@@ -1,5 +1,5 @@
-%jarticleの時はpart,section,subsection,subsubsection
-\documentclass[dvipdfmx]{jarticle}
+%jarticleの時はchapter,section,subsection,subsubsection
+\documentclass[dvipdfmx]{jreport}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{float}
@@ -21,26 +21,21 @@
 
 \maketitle
 
-%改ページ
-\newpage
 
 \begin{abstract}
-\include{abstract.tex}
-%概要
+%ここに直接書く
 
 \end{abstract}
 
 \tableofcontents
 
-%改ページ
-\newpage
 
-\part{はじめに}
-\include{put}{introduction.tex}
+\chapter{はじめに}
+\include{introduction.tex}
 %背景
 %自分の考えも
 
-\part{背景}
+\chapter{背景}
 \include{previous_research.tex}
 %ニューラルネットワークとは
 %ディープラーニングとは
@@ -50,29 +45,29 @@
 %Wavenet(検討)
 %スペクトログラム(検討)
 
-\part{データセット}
+\chapter{実験の詳細}
+\section{データセット}
 \include{dataset.tex}
 %データセット(musescore)
-
-\part{評価}
+\section{評価}
 \include{evaluation.tex}
 %評価用のプログラムを用意する
 
-\part{提案手法}
+\chapter{提案手法}
 \include{proposed_method.tex}
 %手法
 %結果
 %考察
 
-\part{まとめ}
+\chapter{まとめ}
 \include{conclusion.tex}
 %結論
 %展望
 
-\part{謝辞}
+\chapter*{謝辞}
 %優先順位低め
+%ここに直接書く
 
-\part{参考文献}
 
 \bibliography{ref}
 \bibliographystyle{junsrt}
