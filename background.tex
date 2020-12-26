@@ -15,20 +15,36 @@
 GAN(敵対的生成モデル)とは生成モデルと識別モデルが競合して学習を行うディープラーニングのモデルである。生成モデルは訓練データの分布を捉えようとし、識別モデルは訓練データである確率を推定する。\par
 具体的には、訓練データの分布を$p_{data}$,生成モデルの入力となるノイズの分布を$p_z$,ノイズを元にデータを生成する関数を$G$,生成モデルのデータではなく訓練データである確率を返す関数を$D$とした時、下記の式を生成モデルは最小化し識別モデルは最大化をすることを目標として学習を行う\cite{GAN}。
 
-$$\mathbb{E}_{\boldsymbol{x} \sim p_{\text {data }}(\boldsymbol{x})}[\log D(\boldsymbol{x})]+\mathbb{E}_{\boldsymbol{z} \sim p_{\boldsymbol{z}}}(\boldsymbol{z})[\log (1-D(G(\boldsymbol{z})))]$$
+$$
+\mathbb{E}_{\boldsymbol{x} \sim p_{\text {data }}(\boldsymbol{x})}[\log D(\boldsymbol{x})]+\mathbb{E}_{\boldsymbol{z} \sim p_{\boldsymbol{z}}}(\boldsymbol{z})[\log (1-D(G(\boldsymbol{z})))]
+$$
 
 \section{CGAN}
 
 CGAN(条件付き敵対的生成モデル)とは条件付きのGANである。具体的には$y$という条件下で下記の式を生成モデルは最小化し識別モデルは最大化をすることを目標として学習を行う\cite{CGAN}。\par
 原著論文では訓練時にMNISTの数字のラベルを条件として与えることで特定の数字のラベルの画像を生成するモデルを実装している。
 
-$$\mathbb{E}_{\boldsymbol{x} \sim p_{\text {data }}(\boldsymbol{x})}[\log D(\boldsymbol{x} \mid \boldsymbol{y})]+\mathbb{E}_{\boldsymbol{z} \sim p_{z}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z} \mid \boldsymbol{y})))]$$
+$$
+\mathbb{E}_{\boldsymbol{x} \sim p_{\text {data }}(\boldsymbol{x})}[\log D(\boldsymbol{x} \mid \boldsymbol{y})]+\mathbb{E}_{\boldsymbol{z} \sim p_{z}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z} \mid \boldsymbol{y})))]
+$$
 
 \section{pix2pix}
 
-pix2pixとはある条件下で画像間の変換を行うGANである。先程のCGANを元にU-NetとPatachGANを組み合わせたネットワークになっている。U-netとは…,PatachGANとは…。\par
+pix2pixとはある条件下で画像間の変換を行うGANである。先程のCGANを元にU-NetとPatachGANを組み合わせたネットワークになっている。\textcolor{red}{U-netとは…,PatachGANとは…。(ここは後々調べて書く)}\par
+具体的には、画像$x$を条件として(3)式を生成モデルは最小化し識別モデルは最大化をすることを目標として学習を行う\cite{pix2pix}。
 
-具体的には、画像$x$
+$$
+\mathcal{L}_{cGAN}(G, D)=\mathbb{E}_{x, y}[\log D(x, y)]+\mathbb{E}_{x, z}[\log (1-D(x, G(x, z)))] \eqno(1)
+$$
+$$
+\mathcal{L}_{L 1}(G)=\mathbb{E}_{x, y, z}\left[\|y-G(x, z)\|_{1}\right] \eqno(2)
+$$
+$$
+\mathcal{L}_{c G A N}(G, D)+\lambda \mathcal{L}_{L 1}(G) \eqno(3)
+$$
+
+
+
 
 
 
