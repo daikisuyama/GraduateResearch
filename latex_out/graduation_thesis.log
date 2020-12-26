@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.10)  26 DEC 2020 11:12
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.10)  26 DEC 2020 14:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -258,7 +258,7 @@ File: l3backend-dvipdfmx.def 2020-09-24 L3 backend support: dvipdfmx
 \l__pdf_internal_box=\box69
 \g__pdf_backend_object_int=\count287
 \g__pdf_backend_annotation_int=\count288
-) (latex_out/graduation_thesis.aux (latex_out/introduction.aux) (latex_out/previous_research.aux) (latex_out/dataset.aux) (latex_out/evaluation.aux) (latex_out/proposed_method.aux) (latex_out/conclusion.aux))
+) (latex_out/graduation_thesis.aux)
 \openout1 = `graduation_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
@@ -326,81 +326,45 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
 
 ]
 第 1 章
-[2
+(./introduction.tex) [2
 
 ]
-\openout2 = `introduction.aux'.
-
- (./introduction.tex)
 第 2 章
-[3
-
-
-
-
-]
-\openout2 = `previous_research.aux'.
-
- (./previous_research.tex)
-第 3 章
+(./background.tex
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 49.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 49.
-[4
-
-
-
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+) [3
 
 ]
-\openout2 = `dataset.aux'.
-
- (./dataset.tex) [5
-
-
+第 3 章
+(./dataset.tex) (./evaluation.tex) [4
 
 ]
-\openout2 = `evaluation.aux'.
-
- (./evaluation.tex)
 第 4 章
-[6
-
-
-
+(./proposed_method.tex) [5
 
 ]
-\openout2 = `proposed_method.aux'.
-
- (./proposed_method.tex)
 第 5 章
-[7
+(./conclusion.tex) [6
 
-
-
-
-]
-\openout2 = `conclusion.aux'.
-
- (./conclusion.tex) (latex_out/graduation_thesis.bbl [8
-
-
-
+] (latex_out/graduation_thesis.bbl [7
 
 ]
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [9
+) [8
 
-] (latex_out/graduation_thesis.aux (latex_out/introduction.aux) (latex_out/previous_research.aux) (latex_out/dataset.aux) (latex_out/evaluation.aux) (latex_out/proposed_method.aux) (latex_out/conclusion.aux)) ) 
+] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 6886 strings out of 479854
- 102611 string characters out of 5881695
- 412172 words of memory out of 5000000
- 24053 multiletter control sequences out of 15000+600000
+ 6852 strings out of 479854
+ 101789 string characters out of 5881695
+ 409986 words of memory out of 5000000
+ 24043 multiletter control sequences out of 15000+600000
  414678 words of font info for 74 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 68i,6n,75p,352b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,6n,75p,361b,351s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (11 pages, 5928 bytes).
+Output written on latex_out/graduation_thesis.dvi (10 pages, 7868 bytes).
