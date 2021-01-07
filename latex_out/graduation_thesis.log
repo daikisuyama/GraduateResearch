@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  6 JAN 2021 16:17
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  7 JAN 2021 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -312,56 +312,51 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 33.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 33.
- (latex_out/graduation_thesis.toc
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 33.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
-)
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 33.
+ [1]
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 37.
+ (latex_out/graduation_thesis.toc)
 \tf@toc=\write3
 \openout3 = `graduation_thesis.toc'.
 
- [1
+ (./introduction.tex [1
 
 ]
 第 1 章
-(./introduction.tex
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 10.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 10.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 44.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 44.
- [2
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 14.
+[2
 
-]) [3]
+]
 第 2 章
+) [3
+
+]
+第 3 章
 (./background.tex
 File: figure/GAN.png Graphic file (type bmp)
 <figure/GAN.png>
 File: figure/CGAN.png Graphic file (type bmp)
 <figure/CGAN.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4
+ [4
 
 ]) [5]
-第 3 章
-(./dataset.tex) [6
-
-]
 第 4 章
-(./proposed_method.tex) [7
+(./proposed_method.tex [6
 
-]
+]) [7]
 第 5 章
 (./conclusion.tex) [8
 
@@ -371,12 +366,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7044 strings out of 479853
- 104295 string characters out of 5881677
- 414410 words of memory out of 5000000
+ 7041 strings out of 479853
+ 104263 string characters out of 5881677
+ 414419 words of memory out of 5000000
  24207 multiletter control sequences out of 15000+600000
  421462 words of font info for 99 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  68i,14n,75p,430b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (11 pages, 24064 bytes).
+Output written on latex_out/graduation_thesis.dvi (12 pages, 25176 bytes).
