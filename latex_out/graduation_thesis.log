@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  7 JAN 2021 14:56
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  9 JAN 2021 15:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -260,7 +260,9 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: dvipdfmx.def on input line 147.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/comment/comment.sty
+\CommentStream=\write3
+ Excluding comment 'comment') (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 File: l3backend-dvipdfmx.def 2020-09-24 L3 backend support: dvipdfmx
 \g__graphics_track_int=\count286
 \l__pdf_internal_box=\box69
@@ -269,27 +271,27 @@ File: l3backend-dvipdfmx.def 2020-09-24 L3 backend support: dvipdfmx
 ) (latex_out/graduation_thesis.aux)
 \openout1 = `graduation_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-Package hyperref Info: Link coloring OFF on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for JY1/mc/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for JT1/mc/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+Package hyperref Info: Link coloring OFF on input line 30.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -299,79 +301,93 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count289
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 ]
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 33.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 33.
- [1]
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 37.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 38.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <20.74> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 37.
- (latex_out/graduation_thesis.toc)
-\tf@toc=\write3
-\openout3 = `graduation_thesis.toc'.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 38.
+ (latex_out/graduation_thesis.toc
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 1.
+)
+\tf@toc=\write4
+\openout4 = `graduation_thesis.toc'.
 
  (./introduction.tex [1
 
 ]
 第 1 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 6.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 24.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 6.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 24.
+) (./explanation.tex [2
+
+]
+第 2 章
+File: figure/c4_harp_spectrum.png Graphic file (type bmp)
+<figure/c4_harp_spectrum.png>
+File: figure/c4_harp_wav.png Graphic file (type bmp)
+<figure/c4_harp_wav.png>
+File: figure/c4_harp_loudness.png Graphic file (type bmp)
+<figure/c4_harp_loudness.png>
+[3
+
+]
+File: figure/c4_guitar_harp.png Graphic file (type bmp)
+<figure/c4_guitar_harp.png>
+) (./background.tex [4]
+第 3 章
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JT1/gt/m/n' tried instead on input line 14.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 14.
-[2
+File: figure/GAN_net.png Graphic file (type bmp)
+<figure/GAN_net.png>
+[5
 
 ]
-第 2 章
-) [3
-
-]
-第 3 章
-(./background.tex
-File: figure/GAN.png Graphic file (type bmp)
-<figure/GAN.png>
-File: figure/CGAN.png Graphic file (type bmp)
-<figure/CGAN.png>
- [4
-
-]) [5]
+File: figure/pix2pix_net.png Graphic file (type bmp)
+<figure/pix2pix_net.png>
+File: figure/pix2pix_img.png Graphic file (type bmp)
+<figure/pix2pix_img.png>
+ [6]
+File: figure/u-net.png Graphic file (type bmp)
+<figure/u-net.png>
+ [7]) (./proposed_method.tex [8]
 第 4 章
-(./proposed_method.tex [6
+[9
 
-]) [7]
+]) (./conclusion.tex [10]
 第 5 章
-(./conclusion.tex) [8
+) [11
 
-] (latex_out/graduation_thesis.bbl [9
+] (latex_out/graduation_thesis.bbl [12
 
-]) [10
+]) [13
 
 ] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7041 strings out of 479853
- 104263 string characters out of 5881677
- 414419 words of memory out of 5000000
- 24207 multiletter control sequences out of 15000+600000
- 421462 words of font info for 99 fonts, out of 8000000 for 9000
+ 7147 strings out of 479853
+ 106008 string characters out of 5881677
+ 418731 words of memory out of 5000000
+ 24293 multiletter control sequences out of 15000+600000
+ 423636 words of font info for 108 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
- 68i,14n,75p,430b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,75p,478b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (12 pages, 25176 bytes).
+Output written on latex_out/graduation_thesis.dvi (14 pages, 37608 bytes).

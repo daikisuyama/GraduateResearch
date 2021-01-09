@@ -19,6 +19,9 @@
 \usepackage{fancyhdr}
 \usepackage{bookmark}
 \usepackage{color}
+\usepackage{comment}
+\newcommand{\argmax}{\mathop{\rm arg~max~}\limits}
+\newcommand{\argmin}{\mathop{\rm arg~min~}\limits}
 
 \title{ニューラルネットワークによる\\ 音楽の自動変換}
 
@@ -30,9 +33,7 @@
 
 %タイトルページをいじると良い
 
-\begin{abstract}
-本研究ではニューラルネットワークを用いて音色を変換することを目標とする。
-\end{abstract}
+
 
 \tableofcontents
 
@@ -41,19 +42,18 @@
 \input{introduction.tex}
 %自分の考え
 
-\chapter{背景}
+\input{explanation.tex}
+
 \input{background.tex}
 %内容はbackground.texに
 
 
 %データセット、あれば評価方法も
-\chapter{提案手法}
 \input{proposed_method.tex}
 %手法
 %結果
 %考察
 
-\chapter{まとめ}
 \input{conclusion.tex}
 %結論
 %展望

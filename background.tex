@@ -1,60 +1,103 @@
-\section{多層パーセプトロン}
+%図は改良の余地あり
 
-%ニューラルネットワークとはニューロンとニューロン間のシナプスによる結合で形成される脳のネットワークを模した数理モデルである。入力層と出力層を持ち、シナプスの結合強度を変化させることで問題に最適なネットワークを構成することを目標とする。\par
-%この説明は多層パーセプトロン
-%また、入力層と出力層の間に隠れ層を加えて多層にし層間に活性化関数を用いて非線形分離を行うことで、複雑なネットワークを作ることができる。さらに、任意の活性化関数が微分可能であれば、誤差逆伝播法により損失関数を高速に求めることができる。\par
+\chapter{背景}
 
-%ディープラーニングとは層をより深くしたニューラルネットワークを用いた機械学習の手法である。\par
-%また、層を増やすと勾配の減衰による勾配消失や訓練データへの最適化による過学習などの問題が発生するが、前者の場合は活性化関数にReLU関数を用い後者の場合は汎化性能を測定することで避けることができる。\par
+本章では、多層パーセプトロン及びその応用例であるGenerative~Adversarial~Networks~(GAN)~の説明を行った後にGANを画像のスタイル変換に応用したPix2pixを紹介する。
 
-%省略などをなくす
+%ニューラルネットはこの前まででなんとなく説明しておく！
+\section{Multilayer~perceptron}
 
-%以下、abst,intro,method,しか読んでないものがほとんど
+Multilayer~perceptron~(多層パーセプトロン)~はニューラルネットワークの一つである。
+
+%ここから数式(メモは済)
+
+\subsection{層と活性化関数}
+
+%入力層と出力層と隠れ層を持つ
+%行列と活性化関数の演算
+%活性化関数により非線形分離
+
+
+\subsection{誤差関数と誤差逆伝播法}
+
+%任意の活性化関数は微分可能
+%誤差関数
+%誤差逆伝播
 
 \section{GAN}
 
 \begin{figure}[H]
-    \includegraphics[width=10.0cm]{figure/GAN.png}
+\begin{center}
+\includegraphics[width=\hsize]{figure/GAN_net.png}
+\caption{GANのネットワークの図}
+\label{fig:GAN_net}
+\end{center}
 \end{figure}
 
-GAN~(敵対的生成モデル)~とは生成モデルと識別モデルが競合して学習を行うディープラーニングのモデルである。生成モデルは訓練データの分布を捉えようとし、識別モデルは訓練データである確率を推定する。\par
-具体的には、訓練データ$x$の分布を$p_{data}$,生成モデルの入力のノイズ$z$の分布を$p_z$,ノイズ$z$を元にデータを生成する関数を$G$,生成モデルのデータではなく訓練データである確率を返す関数を$D$とした時、式\ref{eq:GAN}を生成モデルは最小化し識別モデルは最大化をすることを目標として学習を行う~\cite{GAN}。
 
+GAN~\cite{GAN}は多層パーセプトロンの応用例であり、生成モデルと識別モデルが競合して学習を行う。生成モデルは自身の出力が学習データであると識別モデルに推定させること、識別モデルは学習データと生成モデルの出力のどちらであるかを正しく推定することを目指して学習する。
 
-\begin{align}
-\label{eq:GAN}
-    \mathbb{E}_{\boldsymbol{x} \sim p_{\text {data }}(\boldsymbol{x})}[\log D(\boldsymbol{x})]+\mathbb{E}_{\boldsymbol{z} \sim p_{\boldsymbol{z}}}(\boldsymbol{z})[\log (1-D(G(\boldsymbol{z})))]
-\end{align}
-
-\section{CGAN}
-
-\begin{figure}[H]
-    \includegraphics[width=10.0cm]{figure/CGAN.png}
-\end{figure}
-
-CGAN(条件付き敵対的生成モデル)とは条件付きのGANである。具体的には$y$という条件下で式\ref{eq:CGAN}を生成モデルは最小化し識別モデルは最大化をすることを目標として学習を行う\cite{CGAN}。\par
-原著論文では訓練時にMNISTの数字のラベルを条件として与えることで特定の数字のラベルの画像を生成するモデルを実装している。
-
+また、生成モデルの目的関数は式\ref{eq:GAN_G}であり、識別モデルの目的関数は\ref{eq:GAN_D}である。
 
 \begin{align}
-    \label{eq:CGAN}
-    \mathbb{E}_{\boldsymbol{x} \sim p_{\text {data }}(\boldsymbol{x})}[\log D(\boldsymbol{x} \mid \boldsymbol{y})]+\mathbb{E}_{\boldsymbol{z} \sim p_{z}(\boldsymbol{z})}[\log (1-D(G(\boldsymbol{z} \mid \boldsymbol{y})))]
+    \label{eq:GAN_G}
+    \argmin _{\theta_G}& \mathbb{E}_{\boldsymbol{z}}[\log (1-D(G(\boldsymbol{z};\theta_G);\theta_D))]\\
+    \label{eq:GAN_D}
+    \argmax _{\theta_D}& \mathbb{E}_{\boldsymbol{x}}[\log D(\boldsymbol{x};\theta_D)]+\mathbb{E}_{\boldsymbol{z}}[\log (1-D(G(\boldsymbol{z};\theta_G);\theta_D))]
 \end{align}
+
+ここで、$\boldsymbol{x}$は学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\cdot;\theta_D)$は識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。
+
 
 
 \section{Pix2pix}
 
-Pix2pixとはある条件下で画像間の変換を行うGANである。先程のCGANを元にU-NetとPatachGANを組み合わせたネットワークになっている。\textcolor{red}{U-netとは…,PatchGANとは…。(ここは後々調べて書く)}\par
-具体的には、画像$x$を条件として式\ref{eq:pix2pix3}を生成モデルは最小化し識別モデルは最大化をすることを目標として学習を行う\cite{pix2pix}。
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\hsize]{figure/pix2pix_net.png}
+\caption{pix2pixのネットワークの図}
+\label{fig:pix2pix_net}
+\end{center}
+\end{figure}
+
+Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANである。図\ref{fig:pix2pix_img}にあるようにピクセルの対応関係を変えずにスタイル変換を行うことができる。
+
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=\hsize]{figure/pix2pix_img.png}
+\caption{pix2pixのスタイル変換の例}
+\label{fig:pix2pix_img}
+\end{center}
+\end{figure}
+
+また、生成モデルの目的関数は式\ref{eq:pix2pix_G}であり、識別モデルの目的関数は\ref{eq:pix2pix_D}である。このような条件付きのGANをConditional~GAN~\cite{CGAN}と呼ぶ。
 
 \begin{align}
-    \mathcal{L}_{cGAN}(G, D)=\mathbb{E}_{x, y}[\log D(x, y)]+\mathbb{E}_{x, z}[\log (1-D(x, G(x, z)))] \label{eq:pix2pix1}\\
-    \mathcal{L}_{L 1}(G)=\mathbb{E}_{x, y, z}\left[\|y-G(x, z)\|_{1}\right] \label{peq:ix2pix2}\\
-    \mathcal{L}_{c G A N}(G, D)+\lambda \mathcal{L}_{L 1}(G) \label{eq:pix2pix3}
+    \label{eq:pix2pix_G}
+    \argmin _{\theta_G}& \mathbb{E}_{\boldsymbol{x}, \boldsymbol{z}}[\log (1-D(\boldsymbol{x}, G(\boldsymbol{x}, \boldsymbol{z}; \theta_G); \theta_D))]+\mathbb{E}_{\boldsymbol{x}, \boldsymbol{y}, \boldsymbol{z}}[\|\boldsymbol{y}-G(\boldsymbol{x}, \boldsymbol{z}; \theta_G)\|_{1}]\\
+    \label{eq:pix2pix_D}
+    \argmax _{\theta_D}& \mathbb{E}_{\boldsymbol{x}, \boldsymbol{y}}[\log D(\boldsymbol{x}, \boldsymbol{y}; \theta_D)]+\mathbb{E}_{\boldsymbol{x}, \boldsymbol{z}}[\log (1-D(\boldsymbol{x}, G(\boldsymbol{x}, \boldsymbol{z}; \theta_G); \theta_D))]
 \end{align}
 
-%CycleGAN(検討)
-%自己回帰モデル(検討)
-%https://ja.wikipedia.org/wiki/%E8%87%AA%E5%B7%B1%E5%9B%9E%E5%B8%B0%E3%83%A2%E3%83%87%E3%83%AB
-%Wavenet(検討)
-%スペクトログラム(検討)
+
+ここで、$\boldsymbol{x}$は変換先の学習データ,$\boldsymbol{y}$は変換元の学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{x},\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\boldsymbol{x},\cdot;\theta_D)$は識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。
+
+\subsection{生成モデルの構造}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=\hsize]{figure/u-net.png}
+\caption{U-netのネットワーク}
+\label{fig:u-net}
+\end{center}
+\end{figure}
+
+%説明が雑すぎる
+
+生成モデルはスタイル変換を行うために全体的な構造を維持する必要があり、encoder-decoderのネットワークとして\ref{fig:u-net}のようなU-net\cite{u-net}におけるスキップコネクションブロックが用いられる。
+
+\subsection{識別モデルの構造}
+
+\textcolor{red}{3.2.2の内容をまとめる}
+
+
