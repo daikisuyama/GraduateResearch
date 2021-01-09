@@ -2,13 +2,12 @@
 %図を適宜加える
 %数式はalignを使う
 %数式は自分の都合の良いように書き換える
-%図などはデザインの本を読む
 %半角括弧の前に~を置く
 %用語は省略しないで書く
 %使ったツールなどはURLも添付する
 
 %jarticleの時はchapter,section,subsection,subsubsection
-\documentclass[dvipdfmx]{jreport}
+\documentclass[a4paper,dvipdfmx]{jreport}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{float}
@@ -23,46 +22,32 @@
 \newcommand{\argmax}{\mathop{\rm arg~max~}\limits}
 \newcommand{\argmin}{\mathop{\rm arg~min~}\limits}
 
-\title{ニューラルネットワークによる\\ 音楽の自動変換}
-
-\author{陶山大輝 \thanks{東京大学教養学部後期課程学際科学科総合情報学コース} \thanks{学籍番号：08-192021} \thanks{指導教員：金子知適准教授}}
-
 \begin{document}
 
-\maketitle
-
-%タイトルページをいじると良い
-
-
+%タイトル
+\input{title.tex}
 
 \tableofcontents
 
-
-
+%初めに
 \input{introduction.tex}
-%自分の考え
 
+%用語の説明
 \input{explanation.tex}
 
+%アルゴリズムの説明
 \input{background.tex}
-%内容はbackground.texに
 
-
-%データセット、あれば評価方法も
+%データセットとか実験方法とか結果
 \input{proposed_method.tex}
-%手法
-%結果
-%考察
 
+%結論と展望
 \input{conclusion.tex}
-%結論
-%展望
 
-\chapter*{謝辞}
-%優先順位低め
-%ここに直接書く
+%感謝
+\input{thanks.tex}
 
-
+%参考文献
 \bibliography{ref}
 \bibliographystyle{junsrt}
 

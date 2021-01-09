@@ -2,31 +2,25 @@
 
 \chapter{背景}
 
-本章では、多層パーセプトロン及びその応用例であるGenerative~Adversarial~Networks~(GAN)~の説明を行った後にGANを画像のスタイル変換に応用したPix2pixを紹介する。
+本章では、Multilayer~perceptron~(MLP)~及びその応用例であるGenerative~Adversarial~Networks~(GAN)~の説明を行った後にGANを画像のスタイル変換に応用したPix2pixを紹介する。
 
-%ニューラルネットはこの前まででなんとなく説明しておく！
-\section{Multilayer~perceptron}
+\section{MLP}
 
-Multilayer~perceptron~(多層パーセプトロン)~はニューラルネットワークの一つである。
+MLPは入力層と出力層を持つニューラルネットワークの一つであり、式\ref{eq:MLP}として定式化することができる。
 
-%ここから数式(メモは済)
+\begin{align}
+    \label{eq:MLP}
+    \boldsymbol{y}&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}(\boldsymbol{x}))))))
+\end{align}
 
-\subsection{層と活性化関数}
+ここで、$\boldsymbol{x}$はMLPへの入力の教師データ,$\hat{\boldsymbol{y}}$はMLPの出力,$\boldsymbol{y}$はMLPの出力の教師データ,$n$は層の総数,$f_{i}$は$i$番目の層の活性化関数,$W_{i}$は$i$番目の層の重みの行列である。
 
-%入力層と出力層と隠れ層を持つ
-%行列と活性化関数の演算
-%活性化関数により非線形分離
-
-
-\subsection{誤差関数と誤差逆伝播法}
-
-%任意の活性化関数は微分可能
-%誤差関数
-%誤差逆伝播
+%ここの誤差逆伝播をもう少し詳しく書くか？
+また、損失関数$L(\hat{\boldsymbol{y}},\boldsymbol{y})$を小さくする方向に重みの更新が行われることで学習は進むが、任意の活性化関数が微分可能である時は誤差逆伝播法により高速に重みの更新を行うことが可能である。
 
 \section{GAN}
 
-\begin{figure}[H]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/GAN_net.png}
 \caption{GANのネットワークの図}
@@ -35,7 +29,7 @@ Multilayer~perceptron~(多層パーセプトロン)~はニューラルネット�
 \end{figure}
 
 
-GAN~\cite{GAN}は多層パーセプトロンの応用例であり、生成モデルと識別モデルが競合して学習を行う。生成モデルは自身の出力が学習データであると識別モデルに推定させること、識別モデルは学習データと生成モデルの出力のどちらであるかを正しく推定することを目指して学習する。
+GAN~\cite{GAN}はMLPの応用例であり、生成モデルと識別モデルが競合して学習を行う。生成モデルは自身の出力が学習データであると識別モデルに推定させること、識別モデルは学習データと生成モデルの出力のどちらであるかを識別することを目指して学習する。
 
 また、生成モデルの目的関数は式\ref{eq:GAN_G}であり、識別モデルの目的関数は\ref{eq:GAN_D}である。
 
@@ -52,7 +46,7 @@ GAN~\cite{GAN}は多層パーセプトロンの応用例であり、生成モデ
 
 \section{Pix2pix}
 
-\begin{figure}[H]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/pix2pix_net.png}
 \caption{pix2pixのネットワークの図}
@@ -84,7 +78,7 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
 
 \subsection{生成モデルの構造}
 
-\begin{figure}[H]
+\begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/u-net.png}
 \caption{U-netのネットワーク}
@@ -92,12 +86,10 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
 \end{center}
 \end{figure}
 
-%説明が雑すぎる
-
-生成モデルはスタイル変換を行うために全体的な構造を維持する必要があり、encoder-decoderのネットワークとして\ref{fig:u-net}のようなU-net\cite{u-net}におけるスキップコネクションブロックが用いられる。
+スタイル変換では基礎的な構造を保持したまま変換を行う必要があり、一般にはencoder-decoderのネットワークが用いられる。Pix2pixの生成モデルでは、\ref{fig:u-net}のようにU-net\cite{u-net}で用いられるスキップコネクションを持ったネットワークを用いている。
 
 \subsection{識別モデルの構造}
 
-\textcolor{red}{3.2.2の内容をまとめる}
+Pix2pixの識別モデルでは、局所的な部分の識別の精度を高めるためにPatchGANという手法を用いている。これにより、パッチと呼ばれる小領域ごとで学習データであるかどうかの識別を行うことができる。
 
 
