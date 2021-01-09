@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  9 JAN 2021 18:21
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  9 JAN 2021 21:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -376,16 +376,20 @@ File: figure/u-net.png Graphic file (type bmp)
 
 ]) (latex_out/graduation_thesis.bbl [12
 
-]) [13
+]) (./appendix.tex [13
+
+]
+第 6 章
+) [14
 
 ] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7128 strings out of 479853
- 105792 string characters out of 5881677
- 418717 words of memory out of 5000000
- 24277 multiletter control sequences out of 15000+600000
+ 7134 strings out of 479853
+ 105856 string characters out of 5881677
+ 418743 words of memory out of 5000000
+ 24281 multiletter control sequences out of 15000+600000
  419619 words of font info for 92 fonts, out of 8000000 for 9000
  929 hyphenation exceptions out of 8191
  68i,13n,75p,478b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (14 pages, 37744 bytes).
+Output written on latex_out/graduation_thesis.dvi (15 pages, 39740 bytes).
