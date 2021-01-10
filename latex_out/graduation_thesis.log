@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  10 JAN 2021 16:48
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  10 JAN 2021 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -402,11 +402,6 @@ File: figure/c4_guitar_harp.png Graphic file (type bmp)
 <figure/c4_guitar_harp.png>
 ) (./background.tex [4]
 第3章
-
-Underfull \hbox (badness 1033) in paragraph at lines 5--6
-[]\JY1/mc/m/n/10 本章では 、 \OT1/cmr/m/n/10 Mul-ti-layer per-cep-tron (MLP) \JY1/mc/m/n/10 及びその応用例である \OT1/cmr/m/n/10 Gen-er-a-tive Ad-ver-sar-ial Net-
- []
-
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 14.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
@@ -446,16 +441,21 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 
 ]
 付録A
+
+Overfull \hbox (25.61195pt too wide) in paragraph at lines 40--41
+ [] 
+ []
+
 ) [15
 
 ] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7285 strings out of 479853
- 107692 string characters out of 5881677
- 424278 words of memory out of 5000000
- 24427 multiletter control sequences out of 15000+600000
+ 7289 strings out of 479853
+ 107764 string characters out of 5881677
+ 424504 words of memory out of 5000000
+ 24431 multiletter control sequences out of 15000+600000
  422540 words of font info for 117 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 68i,13n,75p,685b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,75p,532b,523s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (16 pages, 42000 bytes).
+Output written on latex_out/graduation_thesis.dvi (16 pages, 41780 bytes).

@@ -2,18 +2,18 @@
 
 \chapter{背景}
 
-本章では、Multilayer~perceptron~(MLP)~及びその応用例であるGenerative~Adversarial~Networks~(GAN)~の説明を行った後にGANを画像のスタイル変換に応用したPix2pixを紹介する。
+本章では、Multilayer~perceptron及びその応用例のGenerative~Adversarial~Networksの説明を行った後、Generative~Adversarial~Networksを画像の変換に応用したPix2pixを紹介する。
 
-\section{MLP}
+\section{Multilayer~perceptron}
 
-MLPは入力層と出力層を持つニューラルネットワークの一種であり、複数のアフィン変換と非線形関数からなる関数により定義される。具体的には、式\ref{eq:MLP}で定式化される。
+Multilayer~perceptron~(MLP)~は複数のアフィン変換と非線形関数からなる関数により定義され、式\ref{eq:MLP}で定式化される。
 
 \begin{align}
     \label{eq:MLP}
-    F_{MLP}(\boldsymbol{x})&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}(\boldsymbol{x})+\boldsymbol{b_{1}}))+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
+    F_{MLP}(\boldsymbol{x})&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}(\boldsymbol{x})+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
 \end{align}
 
-ここで、$\boldsymbol{x},\boldsymbol{y}$は実数ベクトル,$n$は層の総数,$f_{i}$は$i$番目の層の非線形関数,$W_{i}$は$i$番目の層のアフィン変換である。
+ここで、$\boldsymbol{x},\boldsymbol{y}$は実数ベクトル,$n$は層の総数,$f_{i}$は$i$層目の非線形関数,$W_{i}$は$i$層目の行列,$b_{i}$は$i$層目の定数ベクトルである。
 
 MLPを用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、それぞれの$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。
 
@@ -21,7 +21,7 @@ MLPを用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j
 
 そして、損失関数としては、平均二乗誤差$L_{MSE}=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}$や平均絶対誤差$L_{MAE}=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}$などが用いられる。
 
-\section{GAN}
+\section{Generative~Adversarial~Networks}
 
 \begin{figure}[t]
 \begin{center}
@@ -32,7 +32,7 @@ MLPを用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j
 \end{figure}
 
 
-GAN~\cite{GAN}はMLPの応用例であり学習データの特徴を学習して擬似的なデータを生成することを目指す。この手法は自然な手書きの文字を出力する際などに用いられる。
+Generative~Adversarial~Networks~(GAN)~\cite{GAN}はMLPの応用例であり学習データの特徴を学習して擬似的なデータを生成することを目指す。この手法は自然な手書きの文字を出力する際などに用いられる。
 
 GANは生成モデルと識別モデルと呼ばれる二つのMLPで構成される。生成モデルは学習データに近いデータを出力し、識別モデルはデータが生成モデルの出力と学習データのどちらであるかを識別し、学習データである確率を出力する。
 

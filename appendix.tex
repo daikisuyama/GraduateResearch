@@ -3,36 +3,40 @@
 \label{sec:appendix}
 
 \section{実験時のパラメータ}
+\label{sec:appendix_params}
 
-%パラメータ,値
+実験時のパラメータを表\ref{tab:params}に示す。
+
 \begin{table}[h]
+\label{tab:params}
+\caption{}
 \begin{center}
-    \begin{tabular}{|l||l|}\hline
+    \begin{tabular}{|ll|}\hline
         パラメータ & 値 \\ \hline \hline
-        インプットのバッチサイズ & 1 \\ \hline
-        学習でのエポック数 & 1000 \\ \hline
+        インプットのバッチサイズ & 1 \\ 
+        学習でのエポック数 & 1000 \\ 
         学習での学習率 & 0.0002 \\ \hline
     \end{tabular}
 \end{center}
 \end{table}
 
-\section{実験日時}
-
-\subsection{生成モデルの表現力}
-
-\noindent
-開始：\\
-終了：
-
-\subsection{生成モデルの汎化能力}
-
-\noindent
-開始：2021-01-09 22:34:23\\
-終了：2021-01-10 05:48:49
-
 \section{データセットの分割方法}
+\label{sec:appendix_split}
 
-\subsection{生成モデルの汎化能力}
+生成モデルの汎化能力を調べた際のデータセットの分割の仕方を表\ref{tab:split}に示す。
 
-\noindent
-[['a5s', 'g2', 'e6', 'f6', 'g3', 'c1', 'a2s', 'f7', 'f5', 'c2s', 'b5', 'e4', 'b6', 'd4s', 'a4', 'b7', 'e1', 'g4s', 'f4', 'a7s', 'g1', 'f2s'], ['a2', 'd1', 'g1s', 'g4', 'd5s', 'd6', 'a3s', 'a1', 'a5', 'c6s', 'f1s', 'c1s', 'a1s', 'c5', 'd2s', 'g7', 'c2', 'e7', 'b2', 'g7s', 'f5s', 'd1s'], ['e3', 'g5', 'c7s', 'd4', 'g5s', 'd6s', 'g6', 'c8', 'c4', 'c4s', 'a0s', 'a3', 'd3', 'd5', 'b0', 'a6', 'a6s', 'f7s', 'c5s', 'd3s', 'f3', 'd7s'], ['b4', 'f3s', 'f6s', 'e2', 'b1', 'e5', 'f2', 'c3', 'a4s', 'f1', 'c6', 'a7', 'd2', 'g6s', 'g2s', 'g3s', 'c3s', 'f4s', 'a0', 'd7', 'b3', 'c7']]
+\begin{table}[h]
+\label{tab:split}
+\caption{}
+\begin{center}
+    \scalebox{0.8}{
+    \begin{tabular}{|lllllllllllllllllllllll|}\hline
+        番号  \\ \hline \hline
+        0 & a5s & g2 & e6 & f6 & g3 & c1 & a2s & f7 & f5 & c2s & b5 & e4 & b6 & d4s & a4 & b7 & e1 & g4s & f4 & a7s & g1 & f2s\\ 
+        1 & a2 & d1 & g1s & g4 & d5s & d6 & a3s & a1 & a5 & c6s & f1s & c1s & a1s & c5 & d2s & g7 & c2 & e7 & b2 & g7s & f5s & d1s \\ 
+        2 & e3 & g5 & c7s & d4 & g5s & d6s & g6 & c8 & c4 & c4s & a0s & a3 & d3 & d5 & b0 & a6 & a6s & f7s & c5s & d3s & f3 & d7s \\ 
+        3 & b4 & f3s & f6s & e2 & b1 & e5 & f2 & c3 & a4s & f1 & c6 & a7 & d2 & g6s & g2s & g3s & c3s & f4s & a0 & d7 & b3 & c7 \\ \hline
+    \end{tabular}
+    }
+\end{center}
+\end{table}
