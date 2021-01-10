@@ -6,32 +6,39 @@
 
 \section{MLP}
 
-MLPは入力層と出力層を持つニューラルネットワークの一つであり、式\ref{eq:MLP}として定式化することができる。
+MLPは入力層と出力層を持つニューラルネットワークの一種であり、複数のアフィン変換と非線形関数からなる関数により定義される。具体的には、式\ref{eq:MLP}で定式化される。
 
 \begin{align}
     \label{eq:MLP}
-    \boldsymbol{y}&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}(\boldsymbol{x}))))))
+    F_{MLP}(\boldsymbol{x})&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}(\boldsymbol{x})+\boldsymbol{b_{1}}))+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
 \end{align}
 
-ここで、$\boldsymbol{x}$はMLPへの入力の教師データ,$\hat{\boldsymbol{y}}$はMLPの出力,$\boldsymbol{y}$はMLPの出力の教師データ,$n$は層の総数,$f_{i}$は$i$番目の層の活性化関数,$W_{i}$は$i$番目の層の重みの行列である。
+ここで、$\boldsymbol{x},\boldsymbol{y}$は実数ベクトル,$n$は層の総数,$f_{i}$は$i$番目の層の非線形関数,$W_{i}$は$i$番目の層のアフィン変換である。
 
-%ここの誤差逆伝播をもう少し詳しく書くか？
-また、損失関数$L(\hat{\boldsymbol{y}},\boldsymbol{y})$を小さくする方向に重みの更新が行われることで学習は進むが、任意の活性化関数が微分可能である時は誤差逆伝播法により高速に重みの更新を行うことが可能である。
+MLPを用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、それぞれの$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。
+
+また、$\boldsymbol{t_j}$に近い$\boldsymbol{y_j}$を出力するにはそれぞれの$i$で$W_i$を適切に決める必要がある。この時、損失関数$L(\boldsymbol{y_j},\boldsymbol{t_j})$を定義し、$W _i \leftarrow W_i - \eta \frac{d L}{dW_i}$として更新すると、$\boldsymbol{y_j}$を$\boldsymbol{t_j}$に近づける方向に$W_i$を更新することができる~(勾配降下法)~。
+
+そして、損失関数としては、平均二乗誤差$L_{MSE}=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}$や平均絶対誤差$L_{MAE}=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}$などが用いられる。
 
 \section{GAN}
 
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/GAN_net.png}
-\caption{GANのネットワークの図}
+\caption{GANのネットワーク}
 \label{fig:GAN_net}
 \end{center}
 \end{figure}
 
 
-GAN~\cite{GAN}はMLPの応用例であり、生成モデルと識別モデルが競合して学習を行う。生成モデルは自身の出力が学習データであると識別モデルに推定させること、識別モデルは学習データと生成モデルの出力のどちらであるかを識別することを目指して学習する。
+GAN~\cite{GAN}はMLPの応用例であり学習データの特徴を学習して擬似的なデータを生成することを目指す。この手法は自然な手書きの文字を出力する際などに用いられる。
 
-また、生成モデルの目的関数は式\ref{eq:GAN_G}であり、識別モデルの目的関数は\ref{eq:GAN_D}である。
+GANは生成モデルと識別モデルと呼ばれる二つのMLPで構成される。生成モデルは学習データに近いデータを出力し、識別モデルはデータが生成モデルの出力と学習データのどちらであるかを識別し、学習データである確率を出力する。
+
+これらの二つのMLPはランダムに初期化された後に競合的に学習を行う。これにより、生成モデルが学習データにより近いデータを生成できるようになると期待される。
+
+また、生成モデルの目的関数は式\ref{eq:GAN_G},識別モデルの目的関数は式\ref{eq:GAN_D}として定式化される。
 
 \begin{align}
     \label{eq:GAN_G}
@@ -49,12 +56,10 @@ GAN~\cite{GAN}はMLPの応用例であり、生成モデルと識別モデルが
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/pix2pix_net.png}
-\caption{pix2pixのネットワークの図}
+\caption{pix2pixのネットワーク}
 \label{fig:pix2pix_net}
 \end{center}
 \end{figure}
-
-Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANである。図\ref{fig:pix2pix_img}にあるようにピクセルの対応関係を変えずにスタイル変換を行うことができる。
 
 \begin{figure}[t]
 \begin{center}
@@ -64,17 +69,19 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
 \end{center}
 \end{figure}
 
-また、生成モデルの目的関数は式\ref{eq:pix2pix_G}であり、識別モデルの目的関数は\ref{eq:pix2pix_D}である。このような条件付きのGANをConditional~GAN~\cite{CGAN}と呼ぶ。
+Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANである。例えば、図\ref{fig:pix2pix_img}のようにピクセルの対応関係を変えずにスタイル変換を行うことができる。
+
+また、Pix2pixはGANに変換先の学習データを条件として与えることでスタイル変換を行う。生成モデルの目的関数は式\ref{eq:pix2pix_G},識別モデルの目的関数は式\ref{eq:pix2pix_D}でとして定式化される。
 
 \begin{align}
     \label{eq:pix2pix_G}
-    \argmin _{\theta_G}& \mathbb{E}_{\boldsymbol{x}, \boldsymbol{z}}[\log (1-D(\boldsymbol{x}, G(\boldsymbol{x}, \boldsymbol{z}; \theta_G); \theta_D))]+\mathbb{E}_{\boldsymbol{x}, \boldsymbol{y}, \boldsymbol{z}}[\|\boldsymbol{y}-G(\boldsymbol{x}, \boldsymbol{z}; \theta_G)\|_{1}]\\
+    \argmin _{\theta_G}& \mathbb{E}_{\boldsymbol{y}, \boldsymbol{z}}[\log (1-D(\boldsymbol{y}, G(\boldsymbol{y}, \boldsymbol{z}; \theta_G); \theta_D))]+\mathbb{E}_{\boldsymbol{x}, \boldsymbol{y}, \boldsymbol{z}}[\|\boldsymbol{x}-G(\boldsymbol{y}, \boldsymbol{z}; \theta_G)\|_{1}]\\
     \label{eq:pix2pix_D}
-    \argmax _{\theta_D}& \mathbb{E}_{\boldsymbol{x}, \boldsymbol{y}}[\log D(\boldsymbol{x}, \boldsymbol{y}; \theta_D)]+\mathbb{E}_{\boldsymbol{x}, \boldsymbol{z}}[\log (1-D(\boldsymbol{x}, G(\boldsymbol{x}, \boldsymbol{z}; \theta_G); \theta_D))]
+    \argmax _{\theta_D}& \mathbb{E}_{\boldsymbol{x}, \boldsymbol{y}}[\log D(\boldsymbol{x}, \boldsymbol{y}; \theta_D)]+\mathbb{E}_{\boldsymbol{y}, \boldsymbol{z}}[\log (1-D(\boldsymbol{y}, G(\boldsymbol{y}, \boldsymbol{z}; \theta_G); \theta_D))]
 \end{align}
 
 
-ここで、$\boldsymbol{x}$は変換先の学習データ,$\boldsymbol{y}$は変換元の学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{x},\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\boldsymbol{x},\cdot;\theta_D)$は識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。
+ここで、$\boldsymbol{x}$は変換元の学習データ,$\boldsymbol{y}$は変換先の学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{y},\boldsymbol{z};\theta_G)$は$\boldsymbol{y}$を条件としノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\boldsymbol{y},\cdot;\theta_D)$は$\boldsymbol{y}$を条件とする識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。
 
 \subsection{生成モデルの構造}
 
@@ -86,10 +93,9 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
 \end{center}
 \end{figure}
 
-スタイル変換では基礎的な構造を保持したまま変換を行う必要があり、一般にはencoder-decoderのネットワークが用いられる。Pix2pixの生成モデルでは、\ref{fig:u-net}のようにU-net\cite{u-net}で用いられるスキップコネクションを持ったネットワークを用いている。
+変換を行うための生成モデルにはEncoder-Decoderのネットワークが用いられる。Pix2pixの生成モデルでは、画像データの基礎的な構造を保持するために、図\ref{fig:u-net}のようにU-net\cite{u-net}で用いられるスキップコネクションを持ったネットワークが用いられる。
 
 \subsection{識別モデルの構造}
 
-Pix2pixの識別モデルでは、局所的な部分の識別の精度を高めるためにPatchGANという手法を用いている。これにより、パッチと呼ばれる小領域ごとで学習データであるかどうかの識別を行うことができる。
-
+Pix2pixの識別モデルでは、PatchGANという手法が用いられる。PatchGANは画像全体の誤差を求めるのではなくパッチと呼ばれる小領域ごとで誤差を求めて平均を取っている。これにより、局所的な部分の識別の精度が高まることが期待される。
 
