@@ -2,6 +2,10 @@
 \chapter{}
 \label{sec:appendix}
 
+%勾配降下法のパラメータを増やす
+%Adamを使った
+%torch.optim.Adam
+%ハイパーパラメータ(beta1,beta2,learning_rate)
 \section{実験時のパラメータ}
 \label{sec:appendix_params}
 
@@ -11,11 +15,11 @@
 \label{tab:params}
 \caption{}
 \begin{center}
-    \begin{tabular}{|ll|}\hline
-        パラメータ & 値 \\ \hline \hline
+    \begin{tabular}{ll}\toprule
+        パラメータ & 値 \\ \midrule
         インプットのバッチサイズ & 1 \\ 
         学習でのエポック数 & 1000 \\ 
-        学習での学習率 & 0.0002 \\ \hline
+        学習での学習率 & 0.0002 \\ \bottomrule
     \end{tabular}
 \end{center}
 \end{table}
@@ -25,17 +29,20 @@
 
 生成モデルの汎化能力を調べた際のデータセットの区分を表\ref{tab:split}に示す。
 
+%国際の階名表記に従っているが、正確にはアルフベットは大文字でsは\#を示す。
+%音階順でソート(アルファベット)
+%アルファベット#数字の表記に変える
 \begin{table}[h]
 \label{tab:split}
 \caption{}
 \begin{center}
     \scalebox{0.8}{
-    \begin{tabular}{|lllllllllllllllllllllll|}\hline
-        番号  \\ \hline \hline
+    \begin{tabular}{l|llllllllllllllllllllll}\toprule
+        番号  \\ \midrule
         0 & a5s & g2 & e6 & f6 & g3 & c1 & a2s & f7 & f5 & c2s & b5 & e4 & b6 & d4s & a4 & b7 & e1 & g4s & f4 & a7s & g1 & f2s\\ 
         1 & a2 & d1 & g1s & g4 & d5s & d6 & a3s & a1 & a5 & c6s & f1s & c1s & a1s & c5 & d2s & g7 & c2 & e7 & b2 & g7s & f5s & d1s \\ 
         2 & e3 & g5 & c7s & d4 & g5s & d6s & g6 & c8 & c4 & c4s & a0s & a3 & d3 & d5 & b0 & a6 & a6s & f7s & c5s & d3s & f3 & d7s \\ 
-        3 & b4 & f3s & f6s & e2 & b1 & e5 & f2 & c3 & a4s & f1 & c6 & a7 & d2 & g6s & g2s & g3s & c3s & f4s & a0 & d7 & b3 & c7 \\ \hline
+        3 & b4 & f3s & f6s & e2 & b1 & e5 & f2 & c3 & a4s & f1 & c6 & a7 & d2 & g6s & g2s & g3s & c3s & f4s & a0 & d7 & b3 & c7 \\ \bottomrule
     \end{tabular}
     }
 \end{center}

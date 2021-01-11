@@ -10,16 +10,15 @@ Multilayer~perceptron~(MLP)~は複数のアフィン変換と非線形関数か�
 
 \begin{align}
     \label{eq:MLP}
-    F_{MLP}(\boldsymbol{x})&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}(\boldsymbol{x})+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
+    F_{MLP}(\boldsymbol{x})&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}\boldsymbol{x}+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
 \end{align}
 
-ここで、$\boldsymbol{x},\boldsymbol{y}$は実数ベクトル,$n$は層の総数,$f_{i}$は$i$層目の非線形関数,$W_{i}$は$i$層目の行列,$b_{i}$は$i$層目の定数ベクトルである。
+ここで、$\boldsymbol{x},\boldsymbol{y}$は実数ベクトル,$n$は1以上の整数,$f_{i}$は$i$番目の非線形関数,$W_{i}$は$i$番目の行列,$b_{i}$は$i$番目の定数ベクトルである。また、$n$を層数と呼ぶ。
 
-MLPを用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、それぞれの$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。
+MLP~$F_{MLP}$を用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、それぞれの$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。しかし、$\boldsymbol{t_j}$に近い$\boldsymbol{y_j}$を出力するにはそれぞれの$i$で$W_i$を適切に決める必要がある。損失関数$L(\boldsymbol{y_j},\boldsymbol{t_j})$を定義し、$W _i \leftarrow W_i - \eta \frac{d L}{dW_i}$として更新すると、$\boldsymbol{y_j}$を$\boldsymbol{t_j}$に近づける方向に$W_i$を更新することができる~(勾配降下法)~。ここで、$\eta$は学習率である。損失関数としては、平均二乗誤差$L_{MSE}=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}$や平均絶対誤差$L_{MAE}=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}$などが用いられる。
 
-また、$\boldsymbol{t_j}$に近い$\boldsymbol{y_j}$を出力するにはそれぞれの$i$で$W_i$を適切に決める必要がある。この時、損失関数$L(\boldsymbol{y_j},\boldsymbol{t_j})$を定義し、$W _i \leftarrow W_i - \eta \frac{d L}{dW_i}$として更新すると、$\boldsymbol{y_j}$を$\boldsymbol{t_j}$に近づける方向に$W_i$を更新することができる~(勾配降下法)~。
-
-そして、損失関数としては、平均二乗誤差$L_{MSE}=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}$や平均絶対誤差$L_{MAE}=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}$などが用いられる。
+%一般にニューラルネットワークと言うと他のものもさすが、のニュアンスを入れる
+本論文ではMLPのことを以降ニューラルネットワークと呼ぶ。
 
 \section{Generative~Adversarial~Networks}
 
@@ -32,13 +31,11 @@ MLPを用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j
 \end{figure}
 
 
-Generative~Adversarial~Networks~(GAN)~\cite{GAN}はMLPの応用例であり学習データの特徴を学習して擬似的なデータを生成することを目指す。この手法は自然な手書きの文字を出力する際などに用いられる。
+Generative~Adversarial~Networks~(GAN)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を学習して擬似的なデータを生成することを目指す。この手法は自然な手書きの文字を出力する際などに用いられる。
 
-GANは生成モデルと識別モデルと呼ばれる二つのMLPで構成される。生成モデルは学習データに近いデータを出力し、識別モデルはデータが生成モデルの出力と学習データのどちらであるかを識別し、学習データである確率を出力する。
+GANは識別モデルと生成モデルと呼ばれる二つのニューラルネットワークで構成される。この二つのモデルはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータが生成モデルの出力と学習データのどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが識別できないほど学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。
 
-これらの二つのMLPはランダムに初期化された後に競合的に学習を行う。これにより、生成モデルが学習データにより近いデータを生成できるようになると期待される。
-
-また、生成モデルの目的関数は式\ref{eq:GAN_G},識別モデルの目的関数は式\ref{eq:GAN_D}として定式化される。
+生成モデルの目的関数は式\ref{eq:GAN_G},識別モデルの目的関数は式\ref{eq:GAN_D}として定式化される。
 
 \begin{align}
     \label{eq:GAN_G}
@@ -69,9 +66,7 @@ GANは生成モデルと識別モデルと呼ばれる二つのMLPで構成さ�
 \end{center}
 \end{figure}
 
-Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANである。例えば、図\ref{fig:pix2pix_img}のようにピクセルの対応関係を変えずにスタイル変換を行うことができる。
-
-また、Pix2pixはGANに変換先の学習データを条件として与えることでスタイル変換を行う。生成モデルの目的関数は式\ref{eq:pix2pix_G},識別モデルの目的関数は式\ref{eq:pix2pix_D}でとして定式化される。
+Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANである。例えば、図\ref{fig:pix2pix_img}のようにピクセルの対応関係を変えずにスタイル変換を行うことができる。Pix2pixはGANに変換先の学習データを条件として与えることでスタイル変換を行う。生成モデルの目的関数は式\ref{eq:pix2pix_G},識別モデルの目的関数は式\ref{eq:pix2pix_D}でとして定式化される。
 
 \begin{align}
     \label{eq:pix2pix_G}
@@ -88,14 +83,16 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/u-net.png}
-\caption{U-netのネットワーク}
+\caption{Encoder-decoderのネットワークとU-netのネットワーク。図は文献~\cite{u-net}の図の〇〇から引用。}
 \label{fig:u-net}
 \end{center}
 \end{figure}
 
-変換を行うための生成モデルにはEncoder-Decoderのネットワークが用いられる。Pix2pixの生成モデルでは、画像データの基礎的な構造を保持するために、図\ref{fig:u-net}のようにU-net\cite{u-net}で用いられるスキップコネクションを持ったネットワークが用いられる。
+変換を行うための生成モデルにはEncoder-decoderのネットワークが用いられる。Pix2pixの生成モデルでは、画像データの基礎的な構造を保持するために、図\ref{fig:u-net}のようにU-net\cite{u-net}で用いられるスキップコネクションを持ったネットワークが用いられる。
 
 \subsection{識別モデルの構造}
+
+%直感的な図を貼っておく
 
 Pix2pixの識別モデルでは、PatchGANという手法が用いられる。PatchGANは画像全体の誤差を求めるのではなくパッチと呼ばれる小領域ごとで誤差を求めて平均を取っている。これにより、局所的な部分の識別の精度が高まることが期待される。
 
