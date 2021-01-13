@@ -15,7 +15,7 @@
 \label{tab:params}
 \caption{}
 \begin{center}
-    \begin{tabular}{ll}\toprule
+    \begin{tabular}{lr}\toprule
         パラメータ & 値 \\ \midrule
         インプットのバッチサイズ & 1 \\ 
         学習でのエポック数 & 1000 \\ 
@@ -24,12 +24,11 @@
 \end{center}
 \end{table}
 
-\section{データセットの区分}
+\section{データセットの分割方法}
 \label{sec:appendix_split}
 
-生成モデルの汎化能力を調べた際のデータセットの区分を表\ref{tab:split}に示す。国際の階名表記に従っている。
+生成モデルの汎化能力を調べた際のデータセットのサブセットへの分割を表\ref{tab:split}に示す。表記は国際の階名表記に従い、音の高さの昇順に並んでいる。データセットの分割方法としては88音をシャッフルして配列に格納した後に22音ずつ順に選んでいる。また、4分割検証を行っているため、番号$i$~($0 \leqq i \leqq 4$)の22音のサブセットを評価に用いた際は番号$j$~($0 \leqq i \leqq 4$かつ$i \neq j$)のサブセットの66音を全て学習に用いている。
 
-%音階順でソート(アルファベット)
 \begin{table}[h]
 \label{tab:split}
 \caption{}
@@ -37,10 +36,10 @@
     \scalebox{0.7}{
     \begin{tabular}{l|llllllllllllllllllllll}\toprule
         番号  \\ \midrule
-        0 & A5$\sharp$ & G2 & E6 & F6 & G3 & C1 & A2$\sharp$ & F7 & F5 & C2$\sharp$ & B5 & E4 & B6 & D4$\sharp$ & A4 & B7 & E1 & G4$\sharp$ & F4 & A7$\sharp$ & G1 & F2$\sharp$ \\ 
-        1 & A2 & D1 & G1$\sharp$ & G4 & D5$\sharp$ & D6 & A3$\sharp$ & A1 & A5 & C6$\sharp$ & F1$\sharp$ & C1$\sharp$ & A1$\sharp$ & C5 & D2$\sharp$ & G7 & C2 & E7 & B2 & G7$\sharp$ & F5$\sharp$ & D1$\sharp$ \\ 
-        2 & E3 & G5 & C7$\sharp$ & D4 & G5$\sharp$ & D6$\sharp$ & G6 & C8 & C4 & C4$\sharp$ & A0$\sharp$ & A3 & D3 & D5 & B0 & A6 & A6$\sharp$ & F7$\sharp$ & C5$\sharp$ & D3$\sharp$ & F3 & D7$\sharp$ \\ 
-        3 & B4 & F3$\sharp$ & F6$\sharp$ & E2 & B1 & E5 & F2 & C3 & A4$\sharp$ & F1 & C6 & A7 & D2 & G6$\sharp$ & G2$\sharp$ & G3$\sharp$ & C3$\sharp$ & F4$\sharp$ & A0 & D7 & B3 & C7 \\ \bottomrule
+        0 & C1 & E1 & G1 & C2$\sharp$ & F2$\sharp$ & G2 & A2$\sharp$ & G3 & D4$\sharp$ & E4 & F4 & G4$\sharp$ & A4 & F5 & A5$\sharp$ & B5 & E6 & F6 & B6 & F7 & A7$\sharp$ & B7\\ 
+        1 & C1$\sharp$ & D1 & D1$\sharp$ & F1$\sharp$ & G1$\sharp$ & A1 & A1$\sharp$ & C2 & D2$\sharp$ & A2 & B2 & A3$\sharp$ & G4 & C5 & D5$\sharp$ & F5$\sharp$ & A5 & C6$\sharp$ & D6 & E7 & G7 & G7$\sharp$ \\ 
+        2 & A0$\sharp$ & B0 & D3 & D3$\sharp$ & E3 & F3 & A3 & C4 & C4$\sharp$ & D4 & C5$\sharp$ & D5 & G5 & G5$\sharp$ & D6$\sharp$ & G6 & A6 & A6$\sharp$ & C7$\sharp$ & D7$\sharp$ & F7$\sharp$ & C8 \\ 
+        3 & A0 & F1 & B1 & D2 & E2 & F2 & G2$\sharp$ & C3 & C3$\sharp$ & F3$\sharp$ & G3$\sharp$ & B3 & F4$\sharp$ & A4$\sharp$ & B4 & E5 & C6 & F6$\sharp$ & G6$\sharp$ & C7 & D7 & A7 \\ \bottomrule
     \end{tabular}
     }
 \end{center}

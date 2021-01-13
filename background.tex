@@ -1,5 +1,3 @@
-%図は改良の余地あり
-
 \chapter{背景}
 
 本章では、Multilayer~perceptron及びその応用例のGenerative~Adversarial~Networksの説明を行った後、Generative~Adversarial~Networksを画像の変換に応用したPix2pixを紹介する。
@@ -13,12 +11,11 @@ Multilayer~perceptron~(MLP)~は複数のアフィン変換と非線形関数か�
     F_{MLP}(\boldsymbol{x})&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}\boldsymbol{x}+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
 \end{align}
 
-ここで、$\boldsymbol{x},\boldsymbol{y}$は実数ベクトル,$n$は1以上の整数,$f_{i}$は$i$番目の非線形関数,$W_{i}$は$i$番目の行列,$b_{i}$は$i$番目の定数ベクトルである。また、$n$を層数と呼ぶ。
+ここで、$\boldsymbol{x}$は実数ベクトル,$n$は1以上の整数,$f_{i}$は$i$番目の非線形関数,$W_{i}$は$i$番目の行列,$b_{i}$は$i$番目の定数ベクトルである。また、$n$を層数と呼ぶ。
 
-MLP~$F_{MLP}$を用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、それぞれの$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。しかし、$\boldsymbol{t_j}$に近い$\boldsymbol{y_j}$を出力するにはそれぞれの$i$で$W_i$を適切に決める必要がある。損失関数$L(\boldsymbol{y_j},\boldsymbol{t_j})$を定義し、$W _i \leftarrow W_i - \eta \frac{d L}{dW_i}$として更新すると、$\boldsymbol{y_j}$を$\boldsymbol{t_j}$に近づける方向に$W_i$を更新することができる~(勾配降下法)~。ここで、$\eta$は学習率である。損失関数としては、平均二乗誤差$L_{MSE}=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}$や平均絶対誤差$L_{MAE}=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}$などが用いられる。
+MLP~($F_{MLP}$)~を用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、それぞれの$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。しかし、$\boldsymbol{t_j}$に近い$\boldsymbol{y_j}$を出力するためにはそれぞれの$i$で$W_i$を適切に決める必要がある。損失関数$L(\boldsymbol{y_j},\boldsymbol{t_j})$を定義し、$W _i \leftarrow W_i - \eta \frac{d L}{dW_i}$として更新すると、$\boldsymbol{y_j}$を$\boldsymbol{t_j}$に近づける方向に$W_i$を更新することができる~(勾配降下法)~。ここで、$\eta$は任意の正の実数であり、学習率とも呼ばれる。損失関数としては、平均二乗誤差$L_{MSE}=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}$や平均絶対誤差$L_{MAE}=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}$などが用いられる。
 
-%一般にニューラルネットワークと言うと他のものもさすが、のニュアンスを入れる
-本論文ではMLPのことを以降ニューラルネットワークと呼ぶ。
+一般には、ニューラルネットワークはMLPより広い概念であるが、本論文ではこれ以降MLPのことをニューラルネットワークと呼ぶ。
 
 \section{Generative~Adversarial~Networks}
 
@@ -31,9 +28,9 @@ MLP~$F_{MLP}$を用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\bold
 \end{figure}
 
 
-Generative~Adversarial~Networks~(GAN)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を学習して擬似的なデータを生成することを目指す。この手法は自然な手書きの文字を出力する際などに用いられる。
+Generative~Adversarial~Networks~(GAN)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を学習して擬似的なデータを生成することを目指す手法である。この手法は自然な手書きの文字を出力する際などに用いられる。
 
-GANは識別モデルと生成モデルと呼ばれる二つのニューラルネットワークで構成される。この二つのモデルはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータが生成モデルの出力と学習データのどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが識別できないほど学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。
+GANは二つのニューラルネットワークで構成され、それぞれ識別モデルと生成モデルと呼ばれる。この二つのモデルはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータが生成モデルの出力と学習データのどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するよう学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。
 
 生成モデルの目的関数は式\ref{eq:GAN_G},識別モデルの目的関数は式\ref{eq:GAN_D}として定式化される。
 
@@ -44,9 +41,9 @@ GANは識別モデルと生成モデルと呼ばれる二つのニューラル�
     \argmax _{\theta_D}& \mathbb{E}_{\boldsymbol{x}}[\log D(\boldsymbol{x};\theta_D)]+\mathbb{E}_{\boldsymbol{z}}[\log (1-D(G(\boldsymbol{z};\theta_G);\theta_D))]
 \end{align}
 
+%ノイズの役割の説明
+
 ここで、$\boldsymbol{x}$は学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\cdot;\theta_D)$は識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。
-
-
 
 \section{Pix2pix}
 
@@ -76,7 +73,7 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
 \end{align}
 
 
-ここで、$\boldsymbol{x}$は変換元の学習データ,$\boldsymbol{y}$は変換先の学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{y},\boldsymbol{z};\theta_G)$は$\boldsymbol{y}$を条件としノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\boldsymbol{y},\cdot;\theta_D)$は$\boldsymbol{y}$を条件とする識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。
+ここで、$\boldsymbol{x}$は変換先の学習データ,$\boldsymbol{y}$は変換元の学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{y},\boldsymbol{z};\theta_G)$は$\boldsymbol{y}$を条件としノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\boldsymbol{y},\cdot;\theta_D)$は$\boldsymbol{y}$を条件とする識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。
 
 \subsection{生成モデルの構造}
 
@@ -88,11 +85,13 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
 \end{center}
 \end{figure}
 
-変換を行うための生成モデルにはEncoder-decoderのネットワークが用いられる。Pix2pixの生成モデルでは、画像データの基礎的な構造を保持するために、図\ref{fig:u-net}のようにU-net\cite{u-net}で用いられるスキップコネクションを持ったネットワークが用いられる。
+%Encoder-Decoderのネットワーク例をciteする
+
+変換を行うための生成モデルにはEncoder-decoderのネットワークが用いられる。Pix2pixの生成モデルでは、画像データの基礎的な構造を保持するために、図\ref{fig:u-net}のようにU-net\cite{u-net}というスキップコネクションを持ったネットワークが用いられる。
 
 \subsection{識別モデルの構造}
 
-%直感的な図を貼っておく
+%直感的な図を貼る
 
 Pix2pixの識別モデルでは、PatchGANという手法が用いられる。PatchGANは画像全体の誤差を求めるのではなくパッチと呼ばれる小領域ごとで誤差を求めて平均を取っている。これにより、局所的な部分の識別の精度が高まることが期待される。
 
