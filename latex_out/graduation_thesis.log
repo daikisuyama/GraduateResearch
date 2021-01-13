@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  13 JAN 2021 11:34
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  14 JAN 2021 01:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -458,42 +458,53 @@ File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
 File: figure/88_88/c5.png Graphic file (type bmp)
 <figure/88_88/c5.png>
- [11]
 File: figure/88_88/f1s.png Graphic file (type bmp)
 <figure/88_88/f1s.png>
 File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
+ [11]
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
 <figure/88_88_det/b7_0980_1000.png>
- [12]
 File: figure/88_88_det/e7_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/e7_0550_0700.png>
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/d7s_0550_0700.png>
-) (./conclusion.tex [13]
+ [12]
+File: figure/66_22_det/d4s_0100_0200.png Graphic file (type bmp)
+<figure/66_22_det/d4s_0100_0200.png>
+ [13]
+File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
+<figure/66_22_det/d1_0300_0500.png>
+File: figure/66_22_det/f6_0070_0080.png Graphic file (type bmp)
+<figure/66_22_det/f6_0070_0080.png>
+File: figure/66_22_det/g4s_0150_0180.png Graphic file (type bmp)
+<figure/66_22_det/g4s_0150_0180.png>
+File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
+<figure/66_22_det/d7s_0100_0110.png>
+) (./conclusion.tex [14] [15]
 第5章
-) (./thanks.tex [14
+) (./thanks.tex [16
 
-]) (latex_out/graduation_thesis.bbl [15
+]) (latex_out/graduation_thesis.bbl [17
 
-]) (./appendix.tex [16
+]) (./appendix.tex [18
 
 ]
 付録A
-) [17
+) [19
 
 ] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7413 strings out of 479853
- 110078 string characters out of 5881677
- 426923 words of memory out of 5000000
- 24534 multiletter control sequences out of 15000+600000
+ 7441 strings out of 479853
+ 110887 string characters out of 5881677
+ 427235 words of memory out of 5000000
+ 24555 multiletter control sequences out of 15000+600000
  423786 words of font info for 122 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 68i,13n,75p,968b,612s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,75p,968b,614s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (18 pages, 56960 bytes).
+Output written on latex_out/graduation_thesis.dvi (20 pages, 61860 bytes).
