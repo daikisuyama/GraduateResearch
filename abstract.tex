@@ -1,5 +1,6 @@
 \documentclass[10pt,a4paper,dvipdfmx]{jsreport}
-\pagestyle{plain}
+\pagestyle{empty}
+\bibliographystyle{junsrt}
 \usepackage{graphicx}
 \usepackage{url}
 \usepackage{float}
@@ -15,6 +16,7 @@
 \setcounter{secnumdepth}{3}
 \newcommand{\argmax}{\mathop{\rm arg~max~}\limits}
 \newcommand{\argmin}{\mathop{\rm arg~min~}\limits}
+\renewcommand{\bibname}{~}
 
 \begin{document}
 
@@ -38,6 +40,17 @@
 
 \vspace{30truept}
 
-{\Large 音楽において音色の自動変換をニューラルネットワークにより行うのは難しいが、本研究ではまずPix2pixを用いた単音における音色の変換手法を提案する。また、単音における変換手法は音楽へと応用することが可能であると筆者は考えており、その応用方法についても本論文にて紹介する。}
+{\large
+
+音楽は世界中で楽しまれている。音楽の作成方法には様々なものがあり、既存の曲をアレンジして新しい曲を作成するRemixと呼ばれる方法がある。しかし、Remixは初心者が手軽に行えるものではない。そこで、コンピュータプログラムによる補助が役に立つと考えられる。本研究では、Remixの代表的な方法の一つである音色の変換に着目し、プログラムによる変換手法を提案する。
+
+音色の変換を行うためには、ある楽器の音を異なる楽器の音へ変換する技術が必要である。そこで、本研究ではPix2pix~\cite{pix2pix}を音色の変換に応用した。Pix2pixはニューラルネットワークにより自然な画像を生成する手法であるGenerative~Adversarial~Networks~(GAN)~\cite{GAN}を用いて画像のスタイル変換を行う手法である。
+
+本研究では、ギターの単音をハープの単音に提案手法を用いて変換する実験を行った。その結果、音の大きさが変わることなどの問題はあったものの、ほとんどの音で音程を維持したまま音色の変換を行うことに成功した。また、データセットの一部の音のみで学習を行った場合でも、ほとんどの音で音程を維持したまま変換を行うことができた。
+
+}
+
+\renewcommand{\clearpage}{}
+\bibliography{ref}
 
 \end{document}

@@ -13,7 +13,10 @@ Multilayer~perceptron~(MLP)~は複数のアフィン変換と非線形関数か�
 
 ここで、$\boldsymbol{x}$は実数ベクトル,$n$は1以上の整数,$f_{i}$は$i$番目の非線形関数,$W_{i}$は$i$番目の行列,$b_{i}$は$i$番目の定数ベクトルである。また、$n$を層数と呼ぶ。
 
-MLP~($F_{MLP}$)~を用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、それぞれの$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。しかし、$\boldsymbol{t_j}$に近い$\boldsymbol{y_j}$を出力するためにはそれぞれの$i$で$W_i$を適切に決める必要がある。損失関数$L(\boldsymbol{y_j},\boldsymbol{t_j})$を定義し、$W _i \leftarrow W_i - \eta \frac{d L}{dW_i}$として更新すると、$\boldsymbol{y_j}$を$\boldsymbol{t_j}$に近づける方向に$W_i$を更新することができる~(勾配降下法)~。ここで、$\eta$は任意の正の実数であり、学習率とも呼ばれる。損失関数としては、平均二乗誤差$L_{MSE}=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}$や平均絶対誤差$L_{MAE}=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}$などが用いられる。
+
+%Adam,SGDもちゃんと学ぶ
+
+MLP~($F_{MLP}$)~を用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、それぞれの$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。しかし、$\boldsymbol{t_j}$に近い$\boldsymbol{y_j}$を出力するためにはそれぞれの$i$で$W_i$を適切に決める必要がある。損失関数$L(\boldsymbol{y_j},\boldsymbol{t_j})$を定義し、$W _i \leftarrow W_i - \eta \frac{d L}{dW_i}$として更新すると、$\boldsymbol{y_j}$を$\boldsymbol{t_j}$に近づける方向に$W_i$を更新することができる~(勾配降下法)~。ここで、$\eta$は任意の正の実数であり、学習率と呼ばれている。なお、この学習率を適切に設定するためにStochastic Gradient Descent~\cite{SGD}やAdam~\cite{Adam}などのアルゴリズムが用いられる。また、損失関数としては、平均二乗誤差$L_{MSE}=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}$や平均絶対誤差$L_{MAE}=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}$などが用いられる。
 
 一般には、ニューラルネットワークはMLPより広い概念であるが、本論文ではこれ以降MLPのことをニューラルネットワークと呼ぶ。
 
@@ -41,9 +44,8 @@ GANは二つのニューラルネットワークで構成され、それぞれ�
     \argmax _{\theta_D}& \mathbb{E}_{\boldsymbol{x}}[\log D(\boldsymbol{x};\theta_D)]+\mathbb{E}_{\boldsymbol{z}}[\log (1-D(G(\boldsymbol{z};\theta_G);\theta_D))]
 \end{align}
 
-%ノイズの役割の説明
 
-ここで、$\boldsymbol{x}$は学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\cdot;\theta_D)$は識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。
+ここで、$\boldsymbol{x}$は学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\cdot;\theta_D)$は識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。ここで、ノイズ$\boldsymbol{z}$は生成モデルの出力データの揺らぎを表現する元となる潜在変数である。
 
 \section{Pix2pix}
 
@@ -63,7 +65,7 @@ GANは二つのニューラルネットワークで構成され、それぞれ�
 \end{center}
 \end{figure}
 
-Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANである。例えば、図\ref{fig:pix2pix_img}のようにピクセルの対応関係を変えずにスタイル変換を行うことができる。Pix2pixはGANに変換先の学習データを条件として与えることでスタイル変換を行う。生成モデルの目的関数は式\ref{eq:pix2pix_G},識別モデルの目的関数は式\ref{eq:pix2pix_D}でとして定式化される。
+Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANである。特定の条件の元で用いるGANとしてはConditional~GAN~(CGAN)~\cite{CGAN}が初めて考案されたが、Pix2pixは与えられた条件の構造を維持したまま画像を変換するという点でCGANとは異なる。具体的には、Pix2pixは図\ref{fig:pix2pix_img}のようにピクセルの対応関係を変えずにスタイル変換を行うことができる。Pix2pixはGANに変換先の学習データを条件として与えることでスタイル変換を行い、生成モデルの目的関数は式\ref{eq:pix2pix_G},識別モデルの目的関数は式\ref{eq:pix2pix_D}でとして定式化される。
 
 \begin{align}
     \label{eq:pix2pix_G}
