@@ -60,7 +60,7 @@ GANは二つのニューラルネットワークで構成され、それぞれ�
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/pix2pix_img.png}
-\caption{pix2pixのスタイル変換の例}
+\caption{pix2pixのスタイル変換の例。図は文献~\cite{pix2pix}のFigure~1から転載。}
 \label{fig:pix2pix_img}
 \end{center}
 \end{figure}
@@ -82,7 +82,7 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/u-net.png}
-\caption{Encoder-decoderのネットワークとU-netのネットワーク。図は文献~\cite{u-net}の図の〇〇から引用。}
+\caption{Encoder-decoderのネットワークとU-netのネットワーク。図は文献~\cite{u-net}のFigure~3から転載。}
 \label{fig:u-net}
 \end{center}
 \end{figure}
@@ -93,7 +93,13 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
 
 \subsection{識別モデルの構造}
 
-%直感的な図を貼る
+\begin{figure}[t]
+\begin{center}
+\includegraphics[width=0.5\hsize]{figure/patchgan.png}
+\caption[The LOF caption]{PatchGANの仕組み。図は\cite{slides_on_ABC}のPatch Discriminatorから転載。}
+\label{fig:patchgan}
+\end{center}
+\end{figure}
 
-Pix2pixの識別モデルでは、PatchGANという手法が用いられる。PatchGANは画像全体の誤差を求めるのではなくパッチと呼ばれる小領域ごとで誤差を求めて平均を取っている。これにより、局所的な部分の識別の精度が高まることが期待される。
+Pix2pixの識別モデルでは、PatchGANという手法が用いられる。PatchGANは図\ref{fig:patchgan}のように画像全体の誤差を求めるのではなくパッチと呼ばれる小領域ごとで誤差を求めて平均を取っている。これにより、局所的な部分の識別の精度が高まることが期待される。
 
