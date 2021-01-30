@@ -8,6 +8,8 @@
 %使ったツールなどはURLも添付する
 %実験は過去形に統一
 
+%スライドの内容を入れて大幅に変える
+
 \documentclass[10pt,a4paper,dvipdfmx]{jsreport}
 \pagestyle{plain}
 \bibliographystyle{junsrt}
@@ -41,8 +43,11 @@
 %用語の説明
 \input{explanation.tex}
 
-%アルゴリズムの説明
+%ニューラルネットワークなどの説明
 \input{background.tex}
+
+%モデルの説明
+\input{proposed_model.tex}
 
 %データセットとか実験方法とか結果
 \input{proposed_method.tex}
