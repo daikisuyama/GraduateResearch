@@ -4,19 +4,37 @@
 
 \section{Multilayer~perceptron}
 
-Multilayer~perceptron~(MLP)~は複数のアフィン変換と非線形関数からなる関数により定義され、式\ref{eq:MLP}で定式化される。
+%Adam,SGDの原著論文に目を通す
+
+Multilayer~perceptron~(MLP)~は複数のアフィン変換と非線形関数を合成した関数により定義され、式\ref{eq:MLP1}で定式化される。
 
 \begin{align}
-    \label{eq:MLP}
+    \label{eq:MLP1}
     F_{MLP}(\boldsymbol{x})&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}\boldsymbol{x}+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
 \end{align}
 
-ここで、$\boldsymbol{x}$は実数ベクトル,$n$は1以上の整数,$f_{i}$は$i$番目の非線形関数,$W_{i}$は$i$番目の行列,$b_{i}$は$i$番目の定数ベクトルである。また、$n$を層数と呼ぶ。
+ここで、$\boldsymbol{x}$は実ベクトル,$n$は1以上の整数,$f_{i}$は$i$番目の非線形関数,$W_{i}$は$i$番目の行列,$b_{i}$は$i$番目の実ベクトルである。また、MLPにおいては、$n$を層数、$W_i,b_i$を$i$番目の層の重み、と呼ぶ。
 
+MLP~($F_{MLP}$)~を用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、任意の$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。$\boldsymbol{t_j}$に近い$\boldsymbol{y_j}$を出力するためには、任意の$i$で$W_i,b_i$を適切に定める必要がある。
 
-%Adam,SGDもちゃんと学ぶ
+$y_j$と$t_j$の誤差を表す関数として損失関数$L(\boldsymbol{y_j},\boldsymbol{t_j})$を定義する。損失関数$L$を式\ref{eq:MLP2}に従って更新することで、$\boldsymbol{y_j}$を$\boldsymbol{t_j}$に近づける方向に層の重み$W_i,b_i$を更新することができる~(勾配降下法)~。
 
-MLP~($F_{MLP}$)~を用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\boldsymbol{t_j}); 1 \leqq j \leqq N\}$について、それぞれの$j$で$\boldsymbol{t_{j}}$の予測値として$\boldsymbol{y_j}=F_{MLP}(\boldsymbol{x_j})$を出力することができる。しかし、$\boldsymbol{t_j}$に近い$\boldsymbol{y_j}$を出力するためにはそれぞれの$i$で$W_i$を適切に決める必要がある。損失関数$L(\boldsymbol{y_j},\boldsymbol{t_j})$を定義し、$W _i \leftarrow W_i - \eta \frac{d L}{dW_i}$として更新すると、$\boldsymbol{y_j}$を$\boldsymbol{t_j}$に近づける方向に$W_i$を更新することができる~(勾配降下法)~。ここで、$\eta$は任意の正の実数であり、学習率と呼ばれている。なお、この学習率を適切に設定するためにStochastic Gradient Descent~\cite{SGD}やAdam~\cite{Adam}などのアルゴリズムが用いられる。また、損失関数としては、平均二乗誤差$L_{MSE}=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}$や平均絶対誤差$L_{MAE}=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}$などが用いられる。
+\begin{align}
+    \label{eq:MLP2}
+    W _i &\leftarrow W_i - \eta \frac{d L}{dW_i} \\
+    b _i &\leftarrow b_i - \eta \frac{d L}{dW_i}
+\end{align}
+
+ここで、$\eta$は任意の正の実数であり、学習率と呼ばれる。なお、この学習率を適切に設定するためにStochastic~Gradient~Descent~\cite{SGD}やAdam~\cite{Adam}などのアルゴリズムが用いられる。
+
+さらに、式\ref{eq:MLP3}で表される平均二乗誤差や式\ref{eq:MLP4}で表される平均絶対誤差などが損失関数として用いられる。
+
+\begin{align}
+    \label{eq:MLP3}
+    L_{MSE}&=\frac{1}{n}\sum _{j=1} ^{n} {(\boldsymbol{y_j} - \boldsymbol{t_j})^2}\\
+    \label{eq:MLP4}
+    L_{MAE}&=\frac{1}{n}\sum _{j=1} ^{n} {|\boldsymbol{y_j} - \boldsymbol{t_j}|}
+\end{align}
 
 一般には、ニューラルネットワークはMLPより広い概念であるが、本論文ではこれ以降MLPのことをニューラルネットワークと呼ぶ。
 
@@ -25,17 +43,16 @@ MLP~($F_{MLP}$)~を用いると、あるデータ集合$D=\{(\boldsymbol{x_j},\b
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/GAN_net.png}
-\caption{GANのネットワーク}
+\caption{GANのネットワーク、図は文献~\cite{pix2pix}のFigure~1を用いて作成。}
 \label{fig:GAN_net}
 \end{center}
 \end{figure}
 
+Generative~Adversarial~Networks~(GAN)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を学習して擬似的なデータを生成することを目指す手法である。この手法は実在しないアイドルの写真を生成する際などに用いられる~\cite{idol}。
 
-Generative~Adversarial~Networks~(GAN)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を学習して擬似的なデータを生成することを目指す手法である。この手法は自然な手書きの文字を出力する際などに用いられる。
+GANは図\ref{fig:GAN_net}のように二つのニューラルネットワークで構成される。それぞれのネットワークは~Discriminator~(識別モデル)~と~Generator~(生成モデル)~と呼ばれる。二つのネットワークはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータが~Fake~data~(生成モデルの出力)~と~Real~data~(学習データ)~のどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するように、~Noise~(ノイズ)~を元に学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。また、ノイズは適当な次元の実ベクトルであり、生成モデルの出力の揺らぎを表現する潜在変数の役割を果たす。
 
-GANは二つのニューラルネットワークで構成され、それぞれ識別モデルと生成モデルと呼ばれる。この二つのモデルはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータが生成モデルの出力と学習データのどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するよう学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。
-
-生成モデルの目的関数は式\ref{eq:GAN_G},識別モデルの目的関数は式\ref{eq:GAN_D}として定式化される。
+そして、GANにおいては、生成モデルの目的関数は式\ref{eq:GAN_G}、識別モデルの目的関数は式\ref{eq:GAN_D}として定式化される。
 
 \begin{align}
     \label{eq:GAN_G}
@@ -45,14 +62,14 @@ GANは二つのニューラルネットワークで構成され、それぞれ�
 \end{align}
 
 
-ここで、$\boldsymbol{x}$は学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\cdot;\theta_D)$は識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。ここで、ノイズ$\boldsymbol{z}$は生成モデルの出力データの揺らぎを表現する元となる潜在変数である。
+ここで、$\boldsymbol{x}$は学習データ、$\boldsymbol{z}$は生成モデルへの入力のノイズ、$G(\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル、$D(\cdot;\theta_D)$は識別モデル、$\theta_G$は生成モデル$G$のパラメータ、$\theta_D$は識別モデル$D$のパラメータ、である。
 
 \section{Pix2pix}
 
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/pix2pix_net.png}
-\caption{pix2pixのネットワーク}
+\caption{pix2pixのネットワーク、図は文献~\cite{pix2pix}のFigure~1を用いて作成。}
 \label{fig:pix2pix_net}
 \end{center}
 \end{figure}
@@ -60,12 +77,14 @@ GANは二つのニューラルネットワークで構成され、それぞれ�
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/pix2pix_img.png}
-\caption{pix2pixのスタイル変換の例。図は文献~\cite{pix2pix}のFigure~1から転載。}
+\caption{pix2pixのスタイル変換の例、図は文献~\cite{pix2pix}のFigure~1を用いて作成。}
 \label{fig:pix2pix_img}
 \end{center}
 \end{figure}
 
-Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANである。特定の条件の元で用いるGANとしてはConditional~GAN~(CGAN)~\cite{CGAN}が初めて考案されたが、Pix2pixは与えられた条件の構造を維持したまま画像を変換するという点でCGANとは異なる。具体的には、Pix2pixは図\ref{fig:pix2pix_img}のようにピクセルの対応関係を変えずにスタイル変換を行うことができる。Pix2pixはGANに変換先の学習データを条件として与えることでスタイル変換を行い、生成モデルの目的関数は式\ref{eq:pix2pix_G},識別モデルの目的関数は式\ref{eq:pix2pix_D}でとして定式化される。
+Pix2pix~\cite{pix2pix}は図\ref{fig:pix2pix_net}のようにネットワークの入力に変換元の画像を~Condition~(条件)~として与えることで画像の変換を行うGANである。特定の条件をネットワークの入力に与えるGANとしてはConditional~GAN~(CGAN)~\cite{CGAN}が初めて考案されたが、Pix2pixは与えられた条件画像の構造を維持したまま変換するという点でCGANとは異なる。具体的には、図\ref{fig:pix2pix_img}のように線画の写真への変換や白黒写真のカラー画像への変換を行うことができる。
+
+そして、Pix2pixにおいては、生成モデルの目的関数は式\ref{eq:pix2pix_G}、識別モデルの目的関数は式\ref{eq:pix2pix_D}として定式化される。
 
 \begin{align}
     \label{eq:pix2pix_G}
@@ -74,32 +93,30 @@ Pix2pix~\cite{pix2pix}はある条件下で画像間の変換を行うGANであ�
     \argmax _{\theta_D}& \mathbb{E}_{\boldsymbol{x}, \boldsymbol{y}}[\log D(\boldsymbol{x}, \boldsymbol{y}; \theta_D)]+\mathbb{E}_{\boldsymbol{y}, \boldsymbol{z}}[\log (1-D(\boldsymbol{y}, G(\boldsymbol{y}, \boldsymbol{z}; \theta_G); \theta_D))]
 \end{align}
 
-
-ここで、$\boldsymbol{x}$は変換先の学習データ,$\boldsymbol{y}$は変換元の学習データ,$\boldsymbol{z}$は生成モデルへの入力のノイズ,$G(\boldsymbol{y},\boldsymbol{z};\theta_G)$は$\boldsymbol{y}$を条件としノイズ$\boldsymbol{z}$を入力とする生成モデル,$D(\boldsymbol{y},\cdot;\theta_D)$は$\boldsymbol{y}$を条件とする識別モデル,$\theta_G$は生成モデル$G$のパラメータ,$\theta_D$は識別モデル$D$のパラメータである。
+ここで、$\boldsymbol{x}$は変換先の学習データ、$\boldsymbol{y}$は変換元の学習データ、$\boldsymbol{z}$は生成モデルへの入力のノイズ、$G(\boldsymbol{y},\boldsymbol{z};\theta_G)$は$\boldsymbol{y}$を条件としノイズ$\boldsymbol{z}$を入力とする生成モデル、$D(\boldsymbol{y},\cdot;\theta_D)$は$\boldsymbol{y}$を条件とする識別モデル、$\theta_G$は生成モデル$G$のパラメータ、$\theta_D$は識別モデル$D$のパラメータ、である。
 
 \subsection{生成モデルの構造}
 
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/u-net.png}
-\caption{Encoder-decoderのネットワークとU-netのネットワーク。図は文献~\cite{u-net}のFigure~3から転載。}
+\caption{生成モデルのネットワーク、図は文献~\cite{pix2pix}のFigure~1とFigure~3を用いて作成。}
 \label{fig:u-net}
 \end{center}
 \end{figure}
 
-%Encoder-Decoderのネットワーク例をciteする
+Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder型のネットワークが用いられる。ただし、変換元の画像とのピクセルの対応関係を維持するために、Skip~Connection~(スキップコネクション)~を持つ~\cite{u-net}。
 
-変換を行うための生成モデルにはEncoder-decoderのネットワークが用いられる。Pix2pixの生成モデルでは、画像データの基礎的な構造を保持するために、図\ref{fig:u-net}のようにU-net\cite{u-net}というスキップコネクションを持ったネットワークが用いられる。
+また、ノイズとしては実ベクトルではなくDropoutが用いられる~\cite{Dropout}。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
 
 \subsection{識別モデルの構造}
 
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=0.5\hsize]{figure/patchgan.png}
-\caption[The LOF caption]{PatchGANの仕組み。図は\cite{slides_on_ABC}のPatch Discriminatorから転載。}
+\includegraphics[width=\hsize]{figure/patchgan.png}
+\caption{PatchGANの仕組み、図は文献~\cite{pix2pix}のFigure~1を用いて作成。}
 \label{fig:patchgan}
 \end{center}
 \end{figure}
 
-Pix2pixの識別モデルでは、PatchGANという手法が用いられる。PatchGANは図\ref{fig:patchgan}のように画像全体の誤差を求めるのではなくパッチと呼ばれる小領域ごとで誤差を求めて平均を取っている。これにより、局所的な部分の識別の精度が高まることが期待される。
-
+Pix2pixの識別モデルには、PatchGANという手法が用いられる。PatchGANは図\ref{fig:patchgan}のように画像全体ではなくパッチと呼ばれる小領域ごとに真偽を求めて平均を出力とする。これにより、局所的な識別精度が高まることが期待される。
