@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  3 FEB 2021 17:13
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  3 FEB 2021 22:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -304,7 +304,14 @@ File: l3backend-dvipdfmx.def 2020-09-24 L3 backend support: dvipdfmx
 \l__pdf_internal_box=\box70
 \g__pdf_backend_object_int=\count290
 \g__pdf_backend_annotation_int=\count291
-) (latex_out/graduation_thesis.aux)
+) (latex_out/graduation_thesis.aux
+
+LaTeX Warning: Label `fig:pr_model' multiply defined.
+
+
+LaTeX Warning: Label `fig:pr_model' multiply defined.
+
+)
 \openout1 = `graduation_thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -454,28 +461,34 @@ File: figure/u-net.png Graphic file (type bmp)
 <figure/u-net.png>
 File: figure/patchgan.png Graphic file (type bmp)
 <figure/patchgan.png>
-) (./proposed_model.tex [10] [11]
+) (./proposed_method.tex [10] [11]
 第5章
-) (./proposed_method.tex [12
+File: figure/pr_model.png Graphic file (type bmp)
+<figure/pr_model.png>
+File: figure/pr_generator.png Graphic file (type bmp)
+<figure/pr_generator.png>
+File: figure/pr_discriminator.png Graphic file (type bmp)
+<figure/pr_discriminator.png>
+File: figure/piano.png Graphic file (type bmp)
+<figure/piano.png>
+[12
 
-]
-第6章
-[13
-
-] [14]
+] [13]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
 File: figure/88_88/c5.png Graphic file (type bmp)
 <figure/88_88/c5.png>
+ [14]
 File: figure/88_88/f1s.png Graphic file (type bmp)
 <figure/88_88/f1s.png>
 File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
+ [15]
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
- [15]
+ [16]
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
@@ -484,9 +497,10 @@ File: figure/88_88_det/e7_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/e7_0550_0700.png>
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/d7s_0550_0700.png>
- [16]
+ [17]
 File: figure/66_22_det/d4s_0100_0200.png Graphic file (type bmp)
 <figure/66_22_det/d4s_0100_0200.png>
+ [18]
 File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
 <figure/66_22_det/d1_0300_0500.png>
 File: figure/66_22_det/f6_0070_0080.png Graphic file (type bmp)
@@ -495,11 +509,11 @@ File: figure/66_22_det/g4s_0150_0180.png Graphic file (type bmp)
 <figure/66_22_det/g4s_0150_0180.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
- [17]) (./conclusion.tex [18] [19]
-第7章
-) (./thanks.tex [20
+) (./conclusion.tex [19]
+第6章
+[20
 
-]) (latex_out/graduation_thesis.bbl [21
+]) (./thanks.tex [21]) (latex_out/graduation_thesis.bbl [22
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
@@ -515,20 +529,24 @@ Underfull \hbox (badness 1210) in paragraph at lines 19--22
 []\OT1/cmr/m/n/10 Sebastian Ruder.  An overview of gra-di-ent de-scent op-ti-miza-tion al-go-rithms.  \OT1/cmr/m/it/10 CoRR\OT1/cmr/m/n/10 , Vol.
  []
 
-) (./appendix.tex [22
+) (./appendix.tex [23
 
 ]
 付録A
-) [23
+) [24
 
-] (latex_out/graduation_thesis.aux) ) 
+] (latex_out/graduation_thesis.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 7469 strings out of 479853
- 111228 string characters out of 5881677
- 427794 words of memory out of 5000000
- 24577 multiletter control sequences out of 15000+600000
+ 7483 strings out of 479853
+ 111549 string characters out of 5881677
+ 427914 words of memory out of 5000000
+ 24590 multiletter control sequences out of 15000+600000
  424300 words of font info for 124 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 68i,13n,75p,846b,614s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,75p,846b,550s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (24 pages, 74596 bytes).
+Output written on latex_out/graduation_thesis.dvi (25 pages, 75820 bytes).
