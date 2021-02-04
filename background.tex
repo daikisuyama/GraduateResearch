@@ -1,12 +1,34 @@
-\chapter{ニューラルネットワーク}
+\chapter{背景：ニューラルネットワーク}
 
 本章では、Multilayer~perceptron及びその応用例のGenerative~Adversarial~Networksの説明を行った後、Generative~Adversarial~Networksを画像の変換に応用したPix2pixを紹介する。
 
+\section{Supervised~learning}
+
+Supervised~learning~(教師あり学習)~は機械学習の手法の一つである。機械学習とは、学習データと呼ばれるデータに含まれる特徴をコンピュータプログラムが自動で学習することで何らかの問題を解く手法のことである。また、教師あり学習では学習データとして入力値と対応するべき出力値がわかっている。従って、学習データが$D=\{(x_j,t_j); 1 \leqq j \leqq N\}$で与えられる時、任意の$j$について$y_j=f(x_j)$となる関数$f$を求めることが目標となる。ここで、入力値は$x_j$、対応するべき出力値は$t_j$、$N$はデータの数、である。
+
+\begin{comment}
+機械学習は、教師あり学習、教師なし学習、強化学習、の三つに主に分類することができる\cite{Bishop}。
+
+\subsection{教師あり学習}
+
+教師あり学習とは、学習データにおいて入力値に対応する出力値がわかる機械学習の手法である。最終的には入力に
+
+また、出力値が離散値である問題を分類問題と呼び、出力値が連続値である問題を回帰問題と呼ぶ。
+
+\subsection{教師なし学習}
+
+教師なし学習とは、学習データにおいて入力値に対応する出力値がわからない機械学習の手法である。例としては、データ内で類似したもの同士をまとめるクラスタリングがあげられる。
+
+\subsection{強化学習}
+
+報酬を最大化させるために特定の状況での適切なアクションを選択する機械学習の手法である。例としては、
+\end{comment}
+
 \section{Multilayer~perceptron}
 
-%Adam,SGDの原著論文に目を通す
+Multilayer~perceptron~(MLP)~は教師あり学習の手法の一つである。
 
-Multilayer~perceptron~(MLP)~は複数のアフィン変換と非線形関数を合成した関数により定義され、式\ref{eq:MLP1}で定式化される。
+複数のアフィン変換と非線形関数を合成した関数により定義され、式\ref{eq:MLP1}で定式化される。
 
 \begin{align}
     \label{eq:MLP1}
@@ -25,6 +47,7 @@ $y_j$と$t_j$の誤差を表す関数として損失関数$L(\boldsymbol{y_j},\b
     b _i &\leftarrow b_i - \eta \frac{d L}{dW_i}
 \end{align}
 
+%Adam,SGDの原著論文に目を通す
 ここで、$\eta$は任意の正の実数であり、学習率と呼ばれる。なお、この学習率を適切に設定するためにStochastic~Gradient~Descent~\cite{SGD}やAdam~\cite{Adam}などのアルゴリズムが用いられる。
 
 さらに、式\ref{eq:MLP3}で表される平均二乗誤差や式\ref{eq:MLP4}で表される平均絶対誤差などが損失関数として用いられる。
@@ -38,7 +61,9 @@ $y_j$と$t_j$の誤差を表す関数として損失関数$L(\boldsymbol{y_j},\b
 
 一般には、ニューラルネットワークはMLPより広い概念であるが、本論文ではこれ以降MLPのことをニューラルネットワークと呼ぶ。
 
-\section{畳み込みニューラルネットワーク}
+\section{Convolutional~Neural~Network}
+
+
 
 %これ必要だ
 
