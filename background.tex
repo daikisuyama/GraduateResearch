@@ -50,7 +50,7 @@ $y_j$と$t_j$の誤差を表す関数として損失関数$L(\boldsymbol{y_j},\b
 
 Generative~Adversarial~Networks~(GAN)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を学習して擬似的なデータを生成することを目指す手法である。この手法は実在しないアイドルの写真を生成する際などに用いられる~\cite{idol}。
 
-GANは図\ref{fig:GAN_net}のように二つのニューラルネットワークで構成される。それぞれのネットワークは~Discriminator~(識別モデル)~と~Generator~(生成モデル)~と呼ばれる。二つのネットワークはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータが~Fake~data~(生成モデルの出力)~と~Real~data~(学習データ)~のどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するように、~Noise~(ノイズ)~を元に学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。また、ノイズは適当な次元の実ベクトルであり、生成モデルの出力の揺らぎを表現する潜在変数の役割を果たす。
+GANは図\ref{fig:GAN_net}のように二つのニューラルネットワークで構成される。それぞれのネットワークはDiscriminator~(識別モデル)~とGenerator~(生成モデル)~と呼ばれる。二つのネットワークはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータがFake~data~(生成モデルの出力)~とReal~data~(学習データ)~のどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するように、Noise~(ノイズ)~を元に学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。また、ノイズは適当な次元の実ベクトルであり、生成モデルの出力の揺らぎを表現する潜在変数の役割を果たす。
 
 そして、GANにおいては、生成モデルの目的関数は式\ref{eq:GAN_G}、識別モデルの目的関数は式\ref{eq:GAN_D}として定式化される。
 
@@ -82,7 +82,7 @@ GANは図\ref{fig:GAN_net}のように二つのニューラルネットワーク
 \end{center}
 \end{figure}
 
-Pix2pix~\cite{pix2pix}は図\ref{fig:pix2pix_net}のようにネットワークの入力に変換元の画像を~Condition~(条件)~として与えることで画像の変換を行うGANである。特定の条件をネットワークの入力に与えるGANとしてはConditional~GAN~(CGAN)~\cite{CGAN}が初めて考案されたが、Pix2pixは与えられた条件画像の構造を維持したまま変換するという点でCGANとは異なる。具体的には、図\ref{fig:pix2pix_img}のように線画の写真への変換や白黒写真のカラー画像への変換を行うことができる。
+Pix2pix~\cite{pix2pix}は図\ref{fig:pix2pix_net}のようにネットワークの入力に変換元の画像を~Condition~(条件)~として与えることで画像の変換を行うGANである。特定の条件をネットワークの入力に与えるGANとしてはConditional~GAN~(CGAN)~\cite{CGAN}が初めて考案されたが、Pix2pixは与えられた条件画像の構造を維持したまま変換するという点でCGANとは異なる。具体的には、図\ref{fig:pix2pix_img}のように線画から写真への変換や白黒画像からカラー画像への変換を行うことができる。
 
 そして、Pix2pixにおいては、生成モデルの目的関数は式\ref{eq:pix2pix_G}、識別モデルの目的関数は式\ref{eq:pix2pix_D}として定式化される。
 
@@ -99,13 +99,13 @@ Pix2pix~\cite{pix2pix}は図\ref{fig:pix2pix_net}のようにネットワーク�
 
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=\hsize]{figure/u-net.png}
+\includegraphics[width=0.95\hsize]{figure/u-net.png}
 \caption{生成モデルのネットワーク、図は文献~\cite{pix2pix}のFigure~1とFigure~3を用いて作成。}
 \label{fig:u-net}
 \end{center}
 \end{figure}
 
-Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder型のネットワークが用いられる。ただし、変換元の画像とのピクセルの対応関係を維持するために、Skip~Connection~(スキップコネクション)~を持つ~\cite{u-net}。
+Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder型のネットワークが用いられる。ただし、変換元の画像と返還後の画像で共通する基本構造であるピクセルの対応関係を維持するために、Skip~Connection~(スキップコネクション)~が用いられる~\cite{u-net}。
 
 また、ノイズとしては実ベクトルではなくDropoutが用いられる~\cite{Dropout}。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
 
@@ -113,7 +113,7 @@ Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder�
 
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=\hsize]{figure/patchgan.png}
+\includegraphics[width=0.95\hsize]{figure/patchgan.png}
 \caption{通常のGANとPatchGANの比較、図は文献~\cite{pix2pix}のFigure~1を用いて作成。}
 \label{fig:patchgan}
 \end{center}
