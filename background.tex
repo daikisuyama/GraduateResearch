@@ -38,6 +38,10 @@ $y_j$と$t_j$の誤差を表す関数として損失関数$L(\boldsymbol{y_j},\b
 
 一般には、ニューラルネットワークはMLPより広い概念であるが、本論文ではこれ以降MLPのことをニューラルネットワークと呼ぶ。
 
+\section{畳み込みニューラルネットワーク}
+
+%これ必要だ
+
 \section{Generative~Adversarial~Networks}
 
 \begin{figure}[t]
@@ -106,6 +110,8 @@ Pix2pix~\cite{pix2pix}は図\ref{fig:pix2pix_net}のようにネットワーク�
 \end{figure}
 
 Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder型のネットワークが用いられる。ただし、変換元の画像と返還後の画像で共通する基本構造であるピクセルの対応関係を維持するために、Skip~Connection~(スキップコネクション)~が用いられる~\cite{u-net}。
+
+%スキップコネクションの説明
 
 また、ノイズとしては実ベクトルではなくDropoutが用いられる~\cite{Dropout}。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
 

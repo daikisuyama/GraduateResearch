@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  4 FEB 2021 15:30
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  4 FEB 2021 18:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -475,18 +475,18 @@ File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
 [11
 
-] [12] [13]
+] [12] [13] [14]
 第5章
 File: figure/piano.png Graphic file (type bmp)
 <figure/piano.png>
-[14
+[15
 
 ]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
- [15]
+ [16]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 118.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -507,19 +507,18 @@ File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
+ [17]
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
 <figure/88_88_det/b7_0980_1000.png>
- [16]
+ [18]
 File: figure/88_88_det/e7_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/e7_0550_0700.png>
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/d7s_0550_0700.png>
- [17]
 File: figure/66_22_det/d4s_0100_0200.png Graphic file (type bmp)
 <figure/66_22_det/d4s_0100_0200.png>
- [18]
 File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
 <figure/66_22_det/d1_0300_0500.png>
 File: figure/66_22_det/f6_0070_0080.png Graphic file (type bmp)
@@ -528,11 +527,11 @@ File: figure/66_22_det/g4s_0150_0180.png Graphic file (type bmp)
 <figure/66_22_det/g4s_0150_0180.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
-) (./conclusion.tex [19]
+) (./conclusion.tex [19] [20] [21]
 第6章
-[20
+[22
 
-]) (./thanks.tex [21]) (latex_out/graduation_thesis.bbl [22
+]) (./thanks.tex [23]) (latex_out/graduation_thesis.bbl [24
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
@@ -548,22 +547,22 @@ Underfull \hbox (badness 1210) in paragraph at lines 19--22
 []\OT1/cmr/m/n/10 Sebastian Ruder.  An overview of gra-di-ent de-scent op-ti-miza-tion al-go-rithms.  \OT1/cmr/m/it/10 CoRR\OT1/cmr/m/n/10 , Vol.
  []
 
-) (./appendix.tex [23
+) (./appendix.tex [25
 
 ]
 付録A
 File: figure/data_div.png Graphic file (type bmp)
 <figure/data_div.png>
-Excluding 'comment' comment.) [24
+Excluding 'comment' comment.) [26
 
-] [25] (latex_out/graduation_thesis.aux) ) 
+] [27] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
  7782 strings out of 479853
  115294 string characters out of 5881677
- 431942 words of memory out of 5000000
+ 432002 words of memory out of 5000000
  24886 multiletter control sequences out of 15000+600000
  425468 words of font info for 130 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  68i,13n,75p,841b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (26 pages, 79196 bytes).
+Output written on latex_out/graduation_thesis.dvi (28 pages, 82352 bytes).
