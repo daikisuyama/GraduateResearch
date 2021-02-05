@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  4 FEB 2021 22:01
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  5 FEB 2021 22:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -446,49 +446,48 @@ File: figure/c4_guitar_harp.png Graphic file (type bmp)
 <figure/c4_guitar_harp.png>
  Excluding 'comment' comment.) (./background.tex [4] [5]
 第3章
-Excluding 'comment' comment.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 6.72699pt on input line 36.
+(Font)              scaled to size 6.72699pt on input line 11.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 4.805pt on input line 36.
- [6
+(Font)              scaled to size 4.805pt on input line 11.
+[6
 
 ]
 File: figure/GAN_net.png Graphic file (type bmp)
 <figure/GAN_net.png>
- [7]
+ [7] [8]
 File: figure/pix2pix_net.png Graphic file (type bmp)
 <figure/pix2pix_net.png>
 File: figure/pix2pix_img.png Graphic file (type bmp)
 <figure/pix2pix_img.png>
- [8]
+ [9]
 File: figure/u-net.png Graphic file (type bmp)
 <figure/u-net.png>
 File: figure/patchgan.png Graphic file (type bmp)
 <figure/patchgan.png>
-) (./proposed_method.tex [9] [10]
+) (./proposed_method.tex [10] [11]
 第4章
 File: figure/pr_model.png Graphic file (type bmp)
 <figure/pr_model.png>
-[11
+[12
 
 ]
 File: figure/pr_generator.png Graphic file (type bmp)
 <figure/pr_generator.png>
 File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
- [12] [13]
+ [13] [14]
 第5章
 File: figure/piano.png Graphic file (type bmp)
 <figure/piano.png>
-[14
+[15
 
 ]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
- [15]
+ [16]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 118.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -509,12 +508,12 @@ File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
- [16]
+ [17]
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
 <figure/88_88_det/b7_0980_1000.png>
- [17]
+ [18]
 File: figure/88_88_det/e7_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/e7_0550_0700.png>
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
@@ -529,11 +528,11 @@ File: figure/66_22_det/g4s_0150_0180.png Graphic file (type bmp)
 <figure/66_22_det/g4s_0150_0180.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
-) (./conclusion.tex [18] [19] [20]
+) (./conclusion.tex [19] [20] [21]
 第6章
-[21
+[22
 
-]) (./thanks.tex [22]) (latex_out/graduation_thesis.bbl [23
+]) (./thanks.tex [23]) (latex_out/graduation_thesis.bbl [24
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
@@ -549,22 +548,22 @@ Underfull \hbox (badness 1210) in paragraph at lines 19--22
 []\OT1/cmr/m/n/10 Sebastian Ruder.  An overview of gra-di-ent de-scent op-ti-miza-tion al-go-rithms.  \OT1/cmr/m/it/10 CoRR\OT1/cmr/m/n/10 , Vol.
  []
 
-) (./appendix.tex [24
+) (./appendix.tex [25
 
 ]
 付録A
 File: figure/data_div.png Graphic file (type bmp)
 <figure/data_div.png>
-Excluding 'comment' comment.) [25
+Excluding 'comment' comment.) [26
 
-] [26] (latex_out/graduation_thesis.aux) ) 
+] [27] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7783 strings out of 479853
- 115300 string characters out of 5881677
- 432003 words of memory out of 5000000
- 24887 multiletter control sequences out of 15000+600000
+ 7784 strings out of 479853
+ 115308 string characters out of 5881677
+ 433954 words of memory out of 5000000
+ 24888 multiletter control sequences out of 15000+600000
  425468 words of font info for 130 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  68i,13n,75p,841b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (27 pages, 84124 bytes).
+Output written on latex_out/graduation_thesis.dvi (28 pages, 86700 bytes).
