@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  7 FEB 2021 11:08
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  7 FEB 2021 22:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,17 +364,17 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 
 ])
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 42.
+(Font)              scaled to size 9.60999pt on input line 43.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 9.60999pt on input line 42.
+(Font)              scaled to size 9.60999pt on input line 43.
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 42.
+(Font)              scaled to size 23.90964pt on input line 43.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 42.
+(Font)              scaled to size 23.90964pt on input line 43.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 42.
+(Font)              scaled to size 23.90964pt on input line 43.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 23.90964pt on input line 42.
+(Font)              scaled to size 23.90964pt on input line 43.
  (latex_out/graduation_thesis.toc
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 3.
@@ -387,13 +387,13 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
+) [1
+
+])
 \tf@toc=\write4
 \openout4 = `graduation_thesis.toc'.
 
- (./introduction.tex [1
-
-]
+ (./introduction.tex [2]
 第1章
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 19.9311pt on input line 1.
@@ -409,7 +409,7 @@ LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
 (Font)              scaled to size 7.68799pt on input line 11.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 7.68799pt on input line 11.
-) (./explanation.tex [2
+) (./explanation.tex [3
 
 ]
 第2章
@@ -439,63 +439,63 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 13.83836pt on input line 21.
-[3
+[4
 
 ]
 File: figure/c4_guitar_harp.png Graphic file (type bmp)
 <figure/c4_guitar_harp.png>
- Excluding 'comment' comment.) (./background.tex [4] [5]
+ Excluding 'comment' comment.) (./background.tex [5] [6]
 第3章
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 11.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 4.805pt on input line 11.
-[6
+[7
 
 ]
-File: figure/neuron1.png Graphic file (type bmp)
-<figure/neuron1.png>
-File: figure/neuron2.png Graphic file (type bmp)
-<figure/neuron2.png>
- [7]
-File: figure/mlp_net.png Graphic file (type bmp)
-<figure/mlp_net.png>
+File: figure/neuron.png Graphic file (type bmp)
+<figure/neuron.png>
  [8]
+File: figure/mlp_net0.png Graphic file (type bmp)
+<figure/mlp_net0.png>
+File: figure/mlp_net1.png Graphic file (type bmp)
+<figure/mlp_net1.png>
+ [9] [10] [11]
 File: figure/GAN_net.png Graphic file (type bmp)
 <figure/GAN_net.png>
- [9]
+ [12]
 File: figure/pix2pix_net.png Graphic file (type bmp)
 <figure/pix2pix_net.png>
 File: figure/pix2pix_img.png Graphic file (type bmp)
 <figure/pix2pix_img.png>
- [10]
+ [13]
 File: figure/u-net.png Graphic file (type bmp)
 <figure/u-net.png>
 File: figure/patchgan.png Graphic file (type bmp)
 <figure/patchgan.png>
- [11]) (./proposed_method.tex [12] [13]
+ [14]) (./proposed_method.tex [15] [16]
 第4章
 File: figure/pr_model.png Graphic file (type bmp)
 <figure/pr_model.png>
-[14
+[17
 
 ]
 File: figure/pr_generator.png Graphic file (type bmp)
 <figure/pr_generator.png>
 File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
- [15] [16]
+ [18] [19]
 第5章
 File: figure/piano.png Graphic file (type bmp)
 <figure/piano.png>
-[17
+[20
 
 ]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
- [18]
+ [21]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 11.53198pt on input line 118.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
@@ -516,12 +516,12 @@ File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
- [19]
+ [22]
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
 <figure/88_88_det/b7_0980_1000.png>
- [20]
+ [23]
 File: figure/88_88_det/e7_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/e7_0550_0700.png>
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
@@ -536,11 +536,11 @@ File: figure/66_22_det/g4s_0150_0180.png Graphic file (type bmp)
 <figure/66_22_det/g4s_0150_0180.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
-) (./conclusion.tex [21] [22] [23]
+) (./conclusion.tex [24] [25] [26]
 第6章
-[24
+[27
 
-]) (./thanks.tex [25]) (latex_out/graduation_thesis.bbl [26
+]) (./thanks.tex [28]) (latex_out/graduation_thesis.bbl [29
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
@@ -551,27 +551,22 @@ LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 21.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 21.
-
-Underfull \hbox (badness 1210) in paragraph at lines 19--22
-[]\OT1/cmr/m/n/10 Sebastian Ruder.  An overview of gra-di-ent de-scent op-ti-miza-tion al-go-rithms.  \OT1/cmr/m/it/10 CoRR\OT1/cmr/m/n/10 , Vol.
- []
-
-) (./appendix.tex [27
+) (./appendix.tex [30
 
 ]
 付録A
 File: figure/data_div.png Graphic file (type bmp)
 <figure/data_div.png>
-Excluding 'comment' comment.) [28
+Excluding 'comment' comment.) [31
 
-] [29] (latex_out/graduation_thesis.aux) ) 
+] [32] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7804 strings out of 479853
- 115639 string characters out of 5881677
- 434293 words of memory out of 5000000
- 24905 multiletter control sequences out of 15000+600000
+ 7837 strings out of 479853
+ 115882 string characters out of 5881677
+ 433482 words of memory out of 5000000
+ 24938 multiletter control sequences out of 15000+600000
  425468 words of font info for 130 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 68i,13n,75p,684b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,75p,905b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (30 pages, 92760 bytes).
+Output written on latex_out/graduation_thesis.dvi (33 pages, 117868 bytes).

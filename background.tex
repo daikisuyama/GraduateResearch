@@ -34,41 +34,26 @@ MLP~(Multilayer~perceptron)~はニューラルネットワークの一つであ�
 
 ニューラルネットワークは、神経細胞と神経細胞間のシナプス結合を通る電気信号により実現される脳の機能に類似した数理モデルである。ニューラルネットワークでは、神経細胞を人工ニューロンとして表現し、シナプス結合の強度を人工ニューロン間の重みとして表現する。
 
-\subsection{人工ニューロンの構造}
+\subsection{人工ニューロンの構造と定式化}
+\label{subsec:neuron}
+%バイアス項の説明
 
 \begin{figure}[b]
 \begin{center}
-\begin{minipage}{0.5\hsize}
-\begin{center}
-\includegraphics[width=\hsize]{figure/neuron1.png}
-\caption{人工ニューロンの構造}
-\label{fig:neuron1}
-\end{center}
-\end{minipage}
-\begin{minipage}{0.45\hsize}
-\begin{center}
-\includegraphics[width=\hsize]{figure/neuron2.png}
-\caption{人工ニューロンのk番目の出力}
-\label{fig:neuron2}
-\end{center}
-\end{minipage}
+\includegraphics[width=0.7\hsize]{figure/neuron.png}
+\caption{人工ニューロン}
+\label{fig:neuron}
 \end{center}
 \end{figure}
 
-MLPにおける人工ニューロンは図\ref{fig:neuron1}のようになる。この人工ニューロンは複数の出力を持ち、k番目の出力は図\ref{fig:neuron2}のようになる。ここで、$\boldsymbol{x_i}$は$i$番目の入力、$\boldsymbol{y_i}$は$i$番目の出力、$\boldsymbol{b}$は実ベクトル、$W$は実行列、$\boldsymbol{b_k}$は$\boldsymbol{b}$の第$k$成分、$W_{ki}$は$W$の$(k,i)$成分、$\theta$は活性化関数である。
-
-\subsection{人工ニューロンの定式化}
-
-人工ニューロンのk番目の出力は$x_i$と$W_{ki}$の重み付き和を活性化関数により変換したものであり、式\ref{eq:MLP0_0}として定式化される。そして、$\boldsymbol{x}=(x_1,x_2,\cdots,x_m),\boldsymbol{y}=(y_1,y_2,\cdots,y_n)$とおけば、人工ニューロンの出力は式\ref{eq:MLP0_1}として定式化される。
+MLPにおける人工ニューロンは図\ref{fig:neuron}のように$m$個の入力$x_i$に対応した重み$w_i$をかけた重み付き和に対して活性関数$\theta$を作用させた出力$y$を返す。つまり、式\ref{eq:MLP0_0}として定式化される。
 
 \begin{align}
     \label{eq:MLP0_0}
-    \boldsymbol{y_k}&=\theta(\sum_{i=1}^{m} W_{ki} \times \boldsymbol{x_i})\\
-    \label{eq:MLP0_1}
-    \boldsymbol{y}&=\theta(W\boldsymbol{x}+\boldsymbol{b})
+    \boldsymbol{y}=\theta(\sum_{i=1}^{m} W_{i} \times \boldsymbol{x_i})
 \end{align}
 
-また、$\boldsymbol{x} \mapsto W\boldsymbol{x}+\boldsymbol{b}$の変換はアフィン変換であるため、人工ニューロンはアフィン変換の後に活性化関数を作用させる働きをする。活性化関数には式\ref{eq:ReLU}のReLU関数や式\ref{eq:Sigmoid}のSigmoid関数などの非線形関数が用いられる。
+また、活性化関数としては出力値を調整するために適当な関数が選ばれる。多くの場合は式\ref{eq:ReLU}のReLU関数や式\ref{eq:Sigmoid}のSigmoid関数などの非線形関数が用いられる。
 
 \begin{align}
     \label{eq:ReLU}
@@ -77,21 +62,34 @@ MLPにおける人工ニューロンは図\ref{fig:neuron1}のようになる。
     \theta_{Sigmoid}(x)&=\frac{1}{1+e^{-x}}
 \end{align}
 
-\subsection{MLPの構造}
+\subsection{MLPの構造と定式化}
 
 \begin{figure}[b]
 \begin{center}
-\includegraphics[width=0.7\hsize]{figure/mlp_net.png}
-\caption{MLPのネットワーク}
-\label{fig:MLP_net}
+\includegraphics[width=0.6\hsize]{figure/mlp_net0.png}
+\caption{MLPの一層}
+\label{fig:MLP_net0}
 \end{center}
 \end{figure}
 
-MLPは、人工ニューロンを基本単位とする図\ref{fig:MLP_net}のような順伝播型のニューラルネットワークである。それぞれの人工ニューロンは層と呼ばれ、一層ずつの入力層と出力層、その間にある中間層から構成される。
+MLPの構成単位は、\ref{subsec:neuron}節の人工ニューロンが複数並んだ層である~(図\ref{fig:MLP_net0})~。この層の出力$\boldsymbol{y}$は式\ref{eq:MLP0_0}より式\ref{eq:MLP0_1}として導出できる。また、$\boldsymbol{x} \mapsto W\boldsymbol{x}+\boldsymbol{b}$はアフィン変換と呼ばれ、$\theta$は活性化関数である。
 
-\subsection{MLPの定式化}
+\begin{align}
+    \label{eq:MLP0_1}
+    \boldsymbol{y}&=\theta(W\boldsymbol{x}+\boldsymbol{b})
+\end{align}
 
-MLPは、$n$を層数とおけば、式\ref{eq:MLP0_2}として定式化される。
+ここで、$\boldsymbol{x}$は層の入力となる実ベクトル、$\boldsymbol{y}$は層の出力となる実ベクトル、$\boldsymbol{b}$は第$i$成分が$i$番目の出力に対応したバイアス項となる実ベクトル、$W$は$(i,j)$成分が$i$番目の人工ニューロンと$i$番目の出力に対応した重みとなる実ベクトル、である。
+
+\begin{figure}[b]
+\begin{center}
+\includegraphics[width=0.8\hsize]{figure/mlp_net1.png}
+\caption{MLPのネットワーク}
+\label{fig:MLP_net1}
+\end{center}
+\end{figure}
+
+MLPは、図\ref{fig:MLP_net0}を一層とした順伝播型の階層構造のニューラルネットワークである~(図\ref{fig:MLP_net1})~。一層ずつの入力層と出力層、その間の中間層から構成される。層を構成する人工ニューロンの出力は次の層の全ての人工ニューロンに渡されるため、MLPを構成する層を全結合層とも呼ぶ。また、$n$を層数とおけば、MLPは式\ref{eq:MLP0_2}として定式化される。
 
 \begin{align}
     \label{eq:MLP0_2}
@@ -101,6 +99,8 @@ MLPは、$n$を層数とおけば、式\ref{eq:MLP0_2}として定式化され�
 ここで、$\boldsymbol{x}$は実ベクトル、$\theta_{i}$は$i$番目の活性化関数、$W_{i}$は$i$番目の行列、$\boldsymbol{b_{i}}$は$i$番目の実ベクトル、である。
 
 \subsection{MLPの学習}
+
+%誤差逆伝播
 
 MLPでは、学習により任意の$i$で$W_i,\boldsymbol{b_i}$を適切に定める必要がある。また、教師あり学習では損失関数を減少させる方向に学習は進むため、それぞれ式\ref{eq:MLP2_0}と\ref{eq:MLP2_1}にしたがって$W_i,\boldsymbol{b_i}$は更新される~(勾配降下法)~。
 
@@ -123,8 +123,27 @@ MLPでは、学習により任意の$i$で$W_i,\boldsymbol{b_i}$を適切に定�
 
 \section{CNN}
 
-CNN~(Convolution~Neural~Network)~はニューラルネットワークの応用例であり、画像認識の分野において成果を出している代表的なネットワークである。
+%内容確認、図を作る
 
+CNN~(Convolution~Neural~Network)~は主に画像認識の分野で成果を残している代表的な順伝播型ニューラルネットワークである~\cite{AlexNet}。CNNのネットワーク構造はMLPにおいて全結合層を脳の視覚野の構造を模倣するように置換したものとみなせる。また、脳の視覚野では、刺激の位置により異なったニューロンの活動電位が発生し、受容する情報の特徴によって受容野が階層構造を形成している~\cite{neocognition}。つまり、CNNは、人工ニューロン間の結合が局所領域に限定され、層ごとに受容する情報が異なるニューラルネットワークである。具体的には、画像の局所領域の特徴量を抽出する畳み込み層と局所領域の特徴量をまとめるプーリング層~(サブサンプリング層)~を繰り返した構造である~\cite{CNNsurvey}。また、以下では画像~(二次元データ)~でCNNの説明を行うが、他の次元のデータについても同様の説明を行うことができる。
+
+\subsection{畳み込み層}
+
+畳み込み層においては、図のようにフィルター~(カーネル)~を用いて畳み込み演算を行う。畳み込み演算ではカーネルのそれぞれの値を重みと見た重み付き和の計算が行われる。また、カーネルは予め決めた幅~(ストライド)~によって移動させる。そして、そのまま畳み込み演算を行った場合は特徴量マップが元の画像より小さいサイズとなるため、一般には元の画像の周りに適当な幅で値を埋める操作を行う~(パディング)~。また、カーネルサイズを$ks$、ストライド幅を$st$、パディング数を$pad$、入力サイズを$in$、出力サイズを$out$、とした時、式\ref{eq:conv}が成り立つ。
+
+\begin{align}
+    \label{eq:conv}
+\end{align}
+
+加えて、異なるカーネルが複数あっても良く、カーネルが複数あるときは出力する特徴量マップの数はその数になる。入力のチャンネル数が1でない場合もそれぞれのチャンネルで求めた畳み込み演算の値を足したものが返される。
+
+\subsection{プーリング層}
+
+プーリング層においては、図のように情報量を圧縮する~(サブサンプリング、ダウンサンプリング)~。入力を局所領域ごとに分解し、その局所領域ごとに何らかの操作を行う。この操作が最大値をとる場合はMax~Pooling、平均値をとる場合はAverage~Poolingと呼び、主にこの二つがプーリング層としては用いられる。
+
+\subsection{CNNの利点}
+
+CNNにはMLPと比べて主に二つの利点がある~\cite{CNNsurvey}。一つ目は、パラメータ数が減少する点である。全結合層の場合は入力の数と出力の数の積が層のパラメータ数となるが、畳み込み層においてはカーネルに含まれるパラメータ数のみが層のパラメータ数となるため、パラメータ数が減少する。また、プーリング層においてもサブサンプリングにより特徴量マップのサイズが小さくなるためパラメータ数の減少に寄与する。二つ目は、様々な解像度での特徴を取得できる点である。プーリング層によりサブサンプリングをすることで解像度が低下し、異なるスケールでの隣接する特徴の共起を得ることができると期待される。
 
 \section{GAN}
 
@@ -203,9 +222,7 @@ Pix2pix~\cite{pix2pix}は、図\ref{fig:pix2pix_net}のようにネットワー�
 \end{center}
 \end{figure}
 
-Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder型のネットワークが用いられる。ただし、変換元の画像と返還後の画像で共通する基本構造であるピクセルの対応関係を維持するために、Skip~Connection~(スキップコネクション)~が用いられる~\cite{u-net}。
-
-%スキップコネクションの説明
+Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder型のネットワークが用いられる。ただし、変換元の画像と返還後の画像で共通する基本構造であるピクセルの対応関係を維持するために、Skip~Connection~(スキップコネクション)~が用いられる~\cite{u-net}。スキップコネクションはエンコード前の特徴量マップをデコード時にも利用しており、この特徴量マップによりピクセルの対応関係が維持されると期待される。
 
 また、ノイズとしては実ベクトルではなくDropoutが用いられる~\cite{Dropout}。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
 
@@ -220,4 +237,4 @@ Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder�
 \end{center}
 \end{figure}
 
-Pix2pixの識別モデルには、PatchGANという手法が用いられる。PatchGANは図\ref{fig:patchgan}のように画像全体ではなくパッチと呼ばれる小領域ごとに真偽を求めて平均を出力とする。これにより、局所的な識別精度が高まることが期待される。
+Pix2pixの識別モデルには、PatchGANという手法が用いられる。PatchGANは図\ref{fig:patchgan}のように画像全体ではなくパッチと呼ばれる局所領域ごとに真偽を求めて平均を出力とする。これにより、局所的な識別精度が高まることが期待される。
