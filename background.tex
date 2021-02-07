@@ -1,6 +1,6 @@
 \chapter{背景：ニューラルネットワーク}
 
-本章では、Multilayer~perceptron及びその応用例のGenerative~Adversarial~Networksの説明を行った後、Generative~Adversarial~Networksを画像の変換に応用したPix2pixを紹介する。
+本章では、教師あり学習とMLPの説明を行った後、MLPの応用例であるCNN及びGANを紹介する。そして、これらの応用例を組み合わせたPix2pixを紹介する。
 
 \section{教師あり学習}
 
@@ -26,65 +26,122 @@ $X,Y$をそれぞれ説明変数と目的変数の空間とすると、$f:X\righ
 %教師なし学習とは、学習データにおいて入力値に対応する出力値がわからない機械学習の手法である。例としては、データ内で類似したもの同士をまとめるクラスタリングがあげられる。
 %強化学習とは、報酬を最大化させるために特定の状況での適切なアクションを選択する機械学習の手法である。
 
+\section{MLP}
 
-\section{多層パーセプトロン}
+MLP~(Multilayer~perceptron)~はニューラルネットワークの一つであり、教師あり学習の手法として用いられる。
 
-多層パーセプトロン~(Multilayer~perceptron、MLP)~は教師あり学習の手法のニューラルネットワークの一つである。本論文では、MLPのことをニューラルネットワークと呼ぶ。
+\subsection{ニューラルネットワーク}
+
+ニューラルネットワークは、神経細胞と神経細胞間のシナプス結合を通る電気信号により実現される脳の機能に類似した数理モデルである。ニューラルネットワークでは、神経細胞を人工ニューロンとして表現し、シナプス結合の強度を人工ニューロン間の重みとして表現する。
+
+\subsection{人工ニューロンの構造}
+
+\begin{figure}[b]
+\begin{center}
+\begin{minipage}{0.5\hsize}
+\begin{center}
+\includegraphics[width=\hsize]{figure/neuron1.png}
+\caption{人工ニューロンの構造}
+\label{fig:neuron1}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.45\hsize}
+\begin{center}
+\includegraphics[width=\hsize]{figure/neuron2.png}
+\caption{人工ニューロンのk番目の出力}
+\label{fig:neuron2}
+\end{center}
+\end{minipage}
+\end{center}
+\end{figure}
+
+MLPにおける人工ニューロンは図\ref{fig:neuron1}のようになる。この人工ニューロンは複数の出力を持ち、k番目の出力は図\ref{fig:neuron2}のようになる。ここで、$\boldsymbol{x_i}$は$i$番目の入力、$\boldsymbol{y_i}$は$i$番目の出力、$\boldsymbol{b}$は実ベクトル、$W$は実行列、$\boldsymbol{b_k}$は$\boldsymbol{b}$の第$k$成分、$W_{ki}$は$W$の$(k,i)$成分、$\theta$は活性化関数である。
+
+\subsection{人工ニューロンの定式化}
+
+人工ニューロンのk番目の出力は$x_i$と$W_{ki}$の重み付き和を活性化関数により変換したものであり、式\ref{eq:MLP0_0}として定式化される。そして、$\boldsymbol{x}=(x_1,x_2,\cdots,x_m),\boldsymbol{y}=(y_1,y_2,\cdots,y_n)$とおけば、人工ニューロンの出力は式\ref{eq:MLP0_1}として定式化される。
+
+\begin{align}
+    \label{eq:MLP0_0}
+    \boldsymbol{y_k}&=\theta(\sum_{i=1}^{m} W_{ki} \times \boldsymbol{x_i})\\
+    \label{eq:MLP0_1}
+    \boldsymbol{y}&=\theta(W\boldsymbol{x}+\boldsymbol{b})
+\end{align}
+
+また、$\boldsymbol{x} \mapsto W\boldsymbol{x}+\boldsymbol{b}$の変換はアフィン変換であるため、人工ニューロンはアフィン変換の後に活性化関数を作用させる働きをする。活性化関数には式\ref{eq:ReLU}のReLU関数や式\ref{eq:Sigmoid}のSigmoid関数などの非線形関数が用いられる。
+
+\begin{align}
+    \label{eq:ReLU}
+    \theta_{ReLU}(x)&=max(0,x)\\
+    \label{eq:Sigmoid}
+    \theta_{Sigmoid}(x)&=\frac{1}{1+e^{-x}}
+\end{align}
+
+\subsection{MLPの構造}
+
+\begin{figure}[b]
+\begin{center}
+\includegraphics[width=0.7\hsize]{figure/mlp_net.png}
+\caption{MLPのネットワーク}
+\label{fig:MLP_net}
+\end{center}
+\end{figure}
+
+MLPは、人工ニューロンを基本単位とする図\ref{fig:MLP_net}のような順伝播型のニューラルネットワークである。それぞれの人工ニューロンは層と呼ばれ、一層ずつの入力層と出力層、その間にある中間層から構成される。
 
 \subsection{MLPの定式化}
 
-MLPは$\hat{f}$を複数のアフィン変換と非線形関数を合成した関数により表現されるため、式\ref{eq:MLP1}で定式化される。
+MLPは、$n$を層数とおけば、式\ref{eq:MLP0_2}として定式化される。
 
 \begin{align}
-    \label{eq:MLP1}
-    F_{MLP}(\boldsymbol{x})&=f_{n}(W_{n}(f_{n-1}(W_{n-1}\cdots(f_{1}(W_{1}\boldsymbol{x}+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
+    \label{eq:MLP0_2}
+    \hat{f}(\boldsymbol{x})&=\theta_{n}(W_{n}(\theta_{n-1}(W_{n-1}\cdots(\theta_{1}(W_{1}\boldsymbol{x}+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
 \end{align}
 
-ここで、$\boldsymbol{x}$は実ベクトル,$n$は1以上の整数,$f_{i}$は$i$番目の非線形関数,$W_{i}$は$i$番目の行列,$\boldsymbol{b_{i}}$は$i$番目の実ベクトルである。また、MLPにおいては、$n$を層数、$W_i,\boldsymbol{b_i}$を$i$番目の層の重み、と呼ぶ。
+ここで、$\boldsymbol{x}$は実ベクトル、$\theta_{i}$は$i$番目の活性化関数、$W_{i}$は$i$番目の行列、$\boldsymbol{b_{i}}$は$i$番目の実ベクトル、である。
 
 \subsection{MLPの学習}
 
-多層パーセプトロンの学習では、任意の$i$で層の重み$W_i,\boldsymbol{b_i}$の値を適切に定める必要がある。また、損失関数を減少させる方向に学習は進むため、式\ref{eq:MLP2}にしたがって層の重み$W_i,\boldsymbol{b_i}$は更新される~(勾配降下法)~。
+MLPでは、学習により任意の$i$で$W_i,\boldsymbol{b_i}$を適切に定める必要がある。また、教師あり学習では損失関数を減少させる方向に学習は進むため、それぞれ式\ref{eq:MLP2_0}と\ref{eq:MLP2_1}にしたがって$W_i,\boldsymbol{b_i}$は更新される~(勾配降下法)~。
 
 \begin{align}
-    \label{eq:MLP2}
+    \label{eq:MLP2_0}
     W _i &\leftarrow W_i - \eta \frac{d L}{dW_i} \\
+    \label{eq:MLP2_1}
     \boldsymbol{b _i} &\leftarrow \boldsymbol{b_i} - \eta \frac{d L}{dW_i}
 \end{align}
 
 %Adam,SGDの原著論文に目を通す
-ここで、$\eta$は任意の正の実数であり、学習率と呼ばれる。なお、この学習率を適切に設定するためにStochastic~Gradient~Descent~\cite{SGD}やAdam~\cite{Adam}などのアルゴリズムが用いられる。
-
-\subsection{MLPの損失関数の例}
-
-多層パーセプトロンにおける損失関数には、式\ref{eq:MLP3}の平均二乗誤差や式\ref{eq:MLP4}の平均絶対誤差などが用いられる。
+ここで、$\eta$は任意の正の実数であり、学習率と呼ばれる。なお、損失関数としては式\ref{eq:MLP3}の平均二乗誤差$L_{MSE}$や式\ref{eq:MLP4}の平均絶対誤差$L_{MAE}$などが用いられる。また、学習率を適切に設定する最適化アルゴリズムとして、Stochastic~Gradient~Descent~\cite{SGD}やAdam~\cite{Adam}などが用いられる。
 
 \begin{align}
     \label{eq:MLP3}
-    L_{MSE}&=\frac{1}{n}\sum _{j} {(\boldsymbol{y_j} - F_{MLP}(\boldsymbol{x_j})^2}\\
+    L_{MSE}&=\frac{1}{n}\sum _{j} {(\boldsymbol{y_j} - \hat{f}(\boldsymbol{x_j})^2}\\
     \label{eq:MLP4}
-    L_{MAE}&=\frac{1}{n}\sum _{j} {|\boldsymbol{y_j} - F_{MLP}(\boldsymbol{x_j})|}
+    L_{MAE}&=\frac{1}{n}\sum _{j} {|\boldsymbol{y_j} - \hat{f}(\boldsymbol{x_j})|}
 \end{align}
 
-\section{畳み込みニューラルネットワーク}
+\section{CNN}
 
-%これ必要だ
+CNN~(Convolution~Neural~Network)~はニューラルネットワークの応用例であり、画像認識の分野において成果を出している代表的なネットワークである。
 
-\section{敵対的生成ネットワーク}
 
-\begin{figure}[t]
+\section{GAN}
+
+\begin{figure}[b]
 \begin{center}
 \includegraphics[width=\hsize]{figure/GAN_net.png}
-\caption{GANのネットワーク、図は文献~\cite{pix2pix}のFigure~1を用いて作成。}
+\caption{GANのネットワーク\\
+図は文献~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:GAN_net}
 \end{center}
 \end{figure}
 
-敵対的生成ネットワーク~(Generative~Adversarial~Networks、GAN)~\cite{GAN}は、ニューラルネットワークの応用例であり、学習データの特徴を持つ擬似的なデータを生成することを目指す手法である。この手法は実在しないアイドルの写真を生成する際などに用いられる~\cite{idol}。
+GAN~(Generative~Adversarial~Networks)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を持つ擬似的なデータを生成することを目指す手法である。この手法は実在しないアイドルの写真を生成する際などに用いられる~\cite{idol}。また、GANは図\ref{fig:GAN_net}のように二つのニューラルネットワークで構成され、それぞれのネットワークはDiscriminator~(識別モデル)~とGenerator~(生成モデル)~と呼ばれる。
 
 \subsection{GANの学習}
 
-GANは図\ref{fig:GAN_net}のように二つのニューラルネットワークで構成される。それぞれのネットワークはDiscriminator~(識別モデル)~とGenerator~(生成モデル)~と呼ばれる。二つのネットワークはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータがFake~data~(生成モデルの出力)~とReal~data~(学習データ)~のどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するように、Noise~(ノイズ)~を元に学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。また、ノイズは適当な次元の実ベクトルであり、生成モデルの出力の揺らぎを表現する潜在変数の役割を果たす。
+生成モデルと識別モデルの二つのネットワークはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータがFake~data~(生成モデルの出力)~とReal~data~(学習データ)~のどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するように、Noise~(ノイズ)~を元に学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。また、ノイズは適当な次元の実ベクトルであり、生成モデルの出力の揺らぎを表現する潜在変数の役割を果たす。
 
 \subsection{GANの定式化}
 
@@ -105,7 +162,8 @@ GANでは、生成モデルの目的関数は式\ref{eq:GAN_G}、識別モデル
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/pix2pix_net.png}
-\caption{pix2pixのネットワーク、図は文献~\cite{pix2pix}のFigure~1を用いて作成。}
+\caption{Pix2pixのネットワーク\\
+図は文献~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:pix2pix_net}
 \end{center}
 \end{figure}
@@ -113,12 +171,15 @@ GANでは、生成モデルの目的関数は式\ref{eq:GAN_G}、識別モデル
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=\hsize]{figure/pix2pix_img.png}
-\caption{pix2pixのスタイル変換の例、図は文献~\cite{pix2pix}のFigure~1を用いて作成。}
+\caption{Pix2pixのスタイル変換の例\\
+図は文献~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:pix2pix_img}
 \end{center}
 \end{figure}
 
 Pix2pix~\cite{pix2pix}は、図\ref{fig:pix2pix_net}のようにネットワークの入力に変換元の画像を~Condition~(条件)~として与えることで画像の変換を行うGANである。特定の条件をネットワークの入力に与えるGANとしてはConditional~GAN~(CGAN)~\cite{CGAN}が初めて考案されたが、Pix2pixは与えられた条件画像の構造を維持したまま変換するという点でCGANとは異なる。具体的には、図\ref{fig:pix2pix_img}のように線画から写真への変換や白黒画像からカラー画像への変換を行うことができる。
+
+\subsection{Pix2pixの定式化}
 
 そして、Pix2pixにおいては、生成モデルの目的関数は式\ref{eq:pix2pix_G}、識別モデルの目的関数は式\ref{eq:pix2pix_D}として定式化される。
 
@@ -131,12 +192,13 @@ Pix2pix~\cite{pix2pix}は、図\ref{fig:pix2pix_net}のようにネットワー�
 
 ここで、$\boldsymbol{x}$は変換先の学習データ、$\boldsymbol{y}$は変換元の学習データ、$\boldsymbol{z}$は生成モデルへの入力のノイズ、$G(\boldsymbol{y},\boldsymbol{z};\theta_G)$は$\boldsymbol{y}$を条件としノイズ$\boldsymbol{z}$を入力とする生成モデル、$D(\boldsymbol{y},\cdot;\theta_D)$は$\boldsymbol{y}$を条件とする識別モデル、$\theta_G$は生成モデル$G$のパラメータ、$\theta_D$は識別モデル$D$のパラメータ、である。
 
-\subsection{生成モデルの構造}
+\subsection{Pix2pixの生成モデル}
 
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.95\hsize]{figure/u-net.png}
-\caption{生成モデルのネットワーク、図は文献~\cite{pix2pix}のFigure~1とFigure~3を用いて作成。}
+\caption{生成モデルのネットワーク\\
+図は文献~\cite{pix2pix}のFigure~1とFigure~3を用いて作成した。}
 \label{fig:u-net}
 \end{center}
 \end{figure}
@@ -147,12 +209,13 @@ Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder�
 
 また、ノイズとしては実ベクトルではなくDropoutが用いられる~\cite{Dropout}。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
 
-\subsection{識別モデルの構造}
+\subsection{Pix2pixの識別モデル}
 
 \begin{figure}[t]
 \begin{center}
 \includegraphics[width=0.95\hsize]{figure/patchgan.png}
-\caption{通常のGANとPatchGANの比較、図は文献~\cite{pix2pix}のFigure~1を用いて作成。}
+\caption{通常のGANとPatchGANの比較\\
+図は文献~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:patchgan}
 \end{center}
 \end{figure}
