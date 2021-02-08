@@ -1,9 +1,9 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  8 FEB 2021 12:22
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  8 FEB 2021 13:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/Users/daikisuyama/Desktop/Research/GraduateResearch/graduation_thesis.tex -halt-on-error
-(/Users/daikisuyama/Desktop/Research/GraduateResearch/graduation_thesis.tex
+**/Users/daikisuyama/Desktop/Research/GraduateResearch/myarticle/graduation_thesis.tex -halt-on-error
+(/Users/daikisuyama/Desktop/Research/GraduateResearch/myarticle/graduation_thesis.tex
 pLaTeX2e <2020-10-01>+1 (based on LaTeX2e <2020-10-01> patch level 2)
 L3 programming layer <2020-12-07> xparse <2020-03-03> (/usr/local/texlive/2020/texmf-dist/tex/platex/jsclasses/jsreport.cls
 Document Class: jsreport 2020/10/09 jsclasses (okumura, texjporg)
@@ -428,23 +428,23 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 File: figure/gakuon.png Graphic file (type bmp)
 <figure/gakuon.png>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 16.
+(Font)              scaled to size 8.64899pt on input line 14.
 LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 8.64899pt on input line 16.
+(Font)              scaled to size 8.64899pt on input line 14.
 LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 21.
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 21.
+(Font)              scaled to size 13.83836pt on input line 19.
 LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 21.
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 13.83836pt on input line 21.
+(Font)              scaled to size 13.83836pt on input line 19.
 [4
 
 ]
 File: figure/c4_guitar_harp.png Graphic file (type bmp)
 <figure/c4_guitar_harp.png>
- Excluding 'comment' comment.) (./background.tex [5] [6]
+ [5] Excluding 'comment' comment.) (./background.tex [6]
 第3章
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 11.
@@ -566,12 +566,12 @@ Excluding 'comment' comment.) [31
 
 ] [32] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7846 strings out of 479853
- 116065 string characters out of 5881677
+ 7851 strings out of 479853
+ 116125 string characters out of 5881677
  433523 words of memory out of 5000000
- 24945 multiletter control sequences out of 15000+600000
+ 24950 multiletter control sequences out of 15000+600000
  425468 words of font info for 130 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 68i,13n,75p,905b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,13n,75p,915b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (33 pages, 118316 bytes).
+Output written on latex_out/graduation_thesis.dvi (33 pages, 122388 bytes).
