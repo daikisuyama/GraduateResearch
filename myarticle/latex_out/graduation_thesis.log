@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  9 FEB 2021 11:44
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  9 FEB 2021 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -444,47 +444,47 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 ]
 File: figure/c4_guitar_harp.png Graphic file (type bmp)
 <figure/c4_guitar_harp.png>
- Excluding 'comment' comment. [5] Excluding 'comment' comment.) (./background.tex [6]
+ Excluding 'comment' comment. [5] [6] Excluding 'comment' comment.) (./background.tex [7]
 第3章
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 11.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 4.805pt on input line 11.
-[7
+[8
 
 ]
 File: figure/neuron.png Graphic file (type bmp)
 <figure/neuron.png>
- [8]
+ [9]
 File: figure/mlp_net0.png Graphic file (type bmp)
 <figure/mlp_net0.png>
 File: figure/mlp_net1.png Graphic file (type bmp)
 <figure/mlp_net1.png>
- [9] [10]
+ [10] [11]
 File: figure/convolution.png Graphic file (type bmp)
 <figure/convolution.png>
- [11]
+ [12]
 File: figure/pooling.png Graphic file (type bmp)
 <figure/pooling.png>
 File: figure/GAN_net.png Graphic file (type bmp)
 <figure/GAN_net.png>
- [12] [13]
+ [13] [14]
 File: figure/pix2pix_net.png Graphic file (type bmp)
 <figure/pix2pix_net.png>
 File: figure/pix2pix_img.png Graphic file (type bmp)
 <figure/pix2pix_img.png>
- [14]
+ [15]
 File: figure/u-net.png Graphic file (type bmp)
 <figure/u-net.png>
 File: figure/patchgan.png Graphic file (type bmp)
 <figure/patchgan.png>
-) [15] (./proposed_method.tex [16]
+) [16] (./proposed_method.tex [17]
 第4章
 File: figure/piano.png Graphic file (type bmp)
 <figure/piano.png>
 File: figure/pr_model.png Graphic file (type bmp)
 <figure/pr_model.png>
-[17
+[18
 
 ]
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
@@ -503,7 +503,7 @@ File: figure/pr_generator.png Graphic file (type bmp)
 <figure/pr_generator.png>
 File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
- [18] [19] [20]
+ [19] [20] [21]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
@@ -514,19 +514,19 @@ File: figure/88_88/f1s.png Graphic file (type bmp)
 <figure/88_88/f1s.png>
 File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
- [21]
+ [22]
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
 <figure/88_88_det/b7_0980_1000.png>
- [22]
+ [23]
 File: figure/88_88_det/e7_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/e7_0550_0700.png>
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/d7s_0550_0700.png>
- [23]
+ [24]
 File: figure/66_22_det/d4s_0100_0200.png Graphic file (type bmp)
 <figure/66_22_det/d4s_0100_0200.png>
 File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
@@ -537,11 +537,11 @@ File: figure/66_22_det/g4s_0150_0180.png Graphic file (type bmp)
 <figure/66_22_det/g4s_0150_0180.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
-) [24] (./conclusion.tex [25]
+) [25] (./conclusion.tex [26]
 第5章
-) (./thanks.tex [26
+) (./thanks.tex [27
 
-]) (latex_out/graduation_thesis.bbl [27
+]) (latex_out/graduation_thesis.bbl [28
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
@@ -552,22 +552,22 @@ LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 16.
-) (./appendix.tex [28
+) (./appendix.tex [29
 
 ]
 付録A
 File: figure/data_div.png Graphic file (type bmp)
 <figure/data_div.png>
-Excluding 'comment' comment.) [29
+Excluding 'comment' comment.) [30
 
-] [30] (latex_out/graduation_thesis.aux) ) 
+] [31] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
  7847 strings out of 479853
  116101 string characters out of 5881677
- 433530 words of memory out of 5000000
+ 433535 words of memory out of 5000000
  24946 multiletter control sequences out of 15000+600000
  425468 words of font info for 130 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  68i,13n,75p,915b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (31 pages, 119948 bytes).
+Output written on latex_out/graduation_thesis.dvi (32 pages, 122844 bytes).
