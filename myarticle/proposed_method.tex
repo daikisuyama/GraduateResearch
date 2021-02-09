@@ -1,4 +1,20 @@
-\chapter{提案モデル}
+\chapter{提案手法}
+
+本章では、実験で用いるデータセットや実験方法などについて説明した後、実験結果の考察を行う。
+
+\section{データセット}
+
+\begin{figure}[b]
+\begin{center}
+\includegraphics[width=\hsize]{figure/piano.png}
+\caption{88鍵のピアノの鍵盤}
+\label{fig:piano}
+\end{center}
+\end{figure}
+
+1秒のギターとハープの音の88組をデータセットとして用意した。また、データ形式としては非圧縮形式で波形を保持するWAV形式を採用した。88音としてはA0$\sim$C8の半音を全て選んだが、これらは図\ref{fig:piano}のような一般的な88鍵のピアノで用いられる音である。
+
+\section{提案モデル}
 
 \begin{figure}[b]
 \begin{center}
@@ -10,15 +26,15 @@
 
 本研究では、図\ref{fig:pr_model}のようなPix2pixを元に作成したモデルを提案する~\cite{pix2pix}。このモデルでは、生成モデルと識別のいずれにも条件として変換元の音を入力している。また、決定論的に音を生成するために、生成モデルの入力にノイズを使用していない。
 
-\section{音の表現}
+\subsection{音の表現}
 
 本研究では、音の表現として音響信号を用いる。また、44100~Hzのサンプリング周波数で1秒の長さの音をサンプリングし、量子化ビット数を16ビット、チャンネル数を1として固定する。よって、音は44100の長さを持つ16ビット整数の一次元配列となる。
 
-\section{ネットワーク構造}
+\subsection{ネットワーク構造}
 
 図\ref{fig:pr_gen}及び図\ref{fig:pr_dis}に生成モデルと識別モデルのネットワーク構造をそれぞれ示す。まず、図にある灰色の箱は複数チャンネルの特徴量マップである。箱の上側にチャンネル数を示し、箱の左側に特徴量マップとなる一次元配列の長さを示している。そして、ネットワーク構造の下にはそれぞれの矢印の操作を示している。ConvolutionとDeconvolutionについては~(カーネルサイズ、パディング数、ストライド幅)~としてそれぞれの値を示し、LeakeyReLUについては負の実数の定義域での一次関数の傾きの値を示す。
 
-\subsection{生成モデル}
+\subsubsection{生成モデル}
 
 \begin{figure}[b]
 \begin{center}
@@ -31,7 +47,7 @@
 
 本研究では、生成モデルに図\ref{fig:pr_gen}のような1つのスキップコネクションを持つEncoder-Decoder型のネットワークを用いた。それぞれのパラメータは図\ref{fig:pr_gen}に示す。
 
-\subsection{識別モデル}
+\subsubsection{識別モデル}
 
 \begin{figure}[b]
 \begin{center}
@@ -43,22 +59,6 @@
 \end{figure}
 
 本研究では、識別モデルに\ref{fig:pr_dis}のようなCNNを用いた。それぞれのパラメータは図\ref{fig:pr_dis}に示す。
-
-\chapter{実験}
-
-本章では、実験で用いるデータセットや実験方法などについて説明した後、実験結果の考察を行う。
-
-\section{データセット}
-
-\begin{figure}[t]
-\begin{center}
-\includegraphics[width=\hsize]{figure/piano.png}
-\caption{88鍵のピアノの鍵盤}
-\label{fig:piano}
-\end{center}
-\end{figure}
-
-1秒のギターとハープの音の88組をデータセットとして用意した。また、データ形式としては非圧縮形式で波形を保持するWAV形式を採用した。88音としてはA0$\sim$C8の半音を全て選んだが、これらは図\ref{fig:piano}のような一般的な88鍵のピアノで用いられる音である。
 
 \section{評価方法}
 

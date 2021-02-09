@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  8 FEB 2021 18:19
+This is e-pTeX, Version 3.14159265-p3.8.3-191112-2.6 (utf8.euc) (TeX Live 2020) (preloaded format=platex 2020.12.28)  9 FEB 2021 11:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -444,7 +444,7 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 ]
 File: figure/c4_guitar_harp.png Graphic file (type bmp)
 <figure/c4_guitar_harp.png>
- [5] Excluding 'comment' comment.) (./background.tex [6]
+ Excluding 'comment' comment. [5] Excluding 'comment' comment.) (./background.tex [6]
 第3章
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 6.72699pt on input line 11.
@@ -480,57 +480,53 @@ File: figure/patchgan.png Graphic file (type bmp)
 <figure/patchgan.png>
 ) [15] (./proposed_method.tex [16]
 第4章
+File: figure/piano.png Graphic file (type bmp)
+<figure/piano.png>
 File: figure/pr_model.png Graphic file (type bmp)
 <figure/pr_model.png>
 [17
 
 ]
+LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 37.
+LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 37.
+LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JT1/gt/m/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 37.
+LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
+(Font)              Font shape `JY1/gt/m/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
+(Font)              scaled to size 11.53198pt on input line 37.
 File: figure/pr_generator.png Graphic file (type bmp)
 <figure/pr_generator.png>
 File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
- [18] [19]
-第5章
-File: figure/piano.png Graphic file (type bmp)
-<figure/piano.png>
-[20
-
-]
+ [18] [19] [20]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
- [21]
-LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 120.
-LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 120.
-LaTeX Font Info:    Font shape `JT1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT1/gt/m/n' tried instead on input line 120.
-LaTeX Font Info:    Font shape `JT1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 120.
-LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY1/gt/m/n' tried instead on input line 120.
-LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
-(Font)              scaled to size 11.53198pt on input line 120.
 File: figure/88_88/c5.png Graphic file (type bmp)
 <figure/88_88/c5.png>
 File: figure/88_88/f1s.png Graphic file (type bmp)
 <figure/88_88/f1s.png>
 File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
+ [21]
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
- [22]
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
 <figure/88_88_det/b7_0980_1000.png>
- [23]
+ [22]
 File: figure/88_88_det/e7_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/e7_0550_0700.png>
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/d7s_0550_0700.png>
+ [23]
 File: figure/66_22_det/d4s_0100_0200.png Graphic file (type bmp)
 <figure/66_22_det/d4s_0100_0200.png>
 File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
@@ -541,11 +537,11 @@ File: figure/66_22_det/g4s_0150_0180.png Graphic file (type bmp)
 <figure/66_22_det/g4s_0150_0180.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
-) (./conclusion.tex [24] [25] [26]
-第6章
-[27
+) [24] (./conclusion.tex [25]
+第5章
+) (./thanks.tex [26
 
-]) (./thanks.tex [28]) (latex_out/graduation_thesis.bbl [29
+]) (latex_out/graduation_thesis.bbl [27
 
 ]
 LaTeX Font Info:    Font shape `JT1/gt/m/it' in size <10> not available
@@ -556,22 +552,22 @@ LaTeX Font Info:    Font shape `JY1/gt/m/it' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 16.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 16.
-) (./appendix.tex [30
+) (./appendix.tex [28
 
 ]
 付録A
 File: figure/data_div.png Graphic file (type bmp)
 <figure/data_div.png>
-Excluding 'comment' comment.) [31
+Excluding 'comment' comment.) [29
 
-] [32] (latex_out/graduation_thesis.aux) ) 
+] [30] (latex_out/graduation_thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 7851 strings out of 479853
- 116125 string characters out of 5881677
- 433523 words of memory out of 5000000
- 24950 multiletter control sequences out of 15000+600000
+ 7847 strings out of 479853
+ 116101 string characters out of 5881677
+ 433530 words of memory out of 5000000
+ 24946 multiletter control sequences out of 15000+600000
  425468 words of font info for 130 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  68i,13n,75p,915b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (33 pages, 122388 bytes).
+Output written on latex_out/graduation_thesis.dvi (31 pages, 119948 bytes).
