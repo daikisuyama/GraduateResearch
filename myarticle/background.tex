@@ -116,7 +116,7 @@ MLPでは、学習により任意の$i$で$W_i,\boldsymbol{b_i}$を適切に定�
 
 \begin{align}
     \label{eq:MLP3}
-    L_{MSE}&=\frac{1}{n}\sum _{j} {(\boldsymbol{y_j} - \hat{f}(\boldsymbol{x_j})^2}\\
+    L_{MSE}&=\frac{1}{n}\sum _{j} {(\boldsymbol{y_j} - \hat{f}(\boldsymbol{x_j}))^2}\\
     \label{eq:MLP4}
     L_{MAE}&=\frac{1}{n}\sum _{j} {|\boldsymbol{y_j} - \hat{f}(\boldsymbol{x_j})|}
 \end{align}
@@ -124,6 +124,7 @@ MLPでは、学習により任意の$i$で$W_i,\boldsymbol{b_i}$を適切に定�
 \section{CNN}
 
 %内容確認、図を作る
+%Deconv(転置)
 
 CNN~(Convolution~Neural~Network)~は主に画像認識の分野で成果を残している代表的な順伝播型ニューラルネットワークである~\cite{AlexNet}。CNNのネットワーク構造はMLPにおいて全結合層を脳の視覚野の構造を模倣するように置換したものとみなせる。また、脳の視覚野では、刺激の位置により異なったニューロンの活動電位が発生し、受容する情報の特徴によって受容野が階層構造を形成している~\cite{neocognition}。つまり、CNNは、人工ニューロン間の結合が局所領域に限定され、層ごとに受容する情報が異なるニューラルネットワークである。具体的には、画像の局所領域の特徴量を抽出する畳み込み層と局所領域の特徴量をまとめるプーリング層~(サブサンプリング層)~を繰り返した構造である~\cite{CNNsurvey}。また、以下では画像~(二次元データ)~でCNNの説明を行うが、他の次元のデータについても同様の説明を行うことができる。
 

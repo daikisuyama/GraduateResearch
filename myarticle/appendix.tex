@@ -1,16 +1,12 @@
 \appendix
 \chapter{}
-\label{sec:appendix}
 
-%ここの内容の充実(1枚になるように)
-%勾配降下法のパラメータを増やす
-%Adamを使った
-%torch.optim.Adam
-%ハイパーパラメータ(beta1,beta2,learning_rate)
-\section{実験時のパラメータ}
+\section{学習時のパラメータ}
 \label{sec:appendix_params}
 
-実験時のパラメータを表\ref{tab:params}に示す。
+%できればここの図は自分で
+
+提案モデルの学習時のパラメータを表\ref{tab:params}に示す。また、図\ref{fig:Adam}はAdamの挙動であり、Adamにおけるパラメータについても表\ref{tab:params}に示す。
 
 \begin{table}[h]
 \label{tab:params}
@@ -18,17 +14,30 @@
 \begin{center}
     \begin{tabular}{lr}\toprule
         パラメータ & 値 \\ \midrule
-        インプットのバッチサイズ & 1 \\ 
-        学習でのエポック数 & 1000 \\ 
-        学習での学習率 & 0.0002 \\ \bottomrule
+        バッチサイズ & 1 \\ 
+        エポック数 & 1000 \\ 
+        $\alpha$ & 0.0002 \\ 
+        $\beta_1,\beta_2$ & 0.5,0.999 \\
+        $\epsilon$ & $10^{-8}$ \\ \bottomrule
     \end{tabular}
 \end{center}
 \end{table}
 
+\begin{figure}[b]
+\begin{center}
+\includegraphics[width=0.9\hsize]{figure/Adam.png}
+\caption{Adamの挙動\\
+図は文献~\cite{Adam}より転載した。}
+\label{fig:Adam}
+\end{center}
+\end{figure}
+
+%ここで改ページ
+
 \section{データセットの分割}
 \label{sec:appendix_split}
 
-生成モデルの汎化能力の評価において4分割交差検証を行ったため、図\ref{fig:data_div}のようにデータセットを4つのサブセットに分割した。データセットの分割方法としては88音をシャッフルして配列に格納した後に22音ずつ順に選んでいる。
+生成モデルの汎化能力の評価において4分割交差検証を行ったため、図\ref{fig:data_div}のようにデータセットを4つのサブセットに分割した。また、88音をシャッフルして配列に格納した後に22音ずつ順に選ぶことで、データセットを4つに分割した。
 
 \begin{figure}[t]
 \begin{center}
