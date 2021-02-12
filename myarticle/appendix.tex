@@ -1,65 +1,80 @@
-\appendix
-\chapter{}
+\chapter{付録}
 
 \section{学習時のパラメータ}
 \label{sec:appendix_params}
 
-%できればここの図は自分で
+提案モデルの学習時のパラメータの値を表\ref{tab:params1}に示す。また、Adam~\cite{Adam}の疑似コード~(Algorithm~\ref{alg:Adam})~にあるハイパーパラメータの値を表\ref{tab:params2}に示す。
 
-提案モデルの学習時のパラメータを表\ref{tab:params}に示す。また、図\ref{fig:Adam}はAdamの挙動であり、Adamにおけるパラメータについても表\ref{tab:params}に示す。
-
-\begin{table}[h]
-\label{tab:params}
-\caption{}
+\begin{table}[b]
 \begin{center}
-    \begin{tabular}{lr}\toprule
-        パラメータ & 値 \\ \midrule
-        バッチサイズ & 1 \\ 
-        エポック数 & 1000 \\ 
-        $\alpha$ & 0.0002 \\ 
-        $\beta_1,\beta_2$ & 0.5,0.999 \\
-        $\epsilon$ & $10^{-8}$ \\ \bottomrule
-    \end{tabular}
+\begin{minipage}{0.49\hsize}
+    \begin{center}
+        \begin{tabular}{lr}\toprule
+            パラメータ & 値 \\ \midrule
+            バッチサイズ & 1 \\ 
+            エポック数 & 1000 \\ \bottomrule
+        \end{tabular}
+    \end{center}
+    \caption{}
+    \label{tab:params1}
+\end{minipage}
+\begin{minipage}{0.49\hsize}
+    \begin{center}
+        \begin{tabular}{lr}\toprule
+            パラメータ & 値 \\ \midrule
+            $\beta_1$ & 0.5 \\
+            $\beta_2$ & 0.999 \\
+            $\eta$ & 0.0002 \\ 
+            $\epsilon$ & $10^{-8}$ \\ \bottomrule
+        \end{tabular}
+    \end{center}
+    \caption{}
+    \label{tab:params2}
+\end{minipage}
 \end{center}
 \end{table}
 
-\begin{algorithm}[H]
-    \SetAlgoLined
-    \KwData{this text}
-    \KwResult{how to write algorithm with \LaTeX2e }
-    initialization\;
-    \While{not at end of this document}{
-    read current\;
-    \eIf{understand}{
-    go to next section\;
-    current section becomes this one\;
-    }{
-    go back to the beginning of current section\;
+\begin{algorithm}[b]
+\label{alg:Adam}
+    \DontPrintSemicolon
+    %\SetAlgoNoEnd\SetAlgoNoLine
+    \SetKwInOut{KwHyParam}{HyperParameter}
+    \SetKwInOut{KwParam}{Parameter}
+    \SetKwInOut{KwObFunc}{Objective~Function}
+    \KwHyParam{$\beta_1,\beta_2\in \interval[open left]{0}{1},\eta,\epsilon$}
+    \KwObFunc{$f$}
+    \KwParam{$\theta$}
+    \Init{
+        \settowidth{\maxwidth}{$m_1,m_2 \leftarrow 0,0$~}
+        \algalign{$t \leftarrow 0$~}{(Initialize~timestep)\;}
+        \algalign{$\theta \leftarrow \theta_0$~}{(Initialize~Parameter)\;}
+        \algalign{$m_1,m_2 \leftarrow 0,0$~}{(Initialize~moments)\;}
     }
+    \Proc{
+        \While{$\theta$ not converged}{
+            \settowidth{\maxwidth}{$m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$~}
+            \algalign{$t \leftarrow t+1$~}{(Update~timestep)\;}
+            \algalign{$g \leftarrow \nabla _{\theta} f(\theta)$~}{(Compute~gradient~of~$f(\theta)$)\;}
+            \algalign{$m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$~}{(Update~biased~moments)\;}
+            \algalign{$\hat{m_1},\hat{m_2} \leftarrow m_1/(1-\beta_1^t),m_2/(1-\beta_2^t)$~}{(Update~bias-corrected~moments)\;}
+            \algalign{$\theta \leftarrow \theta - \eta \cdot \hat{m_1}/(\sqrt{\hat{m_2}}+\epsilon)$~}{(Update~Parameter)\;}
+        }
+        \Return{$\theta$}\;
     }
-    \caption{How to write algorithms}
+\caption{Adam~\cite{Adam}の疑似コード}
 \end{algorithm}
-
-\begin{figure}[b]
-\begin{center}
-\includegraphics[width=0.9\hsize]{figure/Adam.png}
-\caption{Adamの挙動\\
-図は文献~\cite{Adam}より転載した。}
-\label{fig:Adam}
-\end{center}
-\end{figure}
 
 %ここで改ページ
 
 \section{データセットの分割}
 \label{sec:appendix_split}
 
-生成モデルの汎化能力の評価において4分割交差検証を行ったため、図\ref{fig:data_div}のようにデータセットを4つのサブセットに分割した。また、88音をシャッフルして配列に格納した後に22音ずつ順に選ぶことで、データセットを4つに分割した。
+22音ずつの4つのサブセットにデータセットを分割した~(図\ref{fig:data_div})~。また、データセットの4分割は、88音をシャッフルして配列に格納した後に22音ずつ順に選ぶことで実装した。
 
-\begin{figure}[t]
+\begin{figure}[h]
 \begin{center}
 \includegraphics[width=\hsize]{figure/data_div.png}
-\caption{データセットの分割方法}
+\caption{データセットのサブセット}
 \label{fig:data_div}
 \end{center}
 \end{figure}

@@ -27,12 +27,29 @@
 \usepackage{booktabs}
 \usepackage{titlesec}
 \usepackage{algorithm2e}
+\usepackage{interval}
 \setcounter{secnumdepth}{3}
 \newcommand{\argmax}{\mathop{\rm arg~max~}\limits}
 \newcommand{\argmin}{\mathop{\rm arg~min~}\limits}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{第\thechapter 章}{1zw}{}{}
+\titlespacing*{\chapter}{0pt}{*0}{*10}
 \titleformat*{\section}{\LARGE\bfseries}
 \titleformat*{\subsection}{\Large\bfseries}
 \titleformat*{\subsubsection}{\large\bfseries}
+\intervalconfig{soft open fences}
+
+\algnewcommand{\Init}[1]{
+  \textbf{Initialization:}
+  \hspace*{\algorithmicindent}\parbox[t]{\hsize}{\raggedright #1}
+}
+\algnewcommand{\Proc}[1]{
+  \textbf{Procedure:}
+  \hspace*{\algorithmicindent}\parbox[t]{\hsize}{\raggedright #1}
+}
+
+\newlength{\maxwidth}
+\newcommand{\algalign}[2]% #1 = text to left, #2 = text to right
+{\makebox[\maxwidth][l]{#1}~~#2}
 
 \begin{document}
 
@@ -61,10 +78,10 @@
 %感謝
 \input{thanks.tex}
 
-%参考文献
-\bibliography{ref}
-
 %付録
 \input{appendix.tex}
+
+%参考文献
+\bibliography{ref}
 
 \end{document}

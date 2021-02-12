@@ -21,11 +21,6 @@ $X,Y$をそれぞれ説明変数と目的変数の空間とすると、$f:X\righ
 
 また、$\hat{f}$はモデルの学習結果であるが、学習データに含まれる説明変数のみで最適であるため、$\hat{f}$は$f^{'}$に一致するとは限らない。したがって、学習データとは別に評価データを用意し、モデルの評価データに対する性能~(汎化性能)~を測定する必要がある。
 
-%機械学習は、教師あり学習、教師なし学習、強化学習、の三つに主に分類することができる。
-%教師あり学習とは、学習データにおいて入力値に対応する出力値がわかる機械学習の手法である。また、出力値が離散値である問題を分類問題と呼び、出力値が連続値である問題を回帰問題と呼ぶ。
-%教師なし学習とは、学習データにおいて入力値に対応する出力値がわからない機械学習の手法である。例としては、データ内で類似したもの同士をまとめるクラスタリングがあげられる。
-%強化学習とは、報酬を最大化させるために特定の状況での適切なアクションを選択する機械学習の手法である。
-
 \section{MLP}
 
 MLP~(Multilayer~perceptron)~はニューラルネットワークの一つであり、教師あり学習の手法として用いられる。
@@ -169,7 +164,7 @@ CNNにはMLPと比べて主に二つの利点がある~\cite{CNNsurvey}。一つ
 \begin{center}
 \includegraphics[width=\hsize]{figure/GAN_net.png}
 \caption{GANのネットワーク\\
-図は文献~\cite{pix2pix}のFigure~1を用いて作成した。}
+図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:GAN_net}
 \end{center}
 \end{figure}
@@ -200,7 +195,7 @@ GANでは、生成モデルの目的関数は式\ref{eq:GAN_G}、識別モデル
 \begin{center}
 \includegraphics[width=\hsize]{figure/pix2pix_net.png}
 \caption{Pix2pixのネットワーク\\
-図は文献~\cite{pix2pix}のFigure~1を用いて作成した。}
+図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:pix2pix_net}
 \end{center}
 \end{figure}
@@ -209,7 +204,7 @@ GANでは、生成モデルの目的関数は式\ref{eq:GAN_G}、識別モデル
 \begin{center}
 \includegraphics[width=\hsize]{figure/pix2pix_img.png}
 \caption{Pix2pixのスタイル変換の例\\
-図は文献~\cite{pix2pix}のFigure~1を用いて作成した。}
+図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:pix2pix_img}
 \end{center}
 \end{figure}
@@ -235,7 +230,7 @@ Pix2pix~\cite{pix2pix}は、図\ref{fig:pix2pix_net}のようにネットワー�
 \begin{center}
 \includegraphics[width=0.8\hsize]{figure/u-net.png}
 \caption{生成モデルのネットワーク\\
-図は文献~\cite{pix2pix}のFigure~1とFigure~3を用いて作成した。}
+図は~\cite{pix2pix}のFigure~1とFigure~3を用いて作成した。}
 \label{fig:u-net}
 \end{center}
 \end{figure}
@@ -250,7 +245,7 @@ Pix2pixの生成モデルには、図\ref{fig:u-net}のようにEncoder-Decoder�
 \begin{center}
 \includegraphics[width=0.6\hsize]{figure/patchgan.png}
 \caption{通常のGANとPatchGANの比較\\
-図は文献~\cite{pix2pix}のFigure~1を用いて作成した。}
+図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:patchgan}
 \end{center}
 \end{figure}
