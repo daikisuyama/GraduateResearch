@@ -1,15 +1,7 @@
 %注意
-%図や表現の最終確認と改善
-%図を適宜加える
-%数式はalignを使う
-%数式は自分の都合の良いように書き換える
-%半角括弧の前に~を置く
-%用語は省略しないで書く
-%使ったツールなどはURLも添付する
+%図の改善
 %実験は過去形に統一
-
-%スライドの内容を入れて大幅に変える
-
+%表現の統一
 \documentclass[10pt,a4paper,dvipdfmx]{jsreport}
 \pagestyle{plain}
 \bibliographystyle{junsrt}
@@ -60,19 +52,19 @@
 \setcounter{tocdepth}{2}
 \tableofcontents
 
-%初めに
+%はじめに
 \input{introduction.tex}
 
-%用語の説明
+%背景：音楽
 \input{explanation.tex}
 
-%ニューラルネットワークなどの説明
+%背景：ニューラルネットワーク
 \input{background.tex}
 
-%データセットとか実験方法とか結果
+%データセット、提案モデル、実験方法、実験結果
 \input{proposed_method.tex}
 
-%結論と展望
+%結論と課題
 \input{conclusion.tex}
 
 %感謝
