@@ -1,9 +1,8 @@
 %追加すべき事項
 % - 各種アルゴリズムの説明
 % - 実験結果の画像の添付
-\chapter{付録}
-
-\section{学習時のパラメータ}
+\appendix
+\chapter{学習時のパラメータ}
 \label{sec:appendix_params}
 
 提案モデルの学習時のパラメータの値を表\ref{tab:params1}に示す。また、Adam~\cite{Adam}の疑似コード~(Algorithm~\ref{alg:Adam})~にあるハイパーパラメータの値を表\ref{tab:params2}に示す。
@@ -67,9 +66,7 @@
 \caption{Adam~\cite{Adam}の疑似コード}
 \end{algorithm}
 
-%ここで改ページ
-
-\section{データセットの分割}
+\chapter{データセットの分割}
 \label{sec:appendix_split}
 
 22音ずつの4つのサブセットにデータセットを分割した~(図\ref{fig:data_div})~。また、データセットの4分割は、88音をシャッフルして配列に格納した後に22音ずつ順に選ぶことで実装した。
@@ -82,16 +79,14 @@
 \end{center}
 \end{figure}
 
-%ここで改ページ
-
-\section{実験結果}
+\chapter{実験結果}
 \label{sec:appendix_result}
 
 \ref{result}節に載せることのできなかった波形の図を本章に載せる
 
-\subsection{提案モデルの表現力の評価実験}
+\section{提案モデルの表現力の評価実験}
 
 提案モデルの評価実験を行ったところ、88音のうち87音については変換先のギターの音を表現できていると判断することができた。
 
 
-\subsection{提案モデルの汎化能力の評価実験}
+\section{提案モデルの汎化能力の評価実験}

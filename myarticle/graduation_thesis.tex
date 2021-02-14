@@ -20,14 +20,15 @@
 \usepackage{titlesec}
 \usepackage{algorithm2e}
 \usepackage{interval}
+\usepackage{apptools}
 %目次の設定
 \setcounter{secnumdepth}{3}
 %argmaxとargminのコマンド
 \newcommand{\argmax}{\mathop{\rm arg~max~}\limits}
 \newcommand{\argmin}{\mathop{\rm arg~min~}\limits}
 %chapter,section,subsection,subsubsectionの設定
-\titleformat{\chapter}[hang]{\Huge\bfseries}{第\thechapter 章}{1zw}{}{}
-\titlespacing*{\chapter}{0pt}{*0}{50pt}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\IfAppendix{\appendixname\Alph{chapter}}{第\thechapter 章}}{1zw}{}{}
+\titlespacing*{\chapter}{0pt}{0pt}{50pt}
 \titleformat*{\section}{\LARGE\bfseries}
 \titlespacing{\section}{0pt}{20pt}{15pt}
 \titleformat*{\subsection}{\Large\bfseries}
@@ -74,13 +75,13 @@
 %結論と課題
 \input{conclusion.tex}
 
-%感謝
+%謝辞
 \input{thanks.tex}
-
-%付録
-\input{appendix.tex}
 
 %参考文献
 \bibliography{ref}
+
+%付録
+\input{appendix.tex}
 
 \end{document}
