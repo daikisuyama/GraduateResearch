@@ -20,16 +20,23 @@
 \usepackage{titlesec}
 \usepackage{algorithm2e}
 \usepackage{interval}
+%目次の設定
 \setcounter{secnumdepth}{3}
+%argmaxとargminのコマンド
 \newcommand{\argmax}{\mathop{\rm arg~max~}\limits}
 \newcommand{\argmin}{\mathop{\rm arg~min~}\limits}
+%chapter,section,subsection,subsubsectionの設定
 \titleformat{\chapter}[hang]{\Huge\bfseries}{第\thechapter 章}{1zw}{}{}
-\titlespacing*{\chapter}{0pt}{*0}{*10}
+\titlespacing*{\chapter}{0pt}{*0}{50pt}
 \titleformat*{\section}{\LARGE\bfseries}
+\titlespacing{\section}{0pt}{20pt}{15pt}
 \titleformat*{\subsection}{\Large\bfseries}
+\titlespacing{\subsection}{0pt}{15pt}{10pt}
 \titleformat*{\subsubsection}{\large\bfseries}
+\titlespacing{\subsubsection}{0pt}{10pt}{6pt}
+%開き括弧の設定
 \intervalconfig{soft open fences}
-
+%algorithmのコマンド
 \algnewcommand{\Init}[1]{
   \textbf{Initialization:}
   \hspace*{\algorithmicindent}\parbox[t]{\hsize}{\raggedright #1}
@@ -38,7 +45,7 @@
   \textbf{Procedure:}
   \hspace*{\algorithmicindent}\parbox[t]{\hsize}{\raggedright #1}
 }
-
+%align用の箱
 \newlength{\maxwidth}
 \newcommand{\algalign}[2]% #1 = text to left, #2 = text to right
 {\makebox[\maxwidth][l]{#1}~~#2}
