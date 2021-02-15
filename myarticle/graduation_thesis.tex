@@ -3,32 +3,43 @@
 %現在形と過去形のチェック
 %表現の統一
 %改ページのチェック
-\documentclass[10pt,a4paper,dvipdfmx]{jsreport}
+
+%文字の大きさ、紙の大きさ、ドライバ、エンジン、文書クラス
+\documentclass[10pt,a4paper,dvipdfmx,uplatex]{jsreport}
+%ページ番号の出力
 \pagestyle{plain}
 \bibliographystyle{junsrt}
+%画像
 \usepackage{graphicx}
-\usepackage{url}
+%位置指定
 \usepackage{float}
+%ハイパーリンク
 \usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{algpseudocode}
-\usepackage{fancyhdr}
-\usepackage{bookmark}
+%数式
+\usepackage{amsmath,amssymb}
+%アルゴリズム
+\usepackage{algpseudocode,algorithm2e}
+%文字色
 \usepackage{color}
+%コメントアウト
 \usepackage{comment}
+%かっこいい表
 \usepackage{booktabs}
+%タイトルの調整
 \usepackage{titlesec}
-\usepackage{algorithm2e}
+%括弧の設定
 \usepackage{interval}
+%IfAppendix
 \usepackage{apptools}
+%参照の変更
+\usepackage{prettyref}
 %目次の設定
 \setcounter{secnumdepth}{3}
 %argmaxとargminのコマンド
-\newcommand{\argmax}{\mathop{\rm arg~max~}\limits}
-\newcommand{\argmin}{\mathop{\rm arg~min~}\limits}
+\newcommand{\argmax}{\mathop{\mathrm{arg~max~}}\limits}
+\newcommand{\argmin}{\mathop{\mathrm{arg~min~}}\limits}
 %chapter,section,subsection,subsubsectionの設定
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\IfAppendix{\appendixname\Alph{chapter}}{第\thechapter 章}}{1zw}{}{}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\IfAppendix{\appendixname\Alph{chapter}}{第\thechapter~章}}{1zw}{}{}
 \titlespacing*{\chapter}{0pt}{0pt}{50pt}
 \titleformat*{\section}{\LARGE\bfseries}
 \titlespacing{\section}{0pt}{20pt}{15pt}
@@ -51,6 +62,14 @@
 \newlength{\maxwidth}
 \newcommand{\algalign}[2]% #1 = text to left, #2 = text to right
 {\makebox[\maxwidth][l]{#1}~~#2}
+%参照の変更
+\newrefformat{sec}{\ref{#1}節}
+\newrefformat{fig}{図\ref{#1}}
+\newrefformat{alg}{Algorithm~\ref{#1}}
+\newrefformat{tab}{表\ref{#1}}
+\newrefformat{eq}{式\ref{#1}}
+\newrefformat{cha}{第\ref{#1}~章}
+\newrefformat{app}{\appendixname\ref{#1}}
 
 \begin{document}
 
@@ -70,17 +89,17 @@
 %背景：ニューラルネットワーク
 \input{background.tex}
 
-%データセット、提案モデル、実験方法、実験結果
+%提案手法
 \input{proposed_method.tex}
 
-%結論と課題
+%まとめ
 \input{conclusion.tex}
 
 %謝辞
 \input{thanks.tex}
 
 %参考文献
-\bibliography{ref}
+\bibliography{reference}
 
 %付録
 \input{appendix.tex}
