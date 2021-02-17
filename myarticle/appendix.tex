@@ -1,14 +1,13 @@
 %追加すべき事項
-% - 各種アルゴリズムの説明
 % - 実験結果の画像の添付
 % - DDSP解説
 \appendix
 \chapter{学習時のパラメータ}
 \label{app:params}
 
-提案モデルの学習時のパラメータの値を\prettyref{tab:params1}に示す。また、Adam~\cite{Adam}の疑似コード~(\prettyref{alg:Adam})~にあるハイパーパラメータの値を\prettyref{tab:params2}に示す。
+提案モデルの学習時のパラメータの値を\prettyref{tab:params1}に示す。また、\prettyref{tab:params2}はAdam~\cite{Adam}で用いるパラメータの値である。
 
-\begin{table}[b]
+\begin{table}[h]
 \centering
 \begin{minipage}{0.49\hsize}
     \centering
@@ -33,35 +32,6 @@
     \label{tab:params2}
 \end{minipage}
 \end{table}
-
-\begin{algorithm}[b]
-\label{alg:Adam}
-    \DontPrintSemicolon
-    \SetKwInOut{KwHyParam}{HyperParameter}
-    \SetKwInOut{KwParam}{Parameter}
-    \SetKwInOut{KwObFunc}{Objective~Function}
-    \KwHyParam{$\beta_1,\beta_2\in \interval[open left]{0}{1},\eta,\epsilon$}
-    \KwObFunc{$f$}
-    \KwParam{$\theta$}
-    \Init{
-        \settowidth{\maxwidth}{$m_1,m_2 \leftarrow 0,0$~}
-        \algalign{$t \leftarrow 0$~}{(Initialize~timestep)\;}
-        \algalign{$\theta \leftarrow \theta_0$~}{(Initialize~Parameter)\;}
-        \algalign{$m_1,m_2 \leftarrow 0,0$~}{(Initialize~moments)\;}
-    }
-    \Proc{
-        \While{$\theta$ not converged}{
-            \settowidth{\maxwidth}{$m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$~}
-            \algalign{$t \leftarrow t+1$~}{(Update~timestep)\;}
-            \algalign{$g \leftarrow \nabla _{\theta} f(\theta)$~}{(Compute~gradient~of~$f(\theta)$)\;}
-            \algalign{$m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$~}{(Update~biased~moments)\;}
-            \algalign{$\hat{m_1},\hat{m_2} \leftarrow m_1/(1-\beta_1^t),m_2/(1-\beta_2^t)$~}{(Update~bias-corrected~moments)\;}
-            \algalign{$\theta \leftarrow \theta - \eta \cdot \hat{m_1}/(\sqrt{\hat{m_2}}+\epsilon)$~}{(Update~Parameter)\;}
-        }
-        \Return{$\theta$}\;
-    }
-\caption{Adam~\cite{Adam}の疑似コード}
-\end{algorithm}
 
 \chapter{データセットの分割}
 \label{app:split}

@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  15 FEB 2021 22:10
+This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  16 FEB 2021 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -513,9 +513,9 @@ File: figure/gakuon2.png Graphic file (type bmp)
  [5] [6] [7]) (./background.tex [8]
 第3章
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 21.
+(Font)              scaled to size 6.47278pt on input line 18.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 21.
+(Font)              scaled to size 4.62341pt on input line 18.
 [9
 
 ]
@@ -526,99 +526,127 @@ File: figure/neuron.png Graphic file (type bmp)
 ]
 File: figure/mlp_net0.png Graphic file (type bmp)
 <figure/mlp_net0.png>
+File: figure/mlp_net1.png Graphic file (type bmp)
+<figure/mlp_net1.png>
  [11
 
 ]
-File: figure/mlp_net1.png Graphic file (type bmp)
-<figure/mlp_net1.png>
- [12
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 133.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 133.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 133.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 133.
+LaTeX Font Info:    Font shape `JT2/gt/m/it' in size <10> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 155.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 155.
+LaTeX Font Info:    Font shape `JY2/gt/m/it' in size <10> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 155.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 155.
+
+Overfull \hbox (20.00002pt too wide) in paragraph at lines 144--156
+| [] 
+ []
+
+
+Overfull \hbox (20.00002pt too wide) in paragraph at lines 144--156
+| [] 
+ []
+
+[12
 
 ] [13
+
+] [14
 
 ]
 File: figure/convolution.png Graphic file (type bmp)
 <figure/convolution.png>
- [14
+ [15
 
 ]
 File: figure/pooling.png Graphic file (type bmp)
 <figure/pooling.png>
- [15
+ [16
 
 ]
 File: figure/GAN_net.png Graphic file (type bmp)
 <figure/GAN_net.png>
- [16
+ [17
 
 ]
 File: figure/pix2pix_net.png Graphic file (type bmp)
 <figure/pix2pix_net.png>
- [17
+ [18
 
 ]
 File: figure/pix2pix_img.png Graphic file (type bmp)
 <figure/pix2pix_img.png>
- [18
+ [19
 
 ]
 File: figure/u-net.png Graphic file (type bmp)
 <figure/u-net.png>
 File: figure/patchgan.png Graphic file (type bmp)
 <figure/patchgan.png>
-) (./proposed_method.tex [19
+) (./proposed_method.tex [20
 
 ]
 第4章
 File: figure/piano.png Graphic file (type bmp)
 <figure/piano.png>
-[20
+[21
 
 ]
 File: figure/pr_model.png Graphic file (type bmp)
 <figure/pr_model.png>
 File: figure/pr_generator.png Graphic file (type bmp)
 <figure/pr_generator.png>
- [21
+ [22
 
 ]
 File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
- [22
-
-] [23
+ [23
 
 ]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
+ [24
+
+]
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/d7s_0550_0700.png>
 File: figure/88_88_det/e7_0550_0700.png Graphic file (type bmp)
 <figure/88_88_det/e7_0550_0700.png>
- [24
-
-]
 File: figure/66_22_det/d4s_0100_0200.png Graphic file (type bmp)
 <figure/66_22_det/d4s_0100_0200.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
+ [25
+
+]
 File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
 <figure/66_22_det/d1_0300_0500.png>
 File: figure/66_22_det/f6_0070_0080.png Graphic file (type bmp)
 <figure/66_22_det/f6_0070_0080.png>
- [25
-
-]
 File: figure/88_88/c5.png Graphic file (type bmp)
 <figure/88_88/c5.png>
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
+ [26
+
+]
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
 <figure/88_88_det/b7_0980_1000.png>
- [26]
 File: figure/88_88/f1s.png Graphic file (type bmp)
 <figure/88_88/f1s.png>
 File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
@@ -631,37 +659,10 @@ File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 
 ]) (latex_out/graduation_thesis.bbl [29
 
-]
-LaTeX Font Info:    Font shape `JT2/gt/m/it' in size <10> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 30.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 30.
-LaTeX Font Info:    Font shape `JY2/gt/m/it' in size <10> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 30.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 30.
-) (./appendix.tex [30
+]) (./appendix.tex [30
 
 ]
 付録A
-LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 40.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 40.
-LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 40.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 40.
-
-Overfull \hbox (20.00002pt too wide) in paragraph at lines 51--63
-| [] 
- []
-
-
-Overfull \hbox (20.00002pt too wide) in paragraph at lines 51--63
-| [] 
- []
-
 [31
 
 ]
@@ -680,15 +681,15 @@ File: figure/data_div.png Graphic file (type bmp)
 
 ] (latex_out/graduation_thesis.aux)
 Package rerunfilecheck Info: File `graduation_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4251A7BD8FC96DD50468BD5588506878;4272.
+(rerunfilecheck)             Checksum: 71A1F2D497A12D22750EBF2A27B3FA23;4167.
  ) 
 Here is how much of TeX's memory you used:
- 8937 strings out of 479847
- 140514 string characters out of 5881593
- 470953 words of memory out of 5000000
- 26009 multiletter control sequences out of 15000+600000
+ 8935 strings out of 479847
+ 140501 string characters out of 5881593
+ 470792 words of memory out of 5000000
+ 26007 multiletter control sequences out of 15000+600000
  424006 words of font info for 128 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  68i,16n,75p,1041b,637s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (35 pages, 133008 bytes).
+Output written on latex_out/graduation_thesis.dvi (35 pages, 132432 bytes).

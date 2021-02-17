@@ -1,68 +1,56 @@
 %必要事項
 %論文に目を通す
 %追加すべき事項
-% - バッチサイズ
-% - 誤差逆伝播
-% - バイアス項
-% - Deconv
-% - Dilation
-% - 特徴量マップ
+% - Deconv(CNN)
+% - 特徴量マップ(CNN)
 % - CNNの図
+% - MLPの学習(Now)
 \chapter{背景：ニューラルネットワーク}
 
 本章では、教師あり学習とMLPの説明を行った後、MLPの応用例であるCNN及びGANを紹介する。そして、これらの応用例を組み合わせたPix2pixを紹介する。
 
 \section{教師あり学習}
 
-教師あり学習は機械学習の手法の一つである。機械学習とは、学習データと呼ばれるデータに含まれる特徴をコンピュータプログラム~(モデル)~が自動で学習し、学習したモデルを用いて何らかの問題を解く手法のことである。また、教師あり学習では、説明変数と対応するべき目的変数のペアとして学習データが与えられる。
+教師あり学習とは、学習データとして説明変数と対応するべき目的変数のペアが与えられる機械学習の手法である。また、機械学習とは、学習データに含まれる特徴をコンピュータプログラム~(モデル)~が自動で学習し、学習したモデルを用いて何らかの問題を解く手法のことである。
 
 \subsection{教師あり学習の目的}
 
-$X,Y$をそれぞれ説明変数と目的変数の空間とすると、$f:X\rightarrow Y$のうち任意の$\boldsymbol{x} \in X$について正しい値を出力する関数$f^{'}$を表現するモデルを作成することが教師あり学習の目的である。また、$\boldsymbol{x} \in X$について、$f(\boldsymbol{x})$の$f^{'}(\boldsymbol{x})$への近似の程度を評価する関数を損失関数$L$と呼ぶ。よって、損失関数は$\mathbb{R}^+$を非負の実数として$L:Y \times Y \rightarrow \mathbb{R}^+$と定義でき、値が小さいほど近似の程度が良い。
+$X,Y$をそれぞれ説明変数と目的変数の集合とすると、$f:X\rightarrow Y$のうち任意の$\boldsymbol{x} \in X$について正しい値$\boldsymbol{y} \in Y$を出力する関数$f^{'}$を表現するモデルを作成することが教師あり学習の目的である。
+
+また、$f(\boldsymbol{x})$の$f^{'}(\boldsymbol{x})$への近似の程度を評価する関数を損失関数$L$と呼ぶ。損失関数$L$は$L:Y \times Y \rightarrow \mathbb{R}^+$として定義され、値が小さいほど近似の程度が良い関数である。$\mathbb{R}^+$は非負の実数を表す。
+
+ここで、モデルのパラメータを$\theta$とすると、$\theta$が実行可能解で損失関数の期待値を返す関数が目的関数となる最適化問題として教師あり学習を捉えることができる。また、この時の最適解$\theta^{'}$により定まる関数が$f^{'}$であり、目的関数は\ref{eq:SL0}として定式化される。
+
+\begin{align}
+    \label{eq:SL0}
+    \mathbb{E}[L(\boldsymbol{y},f(\boldsymbol{x},\theta))]
+\end{align}
 
 \subsection{教師あり学習モデルの学習と汎化}
 
-任意の$\boldsymbol{x} \in X$と対応する$\boldsymbol{y} \in Y$の組を用意することは現実的には難しいため、学習データはランダムに抽出されているという仮定のもとにある。この時、学習データに含まれる任意の説明変数$\boldsymbol{x}$について損失関数$L$の値の期待値を小さくするように学習を行う。すなわち、目的関数は\prettyref{eq:SL1}となる。
+任意の$\boldsymbol{x}$と対応する$\boldsymbol{y}$の組を用意することは現実的には難しい。したがって、学習データのみでの最適化問題を解いて最適解として$\hat{\theta}$を求めることが教師あり学習モデルの学習の目標である。
 
-\begin{align}
-    \label{eq:SL1}
-    \hat{f}=\argmin _{f} \mathbb{E}[L(\boldsymbol{y},f(\boldsymbol{x}))]
-\end{align}
-
-また、$\hat{f}$はモデルの学習結果であるが、学習データに含まれる説明変数のみで最適であるため、$\hat{f}$は$f^{'}$に一致するとは限らない。したがって、学習データとは別に評価データを用意し、モデルの評価データに対する性能~(汎化性能)~を測定する必要がある。
+しかし、$\hat{\theta}$により定まる$\hat{f}$は$f^{'}$に一致するとは限らない。従って、$\hat{f}$の$f^{'}$への近似の程度を評価する必要がある。そこで、学習データとは別のデータ~(評価データ)~を用意し、評価データについての損失関数の期待値を求めるなどにより未知のデータへのモデルの性能~(汎化性能)~を評価する。
 
 %ここで改ページ
 \clearpage
 
 \section{MLP}
 
-MLP~(Multilayer~perceptron)~はニューラルネットワークの一つであり、教師あり学習の手法として用いられる。
+MLP~(Multilayer~perceptron)~はニューラルネットワークの一つであり、教師あり学習の手法として用いられる。また、ニューラルネットワークとは、神経細胞と神経細胞間のシナプス結合を通る電気信号により実現される脳の機能に類似した数理モデルの総称である。
 
-\subsection{ニューラルネットワーク}
-
-ニューラルネットワークは、神経細胞と神経細胞間のシナプス結合を通る電気信号により実現される脳の機能に類似した数理モデルである。ニューラルネットワークでは、神経細胞を人工ニューロンとして表現し、シナプス結合の強度を人工ニューロン間の重みとして表現する。
-
-\subsection{人工ニューロンの構造と定式化}
+\subsection{MLPと脳機能の関係}
 \label{sec:neuron}
 
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.6\hsize]{figure/neuron.png}
-\caption{人工ニューロン}
-\label{fig:neuron}
-\end{figure}
-
-MLPにおける人工ニューロンは\prettyref{fig:neuron}のように$m$個の入力$x_i$に対応した重み$w_i$をかけた重み付き和に対して活性関数$\theta$を作用させた出力$y$を返す。つまり、\prettyref{eq:MLP0_0}として定式化される。
+MLPでは、神経細胞を\prettyref{fig:neuron}のような人工ニューロンとして表現する。この人工ニューロンでは、樹状突起からの入力を$x_i$として表し、神経細胞間の結合強度を重み$W_i$として表し、活動電位の非線形な発生を活性化関数$\theta$として表し、神経細胞の活動電位の発生の閾値を調整するオフセットをバイアス項$b$として表す。そして、$W_i$を重みとした$x_i$の重み付き和に$b$を加えた値に活性関数$\theta$を作用させた出力$y$を返す。つまり、\prettyref{eq:MLP0_0}として定式化される。
 
 \begin{align}
     \label{eq:MLP0_0}
-    \boldsymbol{y}=\theta(\sum_{i=1}^{m} W_{i} \times \boldsymbol{x_i})
+    y=\theta(\sum_{i=1}^{m} W_{i} \times x_i+b)
 \end{align}
 
-%ここで改ページ
-\clearpage
-
-また、活性化関数としては出力値を調整するために適当な関数が選ばれる。多くの場合は\prettyref{eq:ReLU}のReLU関数や\prettyref{eq:Sigmoid}のSigmoid関数などの非線形関数が用いられる。
+%ここの表現
+活性化関数としてはReLU関数~(\prettyref{eq:ReLU})~やSigmoid関数~(\prettyref{eq:Sigmoid})~などの非線形関数が選ばれる。また、誤差逆伝播法を用いるために、一般には活性化関数に微分可能な関数を選ぶ。
 
 \begin{align}
     \label{eq:ReLU}
@@ -71,67 +59,122 @@ MLPにおける人工ニューロンは\prettyref{fig:neuron}のように$m$個�
     \theta_{Sigmoid}(x)&=\frac{1}{1+e^{-x}}
 \end{align}
 
+\begin{figure}[b]
+\centering
+\includegraphics[width=0.5\hsize]{figure/neuron.png}
+\caption{人工ニューロン}
+\label{fig:neuron}
+\end{figure}
+
+%ここで改ページ
+\clearpage
 
 \subsection{MLPの構造と定式化}
 
-MLPの構成単位は、\prettyref{sec:neuron}の人工ニューロンが複数並んだ層である~(\prettyref{fig:MLP_net0})~。この層の出力$\boldsymbol{y}$は\prettyref{eq:MLP0_0}より\prettyref{eq:MLP0_1}として導出できる。また、$\boldsymbol{x} \mapsto W\boldsymbol{x}+\boldsymbol{b}$はアフィン変換と呼ばれ、$\theta$は活性化関数である。
+MLPは、\prettyref{sec:neuron}に示す人工ニューロンが複数並んだ層~(\prettyref{fig:MLP_net0})~により構成され、順伝播型の層構造のニューラルネットワークを形成する~(\prettyref{fig:MLP_net1})~。また、層構造は入力層と中間層と出力層を持ち、入力層と出力層はそれぞれ一層のみである。そして、層を構成する人工ニューロンの出力は次の層の全ての人工ニューロンに渡されるため、MLPを構成する層を全結合層と呼ぶ。
 
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.6\hsize]{figure/mlp_net0.png}
-\caption{MLPの一層}
-\label{fig:MLP_net0}
-\end{figure}
+この時、\prettyref{eq:MLP0_0}を元にしてMLPの一層の出力$\boldsymbol{y}$は\prettyref{eq:MLP0_1}として導出される。$\boldsymbol{x},\boldsymbol{y},\boldsymbol{b}$は第$i$成分が層の$i$番目の人工ニューロンに対応するベクトルであり、それぞれ入力、出力、バイアス、である。そして、$W$は$(i,j)$成分が層の$j$番目の人工ニューロンの$i$番目の出力の重みに対応する重み行列であり、活性化関数$\theta$はそれぞれの出力に対して同様に作用する。
 
 \begin{align}
     \label{eq:MLP0_1}
-    \boldsymbol{y}&=\theta(W\boldsymbol{x}+\boldsymbol{b})
+    \boldsymbol{y}=\theta(W\boldsymbol{x}+\boldsymbol{b})
 \end{align}
 
-ここで、$\boldsymbol{x}$は層の入力となる実ベクトル、$\boldsymbol{y}$は層の出力となる実ベクトル、$\boldsymbol{b}$は第$i$成分が$i$番目の出力に対応したバイアス項となる実ベクトル、$W$は$(i,j)$成分が$i$番目の人工ニューロンと$i$番目の出力に対応した重みとなる実ベクトル、である。
-
-%ここで改ページ
-\clearpage
-
-MLPは、\prettyref{fig:MLP_net0}を一層とした順伝播型の階層構造のニューラルネットワークである~(\prettyref{fig:MLP_net1})~。一層ずつの入力層と出力層、その間の中間層から構成される。層を構成する人工ニューロンの出力は次の層の全ての人工ニューロンに渡されるため、MLPを構成する層を全結合層と呼ぶ。また、$n$を層数とおくことで、MLPは\prettyref{eq:MLP0_2}として定式化される。
-
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.8\hsize]{figure/mlp_net1.png}
-\caption{MLPのネットワーク}
-\label{fig:MLP_net1}
-\end{figure}
+\prettyref{eq:MLP0_1}より、MLPは\prettyref{eq:MLP0_2}として定式化される。また、$n$は層数であり、下付きの数字は何番目の層であるかを表す。
 
 \begin{align}
     \label{eq:MLP0_2}
-    \hat{f}(\boldsymbol{x})&=\theta_{n}(W_{n}(\theta_{n-1}(W_{n-1}\cdots(\theta_{1}(W_{1}\boldsymbol{x}+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
+    \boldsymbol{y}=\theta_{n}(W_{n}(\theta_{n-1}(W_{n-1}\cdots(\theta_{1}(W_{1}\boldsymbol{x}+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
 \end{align}
 
-ここで、$\boldsymbol{x}$は実ベクトル、$\theta_{i}$は$i$番目の活性化関数、$W_{i}$は$i$番目の行列、$\boldsymbol{b_{i}}$は$i$番目の実ベクトル、である。
-
-
-\subsection{MLPの学習}
-
-MLPではバイアス項と層の重みを更新する学習の結果として、任意の$i$で$W_i,\boldsymbol{b_i}$が適切に定まる。また、教師あり学習では損失関数を減少させる方向に学習は進むため、それぞれ\prettyref{eq:MLP2_0}と\prettyref{eq:MLP2_1}にしたがって$W_i,\boldsymbol{b_i}$は更新される~(勾配降下法)~。
-
-\begin{align}
-    \label{eq:MLP2_0}
-    W _i &\leftarrow W_i - \eta \frac{d L}{dW_i} \\
-    \label{eq:MLP2_1}
-    \boldsymbol{b _i} &\leftarrow \boldsymbol{b_i} - \eta \frac{d L}{dW_i}
-\end{align}
+\begin{figure}[b]
+\centering
+\begin{minipage}{0.4\hsize}
+\centering
+\includegraphics[width=0.95\hsize]{figure/mlp_net0.png}
+\caption{MLPの一層}
+\label{fig:MLP_net0}
+\end{minipage}
+\begin{minipage}{0.55\hsize}
+\centering
+\includegraphics[width=0.9\hsize]{figure/mlp_net1.png}
+\caption{MLPのネットワーク}
+\label{fig:MLP_net1}
+\end{minipage}
+\end{figure}
 
 %ここで改ページ
 \clearpage
 
-ここで、$L$は損失関数であり、$\eta$は学習率と呼ばれる任意の正の実数である。損失関数としては\prettyref{eq:MLP3}の平均二乗誤差$L_{MSE}$や\prettyref{eq:MLP4}の平均絶対誤差$L_{MAE}$などが用いられる。また、学習率の更新化における最適化アルゴリズムとしてはAdam~\cite{Adam}やStochastic~Gradient~Descent~\cite{SGD}などが用いられる。
+\subsection{MLPの学習}
+
+MLPでは、説明変数と目的変数を実ベクトルに変換した後に学習を行う。また、実行可能解はパラメータである$W_i,\boldsymbol{b_i}$であり、最適解を求めるためにそれぞれ更新を行う。この時、損失関数$L$の勾配を用いた最適化アルゴリズム~(勾配降下法)~を一般には用いる。
+
+\subsubsection{最急降下法}
+
+最急降下法は最も急な降下方向である勾配の反対方向へのパラメータの更新を行う勾配降下法のアルゴリズムである。また、$W_i,\boldsymbol{b_i}$は\prettyref{eq:MLP2_0}及び\prettyref{eq:MLP2_1}にしたがって更新される。ここで、$\eta$は学習率と呼ばれる任意の正の実数であり、更新の程度を指定する。
 
 \begin{align}
-    \label{eq:MLP3}
-    L_{MSE}&=\frac{1}{n}\sum _{j} {(\boldsymbol{y_j} - \hat{f}(\boldsymbol{x_j}))^2}\\
-    \label{eq:MLP4}
-    L_{MAE}&=\frac{1}{n}\sum _{j} {|\boldsymbol{y_j} - \hat{f}(\boldsymbol{x_j})|}
+    \label{eq:MLP2_0}
+    W _i &\leftarrow W_i - \eta \frac{\partial L}{\partial W_i} \\
+    \label{eq:MLP2_1}
+    \boldsymbol{b _i} &\leftarrow \boldsymbol{b_i} - \eta \frac{\partial L}{\partial \boldsymbol{b_i}}
 \end{align}
+
+\subsubsection{Adam}
+\label{sec:Adam}
+
+%Adamの説明
+Adam~\cite{Adam}は勾配降下法の中で最も用いられるアルゴリズムである。
+
+\begin{algorithm}[b]
+\label{alg:Adam}
+    \DontPrintSemicolon
+    \SetKwInOut{KwHyParam}{HyperParameter}
+    \SetKwInOut{KwParam}{Parameter}
+    \SetKwInOut{KwObFunc}{Objective~Function}
+    \KwHyParam{$\beta_1,\beta_2\in \interval[open left]{0}{1},\eta,\epsilon$}
+    \KwObFunc{$f$}
+    \KwParam{$\theta$}
+    \Init{
+        \settowidth{\maxwidth}{$m_1,m_2 \leftarrow 0,0$~}
+        \algalign{$t \leftarrow 0$~}{(Initialize~timestep)\;}
+        \algalign{$\theta \leftarrow \theta_0$~}{(Initialize~Parameter)\;}
+        \algalign{$m_1,m_2 \leftarrow 0,0$~}{(Initialize~moments)\;}
+    }
+    \Proc{
+        \While{$\theta$ not converged}{
+            \settowidth{\maxwidth}{$m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$~}
+            \algalign{$t \leftarrow t+1$~}{(Update~timestep)\;}
+            \algalign{$g \leftarrow \nabla _{\theta} f(\theta)$~}{(Compute~gradient~of~$f(\theta)$)\;}
+            \algalign{$m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$~}{(Update~biased~moments)\;}
+            \algalign{$\hat{m_1},\hat{m_2} \leftarrow m_1/(1-\beta_1^t),m_2/(1-\beta_2^t)$~}{(Update~bias-corrected~moments)\;}
+            \algalign{$\theta \leftarrow \theta - \eta \cdot \hat{m_1}/(\sqrt{\hat{m_2}}+\epsilon)$~}{(Update~Parameter)\;}
+        }
+        \Return{$\theta$}\;
+    }
+\caption{Adam~\cite{Adam}の疑似コード}
+\end{algorithm}
+
+%ここで改ページ
+\clearpage
+
+\subsubsection{誤差逆伝播法}
+
+%Bishop本に書いてある
+
+勾配降下法においてはそれぞれのパラメータについて勾配を求める必要がある。この時、高速に勾配を求める方法として誤差逆伝播法が一般に用いられる。誤差を求める際は入力層から出力層の方向で計算を行うが~(順伝播)~、誤差逆伝播法では誤差を出力層から入力層の方向に伝えていく~(逆伝播)~。
+
+
+
+
+\subsubsection{バッチ処理}
+%誤差逆伝播
+
+
+
+%ここで改ページ
+\clearpage
 
 \section{CNN}
 
@@ -200,7 +243,7 @@ GAN~(Generative~Adversarial~Networks)~\cite{GAN}はニューラルネットワ�
 
 \subsection{GANの学習}
 
-生成モデルと識別モデルの二つのネットワークはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータがFake~data~(生成モデルの出力)~とReal~data~(学習データ)~のどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するように、Noise~(ノイズ)~を元に学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。また、ノイズは適当な次元の実ベクトルであり、生成モデルの出力の揺らぎを表現する潜在変数の役割を果たす。
+生成モデルと識別モデルの二つのネットワークはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータがFake~data~(生成モデルの出力)~とReal~data~(学習データ)~のどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するように、Noise~(ノイズ)~を元に学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。また、ノイズは適当な次元のベクトルであり、生成モデルの出力の揺らぎを表現する潜在変数の役割を果たす。
 
 %ここで改ページ
 \clearpage
@@ -259,7 +302,7 @@ Pix2pix~\cite{pix2pix}は、\prettyref{fig:pix2pix_net}のようにネットワ�
 
 Pix2pixの生成モデルには、\prettyref{fig:u-net}のようにEncoder-Decoder型のネットワークが用いられる。ただし、変換元の画像と返還後の画像で共通する基本構造であるピクセルの対応関係を維持するために、スキップコネクションが用いられる。このスキップコネクションはU-net~\cite{u-net}で用いられたものと同様の働きをする。具体的には、エンコード前の特徴量マップをデコード時にも利用しており、この特徴量マップによりピクセルの対応関係が維持されると期待される。
 
-また、ノイズとしては実ベクトルではなくDropout~\cite{Dropout}が用いられる。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
+また、ノイズとしては通常のGANのようなベクトルではなくDropout~\cite{Dropout}が用いられる。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
 
 %ここで改ページ
 \clearpage
