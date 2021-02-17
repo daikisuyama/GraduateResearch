@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  16 FEB 2021 22:11
+This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  17 FEB 2021 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -357,38 +357,77 @@ Package: interval 2019/03/06 v0.4
 Package: apptools 2012/11/28 v1.0 Tools for customizing appendices
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/prettyref/prettyref.sty
 Package: prettyref 1998/07/09 v3.0
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip78
+\cftbeforetoctitleskip=\skip79
+\cftaftertoctitleskip=\skip80
+\cftbeforepartskip=\skip81
+\cftpartnumwidth=\skip82
+\cftpartindent=\skip83
+\cftbeforechapskip=\skip84
+\cftchapindent=\skip85
+\cftchapnumwidth=\skip86
+\cftbeforesecskip=\skip87
+\cftsecindent=\skip88
+\cftsecnumwidth=\skip89
+\cftbeforesubsecskip=\skip90
+\cftsubsecindent=\skip91
+\cftsubsecnumwidth=\skip92
+\cftbeforesubsubsecskip=\skip93
+\cftsubsubsecindent=\skip94
+\cftsubsubsecnumwidth=\skip95
+\cftbeforeparaskip=\skip96
+\cftparaindent=\skip97
+\cftparanumwidth=\skip98
+\cftbeforesubparaskip=\skip99
+\cftsubparaindent=\skip100
+\cftsubparanumwidth=\skip101
+\cftbeforeloftitleskip=\skip102
+\cftafterloftitleskip=\skip103
+\cftbeforefigskip=\skip104
+\cftfigindent=\skip105
+\cftfignumwidth=\skip106
+\c@lofdepth=\count293
+\c@lotdepth=\count294
+\cftbeforelottitleskip=\skip107
+\cftafterlottitleskip=\skip108
+\cftbeforetabskip=\skip109
+\cfttabindent=\skip110
+\cfttabnumwidth=\skip111
 )
-\maxwidth=\skip78
+\maxwidth=\skip112
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 File: l3backend-dvipdfmx.def 2020-09-24 L3 backend support: dvipdfmx
-\g__graphics_track_int=\count293
+\g__graphics_track_int=\count295
 \l__pdf_internal_box=\box79
-\g__pdf_backend_object_int=\count294
-\g__pdf_backend_annotation_int=\count295
+\g__pdf_backend_object_int=\count296
+\g__pdf_backend_annotation_int=\count297
 ) (latex_out/graduation_thesis.aux)
 \openout1 = `graduation_thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-Package hyperref Info: Link coloring OFF on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
+LaTeX Font Info:    ... okay on input line 95.
+Package hyperref Info: Link coloring OFF on input line 95.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -396,11 +435,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count296
+\c@section@level=\count298
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 95.
+LaTeX Info: Redefining \pageref on input line 95.
+LaTeX Info: Redefining \nameref on input line 95.
  (latex_out/graduation_thesis.out) (latex_out/graduation_thesis.out)
 \@outlinefile=\write4
 \openout4 = `graduation_thesis.out'.
@@ -417,41 +456,47 @@ LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
  [1
 
 ])
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 90.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 90.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 90.
+(Font)              scaled to size 23.0061pt on input line 102.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 90.
+(Font)              scaled to size 23.0061pt on input line 102.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 90.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 90.
+(Font)              scaled to size 23.0061pt on input line 102.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 90.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 90.
+(Font)              scaled to size 23.0061pt on input line 102.
  (latex_out/graduation_thesis.toc
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 1.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 9.24683pt on input line 1.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 3.
+(Font)              scaled to size 6.47278pt on input line 2.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 3.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+(Font)              scaled to size 4.62341pt on input line 2.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-])
+) [1])
 \tf@toc=\write5
 \openout5 = `graduation_thesis.toc'.
 
- (./introduction.tex [2]
+ (latex_out/graduation_thesis.lof [2] [3])
+\tf@lof=\write6
+\openout6 = `graduation_thesis.lof'.
+
+ (./introduction.tex [4]
 第1章
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 6.47278pt on input line 11.
@@ -463,7 +508,7 @@ LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
 (Font)              scaled to size 7.39746pt on input line 11.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 7.39746pt on input line 11.
-) (./explanation.tex [3
+) (./explanation.tex [5
 
 ]
 第2章
@@ -493,7 +538,7 @@ LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 8.32214pt on input line 28.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 8.32214pt on input line 28.
-[4
+[6
 
 ]
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
@@ -510,115 +555,110 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 11.09619pt on input line 38.
 File: figure/gakuon2.png Graphic file (type bmp)
 <figure/gakuon2.png>
- [5] [6] [7]) (./background.tex [8]
+ [7] [8] [9]) (./background.tex [10]
 第3章
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 18.
+(Font)              scaled to size 6.47278pt on input line 17.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 18.
-[9
+(Font)              scaled to size 4.62341pt on input line 17.
+[11
 
 ]
 File: figure/neuron.png Graphic file (type bmp)
 <figure/neuron.png>
- [10
+ [12
 
 ]
 File: figure/mlp_net0.png Graphic file (type bmp)
 <figure/mlp_net0.png>
 File: figure/mlp_net1.png Graphic file (type bmp)
 <figure/mlp_net1.png>
- [11
+ [13
 
 ]
-LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 133.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 133.
-LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <10> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 133.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 133.
 LaTeX Font Info:    Font shape `JT2/gt/m/it' in size <10> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 155.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 153.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 155.
+(Font)              scaled to size 9.24683pt on input line 153.
 LaTeX Font Info:    Font shape `JY2/gt/m/it' in size <10> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 155.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 153.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 155.
+(Font)              scaled to size 9.24683pt on input line 153.
 
-Overfull \hbox (20.00002pt too wide) in paragraph at lines 144--156
+Overfull \hbox (20.00002pt too wide) in paragraph at lines 142--154
 | [] 
  []
 
 
-Overfull \hbox (20.00002pt too wide) in paragraph at lines 144--156
+Overfull \hbox (20.00002pt too wide) in paragraph at lines 142--154
 | [] 
  []
 
-[12
+[14
 
-] [13
+] [15
 
-] [14
+]
+File: figure/alex.png Graphic file (type bmp)
+<figure/alex.png>
+ [16
 
 ]
 File: figure/convolution.png Graphic file (type bmp)
 <figure/convolution.png>
- [15
+ [17
 
 ]
 File: figure/pooling.png Graphic file (type bmp)
 <figure/pooling.png>
- [16
+ [18
 
 ]
 File: figure/GAN_net.png Graphic file (type bmp)
 <figure/GAN_net.png>
- [17
+ [19
 
 ]
 File: figure/pix2pix_net.png Graphic file (type bmp)
 <figure/pix2pix_net.png>
- [18
+ [20
 
 ]
 File: figure/pix2pix_img.png Graphic file (type bmp)
 <figure/pix2pix_img.png>
- [19
+ [21
 
 ]
 File: figure/u-net.png Graphic file (type bmp)
 <figure/u-net.png>
 File: figure/patchgan.png Graphic file (type bmp)
 <figure/patchgan.png>
-) (./proposed_method.tex [20
+) (./proposed_method.tex [22
 
 ]
 第4章
 File: figure/piano.png Graphic file (type bmp)
 <figure/piano.png>
-[21
+[23
 
 ]
 File: figure/pr_model.png Graphic file (type bmp)
 <figure/pr_model.png>
 File: figure/pr_generator.png Graphic file (type bmp)
 <figure/pr_generator.png>
- [22
+ [24
 
 ]
 File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
- [23
+ [25
 
 ]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
- [24
+ [26
 
 ]
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
@@ -629,7 +669,7 @@ File: figure/66_22_det/d4s_0100_0200.png Graphic file (type bmp)
 <figure/66_22_det/d4s_0100_0200.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
- [25
+ [27
 
 ]
 File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
@@ -640,7 +680,7 @@ File: figure/88_88/c5.png Graphic file (type bmp)
 <figure/88_88/c5.png>
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
- [26
+ [28
 
 ]
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
@@ -651,45 +691,45 @@ File: figure/88_88/f1s.png Graphic file (type bmp)
 <figure/88_88/f1s.png>
 File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
-) (./conclusion.tex [27
+) (./conclusion.tex [29
 
 ]
 第5章
-) (./thanks.tex [28
+) (./thanks.tex [30
 
-]) (latex_out/graduation_thesis.bbl [29
+]) (latex_out/graduation_thesis.bbl [31
 
-]) (./appendix.tex [30
+]) (./appendix.tex [32
 
 ]
 付録A
-[31
+[33
 
 ]
 付録B
 File: figure/data_div.png Graphic file (type bmp)
 <figure/data_div.png>
-[32
+[34
 
 ]
 付録C
-[33
+[35
 
 ]
 付録D
-) [34
+) [36
 
 ] (latex_out/graduation_thesis.aux)
 Package rerunfilecheck Info: File `graduation_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 71A1F2D497A12D22750EBF2A27B3FA23;4167.
+(rerunfilecheck)             Checksum: 6094D5B041FF19A5BD4276ABB9200C8C;4101.
  ) 
 Here is how much of TeX's memory you used:
- 8935 strings out of 479847
- 140501 string characters out of 5881593
- 470792 words of memory out of 5000000
- 26007 multiletter control sequences out of 15000+600000
- 424006 words of font info for 128 fonts, out of 8000000 for 9000
+ 9210 strings out of 479847
+ 144680 string characters out of 5881593
+ 476097 words of memory out of 5000000
+ 26275 multiletter control sequences out of 15000+600000
+ 423701 words of font info for 127 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 68i,16n,75p,1041b,637s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,16n,75p,1041b,635s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/graduation_thesis.dvi (35 pages, 132432 bytes).
+Output written on latex_out/graduation_thesis.dvi (37 pages, 153900 bytes).

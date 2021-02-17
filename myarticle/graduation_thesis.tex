@@ -35,11 +35,13 @@
 \usepackage{apptools}
 %参照の変更
 \usepackage{prettyref}
+%目次の設定
+\usepackage{tocloft}
 
-%番号付けの設定
+%タイトルの番号付けの設定
 \setcounter{secnumdepth}{3}
 
-%chapter,section,subsection,subsubsectionの設定
+%各種タイトルの設定
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\IfAppendix{\appendixname\Alph{chapter}}{第\thechapter~章}}{1zw}{}{}
 \titlespacing*{\chapter}{0pt}{0pt}{50pt}
 \titleformat*{\section}{\LARGE\bfseries}
@@ -48,6 +50,16 @@
 \titlespacing{\subsection}{0pt}{15pt}{10pt}
 \titleformat*{\subsubsection}{\large\bfseries}
 \titlespacing{\subsubsection}{0pt}{10pt}{6pt}
+
+%目次の設定
+\renewcommand{\cfttoctitlefont}{\Huge\bfseries}
+\renewcommand{\cftchapnumwidth}{4em}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
+\renewcommand{\cftchapdotsep}{\cftdotsep}
+%図目次の設定
+\renewcommand{\cftloftitlefont}{\Huge\bfseries}
+\renewcommand{\cftfigpresnum}{図~}
+\renewcommand{\cftfignumwidth}{4em}
 
 %開き括弧の設定
 \intervalconfig{soft open fences}
@@ -62,12 +74,12 @@
   \hspace*{\algorithmicindent}\parbox[t]{\hsize}{\raggedright #1}
 }
 
-%align用の箱
+%align用の箱の作成
 \newlength{\maxwidth}
 \newcommand{\algalign}[2]% #1 = text to left, #2 = text to right
 {\makebox[\maxwidth][l]{#1}~~#2}
 
-%参照の変更
+%参照の変更(prettyref)
 \newrefformat{sec}{\ref{#1}節}
 \newrefformat{fig}{図\ref{#1}}
 \newrefformat{alg}{Algorithm~\ref{#1}}
@@ -88,6 +100,10 @@
 %目次
 \setcounter{tocdepth}{2}
 \tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Page}\par}
+\listoffigures
+\addtocontents{lof}{~\hfill\textbf{Page}\par}
+%\addcontentsline{toc}{chapter}{図目次}
 
 %はじめに
 \input{introduction.tex}

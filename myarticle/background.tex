@@ -2,12 +2,11 @@
 %論文に目を通す
 %追加すべき事項
 % - Deconv(CNN)
-% - 特徴量マップ(CNN)
-% - CNNの図
-% - MLPの学習(Now)
+% - MLPの学習(Now,誤差逆伝播,バッチ)
+% - Adamの説明
 \chapter{背景：ニューラルネットワーク}
 
-本章では、教師あり学習とMLPの説明を行った後、MLPの応用例であるCNN及びGANを紹介する。そして、これらの応用例を組み合わせたPix2pixを紹介する。
+本章では、教師あり学習の説明を行った後、本論文で必要となるニューラルネットワークの説明を行う。
 
 \section{教師あり学習}
 
@@ -124,7 +123,6 @@ MLPでは、説明変数と目的変数を実ベクトルに変換した後に�
 \subsubsection{Adam}
 \label{sec:Adam}
 
-%Adamの説明
 Adam~\cite{Adam}は勾配降下法の中で最も用いられるアルゴリズムである。
 
 \begin{algorithm}[b]
@@ -178,11 +176,22 @@ Adam~\cite{Adam}は勾配降下法の中で最も用いられるアルゴリズ�
 
 \section{CNN}
 
-CNN~(Convolution~Neural~Network)~は、MLPにおいて全結合層を畳み込み層とプーリング層の繰り返し構造に置換した順伝播型のニューラルネットワークである。
+CNN~(Convolution~Neural~Network)~は、MLPにおいて全結合層を畳み込み層とプーリング層の繰り返し構造に置換した順伝播型のニューラルネットワークである。著名な例としてAlexNet~\cite{AlexNet}と略されるCNNがあり、画像認識の大規模な競技会であるILSVRCで2位以下に10\%以上の認識精度の差をつけて優勝した~(2012年)~。AlexNetでは様々な工夫を行っているもののネットワーク構造は単純である。具体的には、\prettyref{fig:Alex}のように5層の畳み込み層と3層の全結合層から構成され、畳み込み層のうち3層では直後にプーリング層を入れている。
 
 \subsection{CNNの構造}
 
-CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視覚野の機能を模倣するようなネットワーク構造を持つ。脳の視覚野には主に二つの機能があり、一つ目は刺激の位置により異なったニューロンの活動電位の発生であり、二つ目は受容する情報の特徴の段階的な受容である。畳み込み層では、人工ニューロン間の結合を局所領域に限定することで局所領域の特徴を抽出するため、前者の機能を模倣する。また、プーリング層では、人工ニューロンの結合を局所領域に限定することで局所領域の特徴を集約する。したがって、局所領域の集約によりそれぞれの層で異なったスケールでの情報を受容し、後者の機能を模倣する。
+CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視覚野の機能を模倣するようなネットワーク構造を持つ。また、脳の視覚野には主に二つの機能がある。一つ目は刺激の位置により異なった位置のニューロンの活動電位が発生することであり、二つ目は視覚情報の特徴を段階的に受容することである。この二つの機能を畳み込み層とプーリング層によりCNNは表現する。
+
+まず、畳み込み層では、人工ニューロン間の結合を局所領域に限定することで局所領域の特徴を抽出する。したがって、局所領域間の位置関係は変わらないため、前者の機能を模倣することができる。そして、プーリング層では、局所領域の人工ニューロンの出力をまとめることで局所領域の特徴を集約する。したがって、層を進むにつれて高段階の特徴が残るため、後者の機能を模倣することができる。
+
+さらに、CNNはMLPと比べてパラメータ数を減少させることができる。なぜなら、MLPの全結合層では入力の人工ニューロン数と出力の人工ニューロン数の積が一層のパラメータ数となるが、CNNの畳み込み層ではカーネルに含まれるパラメータ数のみが一層のパラメータ数となるからである。また、CNNのプーリング層でも局所領域の人工ニューロンの出力をまとめることで特徴量マップのサイズが小さくなるため、パラメータ数の減少に大きく寄与する。ここで、特徴量マップとはそれぞれの層の入力から得られる出力をまとめたもののことである。
+
+\begin{figure}[b]
+\centering
+\includegraphics[width=\hsize]{figure/alex.png}
+\caption{AlexNetのネットワーク構造}
+\label{fig:Alex}
+\end{figure}
 
 %ここで改ページ
 \clearpage
@@ -190,13 +199,6 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 \subsection{畳み込み層}
 
 畳み込み層においては、カーネルと呼ばれるフィルターを一定の間隔~(ストライド)~でスライドさせながらフィルターにより覆われた入力の部分の畳み込み演算を順に行う。畳み込み演算により、カーネルのそれぞれの値を重みとした対応する入力の部分の重み付き和を計算する。また、入力と出力の大きさを変えないために、一般には入力の周りに適当な幅で値を埋める操作を行う~(パディング)~。そして、画像のような二次元データにおいては、畳み込み演算は\prettyref{fig:conv}のように表現することができる。
-
-\begin{figure}[b]
-\centering
-\includegraphics[width=\hsize]{figure/convolution.png}
-\caption{畳み込み層}
-\label{fig:conv}
-\end{figure}
 
 さらに、入力を$I_h \times I_w$の行列、カーネルを$F_h \times F_w$の行列、ストライドを$S_h,S_w$、パディング幅を$P_h,P_w$、出力を$O_h \times O_w$の行列、とすれば、\prettyref{eq:conv}が成り立つ。\prettyref{fig:conv}においては、$I_h=I_w=4,F_h=F_w=3,S_h=S_w=1,P_h=P_w=1$であるため、$O_h=IO_w=4$となる。
 
@@ -208,10 +210,20 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 
 また、上記では入力と出力がいずれもチャンネル数が1つの場合を考えたが、実際には複数存在することが多い。したがって、カーネルの数は(入力チャンネル数)$\times$(出力チャンネル数)である。また、それぞれの出力チャンネル数に対し特徴量マップが入力チャンネル数だけ存在するが、これらの和にバイアス項を加えたものが実際の出力となる。
 
+\begin{figure}[b]
+\centering
+\includegraphics[width=\hsize]{figure/convolution.png}
+\caption[畳み込み層]{畳み込み層\\
+図は~\cite{AlexNet}のFigure~2を転載した。}
+\label{fig:conv}
+\end{figure}
+
 %ここで改ページ
 \clearpage
 
 \subsection{プーリング層}
+
+プーリング層においては、入力を局所領域ごとに分解し、領域ごとへの何らかの操作により情報量の圧縮を行う~(サブサンプリング、ダウンサンプリング)~。また、この時の操作で最大値をとる場合はMax~Pooling、平均値をとる場合はAverage~Poolingと呼び、主にこの二つが用いられる。
 
 \begin{figure}[b]
 \centering
@@ -219,12 +231,6 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 \caption{プーリング層}
 \label{fig:pooling}
 \end{figure}
-
-プーリング層においては、入力を局所領域ごとに分解し、領域ごとへの何らかの操作により情報量の圧縮を行う~(サブサンプリング、ダウンサンプリング)~。また、この時の操作で最大値をとる場合はMax~Pooling、平均値をとる場合はAverage~Poolingと呼び、主にこの二つが用いられる。
-
-\subsection{CNNの利点}
-
-CNNにはMLPと比べて主に二つの利点がある~\cite{CNNsurvey}。一つ目は、パラメータ数が減少する点である。全結合層においては入力の数と出力の数の積が層のパラメータ数となるが、畳み込み層においてはカーネルに含まれるパラメータ数のみが層のパラメータ数となるため、通常はパラメータ数が減少する。また、プーリング層においてもサブサンプリングにより特徴量マップのサイズが小さくなるためパラメータ数の減少に寄与する。二つ目は、様々な解像度での特徴を取得できる点である。プーリング層によりサブサンプリングをすることで解像度が低下し、異なるスケールでの隣接する特徴の共起を得ることができると期待される。
 
 %ここで改ページ
 \clearpage
@@ -234,7 +240,7 @@ CNNにはMLPと比べて主に二つの利点がある~\cite{CNNsurvey}。一つ
 \begin{figure}[b]
 \centering
 \includegraphics[width=\hsize]{figure/GAN_net.png}
-\caption{GANのネットワーク\\
+\caption[GANのネットワーク]{GANのネットワーク\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:GAN_net}
 \end{figure}
@@ -269,7 +275,7 @@ Pix2pix~\cite{pix2pix}は、\prettyref{fig:pix2pix_net}のようにネットワ�
 \begin{figure}[b]
 \centering
 \includegraphics[width=0.9\hsize]{figure/pix2pix_net.png}
-\caption{Pix2pixのネットワーク\\
+\caption[Pix2pixのネットワーク]{Pix2pixのネットワーク\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:pix2pix_net}
 \end{figure}
@@ -280,7 +286,7 @@ Pix2pix~\cite{pix2pix}は、\prettyref{fig:pix2pix_net}のようにネットワ�
 \begin{figure}[t]
 \centering
 \includegraphics[width=\hsize]{figure/pix2pix_img.png}
-\caption{Pix2pixのスタイル変換の例\\
+\caption[Pix2pixのスタイル変換の例]{Pix2pixのスタイル変換の例\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:pix2pix_img}
 \end{figure}
@@ -310,7 +316,7 @@ Pix2pixの生成モデルには、\prettyref{fig:u-net}のようにEncoder-Decod
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.8\hsize]{figure/u-net.png}
-\caption{生成モデルのネットワーク\\
+\caption[生成モデルのネットワーク]{生成モデルのネットワーク\\
 図は~\cite{pix2pix}のFigure~1とFigure~3を用いて作成した。}
 \label{fig:u-net}
 \end{figure}
@@ -320,7 +326,7 @@ Pix2pixの生成モデルには、\prettyref{fig:u-net}のようにEncoder-Decod
 \begin{figure}[b]
 \centering
 \includegraphics[width=0.6\hsize]{figure/patchgan.png}
-\caption{通常のGANとPatchGANの比較\\
+\caption[通常のGANの識別モデルとPatchGANの比較]{通常のGANの識別モデルとPatchGANの比較\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:patchgan}
 \end{figure}
