@@ -2,7 +2,7 @@
 %論文に目を通す
 %追加すべき事項
 % - Deconv(CNN)
-% - 誤差逆伝播?
+% - ? 誤差逆伝播
 % - バッチ
 % - ? Adamの説明
 \chapter{背景：ニューラルネットワーク}
@@ -61,7 +61,7 @@ MLPでは、神経細胞を\prettyref{fig:neuron}のような人工ニューロ�
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=0.5\hsize]{figure/neuron.png}
+\includegraphics[width=0.5\columnwidth]{figure/neuron.png}
 \caption[MLPの人工ニューロン]{人工ニューロン}
 \label{fig:neuron}
 \end{figure}
@@ -89,15 +89,15 @@ MLPは、\prettyref{sec:neuron}に示す人工ニューロンが複数並んだ�
 
 \begin{figure}[b]
 \centering
-\begin{minipage}{0.4\hsize}
+\begin{minipage}{0.4\columnwidth}
 \centering
-\includegraphics[width=0.95\hsize]{figure/mlp_net0.png}
+\includegraphics[width=0.95\columnwidth]{figure/mlp_net0.png}
 \caption{MLPの一層}
 \label{fig:MLP_net0}
 \end{minipage}
-\begin{minipage}{0.55\hsize}
+\begin{minipage}{0.55\columnwidth}
 \centering
-\includegraphics[width=0.9\hsize]{figure/mlp_net1.png}
+\includegraphics[width=0.9\columnwidth]{figure/mlp_net1.png}
 \caption{MLPのネットワーク}
 \label{fig:MLP_net1}
 \end{minipage}
@@ -135,15 +135,15 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
     \KwHyParam{$\beta_1,\beta_2\in \interval[open left]{0}{1},\eta,\epsilon$}
     \KwObFunc{$f$}
     \KwParam{$\theta$}
+    \setlength{\alignwidth}{0.3\columnwidth}
     \Init{
-        \settowidth{\maxwidth}{$m_1,m_2 \leftarrow 0,0$~}
         \algalign{$t \leftarrow 0$~}{(Initialize~timestep)\;}
         \algalign{$\theta \leftarrow \theta_0$~}{(Initialize~Parameter)\;}
         \algalign{$m_1,m_2 \leftarrow 0,0$~}{(Initialize~moments)\;}
     }
+    \setlength{\alignwidth}{0.7\columnwidth}
     \Proc{
         \While{$\theta$ not converged}{
-            \settowidth{\maxwidth}{$m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$~}
             \algalign{$t \leftarrow t+1$~}{(Update~timestep)\;}
             \algalign{$g \leftarrow \nabla _{\theta} f(\theta)$~}{(Compute~gradient~of~$f(\theta)$)\;}
             \algalign{$m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$~}{(Update~biased~moments)\;}
@@ -189,7 +189,7 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=\hsize]{figure/alex.png}
+\includegraphics[width=\columnwidth]{figure/alex.png}
 \caption{AlexNetのネットワーク}
 \label{fig:Alex}
 \end{figure}
@@ -213,7 +213,7 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=\hsize]{figure/convolution.png}
+\includegraphics[width=\columnwidth]{figure/convolution.png}
 \caption[CNNの畳み込み層]{畳み込み層\\
 図は~\cite{AlexNet}のFigure~2を転載した。}
 \label{fig:conv}
@@ -228,7 +228,7 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=\hsize]{figure/pooling.png}
+\includegraphics[width=\columnwidth]{figure/pooling.png}
 \caption[CNNのプーリング層]{プーリング層}
 \label{fig:pooling}
 \end{figure}
@@ -240,7 +240,7 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=\hsize]{figure/GAN_net.png}
+\includegraphics[width=\columnwidth]{figure/GAN_net.png}
 \caption[GANのネットワーク]{GANのネットワーク\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:GAN_net}
@@ -275,7 +275,7 @@ Pix2pix~\cite{pix2pix}は、ネットワークの入力に変換元の画像を~
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=0.9\hsize]{figure/pix2pix_net.png}
+\includegraphics[width=0.9\columnwidth]{figure/pix2pix_net.png}
 \caption[Pix2pixのネットワーク]{Pix2pixのネットワーク\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:pix2pix_net}
@@ -286,7 +286,7 @@ Pix2pix~\cite{pix2pix}は、ネットワークの入力に変換元の画像を~
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\hsize]{figure/pix2pix_img.png}
+\includegraphics[width=\columnwidth]{figure/pix2pix_img.png}
 \caption[Pix2pixのスタイル変換の例]{Pix2pixのスタイル変換の例\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:pix2pix_img}
@@ -316,7 +316,7 @@ Pix2pixの生成モデルには、\prettyref{fig:u-net}のようにEncoder-Decod
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.8\hsize]{figure/u-net.png}
+\includegraphics[width=0.8\columnwidth]{figure/u-net.png}
 \caption[Pix2pixの生成モデル]{生成モデルのネットワーク\\
 図は~\cite{pix2pix}のFigure~1とFigure~3を用いて作成した。}
 \label{fig:u-net}
@@ -326,7 +326,7 @@ Pix2pixの生成モデルには、\prettyref{fig:u-net}のようにEncoder-Decod
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=0.6\hsize]{figure/patchgan.png}
+\includegraphics[width=0.6\columnwidth]{figure/patchgan.png}
 \caption[通常のGANの識別モデルとPatchGANの比較]{通常のGANの識別モデルとPatchGANの比較\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:patchgan}

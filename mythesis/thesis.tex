@@ -67,17 +67,17 @@
 %アルゴリズムのコマンドの作成
 \algnewcommand{\Init}[1]{
   \textbf{Initialization:}
-  \hspace*{\algorithmicindent}\parbox[t]{\hsize}{\raggedright #1}
+  \hspace*{\algorithmicindent}\parbox[t]{0.9\columnwidth}{\raggedright #1}
 }
 \algnewcommand{\Proc}[1]{
   \textbf{Procedure:}
-  \hspace*{\algorithmicindent}\parbox[t]{\hsize}{\raggedright #1}
+  \hspace*{\algorithmicindent}\parbox[t]{0.9\columnwidth}{\raggedright #1}
 }
 
 %align用の箱の作成
-\newlength{\maxwidth}
-\newcommand{\algalign}[2]% #1 = text to left, #2 = text to right
-{\makebox[\maxwidth][l]{#1}~~#2}
+\newlength{\alignwidth}
+% #1：左側のテキスト、#2：右側のテキスト
+\newcommand{\algalign}[2]{\makebox[\alignwidth][l]{#1}~#2}
 
 %参照の変更(prettyref)
 \newrefformat{sec}{\ref{#1}節}
