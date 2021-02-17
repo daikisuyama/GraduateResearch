@@ -2,8 +2,9 @@
 %論文に目を通す
 %追加すべき事項
 % - Deconv(CNN)
-% - MLPの学習(Now,誤差逆伝播,バッチ)
-% - Adamの説明
+% - 誤差逆伝播?
+% - バッチ
+% - ? Adamの説明
 \chapter{背景：ニューラルネットワーク}
 
 本章では、教師あり学習の説明を行った後、本論文で必要となるニューラルネットワークの説明を行う。
@@ -61,7 +62,7 @@ MLPでは、神経細胞を\prettyref{fig:neuron}のような人工ニューロ�
 \begin{figure}[b]
 \centering
 \includegraphics[width=0.5\hsize]{figure/neuron.png}
-\caption{人工ニューロン}
+\caption[MLPの人工ニューロン]{人工ニューロン}
 \label{fig:neuron}
 \end{figure}
 
@@ -123,7 +124,7 @@ MLPでは、説明変数と目的変数を実ベクトルに変換した後に�
 \subsubsection{Adam}
 \label{sec:Adam}
 
-Adam~\cite{Adam}は勾配降下法の中で最も用いられるアルゴリズムである。
+Adamは勾配降下法の中で最も用いられるアルゴリズムであり、\prettyref{alg:Adam}に示す手順にしたがってパラメータの更新を行う。アルゴリズムの詳細については~\cite{Adam}を参考にされたい。
 
 \begin{algorithm}[b]
 \label{alg:Adam}
@@ -151,7 +152,7 @@ Adam~\cite{Adam}は勾配降下法の中で最も用いられるアルゴリズ�
         }
         \Return{$\theta$}\;
     }
-\caption{Adam~\cite{Adam}の疑似コード}
+\caption{Adamの疑似コード}
 \end{algorithm}
 
 %ここで改ページ
@@ -189,7 +190,7 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 \begin{figure}[b]
 \centering
 \includegraphics[width=\hsize]{figure/alex.png}
-\caption{AlexNetのネットワーク構造}
+\caption{AlexNetのネットワーク}
 \label{fig:Alex}
 \end{figure}
 
@@ -213,7 +214,7 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 \begin{figure}[b]
 \centering
 \includegraphics[width=\hsize]{figure/convolution.png}
-\caption[畳み込み層]{畳み込み層\\
+\caption[CNNの畳み込み層]{畳み込み層\\
 図は~\cite{AlexNet}のFigure~2を転載した。}
 \label{fig:conv}
 \end{figure}
@@ -228,7 +229,7 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 \begin{figure}[b]
 \centering
 \includegraphics[width=\hsize]{figure/pooling.png}
-\caption{プーリング層}
+\caption[CNNのプーリング層]{プーリング層}
 \label{fig:pooling}
 \end{figure}
 
@@ -270,7 +271,7 @@ GANでは、生成モデルの目的関数は\prettyref{eq:GAN_G}、識別モデ
 
 \section{Pix2pix}
 
-Pix2pix~\cite{pix2pix}は、\prettyref{fig:pix2pix_net}のようにネットワークの入力に変換元の画像を~Condition~(条件)~として与えることで画像の変換を行うGANである。特定の条件をネットワークの入力に与えるGANとしてはConditional~GAN~(CGAN)~\cite{CGAN}が初めて考案されたが、Pix2pixは与えられた条件画像の構造を維持したまま変換するという点でCGANとは異なる。具体的には、\prettyref{fig:pix2pix_img}のように線画から写真への変換や白黒画像からカラー画像への変換を行うことができる。
+Pix2pix~\cite{pix2pix}は、ネットワークの入力に変換元の画像を~Condition~(条件)~として与えることで画像の変換を行うGANである~(\prettyref{fig:pix2pix_net})~。特定の条件をネットワークの入力に与えるGANとしてはConditional~GAN~(CGAN)~\cite{CGAN}が初めて考案されたが、Pix2pixは与えられた条件画像の構造を維持したまま変換するという点でCGANとは異なる。具体的には、線画から写真への変換や白黒画像からカラー画像への変換をPix2pixにより行うことができる~(\prettyref{fig:pix2pix_img})~。
 
 \begin{figure}[b]
 \centering
@@ -316,7 +317,7 @@ Pix2pixの生成モデルには、\prettyref{fig:u-net}のようにEncoder-Decod
 \begin{figure}[t]
 \centering
 \includegraphics[width=0.8\hsize]{figure/u-net.png}
-\caption[生成モデルのネットワーク]{生成モデルのネットワーク\\
+\caption[Pix2pixの生成モデル]{生成モデルのネットワーク\\
 図は~\cite{pix2pix}のFigure~1とFigure~3を用いて作成した。}
 \label{fig:u-net}
 \end{figure}
