@@ -37,6 +37,7 @@
 \usepackage{prettyref}
 %目次の設定
 \usepackage{tocloft}
+\usepackage{etoolbox}
 
 %タイトルの番号付けの設定
 \setcounter{secnumdepth}{3}
@@ -53,13 +54,19 @@
 
 %目次の設定
 \renewcommand{\cfttoctitlefont}{\Huge\bfseries}
+\renewcommand{\cftchapfont}{\normalsize\bfseries}
 \renewcommand{\cftchapnumwidth}{4em}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
+
 %図目次の設定
 \renewcommand{\cftloftitlefont}{\Huge\bfseries}
 \renewcommand{\cftfigpresnum}{図~}
 \renewcommand{\cftfignumwidth}{4em}
+%図目次にchapterを加える
+\preto\figure{
+  \ifnum\value{figure}=0\addtocontents{lof}{\normalsize\bfseries {\IfAppendix{\appendixname\Alph{chapter}}{第\thechapter~章}}\vskip10pt}\fi
+}
 
 %開き括弧の設定
 \intervalconfig{soft open fences}
@@ -103,7 +110,6 @@
 \addtocontents{toc}{~\hfill\textbf{Page}\par}
 \listoffigures
 \addtocontents{lof}{~\hfill\textbf{Page}\par}
-%\addcontentsline{toc}{chapter}{図目次}
 
 %はじめに
 \input{introduction.tex}

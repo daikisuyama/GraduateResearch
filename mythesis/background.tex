@@ -4,7 +4,6 @@
 % - Deconv(CNN)
 % - ? 誤差逆伝播
 % - バッチ
-% - ? Adamの説明
 \chapter{背景：ニューラルネットワーク}
 
 本章では、教師あり学習の説明を行った後、本論文で必要となるニューラルネットワークの説明を行う。
@@ -110,9 +109,9 @@ MLPは、\prettyref{sec:neuron}に示す人工ニューロンが複数並んだ�
 
 MLPでは、説明変数と目的変数を実ベクトルに変換した後に学習を行う。また、実行可能解はパラメータである$W_i,\boldsymbol{b_i}$であり、最適解を求めるためにそれぞれ更新を行う。この時、損失関数$L$の勾配を用いた最適化アルゴリズム~(勾配降下法)~を一般には用いる。
 
-\subsubsection{最急降下法}
+\subsubsection{勾配降下法}
 
-最急降下法は最も急な降下方向である勾配の反対方向へのパラメータの更新を行う勾配降下法のアルゴリズムである。また、$W_i,\boldsymbol{b_i}$は\prettyref{eq:MLP2_0}及び\prettyref{eq:MLP2_1}にしたがって更新される。ここで、$\eta$は学習率と呼ばれる任意の正の実数であり、更新の程度を指定する。
+勾配降下法の中で最も単純なアルゴリズムである最急降下法を紹介する。最急降下法とは、最も急な降下方向である勾配の反対方向へのパラメータの更新を行うアルゴリズムである。また、パラメータ$W_i,\boldsymbol{b_i}$は\prettyref{eq:MLP2_0}及び\prettyref{eq:MLP2_1}にしたがって更新される。ここで、$\eta$は学習率と呼ばれる任意の正の実数であり、更新の程度を指定する。
 
 \begin{align}
     \label{eq:MLP2_0}
@@ -121,46 +120,7 @@ MLPでは、説明変数と目的変数を実ベクトルに変換した後に�
     \boldsymbol{b _i} &\leftarrow \boldsymbol{b_i} - \eta \frac{\partial L}{\partial \boldsymbol{b_i}}
 \end{align}
 
-\subsubsection{Adam}
-\label{sec:Adam}
-
-Adamは勾配降下法の中で最も用いられるアルゴリズムであり、\prettyref{alg:Adam}に示す手順にしたがってパラメータの更新を行う。アルゴリズムの詳細については~\cite{Adam}を参考にされたい。
-
-\begin{algorithm}[b]
-\label{alg:Adam}
-    \DontPrintSemicolon
-    \SetKwInOut{KwHyParam}{HyperParameter}
-    \SetKwInOut{KwParam}{Parameter}
-    \SetKwInOut{KwObFunc}{Objective~Function}
-    \KwHyParam{$\beta_1,\beta_2\in \interval[open left]{0}{1},\eta,\epsilon$}
-    \KwObFunc{$f$}
-    \KwParam{$\theta$}
-    \setlength{\alignwidth}{0.3\columnwidth}
-    \Init{
-        \algalign{$t \leftarrow 0$~}{(Initialize~timestep)\;}
-        \algalign{$\theta \leftarrow \theta_0$~}{(Initialize~Parameter)\;}
-        \algalign{$m_1,m_2 \leftarrow 0,0$~}{(Initialize~moments)\;}
-    }
-    \setlength{\alignwidth}{0.7\columnwidth}
-    \Proc{
-        \While{$\theta$ not converged}{
-            \algalign{$t \leftarrow t+1$~}{(Update~timestep)\;}
-            \algalign{$g \leftarrow \nabla _{\theta} f(\theta)$~}{(Compute~gradient~of~$f(\theta)$)\;}
-            \algalign{$m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$~}{(Update~biased~moments)\;}
-            \algalign{$\hat{m_1},\hat{m_2} \leftarrow m_1/(1-\beta_1^t),m_2/(1-\beta_2^t)$~}{(Update~bias-corrected~moments)\;}
-            \algalign{$\theta \leftarrow \theta - \eta \cdot \hat{m_1}/(\sqrt{\hat{m_2}}+\epsilon)$~}{(Update~Parameter)\;}
-        }
-        \Return{$\theta$}\;
-    }
-\caption{Adamの疑似コード}
-\end{algorithm}
-
-%ここで改ページ
-\clearpage
-
 \subsubsection{誤差逆伝播法}
-
-%Bishop本に書いてある
 
 勾配降下法においてはそれぞれのパラメータについて勾配を求める必要がある。この時、高速に勾配を求める方法として誤差逆伝播法が一般に用いられる。誤差を求める際は入力層から出力層の方向で計算を行うが~(順伝播)~、誤差逆伝播法では誤差を出力層から入力層の方向に伝えていく~(逆伝播)~。
 
@@ -168,7 +128,7 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
 
 
 \subsubsection{バッチ処理}
-%誤差逆伝播
+
 
 
 
@@ -177,7 +137,7 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
 
 \section{CNN}
 
-CNN~(Convolution~Neural~Network)~は、MLPにおいて全結合層を畳み込み層とプーリング層の繰り返し構造に置換した順伝播型のニューラルネットワークである。著名な例としてAlexNet~\cite{AlexNet}と略されるCNNがあり、画像認識の大規模な競技会であるILSVRCで2位以下に10\%以上の認識精度の差をつけて優勝した~(2012年)~。AlexNetでは様々な工夫を行っているもののネットワーク構造は単純である。具体的には、\prettyref{fig:Alex}のように5層の畳み込み層と3層の全結合層から構成され、畳み込み層のうち3層では直後にプーリング層を入れている。
+CNN~(Convolution~Neural~Network)~は、MLPにおいて全結合層を畳み込み層とプーリング層の繰り返し構造に置換した順伝播型のニューラルネットワークである。2012年のILSVRCで2位以下に10\%以上の画像の認識精度の差をつけて優勝したAlexNet~\cite{AlexNet}はその著名な例である。また、AlexNetは\prettyref{fig:Alex}のような単純なネットワーク構造を持ち、5層の畳み込み層~(うち3層ではMax~Poolingを行う)~と3層の全結合層のみから構成される。
 
 \subsection{CNNの構造}
 

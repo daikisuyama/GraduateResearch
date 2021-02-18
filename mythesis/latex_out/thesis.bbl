@@ -1,0 +1,66 @@
+\begin{thebibliography}{10}
+
+\bibitem{pix2pix}
+Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, and Alexei~A. Efros.
+\newblock Image-to-image translation with conditional adversarial networks,
+  2018.
+
+\bibitem{GAN}
+Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David
+  Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
+\newblock Generative adversarial networks, 2014.
+
+\bibitem{musictutorial}
+Keunwoo Choi, Gy^^c3^^b6rgy Fazekas, Kyunghyun Cho, and Mark Sandler.
+\newblock A tutorial on deep learning for music information retrieval, 2018.
+
+\bibitem{melscale}
+A scale for the measurement of the psychological magnitude pitch: The journal
+  of the acoustical society of america: Vol 8, no 3.
+\newblock \url{https://asa.scitation.org/doi/10.1121/1.1915893}.
+\newblock (Accessed on 02/10/2021).
+
+\bibitem{AlexNet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In F.~Pereira, C.~J.~C. Burges, L.~Bottou, and K.~Q. Weinberger,
+  editors, {\em Advances in Neural Information Processing Systems}, Vol.~25,
+  pp. 1097--1105. Curran Associates, Inc., 2012.
+
+\bibitem{neocognition}
+Kunihiko Fukushima.
+\newblock {N}eocognitron: {A} self-organizing neural network model for a
+  mechanism of pattern recognition unaffected by shift in position.
+\newblock {\em Biological Cybernetics}, Vol.~36, pp. 193--202, 1980.
+
+\bibitem{idol}
+アイドル自動生成aiを開発 | 株式会社データグリッド | datagrid inc.
+\newblock \url{https://datagrid.co.jp/all/release/33/}.
+\newblock (Accessed on 02/03/2021).
+
+\bibitem{CGAN}
+Mehdi Mirza and Simon Osindero.
+\newblock Conditional generative adversarial nets, 2014.
+
+\bibitem{u-net}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock U-net: Convolutional networks for biomedical image segmentation,
+  2015.
+
+\bibitem{Dropout}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+  Salakhutdinov.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock {\em Journal of Machine Learning Research}, Vol.~15, No.~56, pp.
+  1929--1958, 2014.
+
+\bibitem{Adam}
+Diederik~P. Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization, 2017.
+
+\bibitem{DDSP}
+Jesse Engel, Lamtharn~(Hanoi) Hantrakul, Chenjie Gu, and Adam Roberts.
+\newblock Ddsp: Differentiable digital signal processing.
+\newblock In {\em International Conference on Learning Representations}, 2020.
+
+\end{thebibliography}

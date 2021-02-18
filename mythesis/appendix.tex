@@ -1,11 +1,47 @@
 %追加すべき事項
 % - 実験結果の画像の添付
 % - DDSP解説?
+% - ? Adamの説明
 \appendix
+
+\chapter{Adam}
+\label{cha:Adam}
+
+Adamは勾配降下法の中で最も用いられるアルゴリズムであり、\prettyref{alg:Adam}に示す手順にしたがってパラメータの更新を行う。また、アルゴリズムの詳細については~\cite{Adam}を参考にされたい。
+
+\begin{algorithm}[b]
+\label{alg:Adam}
+    \DontPrintSemicolon
+    \SetKwInOut{KwHyParam}{HyperParameter}
+    \SetKwInOut{KwParam}{Parameter}
+    \SetKwInOut{KwObFunc}{Objective~Function}
+    \KwHyParam{$\beta_1,\beta_2\in \interval[open left]{0}{1},\eta,\epsilon$}
+    \KwObFunc{$f$}
+    \KwParam{$\theta$}
+    \setlength{\alignwidth}{0.2\columnwidth}
+    \Init{
+        $t \leftarrow 0$ \tcc*{Initialize~timestep}\;
+        $\theta \leftarrow \theta_0$ \tcc*{Initialize~Parameter}\;
+        $m_1,m_2 \leftarrow 0,0$ \tcc*{Initialize~moments}\;
+    }
+    \setlength{\alignwidth}{0.58\columnwidth}
+    \Proc{
+        \While{$\theta$ not converged}{
+            $t \leftarrow t+1$ \tcc*{Update~timestep}\;
+            $g \leftarrow \nabla _{\theta} f(\theta)$ \tcc*{Compute~gradient~of~$f(\theta)$}\;
+            $m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$ \tcc*{Update~biased~moments}\;
+            $\hat{m_1},\hat{m_2} \leftarrow m_1/(1-\beta_1^t),m_2/(1-\beta_2^t)$ \tcc*{Update~bias-corrected~moments}\;
+            $\theta \leftarrow \theta - \eta \cdot \hat{m_1}/(\sqrt{\hat{m_2}}+\epsilon)$ \tcc*{Update~Parameter}\;
+        }
+        \Return{$\theta$}\;
+    }
+\caption{Adamの疑似コード}
+\end{algorithm}
+
 \chapter{学習時のパラメータ}
 \label{app:params}
 
-提案モデルの学習時のパラメータの値を\prettyref{tab:params1}に示す。また、\prettyref{tab:params2}はAdam~\cite{Adam}で用いるパラメータの値である。
+提案モデルの学習時のパラメータの値を\prettyref{tab:params1}に示す。また、\prettyref{tab:params2}は\prettyref{alg:Adam}に示すハイパーパラメータの値である。
 
 \begin{table}[h]
 \centering
