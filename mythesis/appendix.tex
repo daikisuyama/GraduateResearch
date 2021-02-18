@@ -14,27 +14,33 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
     \DontPrintSemicolon
     \SetKwInOut{KwHyParam}{HyperParameter}
     \SetKwInOut{KwParam}{Parameter}
-    \SetKwInOut{KwObFunc}{Objective~Function}
+    \SetKwInOut{KwObFunc}{Objective~Function~}
+    \SetKwProg{Init}{Initialization}{:}{end}
+    \SetKwProg{Proc}{Procedure}{:}{end}
     \KwHyParam{$\beta_1,\beta_2\in \interval[open left]{0}{1},\eta,\epsilon$}
     \KwObFunc{$f$}
     \KwParam{$\theta$}
-    \setlength{\alignwidth}{0.2\columnwidth}
-    \Init{
-        $t \leftarrow 0$ \tcc*{Initialize~timestep}\;
-        $\theta \leftarrow \theta_0$ \tcc*{Initialize~Parameter}\;
-        $m_1,m_2 \leftarrow 0,0$ \tcc*{Initialize~moments}\;
+    \BlankLine
+    \Init{}{
+        $t \leftarrow 0$ \tcc*{Initialize~timestep}
+        $\theta \leftarrow \theta_0$ \tcc*{Initialize~Parameter}
+        $m_1 \leftarrow 0$ \tcc*{Initialize~$1^{st}$~moment}
+        $m_2 \leftarrow 0$ \tcc*{Initialize~$2^{nd}$~moment}
     }
-    \setlength{\alignwidth}{0.58\columnwidth}
-    \Proc{
+    \BlankLine
+    \Proc{}{
         \While{$\theta$ not converged}{
-            $t \leftarrow t+1$ \tcc*{Update~timestep}\;
-            $g \leftarrow \nabla _{\theta} f(\theta)$ \tcc*{Compute~gradient~of~$f(\theta)$}\;
-            $m_1,m_2 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g,\beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$ \tcc*{Update~biased~moments}\;
-            $\hat{m_1},\hat{m_2} \leftarrow m_1/(1-\beta_1^t),m_2/(1-\beta_2^t)$ \tcc*{Update~bias-corrected~moments}\;
-            $\theta \leftarrow \theta - \eta \cdot \hat{m_1}/(\sqrt{\hat{m_2}}+\epsilon)$ \tcc*{Update~Parameter}\;
+            $t \leftarrow t+1$ \tcc*{Update~timestep}
+            $g \leftarrow \nabla _{\theta} f(\theta)$ \tcc*{Compute~gradient~of~$f(\theta)$}
+            $m_1 \leftarrow \beta_1 \cdot m_1+(1-\beta_1) \cdot g$ \tcc*{Update~biased~$1^{st}$~moment}
+            $m_2 \leftarrow \beta_2 \cdot m_2+(1-\beta_2) \cdot (g \odot g)$ \tcc*{Update~biased~$2^{nd}$~moment}
+            $\hat{m_1} \leftarrow m_1/(1-\beta_1^t)$ \tcc*{Compute~bias-corrected~$1^{st}$~moment}
+            $\hat{m_2} \leftarrow m_2/(1-\beta_2^t)$ \tcc*{Compute~bias-corrected~$2^{nd}$~moment}
+            $\theta \leftarrow \theta - \eta \cdot \hat{m_1}/(\sqrt{\hat{m_2}}+\epsilon)$ \tcc*{Update~Parameter}
         }
-        \Return{$\theta$}\;
+        \Return{$\theta$}
     }
+    \BlankLine
 \caption{Adamの疑似コード}
 \end{algorithm}
 

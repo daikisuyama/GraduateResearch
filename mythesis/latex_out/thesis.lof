@@ -42,6 +42,6 @@
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
 \fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {付録C}\vskip 10pt
-\contentsline {figure}{\numberline {C.1}{\ignorespaces データセットのサブセット}}{35}{figure.C.1}%
+\contentsline {figure}{\numberline {C.1}{\ignorespaces データセットのサブセット}}{34}{figure.C.1}%
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }

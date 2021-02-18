@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  18 FEB 2021 18:51
+This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  19 FEB 2021 07:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -690,51 +690,41 @@ LaTeX Font Info:    Font shape `JY2/gt/m/it' in size <10> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 9.24683pt on input line 26.
+) (./appendix.tex [31
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--39
-\OT1/cmtt/m/n/10 google . co . jp / books ? hl = ja & lr = lang _ ja % 7Clang _ en & id = geruGMKT9 _ UC & oi = fnd & pg = PR3 & dq =
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 35--39
-\OT1/cmtt/m/n/10 DOI + 10 . 1007 / 978-[]1-[]4419-[]7332-[]0 & ots = J _ CFQNBISM & sig = GJ-[]Jxy2CzGpJtgKiLXnyGLIzOfM # v =
- []
-
-[31
-
-]) (./appendix.tex [32]
+]
 付録A
-[33
+[32
 
 ]
 付録B
-[34
+[33
 
 ]
 付録C
 File: figure/data_div.png Graphic file (type bmp)
 <figure/data_div.png>
-[35
+[34
 
 ]
 付録D
-[36
+[35
 
 ]
 付録E
-) [37
+) [36
 
 ] (latex_out/thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: A71FBF9942EE4BFFD8B46BC201C37060;4142.
  ) 
 Here is how much of TeX's memory you used:
- 9523 strings out of 479847
- 148065 string characters out of 5881593
+ 9547 strings out of 479847
+ 148521 string characters out of 5881593
  482988 words of memory out of 5000000
- 26584 multiletter control sequences out of 15000+600000
+ 26608 multiletter control sequences out of 15000+600000
  423701 words of font info for 127 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 68i,15n,75p,1286b,637s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,16n,75p,1286b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/thesis.dvi (38 pages, 160356 bytes).
+Output written on latex_out/thesis.dvi (37 pages, 159832 bytes).
