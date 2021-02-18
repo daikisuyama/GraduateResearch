@@ -20,6 +20,23 @@ A scale for the measurement of the psychological magnitude pitch: The journal
 \newblock \url{https://asa.scitation.org/doi/10.1121/1.1915893}.
 \newblock (Accessed on 02/10/2021).
 
+\bibitem{GradientDescent}
+Sebastian Ruder.
+\newblock An overview of gradient descent optimization algorithms.
+\newblock {\em CoRR}, Vol. abs/1609.04747, , 2016.
+
+\bibitem{Bishop}
+Christopher~M. Bishop.
+\newblock {\em Pattern Recognition and Machine Learning (Information Science
+  and Statistics)}.
+\newblock Springer-Verlag, Berlin, Heidelberg, 2006.
+
+\bibitem{Calculus}
+Advanced calculus: A geometric view - james j. callahan - google ブックス.
+\newblock
+  \url{https://books.google.co.jp/books?hl=ja&lr=lang_ja%7Clang_en&id=geruGMKT9_UC&oi=fnd&pg=PR3&dq=DOI+10.1007/978-1-4419-7332-0&ots=J_CFQNBISM&sig=GJ-Jxy2CzGpJtgKiLXnyGLIzOfM#v=onepage&q=DOI%2010.1007%2F978-1-4419-7332-0&f=false}.
+\newblock (Accessed on 02/18/2021).
+
 \bibitem{AlexNet}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
