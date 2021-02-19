@@ -7,16 +7,17 @@
 \chapter{Adam}
 \label{app:Adam}
 
-Adamは勾配降下法の中で最も用いられるアルゴリズムであり、\prettyref{alg:Adam}に示す手順にしたがってパラメータの更新を行う。また、Adamについては~\cite{Adam}に詳しい。
+Adamは勾配降下法の中で最も用いられるアルゴリズムであり、\prettyref{fig:Adam}に示す手順にしたがってパラメータの更新を行う。また、Adamについては~\cite{Adam}に詳しい。
 
 \begin{algorithm}[b]
-\label{alg:Adam}
     \DontPrintSemicolon
     \SetKwInOut{KwHyParam}{HyperParameter}
     \SetKwInOut{KwParam}{Parameter}
     \SetKwInOut{KwObFunc}{Objective~Function~}
     \SetKwProg{Init}{Initialization}{:}{end}
     \SetKwProg{Proc}{Procedure}{:}{end}
+    \BlankLine
+    \BlankLine
     \KwHyParam{$\beta_1,\beta_2\in \interval[open left]{0}{1},\eta,\epsilon$}
     \KwObFunc{$f$}
     \KwParam{$\theta$}
@@ -42,12 +43,13 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
     }
     \BlankLine
 \caption{Adamの疑似コード}
+\label{fig:Adam}
 \end{algorithm}
 
 \chapter{学習時のパラメータ}
 \label{app:params}
 
-提案モデルの学習時のパラメータの値を\prettyref{tab:params1}に示す。また、\prettyref{tab:params2}は\prettyref{alg:Adam}に示すハイパーパラメータの値である。
+提案モデルの学習時のパラメータの値を\prettyref{tab:params1}に示す。また、\prettyref{tab:params2}は\prettyref{fig:Adam}に示すハイパーパラメータの値である。
 
 \begin{table}[h]
 \centering

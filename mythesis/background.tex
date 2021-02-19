@@ -57,7 +57,7 @@ MLPでは、神経細胞を\prettyref{fig:neuron}のような人工ニューロ�
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=0.5\columnwidth]{figure/neuron.png}
+\includegraphics[width=0.45\columnwidth]{figure/neuron.png}
 \caption[MLPの人工ニューロン]{人工ニューロン}
 \label{fig:neuron}
 \end{figure}
@@ -85,18 +85,19 @@ MLPは、\prettyref{sec:neuron}に示す人工ニューロンが複数並んだ�
 
 \begin{figure}[b]
 \centering
-\begin{minipage}{0.4\columnwidth}
+\begin{minipage}[b]{0.4\columnwidth}
 \centering
-\includegraphics[width=0.95\columnwidth]{figure/mlp_net0.png}
-\caption{MLPの一層}
+\includegraphics[width=\columnwidth]{figure/mlp_net0.png}
+\subcaption{MLPの一層}
 \label{fig:MLP_net0}
 \end{minipage}
-\begin{minipage}{0.55\columnwidth}
+\begin{minipage}[b]{0.5\columnwidth}
 \centering
-\includegraphics[width=0.9\columnwidth]{figure/mlp_net1.png}
-\caption{MLPのネットワーク}
+\includegraphics[width=\columnwidth]{figure/mlp_net1.png}
+\subcaption{MLPの全層}
 \label{fig:MLP_net1}
 \end{minipage}
+\caption{MLPのネットワーク}
 \end{figure}
 
 %ここで改ページ
@@ -189,31 +190,30 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 \label{fig:pooling}
 \end{figure}
 
+\subsection{}
+
 %ここで改ページ
 \clearpage
 
 \section{GAN}
 
+GAN~(Generative~Adversarial~Networks)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を持つ擬似的なデータを生成することを目指す手法である。この手法は実在しないアイドルの写真を生成する際などに用いられる~\cite{idol}。また、GANはDiscriminator~(識別モデル)~とGenerator~(生成モデル)~の二つのニューラルネットワークで構成される~(\prettyref{fig:GAN_net})~。
+
 \begin{figure}[b]
 \centering
-\includegraphics[width=\columnwidth]{figure/GAN_net.png}
+\includegraphics[width=0.75\columnwidth]{figure/GAN_net.png}
 \caption[GANのネットワーク]{GANのネットワーク\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:GAN_net}
 \end{figure}
 
-GAN~(Generative~Adversarial~Networks)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を持つ擬似的なデータを生成することを目指す手法である。この手法は実在しないアイドルの写真を生成する際などに用いられる~\cite{idol}。また、GANは\prettyref{fig:GAN_net}のように二つのニューラルネットワークで構成され、それぞれのネットワークはDiscriminator~(識別モデル)~とGenerator~(生成モデル)~と呼ばれる。
-
 \subsection{GANの学習}
 
 生成モデルと識別モデルの二つのネットワークはランダムに初期化された後に競合的に学習を進める。まず、識別モデルはデータがFake~data~(生成モデルの出力)~とReal~data~(学習データ)~のどちらであるかを識別できるように学習を進める。そして、生成モデルは識別モデルが学習データであると誤って識別するように、Noise~(ノイズ)~を元に学習データに近いデータを出力する。この二つの学習を交互に繰り返すことで、漸進的に生成モデルが学習データにより近いデータを生成できるようになると期待される。また、ノイズは適当な次元のベクトルであり、生成モデルの出力の揺らぎを表現する潜在変数の役割を果たす。
 
-%ここで改ページ
-\clearpage
-
 \subsection{GANの定式化}
 
-GANでは、生成モデルの目的関数は\prettyref{eq:GAN_G}、識別モデルの目的関数は\prettyref{eq:GAN_D}として定式化される。
+GANでは、生成モデルと識別モデルの目的関数はそれぞれ\prettyref{eq:GAN_G}、\prettyref{eq:GAN_D}として定式化される。
 
 \begin{align}
     \label{eq:GAN_G}
@@ -224,6 +224,9 @@ GANでは、生成モデルの目的関数は\prettyref{eq:GAN_G}、識別モデ
 
 
 ここで、$\boldsymbol{x}$は学習データ、$\boldsymbol{z}$は生成モデルへの入力のノイズ、$G(\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル、$D(\cdot;\theta_D)$は識別モデル、$\theta_G$は生成モデル$G$のパラメータ、$\theta_D$は識別モデル$D$のパラメータ、である。
+
+%ここで改ページ
+\clearpage
 
 \section{Pix2pix}
 
@@ -237,20 +240,20 @@ Pix2pix~\cite{pix2pix}は、ネットワークの入力に変換元の画像を~
 \label{fig:pix2pix_net}
 \end{figure}
 
-%ここで改ページ
-\clearpage
-
-\begin{figure}[t]
+\begin{figure}[b]
 \centering
-\includegraphics[width=\columnwidth]{figure/pix2pix_img.png}
+\includegraphics[width=0.8\columnwidth]{figure/pix2pix_img.png}
 \caption[Pix2pixのスタイル変換の例]{Pix2pixのスタイル変換の例\\
 図は~\cite{pix2pix}のFigure~1を用いて作成した。}
 \label{fig:pix2pix_img}
 \end{figure}
 
+%ここで改ページ
+\clearpage
+
 \subsection{Pix2pixの定式化}
 
-そして、Pix2pixにおいては、生成モデルの目的関数は\prettyref{eq:pix2pix_G}、識別モデルの目的関数は\prettyref{eq:pix2pix_D}として定式化される。
+Pix2pixでは、生成モデルと識別モデルの目的関数はそれぞれ\prettyref{eq:pix2pix_G}、\prettyref{eq:pix2pix_D}として定式化される。
 
 \begin{align}
     \label{eq:pix2pix_G}
@@ -263,29 +266,27 @@ Pix2pix~\cite{pix2pix}は、ネットワークの入力に変換元の画像を~
 
 \subsection{Pix2pixの生成モデル}
 
-Pix2pixの生成モデルには、\prettyref{fig:u-net}のようにEncoder-Decoder型のネットワークが用いられる。ただし、変換元の画像と返還後の画像で共通する基本構造であるピクセルの対応関係を維持するために、スキップコネクションが用いられる。このスキップコネクションはU-net~\cite{u-net}で用いられたものと同様の働きをする。具体的には、エンコード前の特徴量マップをデコード時にも利用しており、この特徴量マップによりピクセルの対応関係が維持されると期待される。
+Pix2pixの生成モデルには、スキップコネクションを持ったEncoder-Decoder型のネットワークが用いられる~(\prettyref{fig:u-net})~。スキップコネクションは変換元の画像と変換後の画像で共通する基本構造であるピクセルの対応関係を維持すると期待され、U-net~\cite{u-net}で用いられたものを参考にしている。また、エンコード前の特徴量マップをデコード時にも利用することで実装している。
 
-また、ノイズとしては通常のGANのようなベクトルではなくDropout~\cite{Dropout}が用いられる。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
-
-%ここで改ページ
-\clearpage
-
-\begin{figure}[t]
-\centering
-\includegraphics[width=0.8\columnwidth]{figure/u-net.png}
-\caption[Pix2pixの生成モデル]{生成モデルのネットワーク\\
-図は~\cite{pix2pix}のFigure~1とFigure~3を用いて作成した。}
-\label{fig:u-net}
-\end{figure}
+そして、ノイズとしてはノイズベクトルの代わりにDropout~\cite{Dropout}が用いられる。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
 
 \subsection{Pix2pixの識別モデル}
 
+Pix2pixの識別モデルには、PatchGANという手法が用いられる。PatchGANは一般的なGANの画像全体の真偽ではなく局所領域ごとの真偽の平均を識別の際に用いるため、局所的な識別精度が高まることが期待される~(\prettyref{fig:patchgan})~。また、CNNの出力として得られた特徴量マップの平均値を出力することで実装している。
+
 \begin{figure}[b]
 \centering
-\includegraphics[width=0.6\columnwidth]{figure/patchgan.png}
-\caption[通常のGANの識別モデルとPatchGANの比較]{通常のGANの識別モデルとPatchGANの比較\\
-図は~\cite{pix2pix}のFigure~1を用いて作成した。}
+\begin{minipage}[b]{0.58\columnwidth}
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/u-net.png}
+\subcaption[Pix2pixの生成モデル]{生成モデルのネットワーク}
+\label{fig:u-net}
+\end{minipage}
+\begin{minipage}[b]{0.4\columnwidth}
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/patchgan.png}
+\subcaption{GANとPatchGANの識別モデルの比較}
 \label{fig:patchgan}
+\end{minipage}
+\caption[Pix2pixの生成モデルと識別モデル]{図は~\cite{pix2pix}のFigure~1とFigure~3を用いて作成した。}
 \end{figure}
-
-Pix2pixの識別モデルには、PatchGANという手法が用いられる。PatchGANは\prettyref{fig:patchgan}のように画像全体ではなくパッチと呼ばれる局所領域ごとに真偽を求めて平均を出力とする。これにより、局所的な識別精度が高まることが期待される。

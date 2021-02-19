@@ -5,6 +5,7 @@
 %表現の統一
 %改ページのチェック
 %載せた論文に目を通す
+%参考文献の調整
 
 %文字の大きさ、紙の大きさ、ドライバ、エンジン、文書クラス
 \documentclass[10pt,a4paper,dvipdfmx,uplatex]{jsreport}
@@ -17,11 +18,11 @@
 %位置指定
 \usepackage{float}
 %ハイパーリンク
-\usepackage{hyperref}
+\usepackage{hyperref,pxjahyper}
 %数式
 \usepackage{amsmath,amssymb}
 %アルゴリズム
-\usepackage{algpseudocode,algorithm2e}
+\usepackage[boxed,figure]{algorithm2e}
 %文字色
 \usepackage{color}
 %コメントアウト
@@ -39,6 +40,10 @@
 %目次の設定
 \usepackage{tocloft}
 \usepackage{etoolbox}
+%図の設定
+\usepackage[subrefformat=parens]{subcaption}
+
+%ハイパーリンクの設定
 
 %タイトルの番号付けの設定
 \setcounter{secnumdepth}{3}
@@ -56,31 +61,30 @@
 %目次の設定
 \renewcommand{\cfttoctitlefont}{\Huge\bfseries}
 \renewcommand{\cftchapfont}{\normalsize\bfseries}
-\renewcommand{\cftchapnumwidth}{4em}
+\setlength{\cftchapnumwidth}{4em}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
 
 %図目次の設定
 \renewcommand{\cftloftitlefont}{\Huge\bfseries}
 \renewcommand{\cftfigpresnum}{図~}
-\renewcommand{\cftfignumwidth}{4em}
+\setlength{\cftbeforefigskip}{0pt}
+\cftsetindents{figure}{1.5em}{5em}
 %図目次にchapterを加える
 \preto\figure{
-  \ifnum\value{figure}=0\addtocontents{lof}{\normalsize\bfseries {\IfAppendix{\appendixname\Alph{chapter}}{第\thechapter~章}}\vskip10pt}\fi
+  \ifnum\value{figure}=0
+  \phantomsection
+  \addtocontents{lof}{
+  \begin{flushleft}
+    \IfAppendix{\normalsize\bfseries{\appendixname\Alph{chapter}}}{\normalsize\bfseries{第\thechapter~章}}
+  \end{flushleft}
+  \par
+  }
+  \fi
 }
 
 %開き括弧の設定
 \intervalconfig{soft open fences}
-
-%アルゴリズムのコマンドの作成
-\algnewcommand{\Init}[1]{
-  \textbf{Initialization:}
-  \hspace*{\algorithmicindent}\parbox[t]{0.9\columnwidth}{\raggedright #1}
-}
-\algnewcommand{\Proc}[1]{
-  \textbf{Procedure:}
-  \hspace*{\algorithmicindent}\parbox[t]{0.9\columnwidth}{\raggedright #1}
-}
 
 %align用の箱の作成
 \newlength{\alignwidth}
@@ -90,7 +94,6 @@
 %参照の変更(prettyref)
 \newrefformat{sec}{\ref{#1}節}
 \newrefformat{fig}{図\ref{#1}}
-\newrefformat{alg}{Algorithm~\ref{#1}}
 \newrefformat{tab}{表\ref{#1}}
 \newrefformat{eq}{式\ref{#1}}
 \newrefformat{cha}{第\ref{#1}~章}
@@ -108,9 +111,15 @@
 %目次
 \setcounter{tocdepth}{2}
 \tableofcontents
+\phantomsection
 \addtocontents{toc}{~\hfill\textbf{Page}\par}
+\clearpage
+
+%図目次
 \listoffigures
+\phantomsection
 \addtocontents{lof}{~\hfill\textbf{Page}\par}
+\clearpage
 
 %はじめに
 \input{introduction.tex}

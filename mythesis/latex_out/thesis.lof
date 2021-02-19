@@ -1,47 +1,47 @@
 \nobreakspace {}\hfill \textbf {Page}\par 
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
-\fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {第2\nobreakspace {}章}\vskip 10pt
-\contentsline {figure}{\numberline {2.1}{\ignorespaces 音波}}{6}{figure.2.1}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces 音波の拡大図}}{7}{figure.2.2}%
+ \begin {flushleft} \fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {第2\nobreakspace {}章}\end {flushleft} \par 
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 音波\relax }}{6}{figure.caption.4}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces 音波の拡大図\relax }}{7}{figure.caption.5}%
 \addvspace {10\jsc@mpt }
-\fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {第3\nobreakspace {}章}\vskip 10pt
-\contentsline {figure}{\numberline {3.1}{\ignorespaces MLPの人工ニューロン}}{12}{figure.3.1}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces MLPの一層}}{13}{figure.3.2}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces MLPのネットワーク}}{13}{figure.3.3}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces AlexNetのネットワーク}}{15}{figure.3.4}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces CNNの畳み込み層}}{16}{figure.3.5}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces CNNのプーリング層}}{17}{figure.3.6}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces GANのネットワーク}}{18}{figure.3.7}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Pix2pixのネットワーク}}{19}{figure.3.8}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Pix2pixのスタイル変換の例}}{20}{figure.3.9}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Pix2pixの生成モデル}}{21}{figure.3.10}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces 通常のGANの識別モデルとPatchGANの比較}}{21}{figure.3.11}%
+ \begin {flushleft} \fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {第3\nobreakspace {}章}\end {flushleft} \par 
+\contentsline {figure}{\numberline {3.1}{\ignorespaces MLPの人工ニューロン}}{12}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces MLPのネットワーク\relax }}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces AlexNetのネットワーク\relax }}{15}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces CNNの畳み込み層}}{16}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces CNNのプーリング層}}{17}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces GANのネットワーク}}{18}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Pix2pixのネットワーク}}{19}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Pix2pixのスタイル変換の例}}{19}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Pix2pixの生成モデルと識別モデル}}{20}{figure.caption.15}%
 \addvspace {10\jsc@mpt }
-\fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {第4\nobreakspace {}章}\vskip 10pt
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 88鍵のピアノの鍵盤}}{22}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 本研究の提案モデル}}{23}{figure.4.2}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces 本研究の生成モデル}}{23}{figure.4.3}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces 本研究の識別モデル}}{24}{figure.4.4}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces F3の音波}}{25}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces C4の音波}}{25}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces D7$\sharp $の音波}}{26}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces E7の音波}}{26}{figure.4.8}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces D4$\sharp $の音波}}{26}{figure.4.9}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces D7$\sharp $の音波}}{26}{figure.4.10}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces D1の音波}}{27}{figure.4.11}%
-\contentsline {figure}{\numberline {4.12}{\ignorespaces F6の音波}}{27}{figure.4.12}%
-\contentsline {figure}{\numberline {4.13}{\ignorespaces C5の音波}}{27}{figure.4.13}%
-\contentsline {figure}{\numberline {4.14}{\ignorespaces D2$\sharp $の音波}}{27}{figure.4.14}%
-\contentsline {figure}{\numberline {4.15}{\ignorespaces A0の音波}}{28}{figure.4.15}%
-\contentsline {figure}{\numberline {4.16}{\ignorespaces B7の音波}}{28}{figure.4.16}%
-\contentsline {figure}{\numberline {4.17}{\ignorespaces F1$\sharp $の音波}}{28}{figure.4.17}%
-\contentsline {figure}{\numberline {4.18}{\ignorespaces A7の音波}}{28}{figure.4.18}%
+ \begin {flushleft} \fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {第4\nobreakspace {}章}\end {flushleft} \par 
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 88鍵のピアノの鍵盤\relax }}{21}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 本研究の提案モデル}}{22}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces 本研究の生成モデル}}{22}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces 本研究の識別モデル}}{23}{figure.caption.20}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces F3の音波}}{24}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces C4の音波}}{24}{figure.caption.21}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces D7$\sharp $の音波}}{25}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces E7の音波}}{25}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces D4$\sharp $の音波}}{25}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces D7$\sharp $の音波}}{25}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces D1の音波}}{26}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces F6の音波}}{26}{figure.caption.24}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces C5の音波}}{26}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces D2$\sharp $の音波}}{26}{figure.caption.25}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces A0の音波}}{27}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces B7の音波}}{27}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces F1$\sharp $の音波}}{27}{figure.caption.27}%
+\contentsline {figure}{\numberline {4.18}{\ignorespaces A7の音波}}{27}{figure.caption.27}%
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
+ \begin {flushleft} \fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {付録A}\end {flushleft} \par 
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Adamの疑似コード\relax }}{31}{figure.caption.31}%
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
-\fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {付録C}\vskip 10pt
-\contentsline {figure}{\numberline {C.1}{\ignorespaces データセットのサブセット}}{34}{figure.C.1}%
+ \begin {flushleft} \fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {付録C}\end {flushleft} \par 
+\contentsline {figure}{\numberline {C.1}{\ignorespaces データセットのサブセット\relax }}{33}{figure.caption.34}%
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }

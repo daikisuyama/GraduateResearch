@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  19 FEB 2021 07:31
+This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  19 FEB 2021 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -171,7 +171,16 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
 )
 \Hy@SectionHShift=\skip50
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/local/texlive/2020/texmf-dist/tex/platex/pxjahyper/pxjahyper.sty
+Package: pxjahyper 2020/10/10 v0.6a
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count199
+) (/usr/local/texlive/2020/texmf-dist/tex/platex/pxjahyper/pxjahyper-enc.sty
+Package: pxjahyper-enc 2020/10/10 v0.6a
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/bxjatoucs/bxjatoucs.sty
+Package: bxjatoucs 2019/10/20 v0.2
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip51
 
@@ -188,13 +197,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count199
+\inf@bad=\count266
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count266
-\leftroot@=\count267
+\uproot@=\count267
+\leftroot@=\count268
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count268
-\DOTSCASE@=\count269
+\classnum@=\count269
+\DOTSCASE@=\count270
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -203,15 +212,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen168
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count270
-\c@MaxMatrixCols=\count271
+\macc@depth=\count271
+\c@MaxMatrixCols=\count272
 \dotsspace@=\muskip17
-\c@parentequation=\count272
-\dspbrk@lvl=\count273
+\c@parentequation=\count273
+\dspbrk@lvl=\count274
 \tag@help=\toks20
-\row@=\count274
-\column@=\count275
-\maxfields@=\count276
+\row@=\count275
+\column@=\count276
+\maxfields@=\count277
 \andhelp@=\toks21
 \eqnshift@=\dimen169
 \alignsep@=\dimen170
@@ -234,33 +243,16 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2020/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
-Package: algpseudocode 
+)) (/usr/local/texlive/2020/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count278
  (/usr/local/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
-Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
-
-Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count277
-\c@ALG@rem=\count278
-\c@ALG@nested=\count279
-\ALG@tlm=\skip54
-\ALG@thistlm=\skip55
-\c@ALG@Lnr=\count280
-\c@ALG@blocknr=\count281
-\c@ALG@storecount=\count282
-\c@ALG@tmpcounter=\count283
-\ALG@tmplength=\skip56
 )
-Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count284
-\algocf@hangindent=\skip57
+\algocf@hangindent=\skip54
  (/usr/local/texlive/2020/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count285
+\c@checkoddpage=\count279
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/relsize/relsize.sty
@@ -271,39 +263,39 @@ Package relsize Warning: Failed to get list of defined font sizes.
 (relsize)                Size scaling will attempt arbitrary sizes..
 
 )
-\skiptotal=\skip58
-\skiplinenumber=\skip59
-\skiprule=\skip60
-\skiphlne=\skip61
-\skiptext=\skip62
-\skiplength=\skip63
-\algomargin=\skip64
-\skipalgocfslide=\skip65
+\skiptotal=\skip55
+\skiplinenumber=\skip56
+\skiprule=\skip57
+\skiphlne=\skip58
+\skiptext=\skip59
+\skiplength=\skip60
+\algomargin=\skip61
+\skipalgocfslide=\skip62
 \algowidth=\dimen175
 \inoutsize=\dimen176
 \inoutindent=\dimen177
 \interspacetitleruled=\dimen178
 \interspacealgoruled=\dimen179
 \interspacetitleboxruled=\dimen180
-\algocf@ruledwidth=\skip66
+\algocf@ruledwidth=\skip63
 \algocf@inoutbox=\box70
 \algocf@inputbox=\box71
-\AlCapSkip=\skip67
-\AlCapHSkip=\skip68
-\algoskipindent=\skip69
+\AlCapSkip=\skip64
+\AlCapHSkip=\skip65
+\algoskipindent=\skip66
 \algocf@nlbox=\box72
 \algocf@hangingbox=\box73
 \algocf@untilbox=\box74
-\algocf@skipuntil=\skip70
+\algocf@skipuntil=\skip67
 \algocf@capbox=\box75
-\algocf@lcaptionbox=\skip71
-\algoheightruledefault=\skip72
-\algoheightrule=\skip73
-\algotitleheightruledefault=\skip74
-\algotitleheightrule=\skip75
-\c@algocfline=\count286
-\c@algocfproc=\count287
-\c@algocf=\count288
+\algocf@lcaptionbox=\skip68
+\algoheightruledefault=\skip69
+\algoheightrule=\skip70
+\algotitleheightruledefault=\skip71
+\algotitleheightrule=\skip72
+\c@algocfline=\count280
+\c@algocfproc=\count281
+\c@algocf=\count282
 \algocf@algoframe=\box76
 \algocf@algobox=\box77
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/color.sty
@@ -328,18 +320,18 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen188
 \cmidrulekern=\dimen189
 \defaultaddspace=\dimen190
-\@cmidla=\count289
-\@cmidlb=\count290
+\@cmidla=\count283
+\@cmidlb=\count284
 \@aboverulesep=\dimen191
 \@belowrulesep=\dimen192
-\@thisruleclass=\count291
-\@lastruleclass=\count292
+\@thisruleclass=\count285
+\@lastruleclass=\count286
 \@thisrulewidth=\dimen193
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2019/10/16 v2.13 Sectioning titles
 \ttl@box=\box78
-\beforetitleunit=\skip76
-\aftertitleunit=\skip77
+\beforetitleunit=\skip73
+\aftertitleunit=\skip74
 \ttl@plus=\dimen194
 \ttl@minus=\dimen195
 \ttl@toksa=\toks24
@@ -360,77 +352,103 @@ Package: prettyref 1998/07/09 v3.0
 ) (/usr/local/texlive/2020/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
-\cftparskip=\skip78
-\cftbeforetoctitleskip=\skip79
-\cftaftertoctitleskip=\skip80
-\cftbeforepartskip=\skip81
-\cftpartnumwidth=\skip82
-\cftpartindent=\skip83
-\cftbeforechapskip=\skip84
-\cftchapindent=\skip85
-\cftchapnumwidth=\skip86
-\cftbeforesecskip=\skip87
-\cftsecindent=\skip88
-\cftsecnumwidth=\skip89
-\cftbeforesubsecskip=\skip90
-\cftsubsecindent=\skip91
-\cftsubsecnumwidth=\skip92
-\cftbeforesubsubsecskip=\skip93
-\cftsubsubsecindent=\skip94
-\cftsubsubsecnumwidth=\skip95
-\cftbeforeparaskip=\skip96
-\cftparaindent=\skip97
-\cftparanumwidth=\skip98
-\cftbeforesubparaskip=\skip99
-\cftsubparaindent=\skip100
-\cftsubparanumwidth=\skip101
-\cftbeforeloftitleskip=\skip102
-\cftafterloftitleskip=\skip103
-\cftbeforefigskip=\skip104
-\cftfigindent=\skip105
-\cftfignumwidth=\skip106
-\c@lofdepth=\count293
-\c@lotdepth=\count294
-\cftbeforelottitleskip=\skip107
-\cftafterlottitleskip=\skip108
-\cftbeforetabskip=\skip109
-\cfttabindent=\skip110
-\cfttabnumwidth=\skip111
-) (/usr/local/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count295
+\cftparskip=\skip75
+\cftbeforetoctitleskip=\skip76
+\cftaftertoctitleskip=\skip77
+\cftbeforepartskip=\skip78
+\cftpartnumwidth=\skip79
+\cftpartindent=\skip80
+\cftbeforechapskip=\skip81
+\cftchapindent=\skip82
+\cftchapnumwidth=\skip83
+\cftbeforesecskip=\skip84
+\cftsecindent=\skip85
+\cftsecnumwidth=\skip86
+\cftbeforesubsecskip=\skip87
+\cftsubsecindent=\skip88
+\cftsubsecnumwidth=\skip89
+\cftbeforesubsubsecskip=\skip90
+\cftsubsubsecindent=\skip91
+\cftsubsubsecnumwidth=\skip92
+\cftbeforeparaskip=\skip93
+\cftparaindent=\skip94
+\cftparanumwidth=\skip95
+\cftbeforesubparaskip=\skip96
+\cftsubparaindent=\skip97
+\cftsubparanumwidth=\skip98
+\cftbeforeloftitleskip=\skip99
+\cftafterloftitleskip=\skip100
+\cftbeforefigskip=\skip101
+\cftfigindent=\skip102
+\cftfignumwidth=\skip103
+\c@lofdepth=\count287
+\c@lotdepth=\count288
+\cftbeforelottitleskip=\skip104
+\cftafterlottitleskip=\skip105
+\cftbeforetabskip=\skip106
+\cfttabindent=\skip107
+\cfttabnumwidth=\skip108
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (/usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen199
+\captionmargin@=\dimen256
+\captionwidth=\dimen257
+\caption@tempdima=\dimen258
+\caption@indent=\dimen259
+\caption@parindent=\dimen260
+\caption@hangindent=\dimen261
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+Package caption Info: \@makecaption = \long macro:#1#2->{\small \advance \leftskip .0628\linewidth \advance \rightskip .0628\linewidth \vskip \abovecaptionskip \sbox \@tempboxa {#1\hskip 1zw\relax #2}\ifdim \wd \@tempboxa <\hsize \centering \fi #1{\hskip 1zw\relax }#2\par \vskip \belowcaptionskip } on input line 1139.
 )
-\alignwidth=\skip112
+
+Package caption Warning: Unknown document class (or package),
+(caption)                standard defaults will be used.
+See the caption package documentation for explanation.
+
+\c@caption@flags=\count289
+\c@continuedfloat=\count290
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+\c@subfigure=\count291
+\c@subtable=\count292
+)
+\alignwidth=\skip109
  (/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-dvipdfmx.def
 File: l3backend-dvipdfmx.def 2020-09-24 L3 backend support: dvipdfmx
-\g__graphics_track_int=\count296
+\g__graphics_track_int=\count293
 \l__pdf_internal_box=\box79
-\g__pdf_backend_object_int=\count297
-\g__pdf_backend_annotation_int=\count298
+\g__pdf_backend_object_int=\count294
+\g__pdf_backend_annotation_int=\count295
 ) (latex_out/thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 103.
-LaTeX Font Info:    ... okay on input line 103.
-Package hyperref Info: Link coloring OFF on input line 103.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+Package hyperref Info: Link coloring OFF on input line 106.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -438,15 +456,17 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count299
+\c@section@level=\count296
 )
-LaTeX Info: Redefining \ref on input line 103.
-LaTeX Info: Redefining \pageref on input line 103.
-LaTeX Info: Redefining \nameref on input line 103.
+LaTeX Info: Redefining \ref on input line 106.
+LaTeX Info: Redefining \pageref on input line 106.
+LaTeX Info: Redefining \nameref on input line 106.
  (latex_out/thesis.out) (latex_out/thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
  (./title.tex
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 19.17792pt on input line 4.
@@ -460,17 +480,17 @@ LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 
 ])
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 110.
+(Font)              scaled to size 23.0061pt on input line 113.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 110.
+(Font)              scaled to size 23.0061pt on input line 113.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 110.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 113.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 110.
+(Font)              scaled to size 23.0061pt on input line 113.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 110.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 113.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 110.
+(Font)              scaled to size 23.0061pt on input line 113.
  (latex_out/thesis.toc
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
 (Font)              Font shape `JT2/gt/m/n' tried instead on input line 1.
@@ -495,11 +515,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \tf@toc=\write5
 \openout5 = `thesis.toc'.
 
- (latex_out/thesis.lof [2] [3])
+ [2] (latex_out/thesis.lof [3
+
+])
 \tf@lof=\write6
 \openout6 = `thesis.lof'.
 
- (./introduction.tex [4]
+ [4] (./introduction.tex
 第1章
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 6.47278pt on input line 11.
@@ -512,6 +534,7 @@ LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 7.39746pt on input line 11.
 ) (./explanation.tex [5
+
 
 ]
 第2章
@@ -537,10 +560,6 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 13.31541pt on input line 14.
 File: figure/gakuon1.png Graphic file (type bmp)
 <figure/gakuon1.png>
-LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 8.32214pt on input line 25.
-LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 8.32214pt on input line 25.
 [6
 
 ]
@@ -574,6 +593,10 @@ File: figure/neuron.png Graphic file (type bmp)
 ]
 File: figure/mlp_net0.png Graphic file (type bmp)
 <figure/mlp_net0.png>
+LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
+(Font)              scaled to size 8.32214pt on input line 91.
+LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
+(Font)              scaled to size 8.32214pt on input line 91.
 File: figure/mlp_net1.png Graphic file (type bmp)
 <figure/mlp_net1.png>
  [13
@@ -603,44 +626,41 @@ File: figure/GAN_net.png Graphic file (type bmp)
 ]
 File: figure/pix2pix_net.png Graphic file (type bmp)
 <figure/pix2pix_net.png>
- [19
-
-]
 File: figure/pix2pix_img.png Graphic file (type bmp)
 <figure/pix2pix_img.png>
- [20
+ [19
 
 ]
 File: figure/u-net.png Graphic file (type bmp)
 <figure/u-net.png>
 File: figure/patchgan.png Graphic file (type bmp)
 <figure/patchgan.png>
-) (./proposed_method.tex [21
+) (./proposed_method.tex [20
 
 ]
 第4章
 File: figure/piano.png Graphic file (type bmp)
 <figure/piano.png>
-[22
+[21
 
 ]
 File: figure/pr_model.png Graphic file (type bmp)
 <figure/pr_model.png>
 File: figure/pr_generator.png Graphic file (type bmp)
 <figure/pr_generator.png>
- [23
+ [22
 
 ]
 File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
- [24
+ [23
 
 ]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
- [25
+ [24
 
 ]
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
@@ -651,7 +671,7 @@ File: figure/66_22_det/d4s_0100_0200.png Graphic file (type bmp)
 <figure/66_22_det/d4s_0100_0200.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
- [26
+ [25
 
 ]
 File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
@@ -662,7 +682,7 @@ File: figure/88_88/c5.png Graphic file (type bmp)
 <figure/88_88/c5.png>
 File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
 <figure/88_88_det/d2s_0100_0103.png>
- [27
+ [26
 
 ]
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
@@ -673,13 +693,13 @@ File: figure/88_88/f1s.png Graphic file (type bmp)
 <figure/88_88/f1s.png>
 File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
-) (./conclusion.tex [28
+) (./conclusion.tex [27
 
 ]
 第5章
-) (./thanks.tex [29
+) (./thanks.tex [28
 
-]) (latex_out/thesis.bbl [30
+]) (latex_out/thesis.bbl [29
 
 ]
 LaTeX Font Info:    Font shape `JT2/gt/m/it' in size <10> not available
@@ -690,41 +710,41 @@ LaTeX Font Info:    Font shape `JY2/gt/m/it' in size <10> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 9.24683pt on input line 26.
-) (./appendix.tex [31
+) (./appendix.tex [30
 
 ]
 付録A
-[32
+[31
 
 ]
 付録B
-[33
+[32
 
 ]
 付録C
 File: figure/data_div.png Graphic file (type bmp)
 <figure/data_div.png>
-[34
+[33
 
 ]
 付録D
-[35
+[34
 
 ]
 付録E
-) [36
+) [35
 
 ] (latex_out/thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A71FBF9942EE4BFFD8B46BC201C37060;4142.
+(rerunfilecheck)             Checksum: 3DAA27E24FF859CED0C2B12A781DB3A2;4252.
  ) 
 Here is how much of TeX's memory you used:
- 9547 strings out of 479847
- 148521 string characters out of 5881593
- 482988 words of memory out of 5000000
- 26608 multiletter control sequences out of 15000+600000
- 423701 words of font info for 127 fonts, out of 8000000 for 9000
+ 10868 strings out of 479847
+ 172880 string characters out of 5881593
+ 503750 words of memory out of 5000000
+ 27917 multiletter control sequences out of 15000+600000
+ 453349 words of font info for 124 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
- 68i,16n,75p,1286b,662s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 68i,16n,75p,1286b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/thesis.dvi (37 pages, 159832 bytes).
+Output written on latex_out/thesis.dvi (36 pages, 161464 bytes).
