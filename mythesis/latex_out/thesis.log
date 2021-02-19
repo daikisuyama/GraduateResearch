@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  19 FEB 2021 21:40
+This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  20 FEB 2021 08:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -428,27 +428,27 @@ File: l3backend-dvipdfmx.def 2020-09-24 L3 backend support: dvipdfmx
 ) (latex_out/thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
-LaTeX Font Info:    ... okay on input line 106.
-Package hyperref Info: Link coloring OFF on input line 106.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for JY2/mc/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for JT2/mc/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 107.
+LaTeX Font Info:    ... okay on input line 107.
+Package hyperref Info: Link coloring OFF on input line 107.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
@@ -458,9 +458,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count296
 )
-LaTeX Info: Redefining \ref on input line 106.
-LaTeX Info: Redefining \pageref on input line 106.
-LaTeX Info: Redefining \nameref on input line 106.
+LaTeX Info: Redefining \ref on input line 107.
+LaTeX Info: Redefining \pageref on input line 107.
+LaTeX Info: Redefining \nameref on input line 107.
  (latex_out/thesis.out) (latex_out/thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
@@ -480,17 +480,17 @@ LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 
 ])
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 113.
+(Font)              scaled to size 23.0061pt on input line 114.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 113.
+(Font)              scaled to size 23.0061pt on input line 114.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 113.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 113.
+(Font)              scaled to size 23.0061pt on input line 114.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <24.88> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 113.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 114.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 23.0061pt on input line 113.
+(Font)              scaled to size 23.0061pt on input line 114.
  (latex_out/thesis.toc
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <10> not available
 (Font)              Font shape `JT2/gt/m/n' tried instead on input line 1.
@@ -648,12 +648,11 @@ File: figure/pr_model.png Graphic file (type bmp)
 <figure/pr_model.png>
 File: figure/pr_generator.png Graphic file (type bmp)
 <figure/pr_generator.png>
- [22
-
-]
 File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
- [23
+ [22
+
+] [23
 
 ]
 File: figure/88_88/f3.png Graphic file (type bmp)
@@ -678,17 +677,17 @@ File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
 <figure/66_22_det/d1_0300_0500.png>
 File: figure/66_22_det/f6_0070_0080.png Graphic file (type bmp)
 <figure/66_22_det/f6_0070_0080.png>
-File: figure/88_88/c5.png Graphic file (type bmp)
-<figure/88_88/c5.png>
-File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
-<figure/88_88_det/d2s_0100_0103.png>
- [26
-
-]
 File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
 <figure/88_88_det/b7_0980_1000.png>
+ [26
+
+]
+File: figure/88_88/c5.png Graphic file (type bmp)
+<figure/88_88/c5.png>
+File: figure/88_88_det/d2s_0100_0103.png Graphic file (type bmp)
+<figure/88_88_det/d2s_0100_0103.png>
 File: figure/88_88/f1s.png Graphic file (type bmp)
 <figure/88_88/f1s.png>
 File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
@@ -736,15 +735,15 @@ File: figure/data_div.png Graphic file (type bmp)
 
 ] (latex_out/thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3DAA27E24FF859CED0C2B12A781DB3A2;4252.
+(rerunfilecheck)             Checksum: 555FD357E1D54A58B67FDD71C4D456E0;4252.
  ) 
 Here is how much of TeX's memory you used:
- 10868 strings out of 479847
- 172880 string characters out of 5881593
- 503750 words of memory out of 5000000
- 27917 multiletter control sequences out of 15000+600000
+ 10870 strings out of 479847
+ 172912 string characters out of 5881593
+ 503843 words of memory out of 5000000
+ 27919 multiletter control sequences out of 15000+600000
  453349 words of font info for 124 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  68i,16n,75p,1286b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/thesis.dvi (36 pages, 161464 bytes).
+Output written on latex_out/thesis.dvi (36 pages, 160624 bytes).

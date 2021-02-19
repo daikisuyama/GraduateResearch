@@ -889,14 +889,6 @@ INPUT ./figure/66_22_det/f6_0070_0080.png
 INPUT ./figure/66_22_det/f6_0070_0080.png
 INPUT figure/66_22_det/f6_0070_0080.png
 INPUT extractbb -B cropbox -O figure/66_22_det/f6_0070_0080.png
-INPUT ./figure/88_88/c5.png
-INPUT ./figure/88_88/c5.png
-INPUT figure/88_88/c5.png
-INPUT extractbb -B cropbox -O figure/88_88/c5.png
-INPUT ./figure/88_88_det/d2s_0100_0103.png
-INPUT ./figure/88_88_det/d2s_0100_0103.png
-INPUT figure/88_88_det/d2s_0100_0103.png
-INPUT extractbb -B cropbox -O figure/88_88_det/d2s_0100_0103.png
 INPUT ./figure/88_88_det/a0_0800_1000.png
 INPUT ./figure/88_88_det/a0_0800_1000.png
 INPUT figure/88_88_det/a0_0800_1000.png
@@ -905,6 +897,14 @@ INPUT ./figure/88_88_det/b7_0980_1000.png
 INPUT ./figure/88_88_det/b7_0980_1000.png
 INPUT figure/88_88_det/b7_0980_1000.png
 INPUT extractbb -B cropbox -O figure/88_88_det/b7_0980_1000.png
+INPUT ./figure/88_88/c5.png
+INPUT ./figure/88_88/c5.png
+INPUT figure/88_88/c5.png
+INPUT extractbb -B cropbox -O figure/88_88/c5.png
+INPUT ./figure/88_88_det/d2s_0100_0103.png
+INPUT ./figure/88_88_det/d2s_0100_0103.png
+INPUT figure/88_88_det/d2s_0100_0103.png
+INPUT extractbb -B cropbox -O figure/88_88_det/d2s_0100_0103.png
 INPUT ./figure/88_88/f1s.png
 INPUT ./figure/88_88/f1s.png
 INPUT figure/88_88/f1s.png

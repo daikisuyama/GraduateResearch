@@ -1,6 +1,8 @@
 %追加すべき事項
 % - ? lossの図と説明
 % - ? 追加実験
+% - 考察の増強
+% - 方法とモデルの増強
 \chapter{提案手法}
 
 本章では、実験で用いるデータセットと提案モデルの説明を行った後、実験結果の考察を行う。
@@ -39,28 +41,29 @@
 
 生成モデルには1つのスキップコネクションを持つEncoder-Decoder型のネットワークを用いた。また、入力は条件となる変換元の音波である~(\prettyref{fig:pr_gen})~。
 
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.6\columnwidth]{figure/pr_generator.png}
-\caption[本研究の生成モデル]{生成モデル\\
-図は~\cite{u-net}のFigure~1を参考に作成した。}
-\label{fig:pr_gen}
-\end{figure}
-
-%ここで改ページ
-\clearpage
-
 \subsection{識別モデル}
 
 識別モデルには一般的なCNNを用いた。また、出力は最終層の特徴量マップの平均値である~(\prettyref{fig:pr_dis})~。
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=0.6\columnwidth]{figure/pr_discriminator.png}
-\caption[本研究の識別モデル]{識別モデル\\
-図は~\cite{u-net}のFigure~1を参考に作成した。}
+\begin{minipage}[b]{0.48\columnwidth}
+\centering
+\includegraphics[width=0.8\columnwidth]{figure/pr_generator.png}
+\subcaption[本研究の生成モデル]{生成モデルのネットワーク}
+\label{fig:pr_gen}
+\end{minipage}
+\begin{minipage}[b]{0.48\columnwidth}
+\centering
+\includegraphics[width=0.8\columnwidth]{figure/pr_discriminator.png}
+\subcaption[本研究の識別モデル]{識別モデルのネットワーク}
 \label{fig:pr_dis}
+\end{minipage}
+\caption[本研究の生成モデルと識別モデル]{図は~\cite{u-net}のFigure~1を参考に作成した。}
 \end{figure}
+
+%ここで改ページ
+\clearpage
 
 \section{実験方法}
 
@@ -74,9 +77,6 @@
 
 単色の音色変換であっても任意の高さと大きさの音を学習データとして用意するのは不可能であるため、提案モデルの汎化能力を評価する必要がある。ここでは、88音のうち3/4を学習データ、1/4を評価データとする4分割交差検定により実験を行った。また、データセットの分割方法は\prettyref{app:split}に示す。
 
-%ここで改ページ
-\clearpage
-
 \subsection{評価方法}
 
 生成した音を音波の波形の観察と音の聴き取りにより考察することで評価した。また、生成モデルの出力が音の高さ及び音の大きさを保持したまま変換先のハープの音の音色に変換できているかという観点から評価を行った。
@@ -84,6 +84,9 @@
 \subsection{データ拡張}
 
 各エポックの任意の学習データの振幅を無作為化することでデータ拡張を行った。具体的には、学習前に乱数のシードを固定した後に一様乱数により$0.3\sim1.0$の乱数を生成した。また、これにより88音と小さいサイズのデータセットへの過学習を防ぐことを期待した。
+
+%ここで改ページ
+\clearpage
 
 \section{実験結果}
 \label{sec:result}
@@ -192,6 +195,29 @@ C7,D7$\sharp$,E7,F7$\sharp$,G7,G7$\sharp$,A7,B7,C8の9音は音の高さも維�
 
 実験結果から四つの課題が明らかになった。
 
+\subsubsection{音の減衰の表現}
+
+振動の減衰を表現できていない音がいくつかあった。これらの音のうち、E2以下の低音域ではハープとは全く異なる波形で減衰し~(\prettyref{fig:88_88_reduce1})~、A6以上の高音域ではほとんど振動が見られなかった~(\prettyref{fig:88_88_reduce2})~。また、提案モデルでは表現力が足りず微小な振動の学習が難しいためであると考えられる。
+
+\begin{figure}[b]
+\centering
+\begin{minipage}{0.48\columnwidth}
+\centering
+\includegraphics[width=0.85\columnwidth]{figure/88_88_det/a0_0800_1000.png}
+\caption[A0の音波]{A0の0.800秒から1.000秒までの音波}
+\label{fig:88_88_reduce1}
+\end{minipage}
+\begin{minipage}{0.48\columnwidth}
+\centering
+\includegraphics[width=0.75\columnwidth]{figure/88_88_det/b7_0980_1000.png}
+\caption[B7の音波]{B7の0.980秒から1.000秒までの音波}
+\label{fig:88_88_reduce2}
+\end{minipage}
+\end{figure}
+
+%ここで改ページ
+\clearpage
+
 \subsubsection{音の大きさの維持}
 
 部分的に大きさを維持できていない音がいくつかあった。\prettyref{fig:88_88_amp}では、波形の前半において生成波形の振幅が小さいことがわかる。原因は振幅をランダムに小さくしたことにあると考えられ、学習の初段階では振幅を固定しておくことや振幅の大きさを別で調整するなどの工夫が必要であると考えられる。
@@ -213,29 +239,6 @@ C7,D7$\sharp$,E7,F7$\sharp$,G7,G7$\sharp$,A7,B7,C8の9音は音の高さも維�
 \includegraphics[width=0.75\columnwidth]{figure/88_88_det/d2s_0100_0103.png}
 \caption[D2$\sharp$の音波]{D2$\sharp$の0.100秒から0.103秒までの音波}
 \label{fig:88_88_smooth}
-\end{minipage}
-\end{figure}
-
-%ここで改ページ
-\clearpage
-
-\subsubsection{音の減衰の表現}
-
-振動の減衰を表現できていない音がいくつかあった。これらの音のうち、E2以下の低音域ではハープとは全く異なる波形で減衰し~(\prettyref{fig:88_88_reduce1})~、A6以上の高音域ではほとんど振動が見られなかった~(\prettyref{fig:88_88_reduce2})~。また、提案モデルでは表現力が足りず微小な振動の学習が難しいためであると考えられる。
-
-\begin{figure}[b]
-\centering
-\begin{minipage}{0.48\columnwidth}
-\centering
-\includegraphics[width=0.85\columnwidth]{figure/88_88_det/a0_0800_1000.png}
-\caption[A0の音波]{A0の0.800秒から1.000秒までの音波}
-\label{fig:88_88_reduce1}
-\end{minipage}
-\begin{minipage}{0.48\columnwidth}
-\centering
-\includegraphics[width=0.75\columnwidth]{figure/88_88_det/b7_0980_1000.png}
-\caption[B7の音波]{B7の0.980秒から1.000秒までの音波}
-\label{fig:88_88_reduce2}
 \end{minipage}
 \end{figure}
 

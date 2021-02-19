@@ -46,12 +46,12 @@
 \contentsline {section}{\numberline {4.1}データセットと音の表現}{21}{section.4.1}%
 \contentsline {section}{\numberline {4.2}提案モデル}{21}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}生成モデル}{22}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}識別モデル}{23}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}識別モデル}{22}{subsection.4.2.2}%
 \contentsline {section}{\numberline {4.3}実験方法}{23}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}提案モデルの表現力の評価実験}{23}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}提案モデルの汎化能力の評価実験}{23}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}評価方法}{24}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}データ拡張}{24}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.3}評価方法}{23}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}データ拡張}{23}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}実験結果}{24}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}概要：提案モデルの表現力の評価実験}{24}{subsection.4.4.1}%
 \contentsline {subsubsection}{\numberline {4.4.1.1}ハープの音を表現できた場合}{24}{subsubsection.4.4.1.1}%
@@ -61,13 +61,13 @@
 \contentsline {subsubsection}{\numberline {4.4.2.2}ハープの音を表現できず音の高さも維持できなかった場合}{25}{subsubsection.4.4.2.2}%
 \contentsline {subsubsection}{\numberline {4.4.2.3}ハープの音を表現できず音の高さを維持できた場合}{26}{subsubsection.4.4.2.3}%
 \contentsline {subsection}{\numberline {4.4.3}課題}{26}{subsection.4.4.3}%
-\contentsline {subsubsection}{\numberline {4.4.3.1}音の大きさの維持}{26}{subsubsection.4.4.3.1}%
-\contentsline {subsubsection}{\numberline {4.4.3.2}音波の滑らかさの表現}{26}{subsubsection.4.4.3.2}%
-\contentsline {subsubsection}{\numberline {4.4.3.3}音の減衰の表現}{27}{subsubsection.4.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}音の減衰の表現}{26}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}音の大きさの維持}{27}{subsubsection.4.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}音波の滑らかさの表現}{27}{subsubsection.4.4.3.3}%
 \contentsline {subsubsection}{\numberline {4.4.3.4}データセットの不安定さ}{27}{subsubsection.4.4.3.4}%
 \contentsline {chapter}{\numberline {第5章}まとめ}{28}{chapter.5}%
-\contentsline {chapter}{謝辞}{29}{chapter*.28}%
-\contentsline {chapter}{参考文献}{30}{chapter*.29}%
+\contentsline {chapter}{謝辞}{29}{chapter*.27}%
+\contentsline {chapter}{参考文献}{30}{chapter*.28}%
 \contentsline {chapter}{\numberline {付録A}Adam}{31}{appendix.A}%
 \contentsline {chapter}{\numberline {付録B}学習時のパラメータ}{32}{appendix.B}%
 \contentsline {chapter}{\numberline {付録C}データセットの分割}{33}{appendix.C}%
