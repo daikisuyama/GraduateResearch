@@ -18,7 +18,8 @@
 %位置指定
 \usepackage{float}
 %ハイパーリンク
-\usepackage{hyperref,pxjahyper}
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{pxjahyper}
 %数式
 \usepackage{amsmath,amssymb}
 %アルゴリズム
@@ -42,8 +43,16 @@
 \usepackage{etoolbox}
 %図の設定
 \usepackage[subrefformat=parens]{subcaption}
+%余白の設定
+\usepackage{geometry}
 
-%ハイパーリンクの設定
+%余白の設定
+\geometry{
+    left=1.25truein,
+    right=1.25truein,
+    top=1.25truein,
+    bottom=1.25truein,
+}
 
 %タイトルの番号付けの設定
 \setcounter{secnumdepth}{3}
