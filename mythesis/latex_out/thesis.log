@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  20 FEB 2021 08:42
+This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  20 FEB 2021 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,45 +539,54 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 ]
 第2章
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 15.9785pt on input line 10.
+(Font)              scaled to size 15.9785pt on input line 11.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 15.9785pt on input line 10.
+(Font)              scaled to size 15.9785pt on input line 11.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 10.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 15.9785pt on input line 10.
+(Font)              scaled to size 15.9785pt on input line 11.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <17.28> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 10.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 15.9785pt on input line 10.
+(Font)              scaled to size 15.9785pt on input line 11.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 14.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 13.31541pt on input line 14.
+(Font)              scaled to size 13.31541pt on input line 15.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 14.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 13.31541pt on input line 14.
+(Font)              scaled to size 13.31541pt on input line 15.
 File: figure/gakuon1.png Graphic file (type bmp)
 <figure/gakuon1.png>
 [6
 
 ]
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 35.
+(Font)              scaled to size 11.09619pt on input line 37.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 35.
+(Font)              scaled to size 11.09619pt on input line 37.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 35.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 35.
+(Font)              scaled to size 11.09619pt on input line 37.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 35.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 37.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 35.
+(Font)              scaled to size 11.09619pt on input line 37.
 File: figure/gakuon2.png Graphic file (type bmp)
 <figure/gakuon2.png>
- [7] [8] [9]) (./background.tex [10]
+ [7
+
+]
+File: figure/audio_signal.png Graphic file (type bmp)
+<figure/audio_signal.png>
+ [8
+
+] [9
+
+]) (./background.tex [10]
 第3章
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 6.47278pt on input line 14.
@@ -735,15 +744,15 @@ File: figure/data_div.png Graphic file (type bmp)
 
 ] (latex_out/thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 555FD357E1D54A58B67FDD71C4D456E0;4252.
+(rerunfilecheck)             Checksum: 7D988EDF95EC4FAB045512BA10A980F7;4237.
  ) 
 Here is how much of TeX's memory you used:
- 10870 strings out of 479847
- 172912 string characters out of 5881593
- 503843 words of memory out of 5000000
- 27919 multiletter control sequences out of 15000+600000
+ 10875 strings out of 479847
+ 173028 string characters out of 5881593
+ 503875 words of memory out of 5000000
+ 27923 multiletter control sequences out of 15000+600000
  453349 words of font info for 124 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  68i,16n,75p,1286b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/thesis.dvi (36 pages, 160624 bytes).
+Output written on latex_out/thesis.dvi (36 pages, 161500 bytes).

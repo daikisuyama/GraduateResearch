@@ -776,6 +776,10 @@ INPUT ./figure/gakuon2.png
 INPUT ./figure/gakuon2.png
 INPUT figure/gakuon2.png
 INPUT extractbb -B cropbox -O figure/gakuon2.png
+INPUT ./figure/audio_signal.png
+INPUT ./figure/audio_signal.png
+INPUT figure/audio_signal.png
+INPUT extractbb -B cropbox -O figure/audio_signal.png
 INPUT ./background.tex
 INPUT background.tex
 INPUT ./background.tex
