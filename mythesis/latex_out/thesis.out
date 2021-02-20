@@ -8,7 +8,7 @@
 \BOOKMARK [2][-]{subsection.2.1.4}{音の音色}{section.2.1}% 7
 \BOOKMARK [1][-]{section.2.2}{音の表現}{chapter.2}% 8
 \BOOKMARK [2][-]{subsection.2.2.1}{音響信号}{section.2.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.2}{二次元での音の表現}{section.2.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.2}{二次元での表現}{section.2.2}% 10
 \BOOKMARK [2][-]{subsection.2.2.3}{STFT}{section.2.2}% 11
 \BOOKMARK [2][-]{subsection.2.2.4}{メルスペクトログラム}{section.2.2}% 12
 \BOOKMARK [2][-]{subsection.2.2.5}{CQT}{section.2.2}% 13
@@ -52,8 +52,8 @@
 \BOOKMARK [2][-]{subsection.4.4.2}{概要：提案モデルの汎化能力の評価実験}{section.4.4}% 51
 \BOOKMARK [2][-]{subsection.4.4.3}{課題}{section.4.4}% 52
 \BOOKMARK [0][-]{chapter.5}{まとめ}{}% 53
-\BOOKMARK [0][-]{chapter*.28}{謝辞}{}% 54
-\BOOKMARK [0][-]{chapter*.29}{参考文献}{}% 55
+\BOOKMARK [0][-]{chapter*.30}{謝辞}{}% 54
+\BOOKMARK [0][-]{chapter*.31}{参考文献}{}% 55
 \BOOKMARK [0][-]{appendix.A}{Adam}{}% 56
 \BOOKMARK [0][-]{appendix.B}{学習時のパラメータ}{}% 57
 \BOOKMARK [0][-]{appendix.C}{データセットの分割}{}% 58

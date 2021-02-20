@@ -780,6 +780,22 @@ INPUT ./figure/audio_signal.png
 INPUT ./figure/audio_signal.png
 INPUT figure/audio_signal.png
 INPUT extractbb -B cropbox -O figure/audio_signal.png
+INPUT ./figure/stft.png
+INPUT ./figure/stft.png
+INPUT figure/stft.png
+INPUT extractbb -B cropbox -O figure/stft.png
+INPUT ./figure/mel.png
+INPUT ./figure/mel.png
+INPUT figure/mel.png
+INPUT extractbb -B cropbox -O figure/mel.png
+INPUT ./figure/cqt.png
+INPUT ./figure/cqt.png
+INPUT figure/cqt.png
+INPUT extractbb -B cropbox -O figure/cqt.png
+INPUT ./figure/choroma.png
+INPUT ./figure/choroma.png
+INPUT figure/choroma.png
+INPUT extractbb -B cropbox -O figure/choroma.png
 INPUT ./background.tex
 INPUT background.tex
 INPUT ./background.tex
