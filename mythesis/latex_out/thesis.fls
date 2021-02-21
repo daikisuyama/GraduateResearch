@@ -812,10 +812,6 @@ INPUT ./figure/cqt.png
 INPUT ./figure/cqt.png
 INPUT figure/cqt.png
 INPUT extractbb -B cropbox -O figure/cqt.png
-INPUT ./figure/choroma.png
-INPUT ./figure/choroma.png
-INPUT figure/choroma.png
-INPUT extractbb -B cropbox -O figure/choroma.png
 INPUT ./background.tex
 INPUT background.tex
 INPUT ./background.tex
@@ -881,10 +877,6 @@ INPUT ./proposed_method.tex
 INPUT proposed_method.tex
 INPUT ./proposed_method.tex
 INPUT proposed_method.tex
-INPUT ./figure/piano.png
-INPUT ./figure/piano.png
-INPUT figure/piano.png
-INPUT extractbb -B cropbox -O figure/piano.png
 INPUT ./figure/pr_model.png
 INPUT ./figure/pr_model.png
 INPUT figure/pr_model.png
@@ -897,6 +889,10 @@ INPUT ./figure/pr_discriminator.png
 INPUT ./figure/pr_discriminator.png
 INPUT figure/pr_discriminator.png
 INPUT extractbb -B cropbox -O figure/pr_discriminator.png
+INPUT ./figure/piano.png
+INPUT ./figure/piano.png
+INPUT figure/piano.png
+INPUT extractbb -B cropbox -O figure/piano.png
 INPUT ./figure/88_88/f3.png
 INPUT ./figure/88_88/f3.png
 INPUT figure/88_88/f3.png
