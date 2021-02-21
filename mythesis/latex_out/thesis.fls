@@ -961,8 +961,8 @@ INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ./appendix.tex
 INPUT appendix.tex
 INPUT ./appendix.tex

@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  21 FEB 2021 12:02
+This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  21 FEB 2021 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -591,37 +591,37 @@ LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 ]
 第2章
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 15.9785pt on input line 11.
+(Font)              scaled to size 15.9785pt on input line 7.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 15.9785pt on input line 11.
+(Font)              scaled to size 15.9785pt on input line 7.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
+(Font)              scaled to size 15.9785pt on input line 7.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <17.28> not available
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
+(Font)              scaled to size 15.9785pt on input line 7.
+LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JT2/gt/m/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 15.9785pt on input line 11.
-LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <17.28> not available
+(Font)              scaled to size 13.31541pt on input line 11.
+LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 15.9785pt on input line 11.
-LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 13.31541pt on input line 15.
-LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <14.4> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 13.31541pt on input line 15.
+(Font)              scaled to size 13.31541pt on input line 11.
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 23.
+(Font)              scaled to size 11.09619pt on input line 19.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 23.
+(Font)              scaled to size 11.09619pt on input line 19.
 LaTeX Font Info:    Font shape `JT2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 23.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 23.
+(Font)              scaled to size 11.09619pt on input line 19.
 LaTeX Font Info:    Font shape `JY2/mc/bx/n' in size <12> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 23.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 19.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 11.09619pt on input line 23.
+(Font)              scaled to size 11.09619pt on input line 19.
 File: figure/gakuon1.png Graphic file (type bmp)
 <figure/gakuon1.png>
 File: figure/gakuon2.png Graphic file (type bmp)
@@ -769,13 +769,13 @@ File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `JT2/gt/m/it' in size <10> not available
-(Font)              Font shape `JT2/gt/m/n' tried instead on input line 21.
+(Font)              Font shape `JT2/gt/m/n' tried instead on input line 44.
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 21.
+(Font)              scaled to size 9.24683pt on input line 44.
 LaTeX Font Info:    Font shape `JY2/gt/m/it' in size <10> not available
-(Font)              Font shape `JY2/gt/m/n' tried instead on input line 21.
+(Font)              Font shape `JY2/gt/m/n' tried instead on input line 44.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 9.24683pt on input line 21.
+(Font)              scaled to size 9.24683pt on input line 44.
  [29
 
 ]) (./appendix.tex [30]
@@ -798,15 +798,15 @@ File: figure/data_div.png Graphic file (type bmp)
 
 ] (latex_out/thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 3AA9715552C57207B09C99DBA9DF3D31;4289.
+(rerunfilecheck)             Checksum: 3350A8448B3BF24AD4961BC5E1AEFC15;4304.
  ) 
 Here is how much of TeX's memory you used:
- 11356 strings out of 479847
- 180084 string characters out of 5881593
- 516704 words of memory out of 5000000
- 28395 multiletter control sequences out of 15000+600000
+ 11359 strings out of 479847
+ 180113 string characters out of 5881593
+ 516805 words of memory out of 5000000
+ 28398 multiletter control sequences out of 15000+600000
  453349 words of font info for 124 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  68i,16n,75p,1286b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/thesis.dvi (35 pages, 162264 bytes).
+Output written on latex_out/thesis.dvi (35 pages, 163916 bytes).

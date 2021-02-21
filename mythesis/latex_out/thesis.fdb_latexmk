@@ -1,16 +1,16 @@
 # Fdb version 3
-["bibtex latex_out/thesis"] 1613876039 "latex_out/thesis.aux" "latex_out/thesis.bbl" "latex_out/thesis" 1613876566
+["bibtex latex_out/thesis"] 1613912276 "latex_out/thesis.aux" "latex_out/thesis.bbl" "latex_out/thesis" 1613912689
   "junsrt.bst" 0 -1 0 ""
-  "latex_out/thesis.aux" 1613876544 27541 519472bc32fc3ae31834a3fc72267cb1 "latex"
-  "reference.bib" 1613813211 7974 18ef048ad20278b737714c01654413eb ""
+  "latex_out/thesis.aux" 1613912666 27717 89328e4ad1abc4c1105e240ab5bad865 "latex"
+  "reference.bib" 1613893782 7968 3f20363a0da334dab5250fde68ee383a ""
   (generated)
   "latex_out/thesis.bbl"
   "latex_out/thesis.blg"
-["dvipdf"] 1613876545 "latex_out/thesis.dvi" "latex_out/thesis.pdf" "latex_out/thesis" 1613876566
-  "latex_out/thesis.dvi" 1613876544 162264 3e5638becdc047ab66e38bd99f68e77c "latex"
+["dvipdf"] 1613912666 "latex_out/thesis.dvi" "latex_out/thesis.pdf" "latex_out/thesis" 1613912689
+  "latex_out/thesis.dvi" 1613912666 163916 395ef47da150caf0b4b60e9ab893608a "latex"
   (generated)
   "latex_out/thesis.pdf"
-["latex"] 1613876533 "/Users/daikisuyama/Desktop/Research/GraduateResearch/mythesis/thesis.tex" "latex_out/thesis.dvi" "thesis" 1613876566
+["latex"] 1613912653 "/Users/daikisuyama/Desktop/Research/GraduateResearch/mythesis/thesis.tex" "latex_out/thesis.dvi" "thesis" 1613912689
   "/Users/daikisuyama/Desktop/Research/GraduateResearch/mythesis/thesis.tex" 1613871160 3663 92e50c8d24df4e27e7e078d179c016f9 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -127,9 +127,9 @@
   "/usr/local/texlive/2020/texmf-var/web2c/euptex/uplatex.fmt" 1609125245 2583911 39bb280a9f0b471a81214623c0c7e09f ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
   "appendix.tex" 1613876533 3729 48a1c09368b574a0e14a3b53e3f401a7 ""
-  "background.tex" 1613869653 22185 f19db450744ae9adf2b8072ffb26d853 ""
+  "background.tex" 1613877335 22203 abc3725a3c380e19515dab4a1933f1b3 ""
   "conclusion.tex" 1613876533 2996 3367a811a2683139799df69f3e2e87c0 ""
-  "explanation.tex" 1613866781 7246 fe935ea43f320f7dbdcf5f8682980e72 ""
+  "explanation.tex" 1613912653 7261 8ce44d3c7a24127ba008a0743ee9c646 ""
   "figure/66_22_det/d1_0300_0500.png" 1613551321 556288 567c56175227bbaadbd4f6168bb29f31 ""
   "figure/66_22_det/d4s_0100_0200.png" 1613551321 794349 4392e7e2142fd124a194ddc66d3c876f ""
   "figure/66_22_det/d7s_0100_0110.png" 1613551321 384455 c4452132ae10bd0380ad1b7686ea0a25 ""
@@ -167,19 +167,19 @@
   "figure/stft.png" 1613859819 66686 5ade76f55b3779ee39cee32d790eabe2 ""
   "figure/u-net.png" 1613551322 113875 78f0603785ef8f7290de1e61277b30ea ""
   "introduction.tex" 1613866781 2245 8778f897ef39d2ce1e72f7405911b119 ""
-  "latex_out/thesis.aux" 1613876544 27541 519472bc32fc3ae31834a3fc72267cb1 "latex"
-  "latex_out/thesis.bbl" 1613876039 3560 ea82b6c9dca75ca55c7a5f43dec5bd8a "bibtex latex_out/thesis"
-  "latex_out/thesis.lof" 1613876544 7447 55332cdfe57e45c27aaa73d1b0dc8731 "latex"
-  "latex_out/thesis.out" 1613876544 4289 3aa9715552c57207b09c99dba9df3d31 "latex"
-  "latex_out/thesis.toc" 1613876544 6975 bb7cb40c6cf1c196e6acfa272a3bbd35 "latex"
-  "proposed_method.tex" 1613874667 15788 08484d730c86f2618a5d6e43f4752c6a ""
+  "latex_out/thesis.aux" 1613912666 27717 89328e4ad1abc4c1105e240ab5bad865 "latex"
+  "latex_out/thesis.bbl" 1613912277 3927 b44ed1ca9c0c253783ee5c8504e5613d "bibtex latex_out/thesis"
+  "latex_out/thesis.lof" 1613912666 7447 55332cdfe57e45c27aaa73d1b0dc8731 "latex"
+  "latex_out/thesis.out" 1613912666 4304 3350a8448b3bf24ad4961bc5e1aefc15 "latex"
+  "latex_out/thesis.toc" 1613912666 6990 95ee6cacd77503608c52de59887bd0fd "latex"
+  "proposed_method.tex" 1613877335 15793 88eeca86f4b017b18cdeba9a71c42f0f ""
   "thanks.tex" 1613551322 331 00f67e384bde4fc4945802a0c4850c2a ""
   "thesis.tex" 1613871160 3663 92e50c8d24df4e27e7e078d179c016f9 ""
   "title.tex" 1613551322 442 94c297796a37621b8c858cb230cd1d22 ""
   (generated)
-  "latex_out/thesis.toc"
-  "latex_out/thesis.aux"
-  "latex_out/thesis.out"
-  "latex_out/thesis.dvi"
-  "latex_out/thesis.lof"
   "latex_out/thesis.log"
+  "latex_out/thesis.dvi"
+  "latex_out/thesis.out"
+  "latex_out/thesis.toc"
+  "latex_out/thesis.lof"
+  "latex_out/thesis.aux"

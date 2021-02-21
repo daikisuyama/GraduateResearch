@@ -14,18 +14,23 @@ Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David
 Keunwoo Choi, Gy^^c3^^b6rgy Fazekas, Kyunghyun Cho, and Mark Sandler.
 \newblock A tutorial on deep learning for music information retrieval, 2018.
 
-\bibitem{DL_ASP}
-Hendrik Purwins, Bo~Li, Tuomas Virtanen, Jan Schluter, Shuo-Yiin Chang, and
-  Tara Sainath.
-\newblock Deep learning for audio signal processing.
-\newblock {\em IEEE Journal of Selected Topics in Signal Processing}, Vol.~13,
-  No.~2, p. 206^^e2^^80^^93219, May 2019.
-
 \bibitem{timbretron}
 Sicong Huang, Qiyang Li, Cem Anil, Xuchan Bao, Sageev Oore, and Roger~B.
   Grosse.
 \newblock Timbretron: A wavenet(cyclegan(cqt(audio))) pipeline for musical
   timbre transfer, 2019.
+
+\bibitem{Jukebox}
+Prafulla Dhariwal, Heewoo Jun, Christine Payne, Jong~Wook Kim, Alec Radford,
+  and Ilya Sutskever.
+\newblock Jukebox: A generative model for music.
+\newblock 2020.
+
+\bibitem{WaveNet}
+Aaron van~den Oord, Sander Dieleman, Heiga Zen, Karen Simonyan, Oriol Vinyals,
+  Alex Graves, Nal Kalchbrenner, Andrew Senior, and Koray Kavukcuoglu.
+\newblock Wavenet: A generative model for raw audio.
+\newblock 2016.
 
 \bibitem{melscale}
 A scale for the measurement of the psychological magnitude pitch: The journal
@@ -37,6 +42,12 @@ A scale for the measurement of the psychological magnitude pitch: The journal
 S.~S. STEVENS.
 \newblock The relation of pitch to frequency: a revised scale.
 \newblock {\em Am. J. Psychol.}, Vol.~53, pp. 329--353, 1940.
+
+\bibitem{GANSynth}
+Jesse~H. Engel, Kumar~Krishna Agrawal, Shuo Chen, Ishaan Gulrajani, Chris
+  Donahue, and Adam Roberts.
+\newblock Gansynth: Adversarial neural audio synthesis.
+\newblock {\em CoRR}, Vol. abs/1902.08710, , 2019.
 
 \bibitem{GradientDescent}
 Sebastian Ruder.

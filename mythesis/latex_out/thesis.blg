@@ -3,45 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: latex_out/thesis.aux
 The style file: junsrt.bst
 Database file #1: reference.bib
-You've used 18 entries,
+Warning--empty journal in Jukebox
+Warning--empty journal in WaveNet
+You've used 20 entries,
             2270 wiz_defined-function locations,
-            640 strings with 6987 characters,
-and the built_in function-call counts, 5108 in all, are:
-= -- 357
-> -- 187
-< -- 13
-+ -- 74
-- -- 56
-* -- 201
-:= -- 594
-add.period$ -- 46
-call.type$ -- 18
-change.case$ -- 16
+            645 strings with 7263 characters,
+and the built_in function-call counts, 5270 in all, are:
+= -- 327
+> -- 234
+< -- 11
++ -- 91
+- -- 71
+* -- 224
+:= -- 661
+add.period$ -- 52
+call.type$ -- 20
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 323
-empty$ -- 520
-format.name$ -- 112
-if$ -- 1276
+cite$ -- 22
+duplicate$ -- 310
+empty$ -- 537
+format.name$ -- 142
+if$ -- 1280
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 9
-newline$ -- 84
-num.names$ -- 18
-pop$ -- 162
+int.to.str$ -- 20
+missing$ -- 11
+newline$ -- 94
+num.names$ -- 20
+pop$ -- 177
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 301
+skip$ -- 268
 stack$ -- 0
-substring$ -- 172
-swap$ -- 105
-text.length$ -- 13
+substring$ -- 136
+swap$ -- 67
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 28
-width$ -- 20
-write$ -- 171
-is.kanji.str$ -- 195
+warning$ -- 2
+while$ -- 29
+width$ -- 22
+write$ -- 189
+is.kanji.str$ -- 223
+(There were 2 warnings)
