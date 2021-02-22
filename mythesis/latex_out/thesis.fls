@@ -44,6 +44,8 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
@@ -597,16 +599,6 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/tocloft/tocloft.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/tocloft/tocloft.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/tocloft/tocloft.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/tocloft/tocloft.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption.sty
@@ -627,6 +619,16 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/caption3.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
+INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/caption/subcaption.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
@@ -792,6 +794,7 @@ INPUT ./figure/gakuon1.png
 INPUT ./figure/gakuon1.png
 INPUT figure/gakuon1.png
 INPUT extractbb -B cropbox -O figure/gakuon1.png
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./figure/gakuon2.png
 INPUT ./figure/gakuon2.png
 INPUT figure/gakuon2.png
@@ -961,7 +964,6 @@ INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ./appendix.tex
 INPUT appendix.tex
@@ -971,6 +973,704 @@ INPUT ./figure/data_div.png
 INPUT ./figure/data_div.png
 INPUT figure/data_div.png
 INPUT extractbb -B cropbox -O figure/data_div.png
+INPUT ./figure/88_88/a0.png
+INPUT ./figure/88_88/a0.png
+INPUT figure/88_88/a0.png
+INPUT extractbb -B cropbox -O figure/88_88/a0.png
+INPUT ./figure/88_88/a0s.png
+INPUT ./figure/88_88/a0s.png
+INPUT figure/88_88/a0s.png
+INPUT extractbb -B cropbox -O figure/88_88/a0s.png
+INPUT ./figure/88_88/b0.png
+INPUT ./figure/88_88/b0.png
+INPUT figure/88_88/b0.png
+INPUT extractbb -B cropbox -O figure/88_88/b0.png
+INPUT ./figure/88_88/c1.png
+INPUT ./figure/88_88/c1.png
+INPUT figure/88_88/c1.png
+INPUT extractbb -B cropbox -O figure/88_88/c1.png
+INPUT ./figure/88_88/c1s.png
+INPUT ./figure/88_88/c1s.png
+INPUT figure/88_88/c1s.png
+INPUT extractbb -B cropbox -O figure/88_88/c1s.png
+INPUT ./figure/88_88/d1.png
+INPUT ./figure/88_88/d1.png
+INPUT figure/88_88/d1.png
+INPUT extractbb -B cropbox -O figure/88_88/d1.png
+INPUT ./figure/88_88/d1s.png
+INPUT ./figure/88_88/d1s.png
+INPUT figure/88_88/d1s.png
+INPUT extractbb -B cropbox -O figure/88_88/d1s.png
+INPUT ./figure/88_88/e1.png
+INPUT ./figure/88_88/e1.png
+INPUT figure/88_88/e1.png
+INPUT extractbb -B cropbox -O figure/88_88/e1.png
+INPUT ./figure/88_88/f1.png
+INPUT ./figure/88_88/f1.png
+INPUT figure/88_88/f1.png
+INPUT extractbb -B cropbox -O figure/88_88/f1.png
+INPUT ./figure/88_88/f1s.png
+INPUT ./figure/88_88/f1s.png
+INPUT figure/88_88/f1s.png
+INPUT ./figure/88_88/g1.png
+INPUT ./figure/88_88/g1.png
+INPUT figure/88_88/g1.png
+INPUT extractbb -B cropbox -O figure/88_88/g1.png
+INPUT ./figure/88_88/g1s.png
+INPUT ./figure/88_88/g1s.png
+INPUT figure/88_88/g1s.png
+INPUT extractbb -B cropbox -O figure/88_88/g1s.png
+INPUT ./figure/88_88/a1.png
+INPUT ./figure/88_88/a1.png
+INPUT figure/88_88/a1.png
+INPUT extractbb -B cropbox -O figure/88_88/a1.png
+INPUT ./figure/88_88/a1s.png
+INPUT ./figure/88_88/a1s.png
+INPUT figure/88_88/a1s.png
+INPUT extractbb -B cropbox -O figure/88_88/a1s.png
+INPUT ./figure/88_88/b1.png
+INPUT ./figure/88_88/b1.png
+INPUT figure/88_88/b1.png
+INPUT extractbb -B cropbox -O figure/88_88/b1.png
+INPUT ./figure/88_88/c2.png
+INPUT ./figure/88_88/c2.png
+INPUT figure/88_88/c2.png
+INPUT extractbb -B cropbox -O figure/88_88/c2.png
+INPUT ./figure/88_88/c2s.png
+INPUT ./figure/88_88/c2s.png
+INPUT figure/88_88/c2s.png
+INPUT extractbb -B cropbox -O figure/88_88/c2s.png
+INPUT ./figure/88_88/d2.png
+INPUT ./figure/88_88/d2.png
+INPUT figure/88_88/d2.png
+INPUT extractbb -B cropbox -O figure/88_88/d2.png
+INPUT ./figure/88_88/d2s.png
+INPUT ./figure/88_88/d2s.png
+INPUT figure/88_88/d2s.png
+INPUT extractbb -B cropbox -O figure/88_88/d2s.png
+INPUT ./figure/88_88/e2.png
+INPUT ./figure/88_88/e2.png
+INPUT figure/88_88/e2.png
+INPUT extractbb -B cropbox -O figure/88_88/e2.png
+INPUT ./figure/88_88/f2.png
+INPUT ./figure/88_88/f2.png
+INPUT figure/88_88/f2.png
+INPUT extractbb -B cropbox -O figure/88_88/f2.png
+INPUT ./figure/88_88/f2s.png
+INPUT ./figure/88_88/f2s.png
+INPUT figure/88_88/f2s.png
+INPUT extractbb -B cropbox -O figure/88_88/f2s.png
+INPUT ./figure/88_88/g2.png
+INPUT ./figure/88_88/g2.png
+INPUT figure/88_88/g2.png
+INPUT extractbb -B cropbox -O figure/88_88/g2.png
+INPUT ./figure/88_88/g2s.png
+INPUT ./figure/88_88/g2s.png
+INPUT figure/88_88/g2s.png
+INPUT extractbb -B cropbox -O figure/88_88/g2s.png
+INPUT ./figure/88_88/a2.png
+INPUT ./figure/88_88/a2.png
+INPUT figure/88_88/a2.png
+INPUT extractbb -B cropbox -O figure/88_88/a2.png
+INPUT ./figure/88_88/a2s.png
+INPUT ./figure/88_88/a2s.png
+INPUT figure/88_88/a2s.png
+INPUT extractbb -B cropbox -O figure/88_88/a2s.png
+INPUT ./figure/88_88/b2.png
+INPUT ./figure/88_88/b2.png
+INPUT figure/88_88/b2.png
+INPUT extractbb -B cropbox -O figure/88_88/b2.png
+INPUT ./figure/88_88/c3.png
+INPUT ./figure/88_88/c3.png
+INPUT figure/88_88/c3.png
+INPUT extractbb -B cropbox -O figure/88_88/c3.png
+INPUT ./figure/88_88/c3s.png
+INPUT ./figure/88_88/c3s.png
+INPUT figure/88_88/c3s.png
+INPUT extractbb -B cropbox -O figure/88_88/c3s.png
+INPUT ./figure/88_88/d3.png
+INPUT ./figure/88_88/d3.png
+INPUT figure/88_88/d3.png
+INPUT extractbb -B cropbox -O figure/88_88/d3.png
+INPUT ./figure/88_88/d3s.png
+INPUT ./figure/88_88/d3s.png
+INPUT figure/88_88/d3s.png
+INPUT extractbb -B cropbox -O figure/88_88/d3s.png
+INPUT ./figure/88_88/e3.png
+INPUT ./figure/88_88/e3.png
+INPUT figure/88_88/e3.png
+INPUT extractbb -B cropbox -O figure/88_88/e3.png
+INPUT ./figure/88_88/f3.png
+INPUT ./figure/88_88/f3.png
+INPUT figure/88_88/f3.png
+INPUT ./figure/88_88/f3s.png
+INPUT ./figure/88_88/f3s.png
+INPUT figure/88_88/f3s.png
+INPUT extractbb -B cropbox -O figure/88_88/f3s.png
+INPUT ./figure/88_88/g3.png
+INPUT ./figure/88_88/g3.png
+INPUT figure/88_88/g3.png
+INPUT extractbb -B cropbox -O figure/88_88/g3.png
+INPUT ./figure/88_88/g3s.png
+INPUT ./figure/88_88/g3s.png
+INPUT figure/88_88/g3s.png
+INPUT extractbb -B cropbox -O figure/88_88/g3s.png
+INPUT ./figure/88_88/a3.png
+INPUT ./figure/88_88/a3.png
+INPUT figure/88_88/a3.png
+INPUT extractbb -B cropbox -O figure/88_88/a3.png
+INPUT ./figure/88_88/a3s.png
+INPUT ./figure/88_88/a3s.png
+INPUT figure/88_88/a3s.png
+INPUT extractbb -B cropbox -O figure/88_88/a3s.png
+INPUT ./figure/88_88/b3.png
+INPUT ./figure/88_88/b3.png
+INPUT figure/88_88/b3.png
+INPUT extractbb -B cropbox -O figure/88_88/b3.png
+INPUT ./figure/88_88/c4.png
+INPUT ./figure/88_88/c4.png
+INPUT figure/88_88/c4.png
+INPUT ./figure/88_88/c4s.png
+INPUT ./figure/88_88/c4s.png
+INPUT figure/88_88/c4s.png
+INPUT extractbb -B cropbox -O figure/88_88/c4s.png
+INPUT ./figure/88_88/d4.png
+INPUT ./figure/88_88/d4.png
+INPUT figure/88_88/d4.png
+INPUT extractbb -B cropbox -O figure/88_88/d4.png
+INPUT ./figure/88_88/d4s.png
+INPUT ./figure/88_88/d4s.png
+INPUT figure/88_88/d4s.png
+INPUT extractbb -B cropbox -O figure/88_88/d4s.png
+INPUT ./figure/88_88/e4.png
+INPUT ./figure/88_88/e4.png
+INPUT figure/88_88/e4.png
+INPUT extractbb -B cropbox -O figure/88_88/e4.png
+INPUT ./figure/88_88/f4.png
+INPUT ./figure/88_88/f4.png
+INPUT figure/88_88/f4.png
+INPUT extractbb -B cropbox -O figure/88_88/f4.png
+INPUT ./figure/88_88/f4s.png
+INPUT ./figure/88_88/f4s.png
+INPUT figure/88_88/f4s.png
+INPUT extractbb -B cropbox -O figure/88_88/f4s.png
+INPUT ./figure/88_88/g4.png
+INPUT ./figure/88_88/g4.png
+INPUT figure/88_88/g4.png
+INPUT extractbb -B cropbox -O figure/88_88/g4.png
+INPUT ./figure/88_88/g4s.png
+INPUT ./figure/88_88/g4s.png
+INPUT figure/88_88/g4s.png
+INPUT extractbb -B cropbox -O figure/88_88/g4s.png
+INPUT ./figure/88_88/a4.png
+INPUT ./figure/88_88/a4.png
+INPUT figure/88_88/a4.png
+INPUT extractbb -B cropbox -O figure/88_88/a4.png
+INPUT ./figure/88_88/a4s.png
+INPUT ./figure/88_88/a4s.png
+INPUT figure/88_88/a4s.png
+INPUT extractbb -B cropbox -O figure/88_88/a4s.png
+INPUT ./figure/88_88/b4.png
+INPUT ./figure/88_88/b4.png
+INPUT figure/88_88/b4.png
+INPUT extractbb -B cropbox -O figure/88_88/b4.png
+INPUT ./figure/88_88/c5.png
+INPUT ./figure/88_88/c5.png
+INPUT figure/88_88/c5.png
+INPUT ./figure/88_88/c5s.png
+INPUT ./figure/88_88/c5s.png
+INPUT figure/88_88/c5s.png
+INPUT extractbb -B cropbox -O figure/88_88/c5s.png
+INPUT ./figure/88_88/d5.png
+INPUT ./figure/88_88/d5.png
+INPUT figure/88_88/d5.png
+INPUT extractbb -B cropbox -O figure/88_88/d5.png
+INPUT ./figure/88_88/d5s.png
+INPUT ./figure/88_88/d5s.png
+INPUT figure/88_88/d5s.png
+INPUT extractbb -B cropbox -O figure/88_88/d5s.png
+INPUT ./figure/88_88/e5.png
+INPUT ./figure/88_88/e5.png
+INPUT figure/88_88/e5.png
+INPUT extractbb -B cropbox -O figure/88_88/e5.png
+INPUT ./figure/88_88/f5.png
+INPUT ./figure/88_88/f5.png
+INPUT figure/88_88/f5.png
+INPUT extractbb -B cropbox -O figure/88_88/f5.png
+INPUT ./figure/88_88/f5s.png
+INPUT ./figure/88_88/f5s.png
+INPUT figure/88_88/f5s.png
+INPUT extractbb -B cropbox -O figure/88_88/f5s.png
+INPUT ./figure/88_88/g5.png
+INPUT ./figure/88_88/g5.png
+INPUT figure/88_88/g5.png
+INPUT extractbb -B cropbox -O figure/88_88/g5.png
+INPUT ./figure/88_88/g5s.png
+INPUT ./figure/88_88/g5s.png
+INPUT figure/88_88/g5s.png
+INPUT extractbb -B cropbox -O figure/88_88/g5s.png
+INPUT ./figure/88_88/a5.png
+INPUT ./figure/88_88/a5.png
+INPUT figure/88_88/a5.png
+INPUT extractbb -B cropbox -O figure/88_88/a5.png
+INPUT ./figure/88_88/a5s.png
+INPUT ./figure/88_88/a5s.png
+INPUT figure/88_88/a5s.png
+INPUT extractbb -B cropbox -O figure/88_88/a5s.png
+INPUT ./figure/88_88/b5.png
+INPUT ./figure/88_88/b5.png
+INPUT figure/88_88/b5.png
+INPUT extractbb -B cropbox -O figure/88_88/b5.png
+INPUT ./figure/88_88/c6.png
+INPUT ./figure/88_88/c6.png
+INPUT figure/88_88/c6.png
+INPUT extractbb -B cropbox -O figure/88_88/c6.png
+INPUT ./figure/88_88/c6s.png
+INPUT ./figure/88_88/c6s.png
+INPUT figure/88_88/c6s.png
+INPUT extractbb -B cropbox -O figure/88_88/c6s.png
+INPUT ./figure/88_88/d6.png
+INPUT ./figure/88_88/d6.png
+INPUT figure/88_88/d6.png
+INPUT extractbb -B cropbox -O figure/88_88/d6.png
+INPUT ./figure/88_88/d6s.png
+INPUT ./figure/88_88/d6s.png
+INPUT figure/88_88/d6s.png
+INPUT extractbb -B cropbox -O figure/88_88/d6s.png
+INPUT ./figure/88_88/e6.png
+INPUT ./figure/88_88/e6.png
+INPUT figure/88_88/e6.png
+INPUT extractbb -B cropbox -O figure/88_88/e6.png
+INPUT ./figure/88_88/f6.png
+INPUT ./figure/88_88/f6.png
+INPUT figure/88_88/f6.png
+INPUT extractbb -B cropbox -O figure/88_88/f6.png
+INPUT ./figure/88_88/f6s.png
+INPUT ./figure/88_88/f6s.png
+INPUT figure/88_88/f6s.png
+INPUT extractbb -B cropbox -O figure/88_88/f6s.png
+INPUT ./figure/88_88/g6.png
+INPUT ./figure/88_88/g6.png
+INPUT figure/88_88/g6.png
+INPUT extractbb -B cropbox -O figure/88_88/g6.png
+INPUT ./figure/88_88/g6s.png
+INPUT ./figure/88_88/g6s.png
+INPUT figure/88_88/g6s.png
+INPUT extractbb -B cropbox -O figure/88_88/g6s.png
+INPUT ./figure/88_88/a6.png
+INPUT ./figure/88_88/a6.png
+INPUT figure/88_88/a6.png
+INPUT extractbb -B cropbox -O figure/88_88/a6.png
+INPUT ./figure/88_88/a6s.png
+INPUT ./figure/88_88/a6s.png
+INPUT figure/88_88/a6s.png
+INPUT extractbb -B cropbox -O figure/88_88/a6s.png
+INPUT ./figure/88_88/b6.png
+INPUT ./figure/88_88/b6.png
+INPUT figure/88_88/b6.png
+INPUT extractbb -B cropbox -O figure/88_88/b6.png
+INPUT ./figure/88_88/c7.png
+INPUT ./figure/88_88/c7.png
+INPUT figure/88_88/c7.png
+INPUT extractbb -B cropbox -O figure/88_88/c7.png
+INPUT ./figure/88_88/c7s.png
+INPUT ./figure/88_88/c7s.png
+INPUT figure/88_88/c7s.png
+INPUT extractbb -B cropbox -O figure/88_88/c7s.png
+INPUT ./figure/88_88/d7.png
+INPUT ./figure/88_88/d7.png
+INPUT figure/88_88/d7.png
+INPUT extractbb -B cropbox -O figure/88_88/d7.png
+INPUT ./figure/88_88/d7s.png
+INPUT ./figure/88_88/d7s.png
+INPUT figure/88_88/d7s.png
+INPUT extractbb -B cropbox -O figure/88_88/d7s.png
+INPUT ./figure/88_88/e7.png
+INPUT ./figure/88_88/e7.png
+INPUT figure/88_88/e7.png
+INPUT extractbb -B cropbox -O figure/88_88/e7.png
+INPUT ./figure/88_88/f7.png
+INPUT ./figure/88_88/f7.png
+INPUT figure/88_88/f7.png
+INPUT extractbb -B cropbox -O figure/88_88/f7.png
+INPUT ./figure/88_88/f7s.png
+INPUT ./figure/88_88/f7s.png
+INPUT figure/88_88/f7s.png
+INPUT extractbb -B cropbox -O figure/88_88/f7s.png
+INPUT ./figure/88_88/g7.png
+INPUT ./figure/88_88/g7.png
+INPUT figure/88_88/g7.png
+INPUT extractbb -B cropbox -O figure/88_88/g7.png
+INPUT ./figure/88_88/g6s.png
+INPUT ./figure/88_88/g6s.png
+INPUT figure/88_88/g6s.png
+INPUT ./figure/88_88/a7.png
+INPUT ./figure/88_88/a7.png
+INPUT figure/88_88/a7.png
+INPUT extractbb -B cropbox -O figure/88_88/a7.png
+INPUT ./figure/88_88/a7s.png
+INPUT ./figure/88_88/a7s.png
+INPUT figure/88_88/a7s.png
+INPUT extractbb -B cropbox -O figure/88_88/a7s.png
+INPUT ./figure/88_88/b7.png
+INPUT ./figure/88_88/b7.png
+INPUT figure/88_88/b7.png
+INPUT extractbb -B cropbox -O figure/88_88/b7.png
+INPUT ./figure/88_88/c8.png
+INPUT ./figure/88_88/c8.png
+INPUT figure/88_88/c8.png
+INPUT extractbb -B cropbox -O figure/88_88/c8.png
+INPUT ./figure/66_22/a0.png
+INPUT ./figure/66_22/a0.png
+INPUT figure/66_22/a0.png
+INPUT extractbb -B cropbox -O figure/66_22/a0.png
+INPUT ./figure/66_22/a0s.png
+INPUT ./figure/66_22/a0s.png
+INPUT figure/66_22/a0s.png
+INPUT extractbb -B cropbox -O figure/66_22/a0s.png
+INPUT ./figure/66_22/b0.png
+INPUT ./figure/66_22/b0.png
+INPUT figure/66_22/b0.png
+INPUT extractbb -B cropbox -O figure/66_22/b0.png
+INPUT ./figure/66_22/c1.png
+INPUT ./figure/66_22/c1.png
+INPUT figure/66_22/c1.png
+INPUT extractbb -B cropbox -O figure/66_22/c1.png
+INPUT ./figure/66_22/c1s.png
+INPUT ./figure/66_22/c1s.png
+INPUT figure/66_22/c1s.png
+INPUT extractbb -B cropbox -O figure/66_22/c1s.png
+INPUT ./figure/66_22/d1.png
+INPUT ./figure/66_22/d1.png
+INPUT figure/66_22/d1.png
+INPUT extractbb -B cropbox -O figure/66_22/d1.png
+INPUT ./figure/66_22/d1s.png
+INPUT ./figure/66_22/d1s.png
+INPUT figure/66_22/d1s.png
+INPUT extractbb -B cropbox -O figure/66_22/d1s.png
+INPUT ./figure/66_22/e1.png
+INPUT ./figure/66_22/e1.png
+INPUT figure/66_22/e1.png
+INPUT extractbb -B cropbox -O figure/66_22/e1.png
+INPUT ./figure/66_22/f1.png
+INPUT ./figure/66_22/f1.png
+INPUT figure/66_22/f1.png
+INPUT extractbb -B cropbox -O figure/66_22/f1.png
+INPUT ./figure/66_22/f1s.png
+INPUT ./figure/66_22/f1s.png
+INPUT figure/66_22/f1s.png
+INPUT extractbb -B cropbox -O figure/66_22/f1s.png
+INPUT ./figure/66_22/g1.png
+INPUT ./figure/66_22/g1.png
+INPUT figure/66_22/g1.png
+INPUT extractbb -B cropbox -O figure/66_22/g1.png
+INPUT ./figure/66_22/g1s.png
+INPUT ./figure/66_22/g1s.png
+INPUT figure/66_22/g1s.png
+INPUT extractbb -B cropbox -O figure/66_22/g1s.png
+INPUT ./figure/66_22/a1.png
+INPUT ./figure/66_22/a1.png
+INPUT figure/66_22/a1.png
+INPUT extractbb -B cropbox -O figure/66_22/a1.png
+INPUT ./figure/66_22/a1s.png
+INPUT ./figure/66_22/a1s.png
+INPUT figure/66_22/a1s.png
+INPUT extractbb -B cropbox -O figure/66_22/a1s.png
+INPUT ./figure/66_22/b1.png
+INPUT ./figure/66_22/b1.png
+INPUT figure/66_22/b1.png
+INPUT extractbb -B cropbox -O figure/66_22/b1.png
+INPUT ./figure/66_22/c2.png
+INPUT ./figure/66_22/c2.png
+INPUT figure/66_22/c2.png
+INPUT extractbb -B cropbox -O figure/66_22/c2.png
+INPUT ./figure/66_22/c2s.png
+INPUT ./figure/66_22/c2s.png
+INPUT figure/66_22/c2s.png
+INPUT extractbb -B cropbox -O figure/66_22/c2s.png
+INPUT ./figure/66_22/d2.png
+INPUT ./figure/66_22/d2.png
+INPUT figure/66_22/d2.png
+INPUT extractbb -B cropbox -O figure/66_22/d2.png
+INPUT ./figure/66_22/d2s.png
+INPUT ./figure/66_22/d2s.png
+INPUT figure/66_22/d2s.png
+INPUT extractbb -B cropbox -O figure/66_22/d2s.png
+INPUT ./figure/66_22/e2.png
+INPUT ./figure/66_22/e2.png
+INPUT figure/66_22/e2.png
+INPUT extractbb -B cropbox -O figure/66_22/e2.png
+INPUT ./figure/66_22/f2.png
+INPUT ./figure/66_22/f2.png
+INPUT figure/66_22/f2.png
+INPUT extractbb -B cropbox -O figure/66_22/f2.png
+INPUT ./figure/66_22/f2s.png
+INPUT ./figure/66_22/f2s.png
+INPUT figure/66_22/f2s.png
+INPUT extractbb -B cropbox -O figure/66_22/f2s.png
+INPUT ./figure/66_22/g2.png
+INPUT ./figure/66_22/g2.png
+INPUT figure/66_22/g2.png
+INPUT extractbb -B cropbox -O figure/66_22/g2.png
+INPUT ./figure/66_22/g2s.png
+INPUT ./figure/66_22/g2s.png
+INPUT figure/66_22/g2s.png
+INPUT extractbb -B cropbox -O figure/66_22/g2s.png
+INPUT ./figure/66_22/a2.png
+INPUT ./figure/66_22/a2.png
+INPUT figure/66_22/a2.png
+INPUT extractbb -B cropbox -O figure/66_22/a2.png
+INPUT ./figure/66_22/a2s.png
+INPUT ./figure/66_22/a2s.png
+INPUT figure/66_22/a2s.png
+INPUT extractbb -B cropbox -O figure/66_22/a2s.png
+INPUT ./figure/66_22/b2.png
+INPUT ./figure/66_22/b2.png
+INPUT figure/66_22/b2.png
+INPUT extractbb -B cropbox -O figure/66_22/b2.png
+INPUT ./figure/66_22/c3.png
+INPUT ./figure/66_22/c3.png
+INPUT figure/66_22/c3.png
+INPUT extractbb -B cropbox -O figure/66_22/c3.png
+INPUT ./figure/66_22/c3s.png
+INPUT ./figure/66_22/c3s.png
+INPUT figure/66_22/c3s.png
+INPUT extractbb -B cropbox -O figure/66_22/c3s.png
+INPUT ./figure/66_22/d3.png
+INPUT ./figure/66_22/d3.png
+INPUT figure/66_22/d3.png
+INPUT extractbb -B cropbox -O figure/66_22/d3.png
+INPUT ./figure/66_22/d3s.png
+INPUT ./figure/66_22/d3s.png
+INPUT figure/66_22/d3s.png
+INPUT extractbb -B cropbox -O figure/66_22/d3s.png
+INPUT ./figure/66_22/e3.png
+INPUT ./figure/66_22/e3.png
+INPUT figure/66_22/e3.png
+INPUT extractbb -B cropbox -O figure/66_22/e3.png
+INPUT ./figure/66_22/f3.png
+INPUT ./figure/66_22/f3.png
+INPUT figure/66_22/f3.png
+INPUT extractbb -B cropbox -O figure/66_22/f3.png
+INPUT ./figure/66_22/f3s.png
+INPUT ./figure/66_22/f3s.png
+INPUT figure/66_22/f3s.png
+INPUT extractbb -B cropbox -O figure/66_22/f3s.png
+INPUT ./figure/66_22/g3.png
+INPUT ./figure/66_22/g3.png
+INPUT figure/66_22/g3.png
+INPUT extractbb -B cropbox -O figure/66_22/g3.png
+INPUT ./figure/66_22/g3s.png
+INPUT ./figure/66_22/g3s.png
+INPUT figure/66_22/g3s.png
+INPUT extractbb -B cropbox -O figure/66_22/g3s.png
+INPUT ./figure/66_22/a3.png
+INPUT ./figure/66_22/a3.png
+INPUT figure/66_22/a3.png
+INPUT extractbb -B cropbox -O figure/66_22/a3.png
+INPUT ./figure/66_22/a3s.png
+INPUT ./figure/66_22/a3s.png
+INPUT figure/66_22/a3s.png
+INPUT extractbb -B cropbox -O figure/66_22/a3s.png
+INPUT ./figure/66_22/b3.png
+INPUT ./figure/66_22/b3.png
+INPUT figure/66_22/b3.png
+INPUT extractbb -B cropbox -O figure/66_22/b3.png
+INPUT ./figure/66_22/c4.png
+INPUT ./figure/66_22/c4.png
+INPUT figure/66_22/c4.png
+INPUT extractbb -B cropbox -O figure/66_22/c4.png
+INPUT ./figure/66_22/c4s.png
+INPUT ./figure/66_22/c4s.png
+INPUT figure/66_22/c4s.png
+INPUT extractbb -B cropbox -O figure/66_22/c4s.png
+INPUT ./figure/66_22/d4.png
+INPUT ./figure/66_22/d4.png
+INPUT figure/66_22/d4.png
+INPUT extractbb -B cropbox -O figure/66_22/d4.png
+INPUT ./figure/66_22/d4s.png
+INPUT ./figure/66_22/d4s.png
+INPUT figure/66_22/d4s.png
+INPUT extractbb -B cropbox -O figure/66_22/d4s.png
+INPUT ./figure/66_22/e4.png
+INPUT ./figure/66_22/e4.png
+INPUT figure/66_22/e4.png
+INPUT extractbb -B cropbox -O figure/66_22/e4.png
+INPUT ./figure/66_22/f4.png
+INPUT ./figure/66_22/f4.png
+INPUT figure/66_22/f4.png
+INPUT extractbb -B cropbox -O figure/66_22/f4.png
+INPUT ./figure/66_22/f4s.png
+INPUT ./figure/66_22/f4s.png
+INPUT figure/66_22/f4s.png
+INPUT extractbb -B cropbox -O figure/66_22/f4s.png
+INPUT ./figure/66_22/g4.png
+INPUT ./figure/66_22/g4.png
+INPUT figure/66_22/g4.png
+INPUT extractbb -B cropbox -O figure/66_22/g4.png
+INPUT ./figure/66_22/g4s.png
+INPUT ./figure/66_22/g4s.png
+INPUT figure/66_22/g4s.png
+INPUT extractbb -B cropbox -O figure/66_22/g4s.png
+INPUT ./figure/66_22/a4.png
+INPUT ./figure/66_22/a4.png
+INPUT figure/66_22/a4.png
+INPUT extractbb -B cropbox -O figure/66_22/a4.png
+INPUT ./figure/66_22/a4s.png
+INPUT ./figure/66_22/a4s.png
+INPUT figure/66_22/a4s.png
+INPUT extractbb -B cropbox -O figure/66_22/a4s.png
+INPUT ./figure/66_22/b4.png
+INPUT ./figure/66_22/b4.png
+INPUT figure/66_22/b4.png
+INPUT extractbb -B cropbox -O figure/66_22/b4.png
+INPUT ./figure/66_22/c5.png
+INPUT ./figure/66_22/c5.png
+INPUT figure/66_22/c5.png
+INPUT extractbb -B cropbox -O figure/66_22/c5.png
+INPUT ./figure/66_22/c5s.png
+INPUT ./figure/66_22/c5s.png
+INPUT figure/66_22/c5s.png
+INPUT extractbb -B cropbox -O figure/66_22/c5s.png
+INPUT ./figure/66_22/d5.png
+INPUT ./figure/66_22/d5.png
+INPUT figure/66_22/d5.png
+INPUT extractbb -B cropbox -O figure/66_22/d5.png
+INPUT ./figure/66_22/d5s.png
+INPUT ./figure/66_22/d5s.png
+INPUT figure/66_22/d5s.png
+INPUT extractbb -B cropbox -O figure/66_22/d5s.png
+INPUT ./figure/66_22/e5.png
+INPUT ./figure/66_22/e5.png
+INPUT figure/66_22/e5.png
+INPUT extractbb -B cropbox -O figure/66_22/e5.png
+INPUT ./figure/66_22/f5.png
+INPUT ./figure/66_22/f5.png
+INPUT figure/66_22/f5.png
+INPUT extractbb -B cropbox -O figure/66_22/f5.png
+INPUT ./figure/66_22/f5s.png
+INPUT ./figure/66_22/f5s.png
+INPUT figure/66_22/f5s.png
+INPUT extractbb -B cropbox -O figure/66_22/f5s.png
+INPUT ./figure/66_22/g5.png
+INPUT ./figure/66_22/g5.png
+INPUT figure/66_22/g5.png
+INPUT extractbb -B cropbox -O figure/66_22/g5.png
+INPUT ./figure/66_22/g5s.png
+INPUT ./figure/66_22/g5s.png
+INPUT figure/66_22/g5s.png
+INPUT extractbb -B cropbox -O figure/66_22/g5s.png
+INPUT ./figure/66_22/a5.png
+INPUT ./figure/66_22/a5.png
+INPUT figure/66_22/a5.png
+INPUT extractbb -B cropbox -O figure/66_22/a5.png
+INPUT ./figure/66_22/a5s.png
+INPUT ./figure/66_22/a5s.png
+INPUT figure/66_22/a5s.png
+INPUT extractbb -B cropbox -O figure/66_22/a5s.png
+INPUT ./figure/66_22/b5.png
+INPUT ./figure/66_22/b5.png
+INPUT figure/66_22/b5.png
+INPUT extractbb -B cropbox -O figure/66_22/b5.png
+INPUT ./figure/66_22/c6.png
+INPUT ./figure/66_22/c6.png
+INPUT figure/66_22/c6.png
+INPUT extractbb -B cropbox -O figure/66_22/c6.png
+INPUT ./figure/66_22/c6s.png
+INPUT ./figure/66_22/c6s.png
+INPUT figure/66_22/c6s.png
+INPUT extractbb -B cropbox -O figure/66_22/c6s.png
+INPUT ./figure/66_22/d6.png
+INPUT ./figure/66_22/d6.png
+INPUT figure/66_22/d6.png
+INPUT extractbb -B cropbox -O figure/66_22/d6.png
+INPUT ./figure/66_22/d6s.png
+INPUT ./figure/66_22/d6s.png
+INPUT figure/66_22/d6s.png
+INPUT extractbb -B cropbox -O figure/66_22/d6s.png
+INPUT ./figure/66_22/e6.png
+INPUT ./figure/66_22/e6.png
+INPUT figure/66_22/e6.png
+INPUT extractbb -B cropbox -O figure/66_22/e6.png
+INPUT ./figure/66_22/f6.png
+INPUT ./figure/66_22/f6.png
+INPUT figure/66_22/f6.png
+INPUT extractbb -B cropbox -O figure/66_22/f6.png
+INPUT ./figure/66_22/f6s.png
+INPUT ./figure/66_22/f6s.png
+INPUT figure/66_22/f6s.png
+INPUT extractbb -B cropbox -O figure/66_22/f6s.png
+INPUT ./figure/66_22/g6.png
+INPUT ./figure/66_22/g6.png
+INPUT figure/66_22/g6.png
+INPUT extractbb -B cropbox -O figure/66_22/g6.png
+INPUT ./figure/66_22/g6s.png
+INPUT ./figure/66_22/g6s.png
+INPUT figure/66_22/g6s.png
+INPUT extractbb -B cropbox -O figure/66_22/g6s.png
+INPUT ./figure/66_22/a6.png
+INPUT ./figure/66_22/a6.png
+INPUT figure/66_22/a6.png
+INPUT extractbb -B cropbox -O figure/66_22/a6.png
+INPUT ./figure/66_22/a6s.png
+INPUT ./figure/66_22/a6s.png
+INPUT figure/66_22/a6s.png
+INPUT extractbb -B cropbox -O figure/66_22/a6s.png
+INPUT ./figure/66_22/b6.png
+INPUT ./figure/66_22/b6.png
+INPUT figure/66_22/b6.png
+INPUT extractbb -B cropbox -O figure/66_22/b6.png
+INPUT ./figure/66_22/c7.png
+INPUT ./figure/66_22/c7.png
+INPUT figure/66_22/c7.png
+INPUT extractbb -B cropbox -O figure/66_22/c7.png
+INPUT ./figure/66_22/c7s.png
+INPUT ./figure/66_22/c7s.png
+INPUT figure/66_22/c7s.png
+INPUT extractbb -B cropbox -O figure/66_22/c7s.png
+INPUT ./figure/66_22/d7.png
+INPUT ./figure/66_22/d7.png
+INPUT figure/66_22/d7.png
+INPUT extractbb -B cropbox -O figure/66_22/d7.png
+INPUT ./figure/66_22/d7s.png
+INPUT ./figure/66_22/d7s.png
+INPUT figure/66_22/d7s.png
+INPUT extractbb -B cropbox -O figure/66_22/d7s.png
+INPUT ./figure/66_22/e7.png
+INPUT ./figure/66_22/e7.png
+INPUT figure/66_22/e7.png
+INPUT extractbb -B cropbox -O figure/66_22/e7.png
+INPUT ./figure/66_22/f7.png
+INPUT ./figure/66_22/f7.png
+INPUT figure/66_22/f7.png
+INPUT extractbb -B cropbox -O figure/66_22/f7.png
+INPUT ./figure/66_22/f7s.png
+INPUT ./figure/66_22/f7s.png
+INPUT figure/66_22/f7s.png
+INPUT extractbb -B cropbox -O figure/66_22/f7s.png
+INPUT ./figure/66_22/g7.png
+INPUT ./figure/66_22/g7.png
+INPUT figure/66_22/g7.png
+INPUT extractbb -B cropbox -O figure/66_22/g7.png
+INPUT ./figure/66_22/g6s.png
+INPUT ./figure/66_22/g6s.png
+INPUT figure/66_22/g6s.png
+INPUT ./figure/66_22/a7.png
+INPUT ./figure/66_22/a7.png
+INPUT figure/66_22/a7.png
+INPUT extractbb -B cropbox -O figure/66_22/a7.png
+INPUT ./figure/66_22/a7s.png
+INPUT ./figure/66_22/a7s.png
+INPUT figure/66_22/a7s.png
+INPUT extractbb -B cropbox -O figure/66_22/a7s.png
+INPUT ./figure/66_22/b7.png
+INPUT ./figure/66_22/b7.png
+INPUT figure/66_22/b7.png
+INPUT extractbb -B cropbox -O figure/66_22/b7.png
+INPUT ./figure/66_22/c8.png
+INPUT ./figure/66_22/c8.png
+INPUT figure/66_22/c8.png
+INPUT extractbb -B cropbox -O figure/66_22/c8.png
 INPUT latex_out/thesis.aux
 INPUT latex_out/thesis.out
 INPUT latex_out/thesis.out

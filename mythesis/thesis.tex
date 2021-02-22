@@ -14,7 +14,8 @@
 \pagestyle{plain}
 
 %画像
-\usepackage{graphicx}
+%draftオプションで枠のみに
+\usepackage[draft]{graphicx}
 %位置指定
 \usepackage{float}
 %ハイパーリンク
@@ -42,6 +43,7 @@
 \usepackage{tocloft}
 \usepackage{etoolbox}
 %図の設定
+\usepackage{caption}
 \usepackage[subrefformat=parens]{subcaption}
 %余白の設定
 \usepackage{geometry}
@@ -61,11 +63,11 @@
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\IfAppendix{\appendixname\Alph{chapter}}{第\thechapter~章}}{1zw}{}{}
 \titlespacing*{\chapter}{0pt}{0pt}{50pt}
 \titleformat*{\section}{\LARGE\bfseries}
-\titlespacing{\section}{0pt}{19pt}{15pt}
+\titlespacing{\section}{0pt}{15pt}{13pt}
 \titleformat*{\subsection}{\Large\bfseries}
-\titlespacing{\subsection}{0pt}{13pt}{10pt}
+\titlespacing{\subsection}{0pt}{12pt}{10pt}
 \titleformat*{\subsubsection}{\large\bfseries}
-\titlespacing{\subsubsection}{0pt}{10pt}{8pt}
+\titlespacing{\subsubsection}{0pt}{9pt}{7pt}
 
 %目次の設定
 \renewcommand{\cfttoctitlefont}{\Huge\bfseries}
@@ -79,16 +81,18 @@
 \renewcommand{\cftfigpresnum}{図~}
 \setlength{\cftbeforefigskip}{0pt}
 \cftsetindents{figure}{1.5em}{5em}
-%図目次にchapterを加える
+%図目次にchapterを加える(付録は載せない)
 \preto\figure{
   \ifnum\value{figure}=0
   \phantomsection
-  \addtocontents{lof}{
-  \begin{flushleft}
-    \IfAppendix{\normalsize\bfseries{\appendixname\Alph{chapter}}}{\normalsize\bfseries{第\thechapter~章}}
-  \end{flushleft}
-  \par
-  \vspace{-7.5pt}
+  \IfAppendix{}{
+    \addtocontents{lof}{
+      \begin{flushleft}
+        \normalsize\bfseries{第\thechapter~章}
+      \end{flushleft}
+      \par
+      \vspace{-7.5pt}
+    }
   }
   \fi
 }
@@ -112,6 +116,38 @@
 %argmaxとargminのコマンド
 \newcommand{\argmax}{\mathop{\mathrm{arg~max~}}\limits}
 \newcommand{\argmin}{\mathop{\mathrm{arg~min~}}\limits}
+
+%付録への図の記載の簡略化コマンド
+% #1：パス名
+% #2,#3：(図のファイル名、図のcaption)
+% #4,#5：(図のファイル名、図のcaption)
+% #6,#7：(図のファイル名、図のcaption)
+% #8,#9：(図のファイル名、図のcaption)
+\newcommand{\appfig}[9]{
+  \begin{figure}[htb]
+  \centering
+  \begin{minipage}{0.24\columnwidth}
+  \centering
+  \includegraphics[width=0.9\columnwidth]{#1#2}
+  \caption[]{#3}
+  \end{minipage}
+  \begin{minipage}{0.24\columnwidth}
+  \centering
+  \includegraphics[width=0.9\columnwidth]{#1#4}
+  \caption[]{#5}
+  \end{minipage}
+  \begin{minipage}{0.24\columnwidth}
+  \centering
+  \includegraphics[width=0.9\columnwidth]{#1#6}
+  \caption[]{#7}
+  \end{minipage}
+  \begin{minipage}{0.24\columnwidth}
+  \centering
+  \includegraphics[width=0.9\columnwidth]{#1#8}
+  \caption[]{#9}
+  \end{minipage}
+  \end{figure}
+}
 
 \begin{document}
 

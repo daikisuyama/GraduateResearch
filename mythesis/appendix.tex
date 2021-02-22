@@ -1,5 +1,4 @@
 %追加すべき事項
-% - 実験結果の画像の添付
 % - ? Adamの詳しい説明
 \appendix
 
@@ -41,7 +40,7 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
         \Return{$\theta$}
     }
     \BlankLine
-\caption{Adamの疑似コード}
+\caption[]{Adamの疑似コード}
 \label{fig:Adam}
 \end{algorithm}
 
@@ -84,18 +83,63 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
 \begin{figure}[h]
 \centering
 \includegraphics[width=\columnwidth]{figure/data_div.png}
-\caption{データセットのサブセット}
+\caption[]{データセットのサブセット}
 \label{fig:data_div}
 \end{figure}
 
 \chapter{実験結果}
 \label{app:result}
 
-\prettyref{sec:result}に載せることのできなかった波形の図を本章に載せる
+\prettyref{sec:result}に載せることのできなかった波形の図を本章に載せる。また、波形の記載方法は\prettyref{sec:result}と同様であるが、簡略化のため、キャプションには音階の表記のみ載せている。
 
 \section{提案モデルの表現力の評価実験}
 
-提案モデルの評価実験を行ったところ、88音のうち87音については変換先のギターの音を表現できていると判断することができた。
+\appfig{figure/88_88/}{a0.png}{A0}{a0s.png}{A0$\sharp$}{b0.png}{B0}{c1.png}{C1}
+\appfig{figure/88_88/}{c1s.png}{C1$\sharp$}{d1.png}{D1}{d1s.png}{D1$\sharp$}{e1.png}{E1}
+\appfig{figure/88_88/}{f1.png}{F1}{f1s.png}{F1$\sharp$}{g1.png}{G1}{g1s.png}{G1$\sharp$}
+\appfig{figure/88_88/}{a1.png}{A1}{a1s.png}{A1$\sharp$}{b1.png}{B1}{c2.png}{C2}
+\appfig{figure/88_88/}{c2s.png}{C2$\sharp$}{d2.png}{D2}{d2s.png}{D2$\sharp$}{e2.png}{E2}
+\appfig{figure/88_88/}{f2.png}{F2}{f2s.png}{F2$\sharp$}{g2.png}{G2}{g2s.png}{G2$\sharp$}
+\appfig{figure/88_88/}{a2.png}{A2}{a2s.png}{A2$\sharp$}{b2.png}{B2}{c3.png}{C3}
+\appfig{figure/88_88/}{c3s.png}{C3$\sharp$}{d3.png}{D3}{d3s.png}{D3$\sharp$}{e3.png}{E3}
+\appfig{figure/88_88/}{f3.png}{F3}{f3s.png}{F3$\sharp$}{g3.png}{G3}{g3s.png}{G3$\sharp$}
+\appfig{figure/88_88/}{a3.png}{A3}{a3s.png}{A3$\sharp$}{b3.png}{B3}{c4.png}{C4}
+\appfig{figure/88_88/}{c4s.png}{C4$\sharp$}{d4.png}{D4}{d4s.png}{D4$\sharp$}{e4.png}{E4}
+\appfig{figure/88_88/}{f4.png}{F4}{f4s.png}{F4$\sharp$}{g4.png}{G4}{g4s.png}{G4$\sharp$}
+\appfig{figure/88_88/}{a4.png}{A4}{a4s.png}{A4$\sharp$}{b4.png}{B4}{c5.png}{C5}
+\appfig{figure/88_88/}{c5s.png}{C5$\sharp$}{d5.png}{D5}{d5s.png}{D5$\sharp$}{e5.png}{E5}
+\appfig{figure/88_88/}{f5.png}{F5}{f5s.png}{F5$\sharp$}{g5.png}{G5}{g5s.png}{G5$\sharp$}
+\appfig{figure/88_88/}{a5.png}{A5}{a5s.png}{A5$\sharp$}{b5.png}{B5}{c6.png}{C6}
+\appfig{figure/88_88/}{c6s.png}{C6$\sharp$}{d6.png}{D6}{d6s.png}{D6$\sharp$}{e6.png}{E6}
+\appfig{figure/88_88/}{f6.png}{F6}{f6s.png}{F6$\sharp$}{g6.png}{G6}{g6s.png}{G6$\sharp$}
+\appfig{figure/88_88/}{a6.png}{A6}{a6s.png}{A6$\sharp$}{b6.png}{B6}{c7.png}{C7}
+\appfig{figure/88_88/}{c7s.png}{C7$\sharp$}{d7.png}{D7}{d7s.png}{D7$\sharp$}{e7.png}{E7}
+\appfig{figure/88_88/}{f7.png}{F7}{f7s.png}{F7$\sharp$}{g7.png}{G7}{g6s.png}{G7$\sharp$}
+\appfig{figure/88_88/}{a7.png}{A7}{a7s.png}{A7$\sharp$}{b7.png}{B7}{c8.png}{C8}
 
+\clearpage
 
 \section{提案モデルの汎化能力の評価実験}
+
+\appfig{figure/66_22/}{a0.png}{A0}{a0s.png}{A0$\sharp$}{b0.png}{B0}{c1.png}{C1}
+\appfig{figure/66_22/}{c1s.png}{C1$\sharp$}{d1.png}{D1}{d1s.png}{D1$\sharp$}{e1.png}{E1}
+\appfig{figure/66_22/}{f1.png}{F1}{f1s.png}{F1$\sharp$}{g1.png}{G1}{g1s.png}{G1$\sharp$}
+\appfig{figure/66_22/}{a1.png}{A1}{a1s.png}{A1$\sharp$}{b1.png}{B1}{c2.png}{C2}
+\appfig{figure/66_22/}{c2s.png}{C2$\sharp$}{d2.png}{D2}{d2s.png}{D2$\sharp$}{e2.png}{E2}
+\appfig{figure/66_22/}{f2.png}{F2}{f2s.png}{F2$\sharp$}{g2.png}{G2}{g2s.png}{G2$\sharp$}
+\appfig{figure/66_22/}{a2.png}{A2}{a2s.png}{A2$\sharp$}{b2.png}{B2}{c3.png}{C3}
+\appfig{figure/66_22/}{c3s.png}{C3$\sharp$}{d3.png}{D3}{d3s.png}{D3$\sharp$}{e3.png}{E3}
+\appfig{figure/66_22/}{f3.png}{F3}{f3s.png}{F3$\sharp$}{g3.png}{G3}{g3s.png}{G3$\sharp$}
+\appfig{figure/66_22/}{a3.png}{A3}{a3s.png}{A3$\sharp$}{b3.png}{B3}{c4.png}{C4}
+\appfig{figure/66_22/}{c4s.png}{C4$\sharp$}{d4.png}{D4}{d4s.png}{D4$\sharp$}{e4.png}{E4}
+\appfig{figure/66_22/}{f4.png}{F4}{f4s.png}{F4$\sharp$}{g4.png}{G4}{g4s.png}{G4$\sharp$}
+\appfig{figure/66_22/}{a4.png}{A4}{a4s.png}{A4$\sharp$}{b4.png}{B4}{c5.png}{C5}
+\appfig{figure/66_22/}{c5s.png}{C5$\sharp$}{d5.png}{D5}{d5s.png}{D5$\sharp$}{e5.png}{E5}
+\appfig{figure/66_22/}{f5.png}{F5}{f5s.png}{F5$\sharp$}{g5.png}{G5}{g5s.png}{G5$\sharp$}
+\appfig{figure/66_22/}{a5.png}{A5}{a5s.png}{A5$\sharp$}{b5.png}{B5}{c6.png}{C6}
+\appfig{figure/66_22/}{c6s.png}{C6$\sharp$}{d6.png}{D6}{d6s.png}{D6$\sharp$}{e6.png}{E6}
+\appfig{figure/66_22/}{f6.png}{F6}{f6s.png}{F6$\sharp$}{g6.png}{G6}{g6s.png}{G6$\sharp$}
+\appfig{figure/66_22/}{a6.png}{A6}{a6s.png}{A6$\sharp$}{b6.png}{B6}{c7.png}{C7}
+\appfig{figure/66_22/}{c7s.png}{C7$\sharp$}{d7.png}{D7}{d7s.png}{D7$\sharp$}{e7.png}{E7}
+\appfig{figure/66_22/}{f7.png}{F7}{f7s.png}{F7$\sharp$}{g7.png}{G7}{g6s.png}{G7$\sharp$}
+\appfig{figure/66_22/}{a7.png}{A7}{a7s.png}{A7$\sharp$}{b7.png}{B7}{c8.png}{C8}

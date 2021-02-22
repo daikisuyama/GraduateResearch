@@ -49,6 +49,12 @@ Jesse~H. Engel, Kumar~Krishna Agrawal, Shuo Chen, Ishaan Gulrajani, Chris
 \newblock Gansynth: Adversarial neural audio synthesis.
 \newblock {\em CoRR}, Vol. abs/1902.08710, , 2019.
 
+\bibitem{CQT}
+Judith Brown.
+\newblock Calculation of a constant q spectral transform.
+\newblock {\em Journal of the Acoustical Society of America}, Vol.~89, No.~1,
+  pp. 425--434, January 1991.
+
 \bibitem{GradientDescent}
 Sebastian Ruder.
 \newblock An overview of gradient descent optimization algorithms.

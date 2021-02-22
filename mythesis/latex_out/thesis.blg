@@ -5,46 +5,46 @@ The style file: junsrt.bst
 Database file #1: reference.bib
 Warning--empty journal in Jukebox
 Warning--empty journal in WaveNet
-You've used 20 entries,
+You've used 21 entries,
             2270 wiz_defined-function locations,
-            645 strings with 7263 characters,
-and the built_in function-call counts, 5270 in all, are:
-= -- 327
-> -- 234
-< -- 11
-+ -- 91
-- -- 71
-* -- 224
-:= -- 661
-add.period$ -- 52
-call.type$ -- 20
-change.case$ -- 18
+            653 strings with 7385 characters,
+and the built_in function-call counts, 5645 in all, are:
+= -- 359
+> -- 238
+< -- 14
++ -- 93
+- -- 72
+* -- 247
+:= -- 701
+add.period$ -- 55
+call.type$ -- 21
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 310
-empty$ -- 537
-format.name$ -- 142
-if$ -- 1280
+cite$ -- 23
+duplicate$ -- 336
+empty$ -- 574
+format.name$ -- 144
+if$ -- 1376
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 11
-newline$ -- 94
-num.names$ -- 20
-pop$ -- 177
+int.to.str$ -- 21
+missing$ -- 12
+newline$ -- 99
+num.names$ -- 21
+pop$ -- 181
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 268
+skip$ -- 291
 stack$ -- 0
-substring$ -- 136
-swap$ -- 67
-text.length$ -- 11
+substring$ -- 164
+swap$ -- 79
+text.length$ -- 14
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 2
-while$ -- 29
-width$ -- 22
-write$ -- 189
-is.kanji.str$ -- 223
+while$ -- 32
+width$ -- 23
+write$ -- 200
+is.kanji.str$ -- 233
 (There were 2 warnings)
