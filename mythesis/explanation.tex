@@ -1,4 +1,5 @@
 %追加すべき事項
+% - ? メルスペクトログラムの例
 \chapter{背景：音}
 
 本章では、音の定義を行い、音の表現方法を紹介する。
@@ -25,13 +26,13 @@
 
 \begin{figure}[b]
 \centering
-\begin{minipage}{0.48\columnwidth}
+\begin{minipage}[b]{0.48\columnwidth}
 \centering
 \includegraphics[width=\columnwidth]{figure/gakuon1.png}
 \caption{音波}
 \label{fig:gakuon1}
 \end{minipage}
-\begin{minipage}{0.48\columnwidth}
+\begin{minipage}[b]{0.48\columnwidth}
 \centering
 \includegraphics[width=\columnwidth]{figure/gakuon2.png}
 \caption{音波の拡大図}
@@ -48,18 +49,18 @@
 
 \subsection{一次元データと二次元データ}
 
-音響信号をニューラルネットワークでは一次元データとして扱う~(\prettyref{fig:audio_signal})~。~\cite{Jukebox}や~\cite{WaveNet}ではこの一次元データをニューラルネットワークで扱うが、素朴な音の表現である一次元データから楽音としての特徴を学習するのは難しい。したがって、音響信号を周波数成分ごとに分解して二次元データに変換することが一般的である。また、二つの次元としては時間と周波数を選ぶことが多く、この場合の二次元データを時間-周波数表現と呼ぶ。
+音響信号をニューラルネットワークでは一次元データとして扱うが~(\prettyref{fig:audio_signal})~、素朴な音の表現である一次元データから楽音としての特徴を学習するのは難しい。したがって、~\cite{Jukebox}のように階層型のネットワークを用いるなどの工夫が必要となる。また、一般的には音響信号を周波数成分ごとに分解して二次元データに変換することが多い。二つの次元としては時間と周波数を選ぶことがほとんどで、この場合の二次元データを時間-周波数表現と呼ぶ。
 
 \subsection{STFT}
 
-STFT~(Short~Time~Fourier~Transform)~は、時間-周波数表現の一般的な生成手法である。STFTでは中間周波数を利用した線形に等間隔のバンドパスフィルターを用いて音響信号を周波数成分ごとに分解する。また、STFTを用いて生成できる時間-周波数表現を可視化した画像をスペクトログラムと呼び、振幅の大きさを明度などにより表す~(\prettyref{fig:STFT})~。ただし、スペクトログラムには位相の情報は保持されないため、音響信号からスペクトログラムの変換は不可逆である。そして、離散信号に対してのSTFTは\prettyref{eq:STFT}により定式化される。また、$m$は時刻、$w_k$は周波数、$w$は0を中心とした窓関数、$x(n)$は時間$n$における信号$x$の値、である。
+STFT~(Short~Time~Fourier~Transform)~は、同じバンド幅の中間周波数を利用したバンドパスフィルターを用いて音響信号を周波数成分ごとに分解する手法である。また、STFTを用いて生成できる時間-周波数表現を可視化した画像をスペクトログラムと呼び、振幅の大きさを明度などにより表す~(\prettyref{fig:STFT})~。ただし、スペクトログラムには位相の情報は保持されないため、音響信号からスペクトログラムへの変換は不可逆である。そして、離散信号に対してのSTFTは\prettyref{eq:STFT}により定式化される。ここで、$m$は時刻、$w_k$は周波数、$w$は0を中心とした窓関数、$x(n)$は時間$n$における信号$x$の値、である。
 
 \begin{align}
     \label{eq:STFT}
     \operatorname{STFT}\left(m, \omega_k\right)=\sum_{n=-\infty}^{\infty} x(n) w(n-m) e^{-i \omega_k n}
 \end{align}
 
-また、人間の聴覚系の周波数分解能は線形からは遠く、STFTは楽音の解析のために作成されたものでもないため、スペクトログラムは周波数方向の圧縮のような工夫を施すことで用いられることが多い。
+また、STFTは人間の聴覚系の周波数分解能に合わせて作られたものではないため、楽音の解析の手法として用いる際はスペクトログラムに何らかの工夫を加えることが多い。周波数方向の圧縮方向を施した一般的なスペクトログラムとしてはメルスペクトログラムがあげられる~(\prettyref{fig:mel})~。メルスペクトログラムでは、人間の感じる音の高さの差が等幅になるように調整した尺度であるメル尺度~\cite{melscale}を用いて周波数方向の圧縮を行う。
 
 \begin{figure}[b]
 \centering
@@ -80,36 +81,39 @@ STFT~(Short~Time~Fourier~Transform)~は、時間-周波数表現の一般的な�
 %ここで改ページ
 \clearpage
 
-メルスペクトログラムは、周波数方向の圧縮の工夫を施したスペクトログラムとして一般的なものである~(\prettyref{fig:mel})~。メルスペクトログラムでは、人間の感じる音の高さの差と差が等しくなるように調整した尺度であるメル尺度~\cite{melscale}を用いて周波数方向の圧縮を行う。また、~\cite{mel}では周波数を$f$として\prettyref{eq:mel}のように定式化される。
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.5\columnwidth]{figure/mel.png}
+\caption{メルスペクトログラム}
+\label{fig:mel}
+\end{figure}
+
+そして、メル尺度は、~\cite{mel}では周波数を$f$として\prettyref{eq:mel}のように定式化される。メル尺度は人間の聴覚系に合わせた尺度であるため、メルスペクトログラムはスペクトログラムよりも楽音の解析に適している。
 
 \begin{align}
     \label{eq:mel}
     mel(f)=1127.01048\log{(\frac{f}{700}+1)}
 \end{align}
 
-メル尺度は人間の聴覚系に合わせた尺度であり、メルスペクトログラムはスペクトログラムよりも楽音の解析に適している。例えば、~\cite{GANSynth}では位相の情報を付加したメルスペクトログラムを用いて楽音の生成を行う。
-
 \subsection{CQT}
 
-CQT~(Constant~Q~Transform)~は音楽の解析のために主に二つの点でSTFTを改善した手法である。一つ目の改善点は、サンプル数についてである。STFTの場合は
+CQT~(Constant~Q~Transform)~\cite{CQT}はSTFTと同様に周波数成分ごとに分解する手法であるが、二つの工夫を行う。まず、定バンド幅のバンドフィルターを持つSTFTには低周波数成分のサンプル数が少なくなり分解能が低下するという問題がある。したがって、CQTでは低周波数成分ほどバンド幅を広げることで分解能を一定にする工夫を行う。そして、人間の聴覚系の分解能は線形よりも対数に近いため、CQTでは対数振幅を用いる工夫を行う。
 
-CQT~(Constant~Q~Transform)~\cite{CQT}は対数振幅の中心周波数を使用した二次元の表現である。CQTは対数振幅を用いており、音の高さの分布に近い。詳しくは~\cite{CQT}を参考にされたい。
-
-また、CQTにおいても\prettyref{fig:cqt}のようなスペクトログラムを生成することができる。この時、
+また、CQTにおいては対数振幅を用いたスペクトログラムを生成することができる~(\prettyref{fig:cqt})~。そして、位相の時間微分をカラーコードにより表現したRainbowgramも音波の生成時の可視化による評価として~\cite{NSynth}や~\cite{GANSynth}で用いられる~(\prettyref{fig:rainbowgram})~。
 
 \begin{figure}[b]
 \centering
 \begin{minipage}[b]{0.48\columnwidth}
 \centering
-\includegraphics[width=\columnwidth]{figure/mel.png}
-\caption{メルスペクトログラム}
-\label{fig:mel}
-\end{minipage}
-\begin{minipage}[b]{0.48\columnwidth}
-\centering
 \includegraphics[width=\columnwidth]{figure/cqt.png}
 \caption{CQT}
 \label{fig:cqt}
+\end{minipage}
+\begin{minipage}[b]{0.48\columnwidth}
+\centering
+\includegraphics[width=\columnwidth]{figure/rainbowgram.png}
+\caption{Rainbowgram}
+\label{fig:rainbowgram}
 \end{minipage}
 \end{figure}
     

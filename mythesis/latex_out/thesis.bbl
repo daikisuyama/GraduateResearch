@@ -1,86 +1,91 @@
 \begin{thebibliography}{10}
 
+\bibitem{AlexNet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock {\em Advances in neural information processing systems}, Vol.~25, pp.
+  1097--1105, 2012.
+
 \bibitem{pix2pix}
-Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, and Alexei~A. Efros.
-\newblock Image-to-image translation with conditional adversarial networks,
-  2018.
+Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, and Alexei~A Efros.
+\newblock Image-to-image translation with conditional adversarial networks.
+\newblock In {\em Proceedings of the IEEE conference on computer vision and
+  pattern recognition}, pp. 1125--1134, 2017.
 
 \bibitem{GAN}
-Ian~J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David
-  Warde-Farley, Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
-\newblock Generative adversarial networks, 2014.
+Ian~J Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley,
+  Sherjil Ozair, Aaron Courville, and Yoshua Bengio.
+\newblock Generative adversarial networks.
+\newblock {\em arXiv preprint arXiv:1406.2661}, 2014.
 
 \bibitem{musictutorial}
-Keunwoo Choi, Gy^^c3^^b6rgy Fazekas, Kyunghyun Cho, and Mark Sandler.
-\newblock A tutorial on deep learning for music information retrieval, 2018.
+Keunwoo Choi, Gy{\"o}rgy Fazekas, Kyunghyun Cho, and Mark Sandler.
+\newblock A tutorial on deep learning for music information retrieval.
+\newblock {\em arXiv preprint arXiv:1709.04396}, 2017.
 
 \bibitem{timbretron}
-Sicong Huang, Qiyang Li, Cem Anil, Xuchan Bao, Sageev Oore, and Roger~B.
-  Grosse.
-\newblock Timbretron: A wavenet(cyclegan(cqt(audio))) pipeline for musical
-  timbre transfer, 2019.
+Sicong Huang, Qiyang Li, Cem Anil, Xuchan Bao, Sageev Oore, and Roger~B Grosse.
+\newblock Timbretron: A wavenet (cyclegan (cqt (audio))) pipeline for musical
+  timbre transfer.
+\newblock {\em arXiv preprint arXiv:1811.09620}, 2018.
 
 \bibitem{Jukebox}
 Prafulla Dhariwal, Heewoo Jun, Christine Payne, Jong~Wook Kim, Alec Radford,
   and Ilya Sutskever.
 \newblock Jukebox: A generative model for music.
-\newblock 2020.
-
-\bibitem{WaveNet}
-Aaron van~den Oord, Sander Dieleman, Heiga Zen, Karen Simonyan, Oriol Vinyals,
-  Alex Graves, Nal Kalchbrenner, Andrew Senior, and Koray Kavukcuoglu.
-\newblock Wavenet: A generative model for raw audio.
-\newblock 2016.
+\newblock {\em arXiv preprint arXiv:2005.00341}, 2020.
 
 \bibitem{melscale}
-A scale for the measurement of the psychological magnitude pitch: The journal
-  of the acoustical society of america: Vol 8, no 3.
-\newblock \url{https://asa.scitation.org/doi/10.1121/1.1915893}.
-\newblock (Accessed on 02/10/2021).
+Stanley~Smith Stevens, John Volkmann, and Edwin~Broomell Newman.
+\newblock A scale for the measurement of the psychological magnitude pitch.
+\newblock {\em The journal of the acoustical society of america}, Vol.~8,
+  No.~3, pp. 185--190, 1937.
 
 \bibitem{mel}
-S.~S. STEVENS.
-\newblock The relation of pitch to frequency: a revised scale.
-\newblock {\em Am. J. Psychol.}, Vol.~53, pp. 329--353, 1940.
-
-\bibitem{GANSynth}
-Jesse~H. Engel, Kumar~Krishna Agrawal, Shuo Chen, Ishaan Gulrajani, Chris
-  Donahue, and Adam Roberts.
-\newblock Gansynth: Adversarial neural audio synthesis.
-\newblock {\em CoRR}, Vol. abs/1902.08710, , 2019.
+Stanley~S Stevens and John Volkmann.
+\newblock The relation of pitch to frequency: A revised scale.
+\newblock {\em The American Journal of Psychology}, Vol.~53, No.~3, pp.
+  329--353, 1940.
 
 \bibitem{CQT}
-Judith Brown.
+Judith~C Brown.
 \newblock Calculation of a constant q spectral transform.
-\newblock {\em Journal of the Acoustical Society of America}, Vol.~89, No.~1,
-  pp. 425--434, January 1991.
+\newblock {\em The Journal of the Acoustical Society of America}, Vol.~89,
+  No.~1, pp. 425--434, 1991.
+
+\bibitem{NSynth}
+Jesse Engel, Cinjon Resnick, Adam Roberts, Sander Dieleman, Mohammad Norouzi,
+  Douglas Eck, and Karen Simonyan.
+\newblock Neural audio synthesis of musical notes with wavenet autoencoders.
+\newblock In {\em International Conference on Machine Learning}, pp.
+  1068--1077. PMLR, 2017.
+
+\bibitem{GANSynth}
+Jesse Engel, Kumar~Krishna Agrawal, Shuo Chen, Ishaan Gulrajani, Chris Donahue,
+  and Adam Roberts.
+\newblock Gansynth: Adversarial neural audio synthesis.
+\newblock {\em arXiv preprint arXiv:1902.08710}, 2019.
 
 \bibitem{GradientDescent}
 Sebastian Ruder.
 \newblock An overview of gradient descent optimization algorithms.
-\newblock {\em CoRR}, Vol. abs/1609.04747, , 2016.
+\newblock {\em arXiv preprint arXiv:1609.04747}, 2016.
 
 \bibitem{Bishop}
 Christopher~M. Bishop.
-\newblock {\em Pattern Recognition and Machine Learning (Information Science
-  and Statistics)}.
-\newblock Springer-Verlag, Berlin, Heidelberg, 2006.
+\newblock {\em Pattern Recognition and Machine Learning}.
+\newblock Springer, 2006.
 
 \bibitem{Calculus}
-James~J. Callahan, 2010.
+James~J Callahan.
+\newblock {\em Advanced calculus: a geometric view}.
+\newblock Springer Science \& Business Media, 2010.
 
-\bibitem{AlexNet}
-Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
-\newblock Imagenet classification with deep convolutional neural networks.
-\newblock In F.~Pereira, C.~J.~C. Burges, L.~Bottou, and K.~Q. Weinberger,
-  editors, {\em Advances in Neural Information Processing Systems}, Vol.~25,
-  pp. 1097--1105. Curran Associates, Inc., 2012.
-
-\bibitem{neocognition}
-Kunihiko Fukushima.
-\newblock {N}eocognitron: {A} self-organizing neural network model for a
-  mechanism of pattern recognition unaffected by shift in position.
-\newblock {\em Biological Cybernetics}, Vol.~36, pp. 193--202, 1980.
+\bibitem{neocognitron}
+Kunihiko Fukushima and Sei Miyake.
+\newblock Neocognitron: A self-organizing neural network model for a mechanism
+  of pattern recognition.
+\newblock pp. 193--202. Springer, 1980.
 
 \bibitem{idol}
 アイドル自動生成aiを開発 | 株式会社データグリッド | datagrid inc.
@@ -89,27 +94,25 @@ Kunihiko Fukushima.
 
 \bibitem{CGAN}
 Mehdi Mirza and Simon Osindero.
-\newblock Conditional generative adversarial nets, 2014.
+\newblock Conditional generative adversarial nets.
+\newblock {\em arXiv preprint arXiv:1411.1784}, 2014.
 
 \bibitem{u-net}
 Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
-\newblock U-net: Convolutional networks for biomedical image segmentation,
-  2015.
+\newblock U-net: Convolutional networks for biomedical image segmentation.
+\newblock In {\em International Conference on Medical image computing and
+  computer-assisted intervention}, pp. 234--241. Springer, 2015.
 
 \bibitem{Dropout}
 Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
   Salakhutdinov.
-\newblock Dropout: A simple way to prevent neural networks from overfitting.
-\newblock {\em Journal of Machine Learning Research}, Vol.~15, No.~56, pp.
+\newblock Dropout: a simple way to prevent neural networks from overfitting.
+\newblock {\em The journal of machine learning research}, Vol.~15, No.~1, pp.
   1929--1958, 2014.
 
 \bibitem{Adam}
-Diederik~P. Kingma and Jimmy Ba.
-\newblock Adam: A method for stochastic optimization, 2017.
-
-\bibitem{DDSP}
-Jesse Engel, Lamtharn~(Hanoi) Hantrakul, Chenjie Gu, and Adam Roberts.
-\newblock Ddsp: Differentiable digital signal processing.
-\newblock In {\em International Conference on Learning Representations}, 2020.
+Diederik~P Kingma and Jimmy Ba.
+\newblock Adam: A method for stochastic optimization.
+\newblock {\em arXiv preprint arXiv:1412.6980}, 2014.
 
 \end{thebibliography}

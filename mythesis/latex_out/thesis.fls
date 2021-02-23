@@ -44,8 +44,6 @@ INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
-INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
@@ -794,7 +792,6 @@ INPUT ./figure/gakuon1.png
 INPUT ./figure/gakuon1.png
 INPUT figure/gakuon1.png
 INPUT extractbb -B cropbox -O figure/gakuon1.png
-INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./figure/gakuon2.png
 INPUT ./figure/gakuon2.png
 INPUT figure/gakuon2.png
@@ -815,6 +812,10 @@ INPUT ./figure/cqt.png
 INPUT ./figure/cqt.png
 INPUT figure/cqt.png
 INPUT extractbb -B cropbox -O figure/cqt.png
+INPUT ./figure/rainbowgram.png
+INPUT ./figure/rainbowgram.png
+INPUT figure/rainbowgram.png
+INPUT extractbb -B cropbox -O figure/rainbowgram.png
 INPUT ./background.tex
 INPUT background.tex
 INPUT ./background.tex
@@ -965,6 +966,7 @@ INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
 INPUT ./appendix.tex
 INPUT appendix.tex
 INPUT ./appendix.tex

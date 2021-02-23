@@ -76,7 +76,7 @@ MLPは、\prettyref{sec:neuron}に示す人工ニューロンが複数並んだ�
     \boldsymbol{y}=\theta(W\boldsymbol{x}+\boldsymbol{b})
 \end{align}
 
-\prettyref{eq:MLP0_1}より、MLPは\prettyref{eq:MLP0_2}として定式化される。また、$n$は層数であり、下付きの数字は何番目の層であるかを表す。
+ここで、$W\boldsymbol{x}+\boldsymbol{b}$は$\boldsymbol{x}$のアフィン変換を表すため、MLPの一層はアフィン変換と活性化関数の合成関数をベクトルに作用させると言える。したがって、この一層を順方向に重ねたものがMLPの全層を形成するため、MLPは\prettyref{eq:MLP0_2}として定式化される。また、$n$は層数であり、下付きの数字は何番目の層であるかを表す。
 
 \begin{align}
     \label{eq:MLP0_2}
@@ -85,13 +85,13 @@ MLPは、\prettyref{sec:neuron}に示す人工ニューロンが複数並んだ�
 
 \begin{figure}[b]
 \centering
-\begin{minipage}[b]{0.4\columnwidth}
+\begin{minipage}[b]{0.48\columnwidth}
 \centering
 \includegraphics[width=\columnwidth]{figure/mlp_net0.png}
 \subcaption{MLPの一層}
 \label{fig:MLP_net0}
 \end{minipage}
-\begin{minipage}[b]{0.5\columnwidth}
+\begin{minipage}[b]{0.48\columnwidth}
 \centering
 \includegraphics[width=\columnwidth]{figure/mlp_net1.png}
 \subcaption{MLPの全層}
@@ -138,7 +138,7 @@ CNN~(Convolution~Neural~Network)~は、MLPにおいて全結合層を畳み込�
 
 \subsection{CNNの構造}
 
-CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視覚野の機能を模倣するようなネットワーク構造を持つ。また、脳の視覚野には主に二つの機能がある。一つ目は刺激の位置により異なった位置のニューロンの活動電位が発生することであり、二つ目は視覚情報の特徴を段階的に受容することである。この二つの機能を畳み込み層とプーリング層によりCNNは表現する。
+CNNはネオコグニトロン~\cite{neocognitron}を起源に持ち、脳の視覚野の機能を模倣するようなネットワーク構造を持つ。また、脳の視覚野には主に二つの機能がある。一つ目は刺激の位置により異なった位置のニューロンの活動電位が発生することであり、二つ目は視覚情報の特徴を段階的に受容することである。この二つの機能を畳み込み層とプーリング層によりCNNは表現する。
 
 まず、畳み込み層では、人工ニューロン間の結合を局所領域に限定することで局所領域の特徴を抽出する。したがって、局所領域間の位置関係は変わらないため、前者の機能を模倣することができる。そして、プーリング層では、局所領域の人工ニューロンの出力をまとめることで局所領域の特徴を集約する。したがって、層を進むにつれて高段階の特徴が残るため、後者の機能を模倣することができる。
 
@@ -147,7 +147,8 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 \begin{figure}[b]
 \centering
 \includegraphics[width=\columnwidth]{figure/alex.png}
-\caption{AlexNetのネットワーク}
+\caption{AlexNetのネットワーク\\
+図は~\cite{AlexNet}のFigure~2を転載した。}
 \label{fig:Alex}
 \end{figure}
 
@@ -171,8 +172,7 @@ CNNはネオコグニトロン~\cite{neocognition}を起源に持ち、脳の視
 \begin{figure}[b]
 \centering
 \includegraphics[width=\columnwidth]{figure/convolution.png}
-\caption[CNNの畳み込み層]{畳み込み層\\
-図は~\cite{AlexNet}のFigure~2を転載した。}
+\caption[CNNの畳み込み層]{畳み込み層}
 \label{fig:conv}
 \end{figure}
 
@@ -276,13 +276,13 @@ Pix2pixの識別モデルには、PatchGANという手法が用いられる。Pa
 
 \begin{figure}[b]
 \centering
-\begin{minipage}[b]{0.58\columnwidth}
+\begin{minipage}[b]{0.5\columnwidth}
 \centering
 \includegraphics[width=0.9\columnwidth]{figure/u-net.png}
 \subcaption[Pix2pixの生成モデル]{生成モデルのネットワーク}
 \label{fig:u-net}
 \end{minipage}
-\begin{minipage}[b]{0.4\columnwidth}
+\begin{minipage}[b]{0.45\columnwidth}
 \centering
 \includegraphics[width=0.9\columnwidth]{figure/patchgan.png}
 \subcaption{GANとPatchGANの識別モデルの比較}

@@ -15,7 +15,7 @@
 
 %画像
 %draftオプションで枠のみに
-\usepackage[draft]{graphicx}
+\usepackage{graphicx}
 %位置指定
 \usepackage{float}
 %ハイパーリンク
@@ -46,15 +46,7 @@
 \usepackage{caption}
 \usepackage[subrefformat=parens]{subcaption}
 %余白の設定
-\usepackage{geometry}
-
-%余白の設定
-\geometry{
-    left=1.25truein,
-    right=1.25truein,
-    top=1.25truein,
-    bottom=1.25truein,
-}
+\usepackage[top=25mm,bottom=25mm,left=30mm,right=30mm]{geometry}
 
 %タイトルの番号付けの設定
 \setcounter{secnumdepth}{3}
@@ -99,11 +91,6 @@
 
 %開き括弧の設定
 \intervalconfig{soft open fences}
-
-%align用の箱の作成
-\newlength{\alignwidth}
-% #1：左側のテキスト、#2：右側のテキスト
-\newcommand{\algalign}[2]{\makebox[\alignwidth][l]{#1}~#2}
 
 %参照の変更(prettyref)
 \newrefformat{sec}{\ref{#1}節}

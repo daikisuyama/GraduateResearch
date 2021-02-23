@@ -7,39 +7,40 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces 音響信号\relax }}{7}{figure.caption.5}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces STFT\relax }}{7}{figure.caption.5}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces メルスペクトログラム\relax }}{8}{figure.caption.6}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces CQT\relax }}{8}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces CQT\relax }}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Rainbowgram\relax }}{8}{figure.caption.7}%
 \addvspace {10\jsc@mpt }
  \begin {flushleft} \fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {第3\nobreakspace {}章}\end {flushleft} \par \vspace {-7.5pt} 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces MLPの人工ニューロン}}{10}{figure.caption.8}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces MLPのネットワーク\relax }}{11}{figure.caption.9}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces AlexNetのネットワーク\relax }}{13}{figure.caption.10}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces CNNの畳み込み層}}{14}{figure.caption.11}%
-\contentsline {figure}{\numberline {3.5}{\ignorespaces CNNのプーリング層}}{15}{figure.caption.12}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces GANのネットワーク}}{16}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Pix2pixのネットワーク}}{17}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Pix2pixのスタイル変換の例}}{17}{figure.caption.15}%
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Pix2pixの生成モデルと識別モデル}}{18}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces MLPの人工ニューロン}}{10}{figure.caption.9}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces MLPのネットワーク\relax }}{11}{figure.caption.10}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces AlexNetのネットワーク 図は\nobreakspace {}\cite {AlexNet}のFigure\nobreakspace {}2を転載した。\relax }}{13}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces CNNの畳み込み層}}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces CNNのプーリング層}}{15}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces GANのネットワーク}}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Pix2pixのネットワーク}}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Pix2pixのスタイル変換の例}}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Pix2pixの生成モデルと識別モデル}}{18}{figure.caption.17}%
 \addvspace {10\jsc@mpt }
  \begin {flushleft} \fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {第4\nobreakspace {}章}\end {flushleft} \par \vspace {-7.5pt} 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 本研究の提案モデル}}{19}{figure.caption.18}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces 本研究の生成モデルと識別モデル\relax }}{20}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 本研究の提案モデル}}{19}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 本研究の生成モデルと識別モデル\relax }}{20}{figure.caption.20}%
 \addvspace {10\jsc@mpt }
  \begin {flushleft} \fontsize {10\jsc@mpt }{16\jsc@mpt }\selectfont \parindent =1zw \kanjiskip =0zw plus .1zw minus .01zw \xkanjiskip =0.25em plus 0.15em minus 0.06em \abovedisplayskip 11\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \abovedisplayshortskip \z@ plus3\jsc@mpt \belowdisplayskip 9\jsc@mpt plus3\jsc@mpt minus4\jsc@mpt \belowdisplayshortskip \belowdisplayskip \let \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \leftmargin \leftmargini \parsep \z@ \topsep 0.5\baselineskip \itemsep \z@ \relax \bfseries {第5\nobreakspace {}章}\end {flushleft} \par \vspace {-7.5pt} 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 88鍵のピアノの鍵盤\relax }}{21}{figure.caption.21}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces F3の音波}}{22}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces C4の音波}}{22}{figure.caption.22}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces D7$\sharp $の音波}}{23}{figure.caption.23}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces E7の音波}}{23}{figure.caption.23}%
-\contentsline {figure}{\numberline {5.6}{\ignorespaces D4$\sharp $の音波}}{23}{figure.caption.24}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces D7$\sharp $の音波}}{23}{figure.caption.24}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces D1の音波}}{24}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces F6の音波}}{24}{figure.caption.25}%
-\contentsline {figure}{\numberline {5.10}{\ignorespaces A0の音波}}{24}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.11}{\ignorespaces B7の音波}}{24}{figure.caption.26}%
-\contentsline {figure}{\numberline {5.12}{\ignorespaces C5の音波}}{25}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.13}{\ignorespaces D2$\sharp $の音波}}{25}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.14}{\ignorespaces F1$\sharp $の音波}}{25}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.15}{\ignorespaces A7の音波}}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 88鍵のピアノの鍵盤\relax }}{21}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces F3の音波}}{22}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces C4の音波}}{22}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces D7$\sharp $の音波}}{23}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces E7の音波}}{23}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces D4$\sharp $の音波}}{23}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces D7$\sharp $の音波}}{23}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces D1の音波}}{24}{figure.caption.26}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces F6の音波}}{24}{figure.caption.26}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces A0の音波}}{24}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces B7の音波}}{24}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces C5の音波}}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces D2$\sharp $の音波}}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces F1$\sharp $の音波}}{25}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces A7の音波}}{25}{figure.caption.29}%
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
 \addvspace {10\jsc@mpt }
