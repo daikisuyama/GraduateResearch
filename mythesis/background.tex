@@ -1,9 +1,6 @@
-%追加すべき事項
-% - Deconv(CNN)
-% - ? 誤差逆伝播
 \chapter{背景：ニューラルネットワーク}
 
-本章では、教師あり学習の説明を行った後、本論文で必要となるニューラルネットワークの説明を行う。
+本章では、教師あり学習の説明を行った後、本論文で必要となるニューラルネットワークの説明を行う。また、本章の図では~\cite{pix2pix}のFigure~1を利用している。
 
 \section{教師あり学習}
 
@@ -15,37 +12,33 @@ $X,Y$をそれぞれ説明変数と目的変数の集合とすると、$f:X\righ
 
 また、$f(\boldsymbol{x})$の$f^{'}(\boldsymbol{x})$への近似の程度を評価する関数を損失関数$L$と呼ぶ。損失関数$L$は$L:Y \times Y \rightarrow \mathbb{R}^+$として定義され、値が小さいほど近似の程度が良い関数である。$\mathbb{R}^+$は非負の実数を表す。
 
-ここで、モデルのパラメータを$\theta$とすると、$\theta$が実行可能解で損失関数の期待値を返す関数が目的関数となる最適化問題として教師あり学習を捉えることができる。また、この時の最適解$\theta^{'}$により定まる関数が$f^{'}$であり、目的関数は\ref{eq:SL0}として定式化される。
-
-\begin{align}
-    \label{eq:SL0}
-    \mathbb{E}[L(\boldsymbol{y},f(\boldsymbol{x},\theta))]
-\end{align}
+ここで、モデルのパラメータを$\theta$とすると、教師あり学習は損失関数の期待値を最小化する$\theta^{'}$を求める最適化問題として考えられ、$\theta^{'}$により決まる関数$f$は$f^{'}$となる。
 
 \subsection{教師あり学習モデルの学習と汎化}
 
 任意の$\boldsymbol{x}$と対応する$\boldsymbol{y}$の組を用意することは現実的には難しい。したがって、学習データのみでの最適化問題を解いて最適解として$\hat{\theta}$を求めることが教師あり学習モデルの学習の目標である。
 
-しかし、$\hat{\theta}$により定まる$\hat{f}$は$f^{'}$に一致するとは限らない。従って、$\hat{f}$の$f^{'}$への近似の程度を評価する必要がある。そこで、学習データとは別のデータ~(評価データ)~を用意し、評価データについての損失関数の期待値を求めるなどにより未知のデータへのモデルの性能~(汎化性能)~を評価する。
+しかし、$\hat{\theta}$により定まる$\hat{f}$は$f^{'}$に一致するとは限らない。従って、$\hat{f}$の$f^{'}$への近似の程度を評価する必要がある。そこで、学習データとは別に評価データを用意し、評価データについての損失関数の期待値を求めるなどにより未知のデータへのモデルの性能~(汎化性能)~を評価する。
+
+\section{MLP}
+
+MLP~(Multilayer~perceptron)~は教師あり学習に用いられるニューラルネットワークである。また、ニューラルネットワークは神経細胞間のシナプス結合を通る電気信号により実現される脳の機能に類似した数理モデルの総称である。
+
+\subsection{人工ニューロンの構造と定式化}
+
+MLPでは、神経細胞を\prettyref{fig:neuron}のような人工ニューロンとして表現する。また、この人工ニューロンでは$W_i$を重みとした$x_i$の重み付き和にオフセットとして$b$を加えた値に活性化関数$\theta$を作用させた値を$y$として出力するため、$y=\theta(\sum_{i=1}^{m} W_{i} \times x_i+b)$として定式化される。
 
 %ここで改ページ
 \clearpage
 
-\section{MLP}
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.9\columnwidth]{figure/neuron.png}
+\caption[MLPの人工ニューロン]{人工ニューロン}
+\label{fig:neuron}
+\end{figure}
 
-MLP~(Multilayer~perceptron)~はニューラルネットワークの一つであり、教師あり学習の手法として用いられる。また、ニューラルネットワークとは、神経細胞と神経細胞間のシナプス結合を通る電気信号により実現される脳の機能に類似した数理モデルの総称である。
-
-\subsection{MLPと脳機能の関係}
-\label{sec:neuron}
-
-MLPでは、神経細胞を\prettyref{fig:neuron}のような人工ニューロンとして表現する。この人工ニューロンでは、樹状突起からの入力を$x_i$として表し、神経細胞間の結合強度を重み$W_i$として表し、活動電位の非線形な発生を活性化関数$\theta$として表し、神経細胞の活動電位の発生の閾値を調整するオフセットをバイアス項$b$として表す。そして、$W_i$を重みとした$x_i$の重み付き和に$b$を加えた値に活性関数$\theta$を作用させた出力$y$を返す。つまり、\prettyref{eq:MLP0_0}として定式化される。
-
-\begin{align}
-    \label{eq:MLP0_0}
-    y=\theta(\sum_{i=1}^{m} W_{i} \times x_i+b)
-\end{align}
-
-%ここの表現
+\begin{comment}
 活性化関数としてはReLU関数~(\prettyref{eq:ReLU})~やSigmoid関数~(\prettyref{eq:Sigmoid})~などの非線形関数が選ばれる。また、誤差逆伝播法を用いるために、一般には活性化関数に微分可能な関数を選ぶ。
 
 \begin{align}
@@ -54,40 +47,17 @@ MLPでは、神経細胞を\prettyref{fig:neuron}のような人工ニューロ�
     \label{eq:Sigmoid}
     \theta_{Sigmoid}(x)&=\frac{1}{1+e^{-x}}
 \end{align}
+\end{comment}
 
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.45\columnwidth]{figure/neuron.png}
-\caption[MLPの人工ニューロン]{人工ニューロン}
-\label{fig:neuron}
-\end{figure}
+\subsection{MLPの構造}
 
-%ここで改ページ
-\clearpage
-
-\subsection{MLPの構造と定式化}
-
-MLPは、\prettyref{sec:neuron}に示す人工ニューロンが複数並んだ層~(\prettyref{fig:MLP_net0})~により構成され、順伝播型の層構造のニューラルネットワークを形成する~(\prettyref{fig:MLP_net1})~。また、層構造は入力層と中間層と出力層を持ち、入力層と出力層はそれぞれ一層のみである。そして、層を構成する人工ニューロンの出力は次の層の全ての人工ニューロンに渡されるため、MLPを構成する層を全結合層と呼ぶ。
-
-この時、\prettyref{eq:MLP0_0}を元にしてMLPの一層の出力$\boldsymbol{y}$は\prettyref{eq:MLP0_1}として導出される。$\boldsymbol{x},\boldsymbol{y},\boldsymbol{b}$は第$i$成分が層の$i$番目の人工ニューロンに対応するベクトルであり、それぞれ入力、出力、バイアス、である。そして、$W$は$(i,j)$成分が層の$j$番目の人工ニューロンの$i$番目の出力の重みに対応する重み行列であり、活性化関数$\theta$はそれぞれの出力に対して同様に作用する。
-
-\begin{align}
-    \label{eq:MLP0_1}
-    \boldsymbol{y}=\theta(W\boldsymbol{x}+\boldsymbol{b})
-\end{align}
-
-ここで、$W\boldsymbol{x}+\boldsymbol{b}$は$\boldsymbol{x}$のアフィン変換を表すため、MLPの一層はアフィン変換と活性化関数の合成関数をベクトルに作用させると言える。したがって、この一層を順方向に重ねたものがMLPの全層を形成するため、MLPは\prettyref{eq:MLP0_2}として定式化される。また、$n$は層数であり、下付きの数字は何番目の層であるかを表す。
-
-\begin{align}
-    \label{eq:MLP0_2}
-    \boldsymbol{y}=\theta_{n}(W_{n}(\theta_{n-1}(W_{n-1}\cdots(\theta_{1}(W_{1}\boldsymbol{x}+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
-\end{align}
+MLPは、\prettyref{fig:neuron}のような人工ニューロンが複数並んだ層を一層とし(\prettyref{fig:MLP_net0})~、この層により順伝播型の階層構造のニューラルネットワークを形成する~(\prettyref{fig:MLP_net1})~。また、層構造として入力層と中間層と出力層を持ち、入力層と出力層はそれぞれ一層のみである。ここで、層を構成する人工ニューロンの出力は次の層の全ての人工ニューロンに渡されるため、MLPを構成する層を全結合層と呼ぶ。
 
 \begin{figure}[b]
 \centering
 \begin{minipage}[b]{0.48\columnwidth}
 \centering
-\includegraphics[width=\columnwidth]{figure/mlp_net0.png}
+\includegraphics[width=0.75\columnwidth]{figure/mlp_net0.png}
 \subcaption{MLPの一層}
 \label{fig:MLP_net0}
 \end{minipage}
@@ -100,17 +70,31 @@ MLPは、\prettyref{sec:neuron}に示す人工ニューロンが複数並んだ�
 \caption{MLPのネットワーク}
 \end{figure}
 
+
+\subsection{MLPの定式化}
+
+MLPの一層は\prettyref{eq:MLP0_1}として定式化され、MLPの全層は\prettyref{eq:MLP0_2}として定式化される。
+
+\begin{align}
+    \label{eq:MLP0_1}
+    \boldsymbol{y}&=\theta(W\boldsymbol{x}+\boldsymbol{b})\\
+    \label{eq:MLP0_2}
+    \boldsymbol{y}&=\theta_{n}(W_{n}(\theta_{n-1}(W_{n-1}\cdots(\theta_{1}(W_{1}\boldsymbol{x}+\boldsymbol{b_{1}}))\cdots+\boldsymbol{b_{n-1}}))+\boldsymbol{b_{n}})
+\end{align}
+
 %ここで改ページ
 \clearpage
 
+ここで、$\boldsymbol{x},\boldsymbol{y},\boldsymbol{b}$は第$i$成分が層の$i$番目の人工ニューロンに対応するベクトルであり、それぞれ入力と出力とバイアス項に対応する。そして、$W$は$(i,j)$成分が層の$j$番目の人工ニューロンの$i$番目の出力の重みに対応する重み行列であり、活性化関数$\theta$はそれぞれの出力に対して同様に作用する。また、$n$は層数であり、下付きの数字は何番目の層であるかを表す。
+
 \subsection{MLPの学習}
 
-MLPでは、説明変数と目的変数を実ベクトルに変換した後に学習を行う。また、実行可能解はパラメータとなる$W_i,\boldsymbol{b_i}$であり、最適解を求めるために順次更新を行う。この時、損失関数$L$の勾配を用いた最適化アルゴリズム~(勾配降下法)~を用いて更新するのが一般的である。
+MLPでは、学習データを実ベクトルに変換した後に学習を行う。また、実行可能解はパラメータ$W_i,\boldsymbol{b_i}$であり、最適解を求めるために順次更新をする。この時、損失関数$L$の勾配を用いた最適化アルゴリズム~(勾配降下法)~を用いて更新するのが一般的である。
 
 \subsubsection{勾配降下法}
 \label{sec:grad}
 
-勾配降下法の中で最も単純なアルゴリズムである最急降下法を紹介する。最急降下法では、最も急な降下方向である勾配の反対方向へパラメータの更新を行う。具体的には、パラメータ$W_i,\boldsymbol{b_i}$はそれぞれ\prettyref{eq:MLP2_0}と\prettyref{eq:MLP2_1}にしたがって更新される。ここで、$\eta$は学習率と呼ばれる正の実数であり、更新の程度を指定する。
+勾配降下法の中で最も単純なアルゴリズムである最急降下法を紹介する。最急降下法では、最も急な降下方向である勾配の反対方向へパラメータの更新を行う。具体的には、パラメータ$W_i,\boldsymbol{b_i}$はそれぞれ\prettyref{eq:MLP2_0}と\prettyref{eq:MLP2_1}にしたがって更新される。
 
 \begin{align}
     \label{eq:MLP2_0}
@@ -119,11 +103,11 @@ MLPでは、説明変数と目的変数を実ベクトルに変換した後に�
     \boldsymbol{b _i} &\leftarrow \boldsymbol{b_i} - \eta \frac{\partial L}{\partial \boldsymbol{b_i}}
 \end{align}
 
-また、勾配降下法としてはSGD~(Stochastic Gradient Descent)やAdam~(Adaptive Moment Estimation)などが一般には用いられる~\cite{GradientDescent}。本研究で用いるアルゴリズムのAdamの挙動を\prettyref{app:Adam}に示す。
+ここで、$\eta$は学習率と呼ばれる正の実数であり、更新の程度を指定する。また、勾配降下法としてはSGD~(Stochastic Gradient Descent)やAdam~(Adaptive Moment Estimation)などが一般には用いられる~\cite{GradientDescent}。本研究で用いるアルゴリズムのAdamの挙動は\prettyref{app:Adam}に示す。
 
 \subsubsection{誤差逆伝播法}
 
-勾配降下法ではそれぞれのパラメータについて損失関数の勾配を求める必要があり、高速に勾配を求める方法として誤差逆伝播法が一般に用いられる。誤差逆伝播法は大きく二つの段階に分けることができる。一つ目の段階では、与えられた学習データを元に入力層から出力層の方向に~(順伝播)~それぞれの人工ニューロンの出力を求める。二つ目の段階では、出力層における損失関数の勾配を求めた後、勾配を誤差として出力層から入力層の方向に~(逆伝播)~伝えて連鎖律を使用した勾配の計算をそれぞれのパラメータについて行う。また、誤差逆伝播法と連鎖律ついてはそれぞれ~\cite{Bishop}の5.3節と~\cite{Calculus}の4.4節に詳しい。
+勾配降下法ではそれぞれのパラメータについて損失関数の勾配を求める必要があり、高速に勾配を求める方法として誤差逆伝播法が一般に用いられる。また、誤差逆伝播法は大きく二つの段階に分けることができる。一つ目の段階では、与えられた学習データを元に入力層から出力層の方向に~(順伝播)~それぞれの人工ニューロンの出力を求める。二つ目の段階では、出力層における損失関数の勾配を求めた後、勾配を誤差として出力層から入力層の方向に~(逆伝播)~伝えながら連鎖律を使用した勾配の計算をそれぞれのパラメータについて行う。また、誤差逆伝播法と連鎖律ついてはそれぞれ~\cite{Bishop}の5.3節と~\cite{Calculus}の4.4節に詳しい。
 
 \subsubsection{バッチ処理}
 
@@ -134,44 +118,23 @@ MLPでは、説明変数と目的変数を実ベクトルに変換した後に�
 
 \section{CNN}
 
-CNN~(Convolution~Neural~Network)~は、MLPにおいて全結合層を畳み込み層とプーリング層の繰り返し構造に置換した順伝播型のニューラルネットワークである。2012年のILSVRCで2位以下に10\%以上の画像の認識精度の差をつけて優勝したAlexNet~\cite{AlexNet}はその著名な例である。また、AlexNetは\prettyref{fig:Alex}のような単純なネットワーク構造を持ち、5層の畳み込み層~(うち3層ではMax~Poolingを行う)~と3層の全結合層のみから構成される。
+CNN~(Convolution~Neural~Network)~は、MLPに全結合層だけでなく畳み込み層とプーリング層を加えた順伝播型のニューラルネットワークである。2012年のILSVRCで2位以下に10\%以上の画像の認識精度の差をつけて優勝したAlexNet~\cite{AlexNet}はその著名な例である。また、本章では二次元データの画像においてCNNの説明を行うが、詳しくは~\cite{CNN_recent}を参考にされたい。
 
-\subsection{CNNの構造}
+\subsection{CNNと視覚野の関係}
 
-CNNはネオコグニトロン~\cite{neocognitron}を起源に持ち、脳の視覚野の機能を模倣するようなネットワーク構造を持つ。また、脳の視覚野には主に二つの機能がある。一つ目は刺激の位置により異なった位置のニューロンの活動電位が発生することであり、二つ目は視覚情報の特徴を段階的に受容することである。この二つの機能を畳み込み層とプーリング層によりCNNは表現する。
+CNNは脳の視覚野の機能を模倣するニューラルネットワークであり、Neocognitron~\cite{neocognitron}を起源に持つ。また、脳の視覚野には主に二つの機能がある。一つ目は刺激の位置により異なった位置のニューロンの活動電位を発生させることであり、二つ目は視覚情報の特徴を段階的に受容することである。
 
-まず、畳み込み層では、人工ニューロン間の結合を局所領域に限定することで局所領域の特徴を抽出する。したがって、局所領域間の位置関係は変わらないため、前者の機能を模倣することができる。そして、プーリング層では、局所領域の人工ニューロンの出力をまとめることで局所領域の特徴を集約する。したがって、層を進むにつれて高段階の特徴が残るため、後者の機能を模倣することができる。
-
-さらに、CNNはMLPと比べてパラメータ数を減少させることができる。なぜなら、MLPの全結合層では入力の人工ニューロン数と出力の人工ニューロン数の積が一層のパラメータ数となるが、CNNの畳み込み層ではカーネルに含まれるパラメータ数のみが一層のパラメータ数となるからである。また、CNNのプーリング層でも局所領域の人工ニューロンの出力をまとめることで特徴量マップのサイズが小さくなるため、パラメータ数の減少に大きく寄与する。ここで、特徴量マップとはそれぞれの層の入力から得られる出力をまとめたもののことである。
-
-\begin{figure}[b]
-\centering
-\includegraphics[width=\columnwidth]{figure/alex.png}
-\caption{AlexNetのネットワーク\\
-図は~\cite{AlexNet}のFigure~2を転載した。}
-\label{fig:Alex}
-\end{figure}
-
-%ここで改ページ
-\clearpage
+上記の二つの機能を畳み込み層とプーリング層を用いてCNNは表現することができる。まず、畳み込み層では、人工ニューロン間の結合を局所領域に限定することで局所領域の特徴を抽出する。また、局所領域間の位置関係は変わらないため、前者の機能を模倣することができる。そして、プーリング層では、局所領域の人工ニューロンの出力をまとめることで局所領域の特徴を集約する。また、層を進むにつれて高段階の特徴が残るため、後者の機能を模倣することができる。
 
 \subsection{畳み込み層}
 
-畳み込み層においては、カーネルと呼ばれるフィルターを一定の間隔~(ストライド)~でスライドさせながらフィルターにより覆われた入力の部分の畳み込み演算を順に行う。畳み込み演算により、カーネルのそれぞれの値を重みとした対応する入力の部分の重み付き和を計算する。また、入力と出力の大きさを変えないために、一般には入力の周りに適当な幅で値を埋める操作を行う~(パディング)~。そして、画像のような二次元データにおいては、畳み込み演算は\prettyref{fig:conv}のように表現することができる。
+畳み込み層においては、入力の行列に対してカーネルと呼ばれるフィルターを用いた畳み込み演算により行列を出力する~(\prettyref{fig:conv})~。カーネルは全結合層の重みに相当する値を持つ行列であり、ストライドと呼ばれる一定の間隔を空けながら上下方向にスライドする。また、畳み込み演算ではカーネルにより覆われた入力の部分に対して重み付き和の計算が行われる。そして、入力と出力の大きさを変えないために入力の周りに適当な幅で値を埋めるのが一般的であり、この操作をパディングと呼ぶ。
 
-さらに、入力を$I_h \times I_w$の行列、カーネルを$F_h \times F_w$の行列、ストライドを$S_h,S_w$、パディング幅を$P_h,P_w$、出力を$O_h \times O_w$の行列、とすれば、\prettyref{eq:conv}が成り立つ。\prettyref{fig:conv}においては、$I_h=I_w=4,F_h=F_w=3,S_h=S_w=1,P_h=P_w=1$であるため、$O_h=IO_w=4$となる。
-
-\begin{align}
-    \label{eq:conv}
-    O_{h}&=\frac{I_h+2 P_h-F_{h}}{S_h}+1 \\
-    O_{w}&=\frac{I_w+2 P_w-F_{w}}{S_w}+1
-\end{align}
-
-また、上記では入力と出力がいずれもチャンネル数が1つの場合を考えたが、実際には複数存在することが多い。したがって、カーネルの数は(入力チャンネル数)$\times$(出力チャンネル数)である。また、それぞれの出力チャンネル数に対し特徴量マップが入力チャンネル数だけ存在するが、これらの和にバイアス項を加えたものが実際の出力となる。
+ここで、\prettyref{fig:conv}では1つの入力の行列に対し1つの出力の行列を返すが、これらの入出力で扱う行列を特徴量マップと呼ぶ。そして、特徴量マップの枚数を表現する際には特徴量マップをチャンネルと呼ぶことが一般的であり、この畳み込み層は入出力が1チャンネルずつであると言える。また、入出力のいずれも複数チャンネルであることが多い。
 
 \begin{figure}[b]
 \centering
-\includegraphics[width=\columnwidth]{figure/convolution.png}
+\includegraphics[width=0.8\columnwidth]{figure/convolution.png}
 \caption[CNNの畳み込み層]{畳み込み層}
 \label{fig:conv}
 \end{figure}
@@ -181,31 +144,11 @@ CNNはネオコグニトロン~\cite{neocognitron}を起源に持ち、脳の視
 
 \subsection{プーリング層}
 
-プーリング層においては、入力を局所領域ごとに分解し、領域ごとへの何らかの操作により情報量の圧縮を行う~(サブサンプリング、ダウンサンプリング)~。また、この時の操作で最大値をとる場合はMax~Pooling、平均値をとる場合はAverage~Poolingと呼び、主にこの二つが用いられる。
-
-\begin{figure}[b]
-\centering
-\includegraphics[width=\columnwidth]{figure/pooling.png}
-\caption[CNNのプーリング層]{プーリング層}
-\label{fig:pooling}
-\end{figure}
-
-\subsection{逆畳み込み層}
-
-%ここで改ページ
-\clearpage
+プーリング層においては、入力を局所領域ごとに分解した後に領域ごとへの何らかの操作により情報量の圧縮を行う~(ダウンサンプリング)~。また、この時の操作で最大値をとる場合はMax~Pooling、平均値をとる場合はAverage~Poolingと呼び、主にこの二つが用いられる。
 
 \section{GAN}
 
-GAN~(Generative~Adversarial~Networks)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を持つ擬似的なデータを生成することを目指す手法である。この手法は実在しないアイドルの写真を生成する際などに用いられる~\cite{idol}。また、GANはDiscriminator~(識別モデル)~とGenerator~(生成モデル)~の二つのニューラルネットワークで構成される~(\prettyref{fig:GAN_net})~。
-
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.75\columnwidth]{figure/GAN_net.png}
-\caption[GANのネットワーク]{GANのネットワーク\\
-図は~\cite{pix2pix}のFigure~1を用いて作成した。}
-\label{fig:GAN_net}
-\end{figure}
+GAN~(Generative~Adversarial~Networks)~\cite{GAN}はニューラルネットワークの応用例であり、学習データの特徴を持つ擬似的なデータを生成することを目指す手法である。この手法を用いると、実在しない人の写真やホテルの写真を生成することができる~\cite{DCGAN}。また、GANはDiscriminator~(識別モデル)~とGenerator~(生成モデル)~の二つのニューラルネットワークで構成される~(\prettyref{fig:GAN_net})~。
 
 \subsection{GANの学習}
 
@@ -223,7 +166,23 @@ GANでは、生成モデルと識別モデルの目的関数はそれぞれ\pret
 \end{align}
 
 
-ここで、$\boldsymbol{x}$は学習データ、$\boldsymbol{z}$は生成モデルへの入力のノイズ、$G(\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル、$D(\cdot;\theta_D)$は識別モデル、$\theta_G$は生成モデル$G$のパラメータ、$\theta_D$は識別モデル$D$のパラメータ、である。
+ここで、$\boldsymbol{x}$は学習データ、$G(\boldsymbol{z};\theta_G)$はノイズ$\boldsymbol{z}$を入力とする生成モデル、$D(\cdot;\theta_D)$は識別モデル、$\theta_G$と$\theta_D$はそれぞれ生成モデル$G$と識別モデル$D$のパラメータ、である。
+
+\begin{figure}[b]
+\centering
+\begin{minipage}[b]{0.48\columnwidth}
+\centering
+\includegraphics[width=\columnwidth]{figure/pooling.png}
+\caption[CNNのプーリング層]{プーリング層}
+\label{fig:pooling}
+\end{minipage}
+\begin{minipage}[b]{0.48\columnwidth}
+\centering
+\includegraphics[width=\columnwidth]{figure/GAN_net.png}
+\caption[GANのネットワーク]{GANのネットワーク}
+\label{fig:GAN_net}
+\end{minipage}
+\end{figure}
 
 %ここで改ページ
 \clearpage
@@ -231,25 +190,6 @@ GANでは、生成モデルと識別モデルの目的関数はそれぞれ\pret
 \section{Pix2pix}
 
 Pix2pix~\cite{pix2pix}は、ネットワークの入力に変換元の画像を~Condition~(条件)~として与えることで画像の変換を行うGANである~(\prettyref{fig:pix2pix_net})~。特定の条件をネットワークの入力に与えるGANとしてはConditional~GAN~(CGAN)~\cite{CGAN}が初めて考案されたが、Pix2pixは与えられた条件画像の構造を維持したまま変換するという点でCGANとは異なる。具体的には、線画から写真への変換や白黒画像からカラー画像への変換をPix2pixにより行うことができる~(\prettyref{fig:pix2pix_img})~。
-
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.9\columnwidth]{figure/pix2pix_net.png}
-\caption[Pix2pixのネットワーク]{Pix2pixのネットワーク\\
-図は~\cite{pix2pix}のFigure~1を用いて作成した。}
-\label{fig:pix2pix_net}
-\end{figure}
-
-\begin{figure}[b]
-\centering
-\includegraphics[width=0.8\columnwidth]{figure/pix2pix_img.png}
-\caption[Pix2pixのスタイル変換の例]{Pix2pixのスタイル変換の例\\
-図は~\cite{pix2pix}のFigure~1を用いて作成した。}
-\label{fig:pix2pix_img}
-\end{figure}
-
-%ここで改ページ
-\clearpage
 
 \subsection{Pix2pixの定式化}
 
@@ -264,29 +204,65 @@ Pix2pixでは、生成モデルと識別モデルの目的関数はそれぞれ\
 
 ここで、$\boldsymbol{x}$は変換先の学習データ、$\boldsymbol{y}$は変換元の学習データ、$\boldsymbol{z}$は生成モデルへの入力のノイズ、$G(\boldsymbol{y},\boldsymbol{z};\theta_G)$は$\boldsymbol{y}$を条件としノイズ$\boldsymbol{z}$を入力とする生成モデル、$D(\boldsymbol{y},\cdot;\theta_D)$は$\boldsymbol{y}$を条件とする識別モデル、$\theta_G$は生成モデル$G$のパラメータ、$\theta_D$は識別モデル$D$のパラメータ、である。
 
-\subsection{Pix2pixの生成モデル}
-
-Pix2pixの生成モデルには、スキップコネクションを持ったEncoder-Decoder型のネットワークが用いられる~(\prettyref{fig:u-net})~。スキップコネクションは変換元の画像と変換後の画像で共通する基本構造であるピクセルの対応関係を維持すると期待され、U-net~\cite{u-net}で用いられたものを参考にしている。また、エンコード前の特徴量マップをデコード時にも利用することで実装している。
-
-そして、ノイズとしてはノイズベクトルの代わりにDropout~\cite{Dropout}が用いられる。Dropoutとは、ニューラルネットワークの重みの更新の際にランダムにいくつかの重みを0として無視する手法のことである。
-
-\subsection{Pix2pixの識別モデル}
-
-Pix2pixの識別モデルには、PatchGANという手法が用いられる。PatchGANは一般的なGANの画像全体の真偽ではなく局所領域ごとの真偽の平均を識別の際に用いるため、局所的な識別精度が高まることが期待される~(\prettyref{fig:patchgan})~。また、CNNの出力として得られた特徴量マップの平均値を出力することで実装している。
+\begin{figure}[b]
+\centering
+\includegraphics[width=0.75\columnwidth]{figure/pix2pix_net.png}
+\caption[Pix2pixのネットワーク]{Pix2pixのネットワーク}
+\label{fig:pix2pix_net}
+\end{figure}
 
 \begin{figure}[b]
 \centering
-\begin{minipage}[b]{0.5\columnwidth}
+\begin{minipage}[b]{0.48\columnwidth}
 \centering
-\includegraphics[width=0.9\columnwidth]{figure/u-net.png}
+\includegraphics[width=0.7\columnwidth]{figure/EP.png}
+\subcaption{Edges~to~Photo}
+\end{minipage}
+\begin{minipage}[b]{0.48\columnwidth}
+\centering
+\includegraphics[width=0.7\columnwidth]{figure/BWC.png}
+\subcaption{BW~to~Color}
+\end{minipage}
+\caption{Pix2pixのスタイル変換の例}
+\label{fig:pix2pix_img}
+\end{figure}
+
+%ここで改ページ
+\clearpage
+
+\subsection{Pix2pixの生成モデル}
+
+Pix2pixの生成モデルにはスキップコネクションを持ったEncoder-Decoderを用いる~(\prettyref{fig:u-net})~。また、GANのノイズとしてはノイズベクトルではなくDropoutを用いる。
+
+\subsubsection{Encoder-Decoder}
+
+Encoder-Decoderは、画像から特徴量を抽出する処理~(Encode)~と特徴量を元に画像を再構成する処理~(Decode)~の二段階で構成されたモデルである。また、Encodeの部分には畳み込み層を用い、Decodeの部分には逆畳み込み層を用いる。逆畳み込み層では畳み込み層の逆演算に相当する演算を行う、逆畳み込み層については~\cite{Deconv}の3.2.2節に詳しい。
+
+\subsubsection{スキップコネクション}
+
+スキップコネクションは\prettyref{fig:u-net}に示す赤線であり、変換元の画像と変換後の画像で共通する基本構造であるピクセルの対応関係を維持すると期待される。また、U-net~\cite{u-net}で用いられたものと同様のスキップコネクションであり、エンコード時の特徴量マップをデコード時にも利用する。
+
+\subsubsection{Dropout}
+
+Dropout~\cite{Dropout}は、学習時にベルヌーイ分布に従ってランダムにある層の重みの一部を0として無視することで正則化を行う手法である。Pix2pixではノイズベクトルを用いた際にノイズを無視して生成モデルが学習をするため、Dropoutを用いる。
+
+\subsection{Pix2pixの識別モデル}
+
+Pix2pixの識別モデルにはPatchGANを用いる。PatchGANは画像全体の真偽ではなく局所領域ごとの真偽の平均を識別に用いるため、局所的な識別精度が高まることが期待される~(\prettyref{fig:patchgan})~。
+
+\begin{figure}[b]
+\centering
+\begin{minipage}[b]{0.48\columnwidth}
+\centering
+\includegraphics[width=\columnwidth]{figure/u-net.png}
 \subcaption[Pix2pixの生成モデル]{生成モデルのネットワーク}
 \label{fig:u-net}
 \end{minipage}
-\begin{minipage}[b]{0.45\columnwidth}
+\begin{minipage}[b]{0.48\columnwidth}
 \centering
-\includegraphics[width=0.9\columnwidth]{figure/patchgan.png}
+\includegraphics[width=\columnwidth]{figure/patchgan.png}
 \subcaption{GANとPatchGANの識別モデルの比較}
 \label{fig:patchgan}
 \end{minipage}
-\caption[Pix2pixの生成モデルと識別モデル]{図は~\cite{pix2pix}のFigure~1とFigure~3を用いて作成した。}
+\caption[Pix2pixの生成モデルと識別モデル]{}
 \end{figure}

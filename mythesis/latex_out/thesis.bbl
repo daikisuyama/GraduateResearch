@@ -1,11 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{AlexNet}
-Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
-\newblock Imagenet classification with deep convolutional neural networks.
-\newblock {\em Advances in neural information processing systems}, Vol.~25, pp.
-  1097--1105, 2012.
-
 \bibitem{pix2pix}
 Phillip Isola, Jun-Yan Zhu, Tinghui Zhou, and Alexei~A Efros.
 \newblock Image-to-image translation with conditional adversarial networks.
@@ -81,21 +75,40 @@ James~J Callahan.
 \newblock {\em Advanced calculus: a geometric view}.
 \newblock Springer Science \& Business Media, 2010.
 
+\bibitem{AlexNet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock {\em Advances in neural information processing systems}, Vol.~25, pp.
+  1097--1105, 2012.
+
+\bibitem{CNN_recent}
+Jiuxiang Gu, Zhenhua Wang, Jason Kuen, Lianyang Ma, Amir Shahroudy, Bing Shuai,
+  Ting Liu, Xingxing Wang, Gang Wang, Jianfei Cai, et~al.
+\newblock Recent advances in convolutional neural networks.
+\newblock {\em Pattern Recognition}, Vol.~77, pp. 354--377, 2018.
+
 \bibitem{neocognitron}
 Kunihiko Fukushima and Sei Miyake.
 \newblock Neocognitron: A self-organizing neural network model for a mechanism
   of pattern recognition.
 \newblock pp. 193--202. Springer, 1980.
 
-\bibitem{idol}
-アイドル自動生成aiを開発 | 株式会社データグリッド | datagrid inc.
-\newblock \url{https://datagrid.co.jp/all/release/33/}.
-\newblock (Accessed on 02/03/2021).
+\bibitem{DCGAN}
+Alec Radford, Luke Metz, and Soumith Chintala.
+\newblock Unsupervised representation learning with deep convolutional
+  generative adversarial networks.
+\newblock {\em arXiv preprint arXiv:1511.06434}, 2015.
 
 \bibitem{CGAN}
 Mehdi Mirza and Simon Osindero.
 \newblock Conditional generative adversarial nets.
 \newblock {\em arXiv preprint arXiv:1411.1784}, 2014.
+
+\bibitem{Deconv}
+Hyeonwoo Noh, Seunghoon Hong, and Bohyung Han.
+\newblock Learning deconvolution network for semantic segmentation.
+\newblock In {\em Proceedings of the IEEE international conference on computer
+  vision}, pp. 1520--1528, 2015.
 
 \bibitem{u-net}
 Olaf Ronneberger, Philipp Fischer, and Thomas Brox.

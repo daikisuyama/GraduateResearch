@@ -1,4 +1,4 @@
-This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  23 FEB 2021 13:36
+This is e-upTeX, Version 3.14159265-p3.8.3-u1.26-191112-2.6 (utf8.uptex) (TeX Live 2020) (preloaded format=uplatex 2020.12.28)  24 FEB 2021 18:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -644,88 +644,80 @@ File: figure/rainbowgram.png Graphic file (type bmp)
 ]
 第3章
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 6.47278pt on input line 14.
+(Font)              scaled to size 6.47278pt on input line 11.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
-(Font)              scaled to size 4.62341pt on input line 14.
+(Font)              scaled to size 4.62341pt on input line 11.
 [9
 
 ]
 File: figure/neuron.png Graphic file (type bmp)
 <figure/neuron.png>
- [10
-
-]
+ Excluding 'comment' comment.
 File: figure/mlp_net0.png Graphic file (type bmp)
 <figure/mlp_net0.png>
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
-(Font)              scaled to size 8.32214pt on input line 91.
+(Font)              scaled to size 8.32214pt on input line 61.
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
-(Font)              scaled to size 8.32214pt on input line 91.
+(Font)              scaled to size 8.32214pt on input line 61.
 File: figure/mlp_net1.png Graphic file (type bmp)
 <figure/mlp_net1.png>
- [11
+ [10
 
-] [12
-
-]
-File: figure/alex.png Graphic file (type bmp)
-<figure/alex.png>
- [13
+] [11
 
 ]
 File: figure/convolution.png Graphic file (type bmp)
 <figure/convolution.png>
- [14
+ [12
 
 ]
 File: figure/pooling.png Graphic file (type bmp)
 <figure/pooling.png>
- [15
-
-]
 File: figure/GAN_net.png Graphic file (type bmp)
 <figure/GAN_net.png>
- [16
+ [13
 
 ]
 File: figure/pix2pix_net.png Graphic file (type bmp)
 <figure/pix2pix_net.png>
-File: figure/pix2pix_img.png Graphic file (type bmp)
-<figure/pix2pix_img.png>
- [17
+File: figure/EP.png Graphic file (type bmp)
+<figure/EP.png>
+File: figure/BWC.png Graphic file (type bmp)
+<figure/BWC.png>
+ [14
 
 ]
 File: figure/u-net.png Graphic file (type bmp)
 <figure/u-net.png>
 File: figure/patchgan.png Graphic file (type bmp)
 <figure/patchgan.png>
-) (./proposed_method.tex [18
+) (./proposed_method.tex [15
 
 ]
 第4章
 File: figure/pr_model.png Graphic file (type bmp)
 <figure/pr_model.png>
-[19
+[16
 
 ]
 File: figure/pr_generator.png Graphic file (type bmp)
 <figure/pr_generator.png>
 File: figure/pr_discriminator.png Graphic file (type bmp)
 <figure/pr_discriminator.png>
- [20
+ [17
 
 ]
 第5章
 File: figure/piano.png Graphic file (type bmp)
 <figure/piano.png>
-[21
+[18
 
 ]
 File: figure/88_88/f3.png Graphic file (type bmp)
 <figure/88_88/f3.png>
 File: figure/88_88/c4.png Graphic file (type bmp)
 <figure/88_88/c4.png>
- [22
+ [19
 
 ]
 File: figure/88_88_det/d7s_0550_0700.png Graphic file (type bmp)
@@ -736,7 +728,7 @@ File: figure/66_22_det/d4s_0100_0200.png Graphic file (type bmp)
 <figure/66_22_det/d4s_0100_0200.png>
 File: figure/66_22_det/d7s_0100_0110.png Graphic file (type bmp)
 <figure/66_22_det/d7s_0100_0110.png>
- [23
+ [20
 
 ]
 File: figure/66_22_det/d1_0300_0500.png Graphic file (type bmp)
@@ -747,7 +739,7 @@ File: figure/88_88_det/a0_0800_1000.png Graphic file (type bmp)
 <figure/88_88_det/a0_0800_1000.png>
 File: figure/88_88_det/b7_0980_1000.png Graphic file (type bmp)
 <figure/88_88_det/b7_0980_1000.png>
- [24
+ [21
 
 ]
 File: figure/88_88/c5.png Graphic file (type bmp)
@@ -758,13 +750,13 @@ File: figure/88_88/f1s.png Graphic file (type bmp)
 <figure/88_88/f1s.png>
 File: figure/88_88_det/a7_0_0030.png Graphic file (type bmp)
 <figure/88_88_det/a7_0_0030.png>
-) (./conclusion.tex [25
+) (./conclusion.tex [22
 
 ]
 第6章
-) (./thanks.tex [26
+) (./thanks.tex [23
 
-]) (latex_out/thesis.bbl [27
+]) (latex_out/thesis.bbl [24
 
 ]
 LaTeX Font Info:    Font shape `JT2/gt/m/it' in size <10> not available
@@ -775,21 +767,21 @@ LaTeX Font Info:    Font shape `JY2/gt/m/it' in size <10> not available
 (Font)              Font shape `JY2/gt/m/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `JY2/gt/m/n' will be
 (Font)              scaled to size 9.24683pt on input line 6.
- [28
+ [25
 
-]) (./appendix.tex [29]
+]) (./appendix.tex [26]
 付録A
-[30
+[27
 
 ]
 付録B
-[31
+[28
 
 ]
 付録C
 File: figure/data_div.png Graphic file (type bmp)
 <figure/data_div.png>
-[32
+[29
 
 ]
 付録D
@@ -969,9 +961,9 @@ File: figure/88_88/b7.png Graphic file (type bmp)
 <figure/88_88/b7.png>
 File: figure/88_88/c8.png Graphic file (type bmp)
 <figure/88_88/c8.png>
-[33
+[30
 
-] [34] [35]
+] [31] [32]
 File: figure/66_22/a0.png Graphic file (type bmp)
 <figure/66_22/a0.png>
 File: figure/66_22/a0s.png Graphic file (type bmp)
@@ -1148,19 +1140,19 @@ File: figure/66_22/b7.png Graphic file (type bmp)
 <figure/66_22/b7.png>
 File: figure/66_22/c8.png Graphic file (type bmp)
 <figure/66_22/c8.png>
-) [36
+) [33
 
-] [37] [38] (latex_out/thesis.aux)
+] [34] [35] (latex_out/thesis.aux)
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5FAE44CBB972A4192B541B7EF0E0241D;4220.
+(rerunfilecheck)             Checksum: 050815A917B592310C42ECFEDF799997;4235.
  ) 
 Here is how much of TeX's memory you used:
- 11957 strings out of 479847
- 193240 string characters out of 5881593
- 542074 words of memory out of 5000000
- 28911 multiletter control sequences out of 15000+600000
+ 11953 strings out of 479847
+ 193160 string characters out of 5881593
+ 541802 words of memory out of 5000000
+ 28907 multiletter control sequences out of 15000+600000
  453349 words of font info for 124 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  68i,16n,75p,1286b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on latex_out/thesis.dvi (39 pages, 199804 bytes).
+Output written on latex_out/thesis.dvi (36 pages, 194412 bytes).

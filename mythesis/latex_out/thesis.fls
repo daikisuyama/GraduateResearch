@@ -845,10 +845,6 @@ INPUT ./figure/mlp_net1.png
 INPUT ./figure/mlp_net1.png
 INPUT figure/mlp_net1.png
 INPUT extractbb -B cropbox -O figure/mlp_net1.png
-INPUT ./figure/alex.png
-INPUT ./figure/alex.png
-INPUT figure/alex.png
-INPUT extractbb -B cropbox -O figure/alex.png
 INPUT ./figure/convolution.png
 INPUT ./figure/convolution.png
 INPUT figure/convolution.png
@@ -865,10 +861,14 @@ INPUT ./figure/pix2pix_net.png
 INPUT ./figure/pix2pix_net.png
 INPUT figure/pix2pix_net.png
 INPUT extractbb -B cropbox -O figure/pix2pix_net.png
-INPUT ./figure/pix2pix_img.png
-INPUT ./figure/pix2pix_img.png
-INPUT figure/pix2pix_img.png
-INPUT extractbb -B cropbox -O figure/pix2pix_img.png
+INPUT ./figure/EP.png
+INPUT ./figure/EP.png
+INPUT figure/EP.png
+INPUT extractbb -B cropbox -O figure/EP.png
+INPUT ./figure/BWC.png
+INPUT ./figure/BWC.png
+INPUT figure/BWC.png
+INPUT extractbb -B cropbox -O figure/BWC.png
 INPUT ./figure/u-net.png
 INPUT ./figure/u-net.png
 INPUT figure/u-net.png
@@ -966,11 +966,11 @@ INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
 INPUT latex_out/thesis.bbl
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT ./appendix.tex
+INPUT appendix.tex
+INPUT ./appendix.tex
+INPUT appendix.tex
 INPUT /usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm
-INPUT ./appendix.tex
-INPUT appendix.tex
-INPUT ./appendix.tex
-INPUT appendix.tex
 INPUT ./figure/data_div.png
 INPUT ./figure/data_div.png
 INPUT figure/data_div.png
