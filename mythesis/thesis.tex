@@ -18,11 +18,8 @@
 \usepackage{graphicx}
 %位置指定
 \usepackage{float}
-%ハイパーリンク
-\usepackage[colorlinks=false]{hyperref}
-\usepackage{pxjahyper}
 %数式
-\usepackage{amsmath,amssymb}
+\usepackage{amsmath,amssymb,mathtools}
 %アルゴリズム
 \usepackage[boxed,figure]{algorithm2e}
 %文字色
@@ -47,12 +44,18 @@
 \usepackage[subrefformat=parens]{subcaption}
 %余白の設定
 \usepackage[top=25mm,bottom=25mm,left=30mm,right=30mm]{geometry}
+%ハイパーリンク
+\usepackage[hidelinks]{hyperref}
+\usepackage{pxjahyper}
+
+%章名の調整
+\newcommand{\mychapname}[1]{\textgt{第~#1~章}}
 
 %タイトルの番号付けの設定
 \setcounter{secnumdepth}{3}
 
 %各種タイトルの設定
-\titleformat{\chapter}[hang]{\Huge\bfseries}{\IfAppendix{\appendixname\Alph{chapter}}{第\thechapter~章}}{1zw}{}{}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\IfAppendix{\appendixname\Alph{chapter}}{\mychapname{\thechapter}}}{1zw}{}{}
 \titlespacing*{\chapter}{0pt}{0pt}{50pt}
 \titleformat*{\section}{\LARGE\bfseries}
 \titlespacing{\section}{0pt}{15pt}{13pt}
@@ -67,37 +70,29 @@
 \setlength{\cftchapnumwidth}{4em}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftchapdotsep}}
 \renewcommand{\cftchapdotsep}{\cftdotsep}
+\renewcommand{\cftbeforetoctitleskip}{0pt}
+\renewcommand{\cftaftertoctitleskip}{30pt}
 
 %図目次の設定
 \renewcommand{\cftloftitlefont}{\Huge\bfseries}
 \renewcommand{\cftfigpresnum}{図~}
-\setlength{\cftbeforefigskip}{0pt}
-\cftsetindents{figure}{1.5em}{5em}
-%図目次にchapterを加える(付録は載せない)
-\preto\figure{
-  \ifnum\value{figure}=0
-  \phantomsection
-  \IfAppendix{}{
-    \addtocontents{lof}{
-      \begin{flushleft}
-        \normalsize\bfseries{第\thechapter~章}
-      \end{flushleft}
-      \par
-      \vspace{-7.5pt}
-    }
-  }
-  \fi
+\cftsetindents{figure}{1.5em}{4em}
+\setlength{\cftbeforeloftitleskip}{0pt}
+\setlength{\cftafterloftitleskip}{30pt}
+%図目次にchapterを加えるコマンド
+\newcommand{\myaddchaplof}[1]{
+  \addcontentsline{lof}{chapter}{\mychapname{\thechapter}\hspace{1zw}#1}
 }
 
 %開き括弧の設定
 \intervalconfig{soft open fences}
-
+  
 %参照の変更(prettyref)
 \newrefformat{sec}{\ref{#1}節}
-\newrefformat{fig}{図\ref{#1}}
-\newrefformat{tab}{表\ref{#1}}
-\newrefformat{eq}{式\ref{#1}}
-\newrefformat{cha}{第\ref{#1}~章}
+\newrefformat{fig}{図~\ref{#1}}
+\newrefformat{tab}{表~\ref{#1}}
+\newrefformat{eq}{式~(\ref{#1})~}
+\newrefformat{cha}{\mychapname{\ref{#1}}}
 \newrefformat{app}{\appendixname\ref{#1}}
 
 %argmaxとargminのコマンド

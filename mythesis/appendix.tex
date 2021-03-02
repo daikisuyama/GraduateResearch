@@ -5,9 +5,9 @@
 \chapter{Adam}
 \label{app:Adam}
 
-Adamは勾配降下法の中で最も用いられるアルゴリズムであり、\prettyref{fig:Adam}に示す手順にしたがってパラメータの更新を行う。また、Adamについては~\cite{Adam}に詳しい。
+Adamは勾配降下法のアルゴリズムの一つであり、\prettyref{fig:Adam}に示す手順にしたがってパラメータの更新を行う。また、Adamについては~\cite{Adam}に詳しい。
 
-\begin{algorithm}[b]
+\begin{algorithm}[hb]
     \DontPrintSemicolon
     \SetKwInOut{KwHyParam}{HyperParameter}
     \SetKwInOut{KwParam}{Parameter}
@@ -47,11 +47,11 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
 \chapter{学習時のパラメータ}
 \label{app:params}
 
-\prettyref{tab:params1}に提案モデルの学習時のパラメータの値を示し、\prettyref{tab:params2}にAdamのハイパーパラメータの値を示す。
+\prettyref{tab:params1}に提案モデルの学習時のパラメータを示し、\prettyref{tab:params2}にAdamのハイパーパラメータを示す。
 
 \begin{table}[h]
 \centering
-\begin{minipage}{0.49\columnwidth}
+\begin{minipage}[b]{0.49\columnwidth}
     \centering
         \begin{tabular}{lr}\toprule
             パラメータ & 値 \\ \midrule
@@ -61,7 +61,7 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
     \caption{}
     \label{tab:params1}
 \end{minipage}
-\begin{minipage}{0.49\columnwidth}
+\begin{minipage}[b]{0.49\columnwidth}
     \centering
         \begin{tabular}{lr}\toprule
             パラメータ & 値 \\ \midrule
@@ -78,7 +78,7 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
 \chapter{データセットの分割}
 \label{app:split}
 
-22音ずつの4つのサブセットにデータセットを分割した~(\prettyref{fig:data_div})~。また、データセットの4分割は、88音をシャッフルして配列に格納した後に22音ずつ順に選ぶことで実装した。
+22音ずつの4つのサブセットにデータセットを分割した~(\prettyref{fig:data_div})~。また、データセットの4分割は、88音をシャッフルして配列に格納した後に22音ずつ順に選ぶことで行った。
 
 \begin{figure}[h]
 \centering
@@ -90,7 +90,7 @@ Adamは勾配降下法の中で最も用いられるアルゴリズムであり�
 \chapter{実験結果}
 \label{app:result}
 
-\prettyref{sec:result}に載せることのできなかった波形の図を本章に載せる。また、波形の記載方法は\prettyref{sec:result}と同様であるが、簡略化のため、キャプションには音階の表記のみ載せている。
+\prettyref{sec:result}に載せることのできなかった波形の図を本章に載せる。また、波形の記載方法は\prettyref{sec:result}と同様であるが、簡略化のため、キャプションには音階名のみ載せている。
 
 \section{提案モデルの表現力の評価実験}
 
